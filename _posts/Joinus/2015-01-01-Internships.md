@@ -14,6 +14,7 @@ header:
 image:
    thumb: "intern_fish_thumb.jpg"
 permalink: "/Joinus/Internships/"
+show_meta: false
 
 ---
 

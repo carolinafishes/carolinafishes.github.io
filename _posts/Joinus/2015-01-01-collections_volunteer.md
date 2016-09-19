@@ -15,6 +15,7 @@ header:
     title: ""
     caption: Okinawa, Japan
 permalink: "/Joinus/collections_volunteer/"
+show_meta: false
 ---
 
 <h3>Volunteer opportunities</h3>
