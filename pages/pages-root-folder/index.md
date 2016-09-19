@@ -21,7 +21,7 @@ widget2:
   video: '<a href="#" data-reveal-id="videoModal"><img src="http://phlow.github.io/feeling-responsive/images/start-video-feeling-responsive-302x182.jpg" width="302" height="182" alt=""/></a>'
 widget3:
   title: "Publications"
-  url: 'https://carolinafishes.github.io/Pubs/reprints'
+  url: 'https://carolinafishes.github.io/Pubs/reprints/'
   image: Hiding_fish2.jpg
   text: 'Browse our published articles here'
 #
