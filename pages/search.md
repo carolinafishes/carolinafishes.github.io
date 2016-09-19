@@ -7,7 +7,7 @@ header:
     title: ""
     caption: Guam
 
-permalink: "/search/"
+permalink: /search/
 sitemap: false
 ---
 
