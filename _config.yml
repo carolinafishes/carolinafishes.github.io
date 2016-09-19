@@ -190,9 +190,9 @@ og_type:                            'website'
 #  Open _data/socialmedia.yml to adjust the left and right topbar navigation
 #
 
-socialmedia:
-    twitter: phlow
-    facebook: phlow.media
+#socialmedia:
+ #   twitter: phlow
+  #  facebook: phlow.media
 
 
 #        ____  _
