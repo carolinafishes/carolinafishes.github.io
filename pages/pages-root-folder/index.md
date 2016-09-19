@@ -20,10 +20,10 @@ widget2:
   image: lizard_fish.jpg
   text: 'We have a beta version of our new R package PhyR available for testing. Check out the manual and code here!'
 widget3:
-  title: "Publications"
-  url: 'https://carolinafishes.github.io/software/reprints/'
+  title: "Research Highlights"
+  url: 'https://carolinafishes.github.io/highlights/'
   image: Hiding_fish2.jpg
-  text: 'WWe're always busy working with our colleagues on all sorts of interesting animals. Browse our published articles here!'
+  text: 'With over 30,000 species, it is an understatement to say that there is much to discover about the diversity of fishes. Come learn about our ongoing research projects and discoveries here!'
 #
 # Use the call for action to show a button on the frontpage
 #
