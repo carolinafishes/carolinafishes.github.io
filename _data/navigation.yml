@@ -1,0 +1,64 @@
+- title: Home
+  url: "/"
+  side: left
+
+- title: Publications
+  url: "/Pubs/"
+  side: left
+  dropdown:
+  - title: "Reprints"
+    url: "/Pubs/reprints"
+ 
+- title: Highlights
+  url: "/highlights/"
+  side: left  
+
+- title: "Fish Team"
+  url: "/team/"
+  side: left
+  
+ 
+  
+
+- title: Software
+  url: "/software/"
+  side: left
+  dropdown:
+  - title: PhyR
+    url: "/software/PhyR/"
+  - title: "R Functions"
+    url: "/MiscR/"
+ 
+
+- title: Blogs
+  url: "/blog/"
+  side: left
+  dropdown:
+  - title: "Collection"
+    url: "/collection/"
+  - title: "NC Fishes"
+    url: "/fish_blog/"
+  - title: "Evolution and Ecology"
+    url: "/eeb/"
+  - title: "Fieldwork"
+    url: "/fieldwork/"
+  - title: "Blog Archive"
+    url: "/blog/archive/"
+
+- title: "Join Us"
+  url: "/Joinus/"
+  side: left
+  dropdown:
+  - title: "Internship Opportunities"
+    url: "/Joinus/Internships/"
+  - title: "Volunteer Opportunities"
+    url: "/Joinus/collections_volunteer/"
+  
+
+- title: "Search"
+  url: "/search/"
+  side: right
+
+- title: "Contact"
+  url: "/contact/"
+  side: right
