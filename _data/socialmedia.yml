@@ -1,25 +1,25 @@
 - name: GitHub
-  url: http://github.com/carolinafishes
+  url: 'http://github.com/carolinafishes'
   class: icon-github
-  title: Code and data...
+  title: "Code and data...
 
 - name: YouTube
-  url: http://www.youtube.com/NCSM_Fishes
+  url: 'http://www.youtube.com/NCSM_Fishes'
   class: icon-youtube
   title: "Coming Soon"
 
 - name: Instagram
-  url: http://instagram.com/NCSM_Fishes
+  url: 'http://instagram.com/NCSM_Fishes'
   class: icon-instagram
   title: "Coming Soon"
 
 - name: Facebook
-  url: http://www.facebook.com/NCSM_Fishes
+  url: 'http://www.facebook.com/NCSM_Fishes'
   class: icon-facebook
   title: "Coming Soon"
 
 - name: Pinterest
-   url: http://www.pinterest.com/carolinafishes
+   url: 'http://www.pinterest.com/carolinafishes'
    class: icon-pinterest
    title: ""
 
