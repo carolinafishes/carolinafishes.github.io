@@ -7,7 +7,7 @@
   side: left
   dropdown:
   - title: "Reprints"
-    url: "/Pubs/reprints"
+    url: "/Pubs/reprints/"
  
 - title: Highlights
   url: "/highlights/"
