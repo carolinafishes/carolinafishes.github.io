@@ -14,6 +14,8 @@ header:
     image_fullwidth: "software_stream.jpg"
     title: ""
     caption: Hells Canyon, ID
+comments: true
+show_meta: false    
 ---
 <h3>1. Installation</h3>
 PhyR is easy to install. Simply <a href='https://github.com/carolinafishes/PhyR'>download the compressed R script from github</a> and source it: 
