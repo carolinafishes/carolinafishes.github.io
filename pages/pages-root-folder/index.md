@@ -6,7 +6,9 @@
 #
 layout: frontpage
 header:
-  image_fullwidth: header_unsplash_12.jpg
+    image_fullwidth: "main_page2.jpg"
+    title: ""
+    caption: Cape Fear River, NC
 widget1:
   title: "Blog & Portfolio"
   url: 'http://phlow.github.io/feeling-responsive/blog/'
