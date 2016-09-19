@@ -23,7 +23,7 @@ widget3:
   title: "Publications"
   url: 'https://carolinafishes.github.io/Pubs/reprints/'
   image: Hiding_fish2.jpg
-  text: 'Browse our published articles here'
+  text: 'We're always busy working with our colleagues on all sorts of interesting animals. Browse our published articles here'
 #
 # Use the call for action to show a button on the frontpage
 #
