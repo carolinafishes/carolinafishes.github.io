@@ -36,8 +36,8 @@
   dropdown:
   - title: "Collection"
     url: "/collection/"
-  - title: "NC Fishes"
-    url: "/fish_blog/"
+  - title: "Discovering Fishes"
+    url: "/fish_diversity/"
   - title: "Evolution and Ecology"
     url: "/eeb/"
   - title: "Fieldwork"
