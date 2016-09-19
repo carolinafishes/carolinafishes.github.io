@@ -1,61 +1,49 @@
 ---
 layout: page
-title: "About"
-subheadline: "Why another Jekyll Theme?"
-teaser: "Since years I am programming and designing websites. I love to work with open source tools and learn via code from others. This time I want to try to give something back..."
+title: "About Us"
+subheadline: "NCMNS Ichthyology"
+show_meta: false
+teaser: "Hidden from view just below the surface of the world's waterways are spectacular environments full of remarkable creatures that we are just beginning to understand..."
 permalink: "/info/"
 header:
-    image_fullwidth: "header_drop.jpg"
+    image_fullwidth: "info_image.jpg"
+    title: ""
+    caption: Iceland
 ---
-...and learn at the same time.
 
-*Feeling Responsive* is my first theme which I let into the world. It's built on work and knowledge of others. While I am still designing it, you read about whats behind this theme in the – *hopefully* – near future.
+With over 30,000 species, ray-finned fishes are argueably among the most successful animals on our planet. But just how did this diversity come to be, and how has it persisted over millions of years? Our team investigates the biodiversity of fishes and also helps scientists around the world do so by maintaining a collection of over 1 million research specimens from across the globe. 
 
 
-## Features
+## Our collection includes
 
-* [Responsive Gallery][8], [Videos][9], [Grid][10], [Typography][11],...
-* 100% GitHub Pages friendly
-* Easy editable navigation, footer and social media links
-* Language Ready – just translate one file.
-* Lots of possibilities to customize it to your needs
-* Lots of different headers
-* Various post formats to let your content shine
-* Uses Jekyll 3.0
-* Multiple possibilities to use images in different ways
-* Fine typography
-* Play Video and Audio with [Mediaelement.js][12]
+* Tissue samples for genomic analyses
+* Specimens of freshwater fishes from drainages across the US
+* Representation from over 42 countries
+* An extensive osteological collection
+* The main repository of Southeastern US fishes
+* A large collection of rare larval deep-sea fishes
+* Research ready locality data, georeferenced with coordinate uncertainty
 
 
 
-## I got inspired by...
+## Keeping up with what we do
 
-[Michael Rose][1] and his fabulous [themes for jekyll][2]. Authors of [A List Apart][4] and [Smashing Magazine][5] since 2002. [GitHub][6] and how they built such a habitat for cooperation worldwide. [Automattic][3] and how they built a fantastic community around WordPress. And many, many more...
+Much of what we do happens behind the scenes of the North Carolina Museum of Natural Sciences. This site is designed to give you a behind the scenes look at what we are doing and discoveries we are sharing with the scientific community. You can keep up with our [collection news here][1] and check out our [software for biologists][2] or [publications][3]. We also have several other [blogs][3] you can browse to see where we are or what we are working on. 
 
-Please make *Feeling Responsive* yours and if you like it, please link back to my homebase <a href="http://phlow.de/">Phlow</a>. That would be awesome.
+This site wouldn't be possible without [GitHub][4] who have created a great environment for sharing and cooperation among scientists worldwide, and [phlow][5] who provided much of foundation for this site's architecture.
 
-#### Since then, fork it!
+We hope you enjoy the site. 
 
-Yours sincerelly, [Moritz »mo.« Sauer][7]
+Yours sincerely, [The NCMNS Ichthyology Team][7]
 
 
- [1]: http://mademistakes.com/about/
- [2]: http://mademistakes.com/work/jekyll-themes/
- [3]: http://automattic.com/
- [4]: http://alistapart.com/
- [5]: http://www.smashingmagazine.com/
+ [1]: http://carolinafishes.github.io/collection
+ [2]: http://carolinafishes.github.io/software
+ [3]: http://carolinafishes.github.io/Pubs/reprints
+ [4]: https://github.com/
+ [5]: http://phlow.de/
  [6]: https://github.com/
- [7]: http://sauer.io
- [8]: {{ site.url }}/design/gallery/
- [9]: {{ site.url }}/design/video/
- [10]: {{ site.url }}/design/grid/
- [11]: {{ site.url }}/design/typography/
- [12]: {{ site.url }}/design/mediaelement_js/
- [13]: #
- [14]: #
- [15]: #
- [16]: #
- [17]: #
- [18]: #
- [19]: #
- [20]: #
+ [7]: #
+ [8]: #
+ [9]: #
+ [10]: #

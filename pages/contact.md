@@ -1,12 +1,27 @@
 ---
 layout: page
 title: "Contact"
-meta_title: "Contact and use our contact form"
-subheadline: "Wufoo-powered contact forms"
-teaser: "Get in touch with me? Use the contact form."
+meta_title: "Have questions?"
+show_meta: false
+subheadline: ""
+teaser: "Get in touch with us!"
+header:
+    image_fullwidth: "contact_beach.jpg"
+    title: ""
+    caption: Jasmund National Park, Germany
+
 permalink: "/contact/"
 ---
-If you need a fabulous contact form for your website, I suggest you use [Wufoo][1]. You can use three forms for free, you get no spam and if you get more than 100 entries you have to pay.
+<h3> General Questions </h3>
+Use <a href='http://naturalsciences.org/about/contact-us'> this form </a> to contact us if you have any questions!
+<br>
+<h3> Ask a naturalist! </h3>
+Find something unusual or want to share an exciting discovery or observation with us? 
+<br>
+ Use <a href='http://naturalsciences.org/forms/ask-a-naturalist'> this form </a> and be as specific as possible about your question or (better) attach a photo or link to video of your observation or animal in question. 
 
 
- [1]: http://www.wufoo.com/
+
+
+
+
