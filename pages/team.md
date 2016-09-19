@@ -22,7 +22,8 @@ permalink: "/team/"
 <img class="b30" src="http://carolinafishes.github.io/images/Alex_guam_diving.jpg" alt="">
 <br>
 My research takes an integrative approach to explore the factors that underlie the origin and maintenance of biodiversity in ray-finned fishes (Actinopterygii). Actinopterygiians comprise over half of all living vertebrate species and a better understanding of their history will shed light onto some long standing questions in evolutionary biology. Why are some clades more diverse than others? Are there general trends that govern the diversification dynamics of lineages in different communities? To answer these questions, my work crosses traditional boundaries between molecular phylogenetics, morphology, paleontology, and ecology. This integrative approach to research facilitates a broader understanding of not only how ecomorphological diversity has accumulated in ecosystems ranging from coral reefs to the Southern Ocean of Antarctica, but also illuminates the factors that influence patterns of vertebrate diversification.
-<br> 
+<br>
+<br><a href="http://carolinafishes.github.io/images/Dornburg_CV.pdf"><en>C.V.</en></a>
 <br><a href='https://www.researchgate.net/profile/Alex_Dornburg'>Research Gate</a>
 <br><a href='https://scholar.google.com/citations?user=VgPd6sMAAAAJ&hl=en'>Google Scholar</a>
 <br><a href='http://loop.frontiersin.org/people/263122/overview'> Loop </a>
