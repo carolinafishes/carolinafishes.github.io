@@ -34,7 +34,7 @@ widget3:
 #
 callforaction:
   url: https://tinyletter.com/carolinafishes
-  text: Inform me about new updates and features ›
+  text: Inform me about new updates ›
   style: secondary
 permalink: /index.html
 #
