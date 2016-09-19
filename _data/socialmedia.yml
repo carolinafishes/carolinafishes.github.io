@@ -19,9 +19,9 @@
   title: "Coming Soon"
 
 - name: Pinterest
-   url: 'http://www.pinterest.com/carolinafishes'
-   class: icon-pinterest
-   title: "Things we find interesting around the web"
+  url: 'http://www.pinterest.com/carolinafishes'
+  class: icon-pinterest
+  title: "Things we find interesting around the web"
 
 # - name: Facebook
 #   url: http://www.facebook.com/
