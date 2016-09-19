@@ -1,27 +1,27 @@
 - name: GitHub
-  url: http://github.com/carolinafishes
+  url: http://github.com/phlow
   class: icon-github
-  title: Code and data...
+  title: Code und mehr...
 
 - name: YouTube
-  url: http://www.youtube.com/NCSM_Fishes
+  url: http://www.youtube.com/PhlowMedia
   class: icon-youtube
-  title: "Coming Soon"
+  title: "Videos, Video-Anleitungen und Filme von Phlow auf YouTube"
 
-- name: Instagram
-  url: http://instagram.com/NCSM_Fishes
-  class: icon-instagram
-  title: "Coming Soon"
+- name: Twitter
+  url: http://twitter.com/phlow
+  class: icon-twitter
+  title: "Immer das Neuste von Phlow gibt es auf Twitter"
 
-- name: Facebook
-  url: http://www.facebook.com/NCSM_Fishes
-  class: icon-facebook
-  title: "Coming Soon"
+- name: Mixcloud
+  url: http://www.mixcloud.com/phlow/
+  class: icon-cloud
+  title: "Mixe, was sonst?"
 
-- name: Pinterest
-   url: http://www.pinterest.com/carolinafishes
-   class: icon-pinterest
-   title: ""
+- name: Phlow YouTube Google+
+  url: https://plus.google.com/u/0/+Phlow
+  class: icon-googleplus
+  title: "YouTube Google+"
 
 # - name: Facebook
 #   url: http://www.facebook.com/
