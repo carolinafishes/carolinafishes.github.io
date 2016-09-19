@@ -21,7 +21,7 @@
 - name: Pinterest
    url: 'http://www.pinterest.com/carolinafishes'
    class: icon-pinterest
-   title: ""
+   title: "Things we find interesting around the web"
 
 # - name: Facebook
 #   url: http://www.facebook.com/
