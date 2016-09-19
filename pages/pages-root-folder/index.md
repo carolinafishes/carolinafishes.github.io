@@ -21,7 +21,7 @@ widget2:
   text: 'We have a beta version of our new R package PhyR available for testing. Check out the manual and code here!'
 widget3:
   title: "Publications"
-  url: 'https://carolinafishes.github.io/Pubs/reprints/'
+  url: 'https://carolinafishes.github.io/Pubs/reprints'
   image: Hiding_fish2.jpg
   text: 'We're always busy working with our colleagues on all sorts of interesting animals. Browse our published articles here'
 #
