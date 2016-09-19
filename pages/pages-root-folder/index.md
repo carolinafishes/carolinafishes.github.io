@@ -6,7 +6,7 @@
 #
 layout: frontpage
 header:
-    image_fullwidth: "main_page2.jpg"
+    image_fullwidth: main_page2.jpg
     title: ""
     caption: Cape Fear River, NC
 widget1:
@@ -35,9 +35,9 @@ widget3:
 # To change colors see sass/_01_settings_colors.scss
 #
 callforaction:
-  url: https://tinyletter.com/feeling-responsive
+  url: https://tinyletter.com/carolinafishes
   text: Inform me about new updates and features ›
-  style: alert
+  style: secondary
 permalink: /index.html
 #
 # This is a nasty hack to make the navigation highlight
