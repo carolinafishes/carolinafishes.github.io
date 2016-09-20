@@ -16,7 +16,7 @@ show_meta: false
 mediaplayer: true
 ---
  
-<br>  We don't often think of venom in fishes. Instead we commonly focus on animals such as snakes, spiders, and scorpions when <a href='http://www.bbc.com/earth/story/20151022-one-animal-is-more-venomous-than-any-other'>listing </a>the world's deadliest creatures. We should reconsider.
+We don't often think of venom in fishes. Instead we commonly focus on animals such as snakes, spiders, and scorpions when <a href='http://www.bbc.com/earth/story/20151022-one-animal-is-more-venomous-than-any-other'>listing </a>the world's deadliest creatures. We should reconsider.
 <br>
 
 It is estimated that there are more venomous fish than snakes. Venomous fishes can be found in fresh and saltwater, in habitats ranging from alpine streams to coral reefs. This spring I had the opportunity to meet one of the most venomous fish of them all: The stonefish.
@@ -38,7 +38,9 @@ Finding a specific rock in a tide pool is not exactly easy. But stonefish don't 
 <img  class="b30" src="http://carolinafishes.github.io/images/stonfish_habitat.jpg" alt=""> 
 Australia has kept good records of its stonefish envenomations and, thanks to antivenom, no one has died from stonefish since 1915. That said, envenomations are not rare in the Pacific and incredibly painful and serious. In fact, in Australia alone there are between 700-1000 uses of stonefish antivenom annually. We discovered this video by <a href='https://www.smartereveryday.com'> Smarter Every Day</a> that goes behind the scenes to document the lab that helps meet the demand of Stonefish antivenom. Check it out and if you ever find yourself in the tropical pacific, watch your step! 
 <br>
-<video src="https://www.youtube.com/watch?v=I8yJkIuvPvM" controls="controls" type="video/youtube" width="640" height="360" preload="auto"></video>
+<video id="player1" controls="controls" width="640" height="360" preload="auto">
+<source type="video/youtube" src="https://www.youtube.com/watch?v=I8yJkIuvPvM"/>
+</video>
 
 
 
