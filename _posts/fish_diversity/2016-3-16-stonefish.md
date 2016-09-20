@@ -43,7 +43,7 @@ Finding a specific rock in a tide pool is not exactly easy. But stonefish don't 
 How often people actually step on stonefish? 
 <br>
 
-We can look to Australia for some insights on this. First of all, thanks to antivenom, no one has died from stonefish since 1915. That said, envenomations are not rare. In Australia alone there are between 700-1000 uses of stonefish antivenom annually. Now remember that these animals range from the Red Sea through most of the tropical Indo-Pacific. Dan discovered this video by <a href='https://www.smartereveryday.com'> Smarter Every Day</a> that goes behind the scenes to document the lab that helps meet the demand of Stonefish antivenom. Check it out and if you ever find yourself in the tropical pacific, watch your step! 
+We can look to Australia for some insights on this. First of all, thanks to antivenom, no one down under has been documented as dying from a stonefish since 1915. That said, envenomations are not rare. In Australia alone there are between 700-1000 uses of stonefish antivenom annually. Now remember that these animals range from the Red Sea through most of the tropical Indo-Pacific. Dan discovered this video by <a href='https://www.smartereveryday.com'> Smarter Every Day</a> that goes behind the scenes to document the lab that helps meet the demand of stonefish antivenom. Check it out and if you ever find yourself in the tropical pacific, watch your step! 
 
 <br>
 
