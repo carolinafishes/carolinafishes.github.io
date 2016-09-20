@@ -41,10 +41,8 @@ Finding a specific rock in a tide pool is not exactly easy. But stonefish don't 
 Australia has kept good records of its stonefish envenomations and, thanks to antivenom, no one has died from stonefish since 1915. That said, envenomations are not rare in the Pacific and incredibly painful and serious. In fact, in Australia alone there are between 700-1000 uses of stonefish antivenom annually. We discovered this video by <a href='https://www.smartereveryday.com'> Smarter Every Day</a> that goes behind the scenes to document the lab that helps meet the demand of Stonefish antivenom. Check it out and if you ever find yourself in the tropical pacific, watch your step! 
 
 <br>
+[![Start Video](https://github.com/Phlow/feeling-responsive/blob/gh-pages/images/video-feeling-responsive-1280x720.jpg)](https://www.www.youtube.com/watch?v=I8yJkIuvPvM)
 
-<video id="player1" controls="controls" width="640" height="360">
-<source src="http://www.youtube.com/watch?v=I8yJkIuvPvM" type="video/youtube" />
-</video>
 
 
 
