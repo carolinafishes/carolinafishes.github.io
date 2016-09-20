@@ -22,7 +22,7 @@ We don't often think of venom in fishes. Instead we commonly focus on animals su
 It is estimated that there are more venomous fish than snakes. Venomous fishes can be found in fresh and saltwater, in habitats ranging from alpine streams to coral reefs. This spring I had the opportunity to meet one of the most venomous fish of them all: The stonefish.
 <br>
 
-<a href='https://danlwarren.wordpress.com/'>Dan Warren </a>, <a href='https://www.researchgate.net/profile/Teresa_Iglesias'>Teresa Iglesias </a> and I were working in a tide pool area during a late night low tide outside of <a href='http://http://www.oist.jp/'>the Okinawa Institude of Science and Technology </a>. About an hour into our work Dan called out and we went to see what he was excited about. In few inches of water was a massive stonefish.
+<a href='https://danlwarren.wordpress.com/'>Dan Warren </a>, <a href='https://www.researchgate.net/profile/Teresa_Iglesias'>Teresa Iglesias </a> and I were working in a tide pool area during a late night low tide outside of <a href='http://http://www.oist.jp/'>the Okinawa Institude of Science and Technology </a>. About an hour into our work Dan called out and we went to see what he was excited about. In a few inches of water was a massive stonefish.
 
 <h3> Stonefish Encounters </h3>
 
@@ -40,10 +40,10 @@ Now here is an image of where we were walking.
 Finding a specific rock in a tide pool is not exactly easy. But stonefish don't restrict themselves to tidepools. It turns out that stonefish can live out of the water for up to 24 hours. This now means you have to be looking for your specific rock anywhere on the beach. 
 <br>
 
-How often do people step on stonefish?
+How often people actually step on stonefish? 
 <br>
 
-That is a good question and Australia can give us some insight. Australia has kept good records of its stonefish envenomations and, thanks to antivenom, no one has died from stonefish since 1915. That said, envenomations are not rare. In Australia alone there are between 700-1000 uses of stonefish antivenom annually. Now remember that these animals range from the Red Sea through most of the tropical Indo-Pacific. Dan discovered this video by <a href='https://www.smartereveryday.com'> Smarter Every Day</a> that goes behind the scenes to document the lab that helps meet the demand of Stonefish antivenom. Check it out and if you ever find yourself in the tropical pacific, watch your step! 
+We can look to Australia for some insights on this. First of all, thanks to antivenom, no one has died from stonefish since 1915. That said, envenomations are not rare. In Australia alone there are between 700-1000 uses of stonefish antivenom annually. Now remember that these animals range from the Red Sea through most of the tropical Indo-Pacific. Dan discovered this video by <a href='https://www.smartereveryday.com'> Smarter Every Day</a> that goes behind the scenes to document the lab that helps meet the demand of Stonefish antivenom. Check it out and if you ever find yourself in the tropical pacific, watch your step! 
 
 <br>
 
