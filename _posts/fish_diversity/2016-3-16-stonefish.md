@@ -29,7 +29,7 @@ It is estimated that there are more venomous fish than snakes. Venomous fishes c
 <br> We all knew this fish was venomous, but it wasn't until we did a little reading that we discovered how venomous. Stonefish are potentially lethal. Unlike other icons of the venom world like snakes or spiders, stonefish venom isn't injected through a bite. Instead venom is injected through their fin ray spines on top of the fish. Basically, you step on them and it activates the venom injection mechanism. Luckily these fish are not at all aggressive and do not seek out trouble with people. Think of them more as a really dangerous rock that likes to eat fish once in a while. 
 <br> 
 
-That said, people often do wind up stepping on stonefish. It is easy to see why. If you are looking for a stonefish, the ideal search image is a essentially a rock with some algae on it. Here is an image of the one we found out of water.
+That said, people often do wind up stepping on stonefish. It is easy to see why. If you are looking for a stonefish, the ideal search image really is a rock with some algae on it. Here is an image of the one we found out of water.
 <br>
 
 <img  class="b30" src="http://carolinafishes.github.io/images/stonefish2.jpg" alt=""> 
