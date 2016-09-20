@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Meet the Stonefish"
-teaser: "The most venomous fish in the world (page under construction)"
+teaser: "The most venomous fish in the world"
 header:
     image_fullwidth: "stonefish_banner.jpg"
     caption: Okinawa, Japan
