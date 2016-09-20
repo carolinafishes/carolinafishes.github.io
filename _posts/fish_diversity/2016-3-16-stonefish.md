@@ -42,7 +42,7 @@ Australia has kept good records of its stonefish envenomations and, thanks to an
 
 <br>
 
-<video src="https://www.youtube.com/watch?v=I8yJkIuvPvM" type="video/youtube" controls="controls"></video>
+<video src="https://www.youtube.com/watch?v=I8yJkIuvPvM"></video>
 
 
 
