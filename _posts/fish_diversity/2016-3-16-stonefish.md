@@ -13,6 +13,7 @@ categories:
     - fish_diversity
 comments: true
 show_meta: false
+mediaplayer: true
 ---
  
 <br>  We don't often think of venom in fishes. Instead we commonly focus on animals such as snakes, spiders, and scorpions when <a href='http://www.bbc.com/earth/story/20151022-one-animal-is-more-venomous-than-any-other'>listing </a>the world's deadliest creatures. We should reconsider.
