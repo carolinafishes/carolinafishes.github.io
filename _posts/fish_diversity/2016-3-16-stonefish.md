@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Meet the Stonefish"
-teaser: "The world's most venomous fish"
+teaser: "The most venomous fish in the world"
 header:
     image_fullwidth: "stonefish_banner.jpg"
     caption: Okinawa, Japan
@@ -24,7 +24,7 @@ It is estimated that there are more venomous fish than snakes. Venomous fishes c
 
 <a href='https://danlwarren.wordpress.com/'>Dan Warren </a>, <a href='https://www.researchgate.net/profile/Teresa_Iglesias'>Teresa Iglesias </a> and I were working in a tide pool area during a late night low tide outside of <a href='http://http://www.oist.jp/'>the Okinawa Institude of Science and Technology </a>. About an hour into our work Dan called out and we went to see what he was excited about. In few inches of water was a massive stonefish.
 
-<h3> Meet The World's Most Venomous Fish </h3>
+<h3> Stonefish Encounters </h3>
 
 <br> We all knew this fish was venomous, but it wasn't until we did a little reading that we discovered how venomous. Stonefish are potentially lethal. Unlike other icons of the venom world like snakes or spiders, stonefish venom isn't injected through a bite. Instead venom is injected through their fin ray spines on top of the fish. Basically, you step on them and it activates the venom injection mechanism. Luckily these fish are not at all aggressive and do not seek out trouble with people. Think of them more as a really dangerous rock that likes to eat fish once in a while. 
 <br> 
@@ -42,7 +42,9 @@ Australia has kept good records of its stonefish envenomations and, thanks to an
 
 <br>
 
-<iframe width="420" height="315" src="https://www.youtube.com/watch?v=I8yJkIuvPvM" frameborder="0" allowfullscreen></iframe>
+<video width="640" height="360" id="player1"> 
+	<source type="video/youtube" src="https://www.youtube.com/watch?v=I8yJkIuvPvM" />
+</video>
 
 
 
