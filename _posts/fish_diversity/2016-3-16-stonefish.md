@@ -34,11 +34,16 @@ That said, people often do wind up stepping on stonefish. It is easy to see why.
 
 <img  class="b30" src="http://carolinafishes.github.io/images/stonefish2.jpg" alt=""> 
 Now here is an image of where we were walking. 
-Finding a specific rock in a tide pool is not exactly easy. But stonefish don't restrict themselves to tidepools. It turns out that stonefish can live out of the water for up to 24 hours. This now means you have to be looking for your specific rock anywhere on the beach.
 <br>
 
 <img  class="b30" src="http://carolinafishes.github.io/images/stonfish_habitat.jpg" alt=""> 
-Australia has kept good records of its stonefish envenomations and, thanks to antivenom, no one has died from stonefish since 1915. That said, envenomations are not rare in the Pacific and incredibly painful and serious. In fact, in Australia alone there are between 700-1000 uses of stonefish antivenom annually. We discovered this video by <a href='https://www.smartereveryday.com'> Smarter Every Day</a> that goes behind the scenes to document the lab that helps meet the demand of Stonefish antivenom. Check it out and if you ever find yourself in the tropical pacific, watch your step! 
+Finding a specific rock in a tide pool is not exactly easy. But stonefish don't restrict themselves to tidepools. It turns out that stonefish can live out of the water for up to 24 hours. This now means you have to be looking for your specific rock anywhere on the beach. 
+<br>
+
+How often do people step on stonefish?
+<br>
+
+That is a good question and Australia can give us some insight. Australia has kept good records of its stonefish envenomations and, thanks to antivenom, no one has died from stonefish since 1915. That said, envenomations are not rare. In Australia alone there are between 700-1000 uses of stonefish antivenom annually. Now remember that these animals range from the red sea through most of the tropical Indo-Pacific.Dan discovered this video by <a href='https://www.smartereveryday.com'> Smarter Every Day</a> that goes behind the scenes to document the lab that helps meet the demand of Stonefish antivenom. Check it out and if you ever find yourself in the tropical pacific, watch your step! 
 
 <br>
 
