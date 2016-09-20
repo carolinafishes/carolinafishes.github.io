@@ -9,7 +9,8 @@ header:
    title: ""
    caption: Green Moray, Curaçao
 ---
-<h3>Coming soon.... </h3>
+<br>
+<h3>Coming soon</h3>
 
 <ul>
     {% for post in site.categories.fish_diversity %}
