@@ -27,18 +27,17 @@ It is estimated that there are more venomous fish than snakes. Venomous fishes c
 <h3> Meet The World's Most Venomous Fish </h3>
 
 <br> We all knew this fish was venomous, but it wasn't until we did a little reading that we discovered how venomous. Stonefish are potentially lethal. Unlike other icons of the venom world like snakes or spiders, stonefish venom isn't injected through a bite. Instead venom is injected through their fin ray spines on top of the fish. Basically, you step on them and it activates the venom injection mechanism. Luckily these fish are not at all aggressive and do not seek out trouble with people. Think of them more as a really dangerous rock that likes to eat fish once in a while. 
+<br> 
 
-<br> That said, people often do wind up stepping on stonefish. It is easy to see why. If you are looking for a stonefish, the ideal search image is a essentially a rock with some algae on it. Here is an image of the one we found out of water.
+That said, people often do wind up stepping on stonefish. It is easy to see why. If you are looking for a stonefish, the ideal search image is a essentially a rock with some algae on it. Here is an image of the one we found out of water.
 <img  class="b30" src="http://carolinafishes.github.io/images/stonefish2.jpg" alt=""> 
-
 Now here is an image of where we were walking. 
 Finding a specific rock in a tide pool is not exactly easy. But stonefish don't restrict themselves to tidepools. It turns out that stonefish can live out of the water for up to 24 hours. This now means you have to be looking for your specific rock anywhere on the beach. I
 <img  class="b30" src="http://carolinafishes.github.io/images/stonfish_habitat.jpg" alt=""> 
-
-<br> Australia has kept good records of its stonefish envenomations and, thanks to antivenom, no one has died from stonefish since 1915. That said, envenomations are not rare in the Pacific and incredibly painful and serious. In fact, in Australia alone there are between 700-1000 uses of stonefish antivenom annually. We discovered this video by <a href='https://www.smartereveryday.com'> Smarter Every Day</a> that goes behind the scenes to document the lab that helps meet the demand of Stonefish antivenom. Check it out and if you ever find yourself in the tropical pacific, watch your step! 
+Australia has kept good records of its stonefish envenomations and, thanks to antivenom, no one has died from stonefish since 1915. That said, envenomations are not rare in the Pacific and incredibly painful and serious. In fact, in Australia alone there are between 700-1000 uses of stonefish antivenom annually. We discovered this video by <a href='https://www.smartereveryday.com'> Smarter Every Day</a> that goes behind the scenes to document the lab that helps meet the demand of Stonefish antivenom. Check it out and if you ever find yourself in the tropical pacific, watch your step! 
 
 <video id="player1" controls="controls" width="640" height="360" preload="auto">
-<source src="https://www.youtube.com/watch?v=I8yJkIuvPvM" type="video/youtube">
+<source type="video/youtube" src="https://www.youtube.com/watch?v=I8yJkIuvPvM">
 </video>
 
 
