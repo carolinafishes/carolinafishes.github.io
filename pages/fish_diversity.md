@@ -5,9 +5,9 @@ title: "Discover the Amazing World of Fish"
 subheadline: ""
 permalink: "/fish_diversity/"
 header:
-   image_fullwidth: "Fish_banner.jpg"
+   image_fullwidth: "Fish2_banner.jpg"
    title: ""
-   caption: Green Moray, Curaçao
+   caption: Cannon Beach, Oregon
 ---
 <br>
 <h3>Coming soon</h3>
