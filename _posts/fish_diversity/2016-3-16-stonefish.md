@@ -47,7 +47,7 @@ We can look to Australia for some insights on this. First of all, thanks to anti
 
 <br>
 
-<video id="player1" style="width:100%;height:100%;" width="640" height="360" > 
+<video id="player1" style="width:100%;height:100%;" width="640" height="360" controls="controls" > 
 	<source type="video/youtube" src="https://www.youtube.com/watch?v=I8yJkIuvPvM" />
 </video>
 
