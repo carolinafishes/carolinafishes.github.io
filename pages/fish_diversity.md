@@ -1,7 +1,7 @@
 ---
 layout: page
 show_meta: false
-title: "Discover the Amazing World of Fish"
+title: "The Amazing World of Fish"
 subheadline: ""
 permalink: "/fish_diversity/"
 header:
