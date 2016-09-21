@@ -2134,7 +2134,7 @@ if (typeof jQuery != 'undefined') {
 		},
 
 		// set dimensions via JS instead of CSS
-		setDimensions: true,
+		setDimensions: false,
 
 		// width of audio player
 		audioWidth: -1,
