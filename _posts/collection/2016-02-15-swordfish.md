@@ -31,6 +31,7 @@ Check out this animated video that reconstructs the routes of whaling vessels ov
 <video id="player1" style="width:100%;height:100%;" width="640" height="360" controls="controls" > 
 	<source type="video/youtube" src="https://www.youtube.com/watch?v=Tn7fQ5mYHPA" />
 </video>
+
 <br>
 
 So what does a swordfish have to do with whaling? 
@@ -45,6 +46,6 @@ However, swordfish have a major weakness. Sometimes, they come to the surface by
 Swordfishing harpooning in the 1800's used remarkably similar gear to whaling. Today, some fishermen continue to use harpoons to harvest swordfish. In fact, the <a href="https://www.msc.org/track-a-fishery/fisheries-in-the-program/certified/north-west-atlantic/north-west-atlantic-canada-harpoon-swordfish/fishers-story">marine stewardship council has certified the Nova Scotia harpoon-based fishery as sustainable</a>. With consumer giants like <a href="http://www.wholefoodsmarket.com/blog/whole-story/harpoon-caught-swordfish-1">Whole Foods promoting this fishery</a>, we may well see a rise in harpoon based fishing replacing to fisheries using long-line and gill-net fisheries.
 <br>
 
-We'll never know if this specimen was shot from a whaleboat on one of it's long voyages or if it was shot from one of the many vessels harvesting these fishes from the Northern Atlantic. However, this specimen is a reminder of how our natural history collections are more than just repositories of biological materials for scientists. They also document our interactions with the planet over the last few centuries. Snapshots in time, offering unique glimpses and reflections of our history.
+We'll never know if this specimen was shot from a whaleboat on one of it's long voyages or if it was shot from one of the many vessels harvesting these fishes from the Northern Atlantic. However, this specimen is a reminder of how our natural history collections are more than just repositories of biological materials for scientists. They document our interactions with the planet. Snapshots in time, offering unique glimpses and reflections of our history.
 
 
