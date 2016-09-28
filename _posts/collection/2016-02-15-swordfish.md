@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "A fish from 1869"
-teaser: "A snapshot of New England's maritime history"
+title: "Harpoons, Whales, and Swordfish"
+teaser: "A fish from 1869 provides a snapshot of New England's maritime history"
 header:
     image_fullwidth: "New_bedfordbanner2.jpg"
     caption: New Bedford, Massachusetts
