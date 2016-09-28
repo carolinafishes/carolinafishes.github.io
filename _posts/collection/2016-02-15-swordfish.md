@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Meet our oldest specimen"
+title: "The oldest fish specimen in the NCSM"
 teaser: "A snapshot of New England's maritime history"
 header:
     image_fullwidth: "New_bedfordbanner.jpg"
