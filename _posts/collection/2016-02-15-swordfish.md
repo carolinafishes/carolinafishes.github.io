@@ -13,7 +13,7 @@ categories:
     - collection
 comments: true
 show_meta: false
-
+mediaplayer: true
 ---
  
 I recently coauthored a piece for the Naturalist Magazine with Meg Eberle about our oldest specimen and thought I would repost some of the article here.
