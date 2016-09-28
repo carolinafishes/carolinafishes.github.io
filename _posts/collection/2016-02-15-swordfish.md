@@ -44,9 +44,11 @@ However, swordfish have a major weakness. Sometimes, they come to the surface by
 Swordfishing harpooning in the 1800's used remarkably similar gear to whaling. In Massachusetts, harpooning swordfish was an industry onto itself that was still active up through the 1960's, by then using a combination of boats in the water with sent out to spot fish from the air. Then the industry changed. 
 <br>
 <h3> Enter long-lining </h3>
-
-By spacing hooks every 50 feet on lines that stretch over 10 miles each, individual boats could harvest more fish in a night than harpooner's could in a season. Here is what the typical rig looks like courtesy of a NOAA report
 <br>
+
+By spacing hooks every 50 feet on lines that stretch over 10 miles each, individual boats could harvest more fish in a night than harpooner's could in a season. 
+<br>
+Here is what the typical rig looks like courtesy of a NOAA report
 
 <img  class="b30" src="http://carolinafishes.github.io/images/swordfish.jpg" alt=""> 
 It is safe to say that long-lining is controversial. As anyone who has ever fished can tell you, you can't completely control what takes the hook. Sharks, turtles, and sea birds all have been caught as by-catch. The use of miles and miles of hooks is also really effective at catching lots and lots of swordfish. So just as whalers had over-harvested whales in the Atlantic by the 1890's, long-lining brought swordfish to the brink of being wiped out in the North Atlantic by the 1990's.   
