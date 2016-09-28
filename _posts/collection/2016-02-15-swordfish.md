@@ -45,7 +45,6 @@ Swordfishing harpooning in the 1800's used remarkably similar gear to whaling. I
 <br>
 <h3> Enter long-lining </h3>
 <br>
-
 By spacing hooks every 50 feet on lines that stretch over 10 miles each, individual boats could harvest more fish in a night than harpooner's could in a season. 
 <br>
 Here is what the typical rig looks like courtesy of a NOAA report
@@ -56,7 +55,6 @@ It is safe to say that long-lining is controversial. As anyone who has ever fish
 
 <h3> The future of swordfish </h3>
 <br>
-
 We don't often hear of conservation success stories and marine fisheries together, but largely thanks to campaigns in the late 1990's like "give swordfish a break", and numerous ongoning management efforts, swordfish stocks are rebounding. And we appear to be going full circle in how we harvest them.
 <br>
 
