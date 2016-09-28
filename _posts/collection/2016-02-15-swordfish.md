@@ -28,11 +28,9 @@ Whaling was once a thriving part of the US economy, and New Bedford was at the e
 Check out this animated video that reconstructs the routes of whaling vessels over time. By 1869 journeys out of New Bedford were nothing short of monumental.
 <br>
 
-<video id="player2" style="width:100%;height:100%;" width="640" height="360" controls="controls" > 
+<video id="whaleplay" style="width:100%;height:100%;" width="640" height="360" controls="controls" > 
 	<source type="video/youtube" src="https://www.youtube.com/watch?v=Tn7fQ5mYHPA" />
 </video>
-
-<br>
 
 So what does a swordfish have to do with whaling? 
 <br>
