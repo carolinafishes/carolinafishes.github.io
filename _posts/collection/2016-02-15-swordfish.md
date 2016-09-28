@@ -19,7 +19,7 @@ mediaplayer: true
 I recently coauthored a piece for the Naturalist Magazine with Meg Eberle about our oldest specimen and thought I would repost some of the article here.
 <br>
 
-Since its inception in the late nineteenth century, the Museum of Natural Sciences has archived fish specimens from around the entire world. In addition to being of tremendous scientific value, these specimens occasionally serve as intriguing vignettes of our  maritime history. A perfect example is the oldest specimen in the collection: A swordfish (<i>Xiphias gladius</i>) bill on which a rather worn looking label indicates that the swordfish was “Brot [sic] into NEW BEDFORD, MASS. On a ‘Whaler’ about 1869.”
+Since its inception in the late nineteenth century, the Museum of Natural Sciences has archived fish specimens from around the entire world. In addition to being of tremendous scientific value, these specimens occasionally serve as intriguing vignettes of our maritime history. A perfect example is the oldest specimen in the collection: A swordfish (<i>Xiphias gladius</i>) bill on which a rather worn looking label indicates that the swordfish was “Brot [sic] into NEW BEDFORD, MASS. On a ‘Whaler’ about 1869.”
 <br>
 
 Whaling was once a thriving part of the US economy, and New Bedford was at the epicenter of this industry. Whale parts were used for a variety of everyday products, ranging from oils and soaps to corsets, umbrellas, and skirts. However, whales are not a limitless resource and by 1869, ships were leaving New England and circumnavigating the globe in search of more. Meaning this swordfish bill specimen could have come from any part of the species’ extensive range. 
@@ -41,7 +41,7 @@ Swordfish are large, predatory fish found throughout the temperate parts of the 
 However, swordfish have a major weakness. Sometimes, they come to the surface by day to bask in the sun. This makes them an easy target for an opportunistic hunter with a harpoon. 
 <br>
 
-Swordfishing harpooning in the 1800's used remarkably similar gear to whaling. In Massachusetts, harpooning swordfish was an industry onto itself that was still active up through the 1960's, by then using a combination of boats in the water with sent out to spot fish from the air. Then the industry changed. 
+Swordfishing harpooning in the 1800's used remarkably similar gear to whaling. In Massachusetts, harpooning swordfish was an industry onto itself that was still active up through the 1960's, by then using planes to first spot fish from there before sending out boats over the water. But by the 1970's the open ocean fishing industry changed dramatically. 
 <br>
 <h3> Enter long-lining </h3>
 <br>
@@ -50,12 +50,12 @@ By spacing hooks every 50 feet on lines that stretch over 10 miles each, individ
 Here is what the typical rig looks like courtesy of a NOAA report
 
 <img  class="b30" src="http://carolinafishes.github.io/images/swordfish.jpg" alt=""> 
-It is safe to say that long-lining is controversial. As anyone who has ever fished can tell you, you can't completely control what takes the hook. Sharks, turtles, and sea birds all have been caught as by-catch. The use of miles and miles of hooks is also really effective at catching lots and lots of swordfish. So just as whalers had over-harvested whales in the Atlantic by the 1890's, long-lining brought swordfish to the brink of being wiped out in the North Atlantic by the 1990's.   
+It is safe to say that long-lining is controversial. As anyone who has ever fished can tell you, you can't completely control what takes the hook. Now imagine a single boat trailing thousands of hooks. Sharks, turtles, and sea birds all have been caught as by-catch. In addition to problems with by-catch, the use of miles and miles of hooks is also really effective at catching lots and lots of swordfish. Too efficient. Just as whalers had over-harvested whales in the Atlantic by the 1890's, long-lining brought swordfish close to being wiped out in the North Atlantic by the 1990's.   
 <br>
 
 <h3> The future of swordfish </h3>
 <br>
-We don't often hear of conservation success stories and marine fisheries together, but largely thanks to campaigns in the late 1990's like "give swordfish a break", and numerous ongoning management efforts, swordfish stocks are rebounding. And we appear to be going full circle in how we harvest them.
+We don't hear enough stories of conservation success with marine fisheries together. But swordfish are such a story. Largely thanks to campaigns in the late 1990's like "give swordfish a break", and numerous ongoing management efforts, swordfish stocks are rebounding. And we appear to be going full circle in how we harvest them.
 <br>
 
 Rather than using long-lines, some fishermen now again use harpoons to harvest swordfish. It produces far less by catch and also allows for more control in numbers taken. In fact, the <a href="https://www.msc.org/track-a-fishery/fisheries-in-the-program/certified/north-west-atlantic/north-west-atlantic-canada-harpoon-swordfish/fishers-story">marine stewardship council has certified the Nova Scotia harpoon-based fishery as sustainable</a>. With consumer giants like <a href="http://www.wholefoodsmarket.com/blog/whole-story/harpoon-caught-swordfish-1">Whole Foods promoting this fishery</a>, we may well see a rise in harpoon based fishing replacing to fisheries using long-line and gill-net fisheries. 
