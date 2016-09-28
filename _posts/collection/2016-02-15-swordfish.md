@@ -4,7 +4,7 @@ title: "Meet our oldest specimen"
 teaser: "A snapshot of New England's maritime history"
 header:
     image_fullwidth: "New_bedfordbanner.jpg"
-    caption: Mew Bedford, Massachusetts
+    caption: New Bedford, Massachusetts
     title: ""
 image:
     thumb:  nb_thumb.jpg
