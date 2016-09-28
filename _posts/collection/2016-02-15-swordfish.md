@@ -3,12 +3,12 @@ layout: page
 title: "The oldest fish specimen in the NCSM"
 teaser: "A snapshot of New England's maritime history"
 header:
-    image_fullwidth: "New_bedfordbanner.jpg"
+    image_fullwidth: "New_bedfordbanner2.jpg"
     caption: New Bedford, Massachusetts
     title: ""
 image:
     thumb:  nb_thumb.jpg
-    homepage: New_bedfordbanner.jpg
+    homepage: New_bedfordbanner2.jpg
 categories:
     - collection
 comments: true
