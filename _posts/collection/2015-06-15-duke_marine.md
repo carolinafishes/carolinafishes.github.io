@@ -14,7 +14,6 @@ categories:
     - collection
 comments: true
 show_meta: false
-permalink: "/duke_marine/"
 
 ---
  
