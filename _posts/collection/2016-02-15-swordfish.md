@@ -41,8 +41,9 @@ Swordfish are large, predatory fish found throughout the temperate parts of the 
 However, swordfish have a major weakness. Sometimes, they come to the surface by day to bask in the sun. This makes them an easy target for an opportunistic hunter with a harpoon. 
 <br>
 
-Swordfishing harpooning in the 1800's used remarkably similar gear to whaling. In Massachusetts, harpooning swordfish was an industry onto itself that was still active up through the 1960's, by then using a combination of boats in the water with sent out to spot fish from the air. Then the industry changed. Enter long-lining. 
+Swordfishing harpooning in the 1800's used remarkably similar gear to whaling. In Massachusetts, harpooning swordfish was an industry onto itself that was still active up through the 1960's, by then using a combination of boats in the water with sent out to spot fish from the air. Then the industry changed. 
 <br>
+<h3> Enter long-lining </h3>
 
 By spacing hooks every 50 feet on lines that stretch over 10 miles each, individual boats could harvest more fish in a night than harpooner's could in a season. Here is what the typical rig looks like courtesy of a NOAA report
 <br>
