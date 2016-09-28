@@ -54,12 +54,15 @@ Here is what the typical rig looks like courtesy of a NOAA report
 It is safe to say that long-lining is controversial. As anyone who has ever fished can tell you, you can't completely control what takes the hook. Sharks, turtles, and sea birds all have been caught as by-catch. The use of miles and miles of hooks is also really effective at catching lots and lots of swordfish. So just as whalers had over-harvested whales in the Atlantic by the 1890's, long-lining brought swordfish to the brink of being wiped out in the North Atlantic by the 1990's.   
 <br>
 
+<h3> The future of swordfish </h3>
+<br>
+
 We don't often hear of conservation success stories and marine fisheries together, but largely thanks to campaigns in the late 1990's like "give swordfish a break", and numerous ongoning management efforts, swordfish stocks are rebounding. And we appear to be going full circle in how we harvest them.
 <br>
 
 Rather than using long-lines, some fishermen now again use harpoons to harvest swordfish. It produces far less by catch and also allows for more control in numbers taken. In fact, the <a href="https://www.msc.org/track-a-fishery/fisheries-in-the-program/certified/north-west-atlantic/north-west-atlantic-canada-harpoon-swordfish/fishers-story">marine stewardship council has certified the Nova Scotia harpoon-based fishery as sustainable</a>. With consumer giants like <a href="http://www.wholefoodsmarket.com/blog/whole-story/harpoon-caught-swordfish-1">Whole Foods promoting this fishery</a>, we may well see a rise in harpoon based fishing replacing to fisheries using long-line and gill-net fisheries. 
 <br>
 
-We'll never know if this specimen was shot from a whaleboat on one of its long voyages or if it was shot from one of the many vessels harvesting these fishes from the Northern Atlantic. However, this specimen is a reminder of how our natural history collections are more than just repositories of biological materials for scientists. They document our interactions with the planet. Each specimen is a unique snapshot in time, part of the historical narrative that provides perspective for facing new challenges as we make our journey into the future. 
+We'll never know if this specimen was shot from a whaleboat on one of its long voyages or if it was shot from one of the many vessels harvesting these fishes from the Northern Atlantic. However, this specimen is a reminder of how our natural history collections are more than just repositories of biological materials for scientists. They document our interactions with the plants and animals of our planet. Each specimen is a unique snapshot in time, part of the historical narrative that provides perspective for facing new challenges as we make our journey into the future. 
 
 
