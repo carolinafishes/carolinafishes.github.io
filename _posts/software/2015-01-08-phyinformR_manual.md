@@ -341,28 +341,7 @@ heatmap.2(demo2, Colv=F,Rowv=F, scale='none')
 This heatmap shows us the probability of correct resolution for increasingly small internodes. This map can be generated for other loci and the internode distances can be zoomed in on using the space.maker.narrow function.
 <br>
 <br>
-<h3>6. Posterior Distributions</h3>
 
-Since branch length are rarely known with certainty, PhyR can also be used to calculate QIRP, QIPP, and QIHP values across a distribution of trees such as those obtained from Bayesian analyses. To do this, simply read in your trees or use the sample distribution of bichir trees from a study by Near et al. (2014) provided with the sample data.
-<br>
-First you will need to specify the quartet of interest. In the bichir dataset, we will look at the clade containing Polypterus congicus as this species was not placed with high support in the tree. We define the quartet as follows:
-<br>
-<pre>quart<- c(”Polypterus_congicus","Polypterus_bichir","Polypterus_ansorgii" ,"Polypterus_endlicheri” ) </pre>
-<br>The rest is easy. PhyR will go over your distribution of trees using the Su et al. (2015) calculations. See section 5 if you skipped it and the variable names seem enigmatic. To begin, simply run the function:
-<pre>
-post.su(a,b,c,d,e,f,Pi_T,Pi_C,Pi_A,Pi_G,
- rate_vector,quart,trees)->final
-</pre>
-<br> 
-Note that “trees” are the posterior trees you can read in using APES "read.tree" function with the example trees provided in the download package. 
-<br>This function returns a matrix of
-internodes and T values from the trees and their associated QIHP,QIPP, and QIRP values. Summarizing these can be done by using the following function:
-<br>
-<pre>plot.posterior(final, plot=”QIPs”)</pre>
-<br>This returns a density plot of the quartet internode resolution/polytomy/homoplasy probabilities and the internode lengths allowing for easy visualization
-<br>
-<br>Returns violin plots of the quartet internode resolution/polytomy/homoplasy probabilities and the internode lengths.
-<br>
 <h3> 8. References </h3>
 Dornburg, A., M. Friedman, and T. J. Near. 2015. Phylogenetic analysis of molecular and morphological data highlights uncertainty in the relationships of fossil and living species of Elopomorpha (Actinopterygii: Teleostei). Molecular Phylogenetics and Evolution 89:205-218.
 <br>
