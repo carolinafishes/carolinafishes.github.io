@@ -137,41 +137,51 @@ Need from Nick
 There are three quantities that phyloInformeR calculates with regard to a specified internode given a set of site rates: Quartet Internode Resolution Probability (QIRP, "Quirp"), Quartet Internode Homoplasy Probability (QIHP, "Quip"), and Quartet Internode Polytomy Probability (QIPP, "Quippy"). Townsend et al.1 introduced two ways to calculate these quantities: An analytical approximation and a Monte Carlo based solution. Both approaches depend on site rates and two user defined internode lengths, T (time from present) and t (internode)
 <br>
 <img class="b30" src="https://carolinafishes.github.io/images/phyinformR_1.png" alt="">
-The theory of Townsend et al.1 defines T and t based on a phylogenetic quartet with even branch lengths. Under this assumption, T is the time from the present to the ancestor of a taxon (red in the example above) and t, the focal internode length (grey in the example above). Later in this section we will discuss how to perform similar analyses allowing for uneven quartets 
+The theory of Townsend et al. defines T and t based on a phylogenetic quartet with even branch lengths. Under this assumption, T is the time from the present to the ancestor of a taxon (red in the example above) and t, the focal internode length (grey in the example above). Later in this section we will discuss how to perform similar analyses allowing for uneven quartets 
+<br>
 <br>
 Lets start by calculating approximate solutions for QIRP, QIHP, and QIPP
 <br>
-Using the previous illustration, you should have an idea of what T (time) and t (internode distance) you will want to use for your data. 
 <br>
-For state space, a binary morphological matrix could be assessed by setting the state space to 2 or amino acid (20 or ~5)1, or other types of data with differing numbers of characters. If you are using nucleotides, despite having a four character states, Simmons et al.3 have demonstrated the state space to be better modelled using 3 states, so we will go with that for the remainder of this guide. 
+Using the above illustration, you should have an idea of what T (time) and t (internode distance) you will want to use for your data. 
+<br>
+<br>
+For state space, a binary morphological matrix could be assessed by setting the state space to 2 or amino acid (20 or ~5)1, or other types of data with differing numbers of characters. If you are using nucleotides, despite having a four character states, Simmons et al. have demonstrated the state space to be better modelled using 3 states, so we will go with that for the remainder of this guide. 
 <br>
 Here is the implementation using T= 100 million year (Ma) and t= 0.5 Ma
 <br>
 <pre> Approximator(100,0.5, rr, 3) </pre>
-<br>
-This function gives us the approximate contribution of QIRP versus QIHP for resolution of an internode using the equations of Townsend et al. (2012). T=time, t=internode distance, rr=rate vector, and s=state space. For example:
-<code> Approximator(50,5, rr, 3) </code>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_6.png" alt="">
 <br>
-Alternatively you can use the monte carlo simulation approach to get the histogram, since this is time consuming based on the number of simulations, PhyR assumes you will do this on a cluster or while you are doing something else and records the output to file. The input looks similar, though now you specify a file name for the probabilities and an image file name histogram. Note that the two files must have different names!
-<code>#cluster.signal.noise(t, t0, rateVector, nsims,s, filename=”file1”,imagename=”file2.pdf”)</code>
+Alternatively you can use the Monte Carlo simulation approach1. Since the simulation is time consuming dependent on the number of simulations and the number of sites, we recommend that you do this on a cluster or while you are doing something else. The output is automatically recorded to file. The input looks similar to the approximation, though now you specify a file name for the probabilities and an image file name. Note that the two files must have different names! 
 <br>
-For large phylogenomic datasets these simulations become cumbersome very quickly so we can take advantage of R’s parallel processing abilities. To run the simulation in parallel use the following function (remember to set your cores appropriately using the registerDoParallel(cores=desired#(e.g., 8) function!)
-Also remember the file and image names CAN NOT be identical. The syntax is the same, the function name just changes slightly
-<pre>
-#parallel.cluster.signal.noise(t, t0, rateVector, nsims,s, filename=”file1”,imagename=”file2.pdf”) 
-parallel.cluster.signal.noise(50,5,rr,500,3,filename=”test”,imagename=”test.image”)
-</pre>
+You can also toggle the screen output on and off by setting image to either "TRUE" or "FALSE". The simulation can be run in parallel so 
+<br>
+Remember to set your cores appropriately using the registerDoParallel(cores=8) 
+<br>
+Here is the function using the same T and t and 5000 simulations
+<pre>parallel.cluster.signal.noise(100,0.5,rr,5000,3,filename="test",imagename="testimage",image="TRUE")</pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_7.png" alt="">
 <br>
 <h3> 5. Advanced resolution probability quantification </h3>
 <br>
-Calculations based on the equations of Townsend et al. (2012) make several assumptions including equal base frequency distributions in the alignment, equal branch lengths within the phylogenetic quartet, and a Jukes-Cantor model of sequence evolution. Su et al. (2014) introduced extensions to the equations of Townsend et al. (2012) that allow for uneven branch lengths, and any nucleotide substitution model or distribution of base frequencies.
+Calculations based on the equations of Townsend et al.(2012) make several assumptions 
 <br>
-PhyR makes use of external python script to enable these calculations, as R is not an ideal platform in which to simplify symbolic equations. In order to utilize the script Su_et_al.py, simply copy into the working directory you have set for your R session. Once this is in place, there are several input commands.
 <br>
-First specify your model settings based on a model selection program such as Modeltest (Posada and Crandall 1998), or Partitionfinder (Lanfear et al. 2012, Lanfear et al. 2014). Model settings are defined as follows and require changing for different nucleotide substitution models, base frequencies, and branch lengths. For example:
-
+1) equal base frequency distributions in the alignment 
+<br>
+<br>
+2) equal branch lengths within the phylogenetic quartet 
+<br>
+<br>
+3) a Jukes-Cantor model of sequence evolution
+<br>
+<br>
+Su et al. (2014) provided extensions to the equations of Townsend et al.(2012) that enable any nucleotide substitution model or distribution of base frequencies and Su and Townsend (2015) provided the theoretical framework for relaxing the assumption of even branch lengths 
+<br>
+To use these extension, first specify your model settings based on a model selection program such as Modeltest, or Partitionfinder6. Model settings are defined as follows and require changing for different nucleotide substitution models, base frequencies, and branch lengths 
+<br>
+For example:
 <pre>
 a=1 
 b=1 
@@ -185,24 +195,66 @@ Pi_A=0.25
 Pi_G=0.25
 internode<-c(62.4937, 62.4937, 62.4937, 62.4937, 8.9939)
 </pre>
-a through f are the relative rate parameters which are defined as follows: rCT = rTC = a; rAT = rTA = b; rTG = rGT = c; rCA = rAC = d; rCG = rGC = e; rAG = rGA = f. A table of relative rate parameter settings for different substitution models taken from Su et al. (2014) is attached for reference
+Pi_T through Pi_G are the empirical base frequency parameters 
+<br>
+<br>
+IMPORTANT | these must sum up to one | Pi_T + Pi_C + Pi_A + Pi_G = 1 
+<br>
+<br>
+a through f are the relative rate parameters which are defined as follows
+<br> 
+rCT = rTC = a; rAT = rTA = b; rTG = rGT = c; rCA = rAC = d; rCG = rGC = e; rAG = rGA = f 
+<br>
+ A table of relative rate parameter settings for different substitution models taken from Su et al. (2014) is attached for reference
 <img class="b30" src="https://carolinafishes.github.io/images/informR_8.png" alt="">
-Pi_T through Pi_G are the empirical base frequency parameters. IMPORTANT, these must sum up to one : Pi_T + Pi_C + Pi_A + Pi_G = 1!
+internode in the above code is as an object containing the numerical values of branch lengths of T1, T2, T3, T4, and the internode length t0 for the four - taxon tree in question
+<img class="b30" src="https://carolinafishes.github.io/images/phyinformR_1.png" alt="">
+IMPORTANT -T1 and T2 must belong to the same sister clade and T3 and T4 must belong to the other clade in the hypothesized topology of the four - taxon problem in question (see above)
 <br>
-Next the numerical values of branch lengths of T_ 1, T_ 2, T_ 3, T_ 4, and the internode length t_o, are entered into an object respectively, for the four - taxon tree problem in question.
-<img class="b30" src="https://carolinafishes.github.io/images/informR_9.png" alt="">
 <br>
-There is another IMPORTANT point here: T_ 1 and T_ 2 branches must belong to the same sister clade and T_ 3 and T_ 4 must belong to the other clade in the hypothesized correct/consensus topology of the four - taxon problem in question (see above).
+Quartet trees do not need to be rooted. All four subtending branches may vary
+<img class="b30" src="https://carolinafishes.github.io/images/phyinformR_1.png" alt="">
 <br>
-Once these are entered, simply calculate QIRP, QIHP, or QIPP values as follows:
+You can quantify QIHP, QIPP, and QIRP with
 <pre>
-allmodel.signal.noise (a,b,c,d,e,f,internode,Pi_T,Pi_C,Pi_A,Pi_G, rate_vector)
+allmodel.signal.noise (a,b,c,d,e,f,internode,Pi_T,Pi_C,Pi_A,Pi_G, rr)
 </pre>
-Using the rate vector from the sample data with the above input values, the output should look like this
-<img class="b30" src="https://carolinafishes.github.io/images/informR_10.png" alt="">
-The probabilities from left to write are the probability of contributing to an incorrect tree (0.168..;QIHP), the probability of providing no information for resolution (0.082.. ;QIPP), and the probability of providing information towards correct resolution (0.745.. ;QIRP).
-
+From left to right, the three values represent QIHP, QIPP, and QIRP
+<h3> Posterior Distributions </h3>
+Since branch length are rarely known with certainty, phyinformR can also be used to calculate QIRP, QIPP, and QIHP values across a distribution of trees such as those obtained from Bayesian analyses. 
 <br>
+For this example, we will read in use the sample distribution of bichir trees from a study by Near et al.8 that is provided with the release 
+<pre>
+Need from Nick>
+</pre>	
+First you will need to specify the quartet of interest. In the bichir dataset, we will look at the clade containing Polypterus congicus as this species was not placed with high support in the tree. We define the quartet as follows
+<pre>
+quart<- c("Polypterus_congicus","Polypterus_bichir","Polypterus_ansorgii" ,"Polypterus_endlicheri" ) 
+</pre>
+The remaining objects should be familiar, please review the above and preceeding page if the variable names seem enigmatic. To compute over a distribution of trees, run the function
+<pre>
+su.bayes(a,b,c,d,e,f,Pi_T,Pi_C,Pi_A,Pi_G,rate_vector,quart,trees)->final
+</pre>
+This function returns a matrix of internodes and T values from the trees and their associated QIHP,QIPP, and QIRP values 
+<pre>
+su.bayes runs in parallel 
+<br>
+Remember to set your cores appropriately using registerDoParallel(cores=8) 
+<br>
+su.bayes returns a matrix of internodes and T values from the trees and their associated QIHP, QIPP, and QIRP values. This matrix can be summarized using
+<pre>
+plot.posterior(final, plot="QIPs")   #or
+plot.posterior(final,plot="violin")
+</pre>
+Setting plot="qips" returns a density plot of the quartet internode resolution/polytomy/homoplasy probabilities and the internode lengths
+<img class="b30" src="http://carolinafishes.github.io/images/informR_14.png" alt="">
+Visualizing the density of calculations reveals a trend that is common in phylogenetic datasets. Both lack of information and increased probabilities of convergence misleading inference plague smaller internodes. In this plot we can see that the bulk of the posterior density is in the realm of low QIRP and high QIPP, so we can conclude that the lack of resolution of this clade by this locus is in part predicted to be driven by limited information content
+<br>
+<br>
+Plot = "violin" returns violin plots of the quartet internode resolution/polytomy/homoplasy probabilities and the internode lengths 
+<img class="b30" src="http://carolinafishes.github.io/images/informR_15.png" alt="">
+Visualizing the quantiles and kernel density of calculations allows for a additional perspective of how topological and branch length uncertainty influence quantifications. In this case we can see from the box plot of quantiles that QIHP is generally low, but that QIPP is centered near 0.45 with the majority of trees leading to a calculation between about 0.5 and 0.35. The kernel density gives us additional perspective, showcasing somewhat inverted distributions between QIRP and QIPP, with the majority of QIRP values being lower. 
+
 <h3>6. Advanced visualizations</h3>
 One way to assess signal across a tree is to plot the probability of a marker contributing to correct inference for each node simultaneously by providing a tree, rate vector, and state space as in Hwang et al. (2015):
 <pre> PlotTreeSI(sample.tree,rr,3) </pre>
@@ -309,11 +361,6 @@ internodes and T values from the trees and their associated QIHP,QIPP, and QIRP 
 <pre>plot.posterior(final, plot=”QIPs”)</pre>
 <br>This returns a density plot of the quartet internode resolution/polytomy/homoplasy probabilities and the internode lengths allowing for easy visualization
 <br>
-<img class="b30" src="http://carolinafishes.github.io/images/informR_14.png" alt="">
-<br>
-Alternatively:
-<pre>plot.posterior(final, plot=”violin”)</pre>
-<img class="b30" src="http://carolinafishes.github.io/images/informR_15.png" alt="">
 <br>Returns violin plots of the quartet internode resolution/polytomy/homoplasy probabilities and the internode lengths.
 <br>
 <h3> 8. References </h3>
