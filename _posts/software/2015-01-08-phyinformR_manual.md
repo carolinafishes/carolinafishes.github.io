@@ -147,7 +147,7 @@ For state space, a binary morphological matrix could be assessed by setting the 
 <br>
 Here is the implementation using T= 100 million year (Ma) and t= 0.5 Ma
 <br>
-<pre> Approximator(T,t, rr, s)->ll </pre>
+<pre> Approximator(100,0.5, rr, 3) </pre>
 <br>
 This function gives us the approximate contribution of QIRP versus QIHP for resolution of an internode using the equations of Townsend et al. (2012). T=time, t=internode distance, rr=rate vector, and s=state space. For example:
 <code> Approximator(50,5, rr, 3) </code>
