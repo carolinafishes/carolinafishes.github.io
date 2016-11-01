@@ -362,8 +362,7 @@ heatmap.2(demo2, Colv=F,Rowv=F, scale='none')
 This heatmap shows us the probability of correct resolution for increasingly small internodes. This map can be generated for other loci and the internode distances can be zoomed in on using the space.maker.narrow function.
 <br>
 <br>
-
-<h3> 8. References </h3>
+<h3> 7. References </h3>
 Dornburg, A., M. Friedman, and T. J. Near. 2015. Phylogenetic analysis of molecular and morphological data highlights uncertainty in the relationships of fossil and living species of Elopomorpha (Actinopterygii: Teleostei). Molecular Phylogenetics and Evolution 89:205-218.
 <br>
 <br>
