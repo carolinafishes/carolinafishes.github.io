@@ -76,7 +76,7 @@ Once you have site rates, use the the "c" function in R to format them. You are 
 For this walkthrough, we will be using the avian tree and site rates from Prum et al.3 that are distributed with phyinformR
 <br>
 <pre>
-as.matrix(prumetalrates)->rr 
+Need from Nick 
 informativeness.profile(rr,tree, codon="FALSE", values="off")
 </pre>
 <br> Easy! Now you can make phylogenetic informativeness profiles (Townsend 2007) that look like this
@@ -120,11 +120,34 @@ defined.multi.profile(rr,tree,Breaks, values="off")
 <img class="b30" src="https://carolinafishes.github.io/images/informR_5.png" alt="">
 In this example the two loci are very similar.
 <br>
-Using this logic we can break datasets into any size partition we wish to evaluate. Feel free to give this a whirl with the other included tree from one of our recent studies (Dornburg et al. 2015) that spans the evolutionary history of elopomorpha (eels, tarpons, bonefishes) to get comfortable. Simply replace sample.tree with sample.tree2. Now, how about visualizing signal or noise probabilities across a tree?
+Using this logic we can break datasets into any size partition we wish to evaluate. Feel free to give this a whirl with  other included trees from one of our recent studies (Dornburg et al. 2014; Dornburg et al. 2015) to get comfortable. Now, how about visualizing signal or noise probabilities across a tree?
 <br>
 <h3>4. Resolution probability quantification</h3>
-PhyR calculates quartet internode resolution probabilities (QIRP) and compares these to quartet internode homoplasy probabilities (QIHP) as well as quartet internode polytomy probabilities (QIPP) following the equations of Townsend et al. (2012).
-<code> Approximator(T,t, rr, s)->ll </code>
+Townsend et al. (2012) introduced theory that takes into the account the interplay of site rates, time, and internode length between species divergences to assess the predicted probabilty of data contributing to accurate topological resolution 
+<br>
+Use of this method requires three inputs: 
+<br>
+site rates, state space, and internode lengths
+<br>
+Site rates are covered above. Now we'll introduce the internode lengths and state spaces and will continue using the avian tree and site rates from Prum et al. (2015) that are distributed with phyinformR.In case these are not in memory already use
+<pre>
+Need from Nick
+</pre>
+<h3> Getting Started </h3>
+There are three quantities that phyloInformeR calculates with regard to a specified internode given a set of site rates: Quartet Internode Resolution Probability (QIRP, "Quirp"), Quartet Internode Homoplasy Probability (QIHP, "Quip"), and Quartet Internode Polytomy Probability (QIPP, "Quippy"). Townsend et al.1 introduced two ways to calculate these quantities: An analytical approximation and a Monte Carlo based solution. Both approaches depend on site rates and two user defined internode lengths, T (time from present) and t (internode)
+<br>
+<img class="b30" src="https://carolinafishes.github.io/images/phyinformR_1.png" alt="">
+The theory of Townsend et al.1 defines T and t based on a phylogenetic quartet with even branch lengths. Under this assumption, T is the time from the present to the ancestor of a taxon (red in the example above) and t, the focal internode length (grey in the example above). Later in this section we will discuss how to perform similar analyses allowing for uneven quartets 
+<br>
+Lets start by calculating approximate solutions for QIRP, QIHP, and QIPP
+<br>
+Using the previous illustration, you should have an idea of what T (time) and t (internode distance) you will want to use for your data. 
+<br>
+For state space, a binary morphological matrix could be assessed by setting the state space to 2 or amino acid (20 or ~5)1, or other types of data with differing numbers of characters. If you are using nucleotides, despite having a four character states, Simmons et al.3 have demonstrated the state space to be better modelled using 3 states, so we will go with that for the remainder of this guide. 
+<br>
+Here is the implementation using T= 100 million year (Ma) and t= 0.5 Ma
+<br>
+<pre> Approximator(T,t, rr, s)->ll </pre>
 <br>
 This function gives us the approximate contribution of QIRP versus QIHP for resolution of an internode using the equations of Townsend et al. (2012). T=time, t=internode distance, rr=rate vector, and s=state space. For example:
 <code> Approximator(50,5, rr, 3) </code>
