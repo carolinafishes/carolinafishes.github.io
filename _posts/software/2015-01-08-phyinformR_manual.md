@@ -18,11 +18,12 @@ comments: true
 show_meta: false    
 ---
 <h3>1. Installation</h3>
-phyinformR is easy to install. Simply install via CRAN or <a href='https://github.com/carolinafishes/phyinformR'>download the compressed R script from github</a> and intall it manually 
+phyinformR is easy to install. Simply install via CRAN or <a href='https://github.com/carolinafishes/phyinformR'>download the compressed R script from github</a> and install it manually 
 
-If you would like to load the sample data, you can also source this the same way. 
-<pre>source(“pathtoscript/PhyR_sample”)</pre>
-
+If you would like to load the sample data, you can... 
+<pre>(need final from nick...)
+</pre> 
+We will also be hosting more sample data through Zenodo archives and github to explore new features as we develop them, so check back often!
 <br>
 <h3>2. Dependencies</h3>
 phyinformR is built upon the efforts of several other R packages including:
@@ -54,23 +55,23 @@ setwd("~/Documents/phyinformR")
 
 
 <h3>3. Phylogenetic Informativeness Profiles</h3>
+<br> Townsend's phylogenetic informativeness profiles are a visual tool that enables assessment of the predicted utility of a given sequence for phylogenetic inference across a timescale of interest. Use of this method requires two inputs: site rates and a guide tree
 <br>
-<br> Townsend's phylogenetic informativeness profiles are a visual tool that enables assessment of the predicted utility of a given sequence for phylogenetic inference across a timescale of interest 
-<br>
-Use of this method requires two inputs: 
-site rates and a guide tree
 <br>
 Site rates can be obtained through a variety of software applications such as hyphy, rate4site, or DNArates. The phydesign web interface2 makes quantifying site rates easy: 
 <br>
+<br>
 1) Navigate to http://phydesign.townsend.yale.edu/
+<br>
 2) Upload an alignment and ultrametric tree 
+<br>
 3) Choose your program for estimating rates from a dropdown 
+<br>
 4) Wait for the email that your results are ready 
 <br>
 Once you have site rates, use the the "c" function in R to format them. You are ready to explore your data
 <pre> mysiterates<-c(0.00034, 0.005678, 0.0,..., 0.008967)
 </pre>
-<br>
 <h3> Getting Started </h3>
 For this walkthrough, we will be using the avian tree and site rates from Prum et al.3 that are distributed with phyinformR
 <br>
@@ -104,15 +105,17 @@ cbind(lower,upper)->breaks
 phyinformR has a function allowing profiles to be broken along any point in the rate vector, to assess changes in phylogenetic informativeness associated with thresholding the dataset at that rate
 <code>multi.profile(rr,tree, breaks)</code>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_4.png" alt="">
-
-Part1 represents the slower site rates, and as expected the decay in phylogenetic informativeness is much lower across the tree. Conversely, we can see the faster sites in part two are informative for recent divergences, yet exhibit a rapid decline in informative site patterns as we move to deeper portions of the tree.
+Partition 1 represents the slower site rates. As expected, the decay in phylogenetic informativeness for partition 1 is much lower across the tree than for partition 2. Conversely, we can see the faster sites in part two are informative for recent divergences, yet exhibit a rapid decline in informative site patterns as we move to deeper portions of the tree.
 <br>
-The above is not the usual way that nucleotide sequence data is explored. Instead, it is more common to have character sets based loci you wish to evaluate. In this case simply use the same logic as above to define your loci and use defined.multi.profile as follows. In this example we will have locus 1 span sites 1-499 in the alignment and locus2 span sites 500-979.
+The above examples serve to illustrate what phyinformR does, but this approach is not common practice. Instead, it is more common to work with character sets partitioned by loci you wish to evaluate. In this case, simply use the same approach as above to define your loci and use defined.multi.profile 
+<br>
+In this example we will compare locus 1, that spans sites 1-1594 in the alignment and locus2, that spans sites 1595-2787.
+
 <pre>
-Lower<-c(0,500)
-Upper<-c(499,979) 
+Lower<-c(1,1594)
+Upper<-c(1595,2787) 
 Breaks<-cbind(Lower,Upper) 
-defined.multi.profile(rr,sample.tree,Breaks)
+defined.multi.profile(rr,tree,Breaks, values="off")
 </pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_5.png" alt="">
 In this example the two loci are very similar.
