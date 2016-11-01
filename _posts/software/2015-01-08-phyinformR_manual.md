@@ -256,29 +256,49 @@ Plot = "violin" returns violin plots of the quartet internode resolution/polytom
 Visualizing the quantiles and kernel density of calculations allows for a additional perspective of how topological and branch length uncertainty influence quantifications. In this case we can see from the box plot of quantiles that QIHP is generally low, but that QIPP is centered near 0.45 with the majority of trees leading to a calculation between about 0.5 and 0.35. The kernel density gives us additional perspective, showcasing somewhat inverted distributions between QIRP and QIPP, with the majority of QIRP values being lower. 
 
 <h3>6. Advanced visualizations</h3>
-One way to assess signal across a tree is to plot the probability of a marker contributing to correct inference for each node simultaneously by providing a tree, rate vector, and state space as in Hwang et al. (2015):
-<pre> PlotTreeSI(sample.tree,rr,3) </pre>
+The quantitative framework of quartet internode calculations lends itself wonderfully to the development of new ways to visualize information in a given dataset. This section highlights graphics from a few recent publications 
+<br>
+<br>
+Hwang et al. 2015 depicted QIRP across an entire tree by plotting the QIRP of a marker for each node simultaneously. This plot can be drawn by providing a tree, rate vector, and state space as in section 3. For this example, we will use a single tree from Near et al. 2014 along with site rates from the same study
+<pre>
+	Need from Nick
+
+trees[[1]]->bichir_tree
+PlotTreeSI(sample.tree,rr,3) </pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_11.png" alt="">
 Here the branch lengths (x axis) and the blue lines (QIRP, y axis) match up and we can see that signal is pretty high for many nodes. However, some of the smaller internodes are predicted to be impacted by homoplasy or contain little information. We can explore this further by looking at the rate distribution. First we will get the rates from a partition we defined in the the PI profile section:
-<pre>get.ind.sites(rr,breaks)->ES
-ES[,2]->part
-as.matrix(part)->partx
-partx[partx%in% Upper[1]:Upper[2]]->part.check 
-as.numeric(part.check)->part.check
-rr->rates
-rates[part.check]->part.current
-as.matrix(part.current)->parts
+<br>
+<br>
+Visualizing Phylogenetic Experimental Design
+<br>
+Say we are interested choosing a new marker to sequence for bichirs. 
+<br>
+We can compare the predicted utility of rag1 to candidate markers using this plotting method. In this example we will compare rag1 with the first locus from Prum et al. 2015
+We'll start by isolating the locus
+
+<pre>as.matrix(prumetalrates[1:1594])->candidate.locus
 </pre>
-Now plot!
-<pre>Plot.Another.TreeSI(tree,parts,3,col=”green”,type=3)</pre>
+Now we can compare to the above plot as follows
+<pre> Plot.Another.TreeSI(bichir_tree, candidate.locus,3,col="red",type=3)</pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_12.png" alt="">
-An alternative to visualization of multiple loci or dataset partitions while assessing uncertainty in the true internode length is to create heatmaps similar to those in Prum et al. (2015) that evaluate QIRP at a given node age across a range of internodes use the following commands. Note that here we are using the files from Prum et al. (2015), which are <a href='https://zenodo.org/record/30269?ln=en#.VfJJ-GRViko'> available on Zenodo (DOI 10.5281). </a>
-We begin by assembling the rates of all loci, and convert those into matrix form
+In the above plot QIRP is on the Y axis and time is on the X axis. Blue lines correspond to the QIRP values of the tree internodes for rag1 while red lines correspond to our candidate locus. This visualization reveals that the candidate marker is predicted to be of higher utility for resolving every node in the bichir tree. This sort of visualization can be a great heuristic for choosing probe sets or primers for cost and time effective sequencing of markers
+
+This form of visualization also displays overall trends of markers over time, and can help disentangle sources of error in tree inference. However, the above method requires a fixed internode length. Prum et al. 2015 provided an alternative visualization that accommodates for uncertainty in internode length  
+
+Note that here we are using the files from Prum et al. (2015), which are <a href='https://zenodo.org/record/30269?ln=en#.VfJJ-GRViko'> available on Zenodo (DOI 10.5281)</a>
+though you could also substitute site rates from your own markers here. 
+<br>
+Download the above files and open prumetal_heatmap_rosetta.r that is hosted on the github repository with phyinformR
+<br>
+Navigate to the "Phylogenetic_Informativeness" part of the downloaded directory 
+<br>
+Change the setwd() function at the top of the rosetta file to the directory path, save, then source
 <pre>
-allrates<- c(L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12,L21,L22,L24,L27,L28,L30,L31,L32,L34,L35,L3 6,L37,L38,L39,L41,L42,L43,L44,L48,L49,L50,L51,L53,L54,L57,L58,L59,L61,L62,L63,L64,L 65,L67,L72,L73,L74,L75,L76,L77,L78,L79,L80,L81,L82,L85,L86,L87,L88,L89,L91,L94,L95, L98,L99,L100,L102,L103,L104,L105,L107,L108,L110,L111,L113,L115,L116,L118,L119,L12 0,L121,L122,L125,L126,L127,L128,L129,L130,L131,L133,L134,L135,L136,L137,L141,L142, L143,L145,L146,L147,L148,L149,L150,L151,L152,L153,L154,L155,L157,L158,L159,L161,L 162,L163,L165,L169,L170,L171,L174,L175,L176,L177,L178,L180,L181,L182,L183,L184,L1 86,L187,L188,L189,L190,L192,L193,L194,L195,L196,L197,L201,L202,L203,L204,L205,L209,L207,L208,L209,L210,L211,L213,L214,L215,L216,L217,L219,L221,L222,L223,L224,L225, L226,L228,L229,L230,L231,L232,L233,L234,L235,L237,L239,L240,L241,L242,L243,L244,L 245,L246,L247,L248,L249,L250,L251,L252,L253,L255,L256,L257,L258,L260,L261,L262,L2 64,L265,L266,L267,L269,L270,L271,L272,L275,L276,L277,L279,L280,L281,L282,L288,L28 9,L290,L292,L293,L294,L295,L296,L297,L298,L301,L302,L303,L305,L306,L307,L310,L311, L312,L314,L315,L316,L317,L318,L319,L320,L321,L322,L325,L327,L328,L329,L330,L331,L 333,L334,L335,L336,L337,L338,L339,L340,L341,L342,L343,L344,L346,L347,L348,L349)
-as.matrix(allrates)->allrates
+setwd("~/yourpath/Zenodo/Phylogenetic_Informativeness")
+source("~/yourpathtofile/prumetal_heatmap_rosetta.r")
 </pre>
-We then sort the remaining loci by length, this lets us ask whether size of the locus is associated with increased information content. We are going to visualize a random subset of loci for the sake of keeping the tutorial manageable.
+This file translates the rates into locus specific rate matrices for you to explore. For this tutorial we will sort some loci by length to ask whether size of the locus is associated with increased information content. We are going to visualize a random subset of loci for the sake of keeping the tutorial manageable, though feel free to explore the full data further!
+
 <pre>
 length(L216)->leL216
 length(L182)->leL182
@@ -301,9 +321,10 @@ length(L80)->leL80
 length(L28)->leL28 c(leL216,leL182,leL149,leL213,leL184,leL223,leL305,leL8,leL203,leL95,leL41,leL295,leL107,
 leL163,leL21,leL2,leL325,leL80,leL28)->ll names(ll)<-
 c("leL216","leL182","leL149","leL213","leL184","leL223","leL305","leL8","leL203","leL95",
-"leL41","leL295","leL107","leL163","leL21","leL2","leL325","leL80","leL28") sort(ll)
+"leL41","leL295","leL107","leL163","leL21","leL2","leL325","leL80","leL28") 
+sort(ll)
 </pre>
-The guide tree from Prum et al. (2015) used relative rates, so we are going to look at resolving Neoaves with a crown at .30. We begin by calculating the signal for different internode lengths. Note that the loci were already formatted as matrices in the Prum et al. (2015) script.
+The guide tree from Prum et al. 2015 used relative rates (root height=1), so we are going to look at resolving Neoaves with a crown at .30. We begin by calculating the signal for different internode lengths. Note that the loci were already formatted as matrices in the Prum et al. 2015 script.
 <pre>
 space.maker(allrates,.30,3)->a1 
 space.maker(L213,.30,3)->a2 
@@ -349,6 +370,12 @@ Dornburg, A., M. Friedman, and T. J. Near. 2015. Phylogenetic analysis of molecu
 Dornburg, A., A. J. Moore, J. M. Beaulieu, R. I. Eytan, and T. J. Near. 2014. The impact of shifts in marine biodiversity hotspots on patterns of range evolution: evidence from the Holocentridae (squirrelfishes and soldierfishes). Evolution 69:146-161.
 <br>
 <br>
+Graybeal, A. “The Phylogenetic Utility of Cytochrome B: Lessons from Bufonid Frogs” Molecular phylogenetics and evolution 1993;: 256–269. 
+<br>
+<br>
+Harmon LJ, Weir JT, Brock CD, Glor RE, Challenger W. GEIGER: investigating evolutionary radiations. Bioinformatics. 2008;24:129–31.
+<br>
+<br>
 Hwang, J., Q. Zhao, Z. L. Yang, Z. Wang, and J. P. Townsend. 2015. Solving the ecological puzzle of mycorrhizal associations using data from annotated collections and environmental samples–an example of saddle fungi. Environmental microbiology reports 7:658-667.
 <br>
 <br>
@@ -358,7 +385,16 @@ Lanfear, R., B. Calcott, S. Y. W. Ho, and S. Guindon. 2012. PartitionFinder: com
 Lanfear, R., B. Calcott, D. Kainer, C. Mayer, and A. Stamatakis. 2014. Selecting optimal partitioning schemes for phylogenomic datasets. BMC Evolutionary Biology 14:82.
 <br>
 <br>
+McCallum E, Weston S. Parallel R. “O’Reilly Media, Inc.”; 2011.
+<br>
+<br>
 Near, T. J., A. Dornburg, M. Tokita, D. Suzuki, M. C. Brandley, and M. Friedman. 2014. Boom and bust: ancient and recent diversification in bichirs (Polypteridae: Actinopterygii), a relictual lineage of ray-finned fishes. Evolution 68:1014-1026.
+<br>
+<br>
+Neuwirth,E.RColorBrewer: ColorBrewer Palettes. 2014. R package version 1.1-2. https://CRAN.R-project.org/package=RColorBrewer
+<br>
+<br>
+Paradis E, Claude J, Strimmer K. APE: Analyses of Phylogenetics and Evolution in R language. Bioinformatics. 2004;20:289–90.
 <br>
 <br>
 Posada, D., and K. A. Crandall. 1998. Modeltest: testing the model of DNA substitution. Bioinformatics 14:817-818.
@@ -367,11 +403,24 @@ Posada, D., and K. A. Crandall. 1998. Modeltest: testing the model of DNA substi
 Prum, R. O., J. S. Berv, A. Dornburg, D. J. Field, J. P. Townsend, E. Moriarty Lemmon, and A. R. Lemmon. Accepted. A Comprehensive Phylogeny of Birds (Aves) using Targeted Next Generation DNA Sequencing. Nature.
 <br>
 <br>
+Revell LJ. phytools: an R package for phylogenetic comparative biology (and other things). Methods Ecol. Evol. 2011;3:217–23
+<br>
+<br>
 Su, Z., Z. Wang, F. Lopez-Giraldez, and J. P. Townsend. 2014. The impact of incorporating molecular evolutionary model into predictions of phylogenetic signal and noise. Phylogenetics, Phylogenomics, and Systematics 2:11.
 <br>
 <br>
+Su Z, Townsend JP. Utility of characters evolving at diverse rates of evolution to resolve quartet trees with unequal branch lengths: analytical predictions of long-branch effects. BMC Evol. Biol. 2015;15:86.
 Townsend, J. P. 2007. Profiling phylogenetic informativeness. Systematic Biology 56:222-231. 
 <br>
 <br>
 Townsend, J. P., Z. Su, and Y. I. Tekle. 2012. Phylogenetic signal and noise: predicting the
 power of a data set to resolve phylogeny. Systematic Biology 61:835-849.
+<br>
+<br>
+Warnes,G.R., Bolker, B., Bonebakker, L., Gentleman, R., Liaw, W.H.A., Lumley, T., Maechler, M., Magnusson, A., Moeller, S., Schwartz, B., Venables B., gplots: Various R Programming Tools for Plotting Data. 2016. R package version 3.0.1. https://CRAN.R-project.org/package=gplots.
+<br>
+<br>
+Wickham H. ggplot2: Elegant Graphics for Data Analysis. Springer; 2016.
+<br>
+<br>
+Yang, Z. Fair-balance paradox, star-tree paradox, and Bayesian phylogenetics. Molecular biology and evolution 2007; 24(8), pp.1639-1655.
