@@ -1,12 +1,12 @@
 ---
 layout: page
-title:  "Walking Through PhyR"
+title:  "Walking Through phyinformR"
 
 teaser: "Learn how to conduct phylogenetic informativeness analyses in R!"
 categories:
     - software
 tags:
-    - software PhyR
+    - software phyinformR
     
 image:
    thumb: "informer_thumb.jpg"
@@ -18,68 +18,91 @@ comments: true
 show_meta: false    
 ---
 <h3>1. Installation</h3>
-PhyR is easy to install. Simply <a href='https://github.com/carolinafishes/PhyR'>download the compressed R script from github</a> and source it: 
-<pre>source(“pathtoscript/PhyR”)</pre>
+phyinformR is easy to install. Simply install via CRAN or <a href='https://github.com/carolinafishes/phyinformR'>download the compressed R script from github</a> and intall it manually 
+
 If you would like to load the sample data, you can also source this the same way. 
 <pre>source(“pathtoscript/PhyR_sample”)</pre>
-If you are using the equations from Su et al. (2014), you will need to ensure that you have set your working directory and placed the associated python script “Su_et_al.py” into this directory. 
-<pre>setwd(“pathto/whereyou/are/working”)</pre>
+
 <br>
 <h3>2. Dependencies</h3>
-PhyR uses several other R packages. Install then load these.
+phyinformR is built upon the efforts of several other R packages including:
 <pre>
-library (phytools)
-library(splines)
-library(gplots)
-library(RColorBrewer)
-library(foreach)
-library(iterators)
-library(geiger)
-library(doParallel)
-library(gridExtra)
-#set the number of cores if you are working in parallel registerDoParallel(cores=8)
+phytools
+splines
+gplots
+RColorBrewer
+foreach
+iterators
+geiger
+doParallel
+gridExtra
+hexbin
+ggplot2
+PBSmodelling
+</pre>
+
+Several functions in phyinformR use parallel processing. Enable this via
+<pre>
+#set the number of cores if you are working in parallel 
+registerDoParallel(cores=8)
 </pre>
 
 now set your working directory to save files
 <pre>
-setwd("~/Documents/PhyR")
+setwd("~/Documents/phyinformR")
 </pre>
-If you are using the Su_et_al.py script, you will need to install numpy, scipy, and sympy. This can be done easily using Anaconda by <a href='https://store.continuum.io/cshop/anaconda/'> Continuum Analytics</a> (free at the time of this writing).
+
 
 <h3>3. Phylogenetic Informativeness Profiles</h3>
 <br>
-<br> We are using the squirrelfish tree from Dornburg et al. (2014) in the sample file, in conjunction with the example rate vector from the Mathematica notebook of Su et al. (2014) in the sample file.
+<br> Townsend's phylogenetic informativeness profiles are a visual tool that enables assessment of the predicted utility of a given sequence for phylogenetic inference across a timescale of interest 
 <br>
-For your own data paste or read in rates from hyphy or other rate estimation software (e.g., rates<-c(0,3.4,5,6.7). Likewise read in your tree using ape’s read.tree function.
-convert your rates into a matrix, PhyR requires this format
+Use of this method requires two inputs: 
+site rates and a guide tree
+<br>
+Site rates can be obtained through a variety of software applications such as hyphy, rate4site, or DNArates. The phydesign web interface2 makes quantifying site rates easy: 
+<br>
+1) Navigate to http://phydesign.townsend.yale.edu/
+2) Upload an alignment and ultrametric tree 
+3) Choose your program for estimating rates from a dropdown 
+4) Wait for the email that your results are ready 
+<br>
+Once you have site rates, use the the "c" function in R to format them. You are ready to explore your data
+<pre> mysiterates<-c(0.00034, 0.005678, 0.0,..., 0.008967)
+</pre>
+<br>
+<h3> Getting Started </h3>
+For this walkthrough, we will be using the avian tree and site rates from Prum et al.3 that are distributed with phyinformR
 <br>
 <pre>
-as.matrix(sample.rates)->rr 
-informativeness.profile(rr,sample.tree, codon=”FALSE”)
+as.matrix(prumetalrates)->rr 
+informativeness.profile(rr,tree, codon="FALSE", values="off")
 </pre>
 <br> Easy! Now you can make phylogenetic informativeness profiles (Townsend 2007) that look like this
 <img class="b30" src="https://carolinafishes.github.io/images/informR_1.png" alt="">
-
-Just to contrast, we can take another sample tree that is older
-If your alignment is in reading frame simply modify the function to get profiles by codon position as follows
+To obtain PI profiles for each codon position, you can toggle codon="TRUE" if you are in reading frame
 <pre>
 informativeness.profile(rr,tree, codon=”TRUE”)
 </pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_2.png" alt="">
+If you would like phyinformR to output of branching times and PI values, simply switch the values="on"
 
-<br>The data can be explored in multiple ways. For example, why not try dividing the data based on site rates? To begin, we can simply visualize the rates.
+<h3> Exploring Data with PI Profiles </h3>
+<br>Let's do something different and partition the data by site rates. First we will view the rates:
 <pre> hist(rr) </pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_3.png" alt="">
 
-ok, lets arbitrarily say we want to retain rates below “0.005”
+We can see a bit of a tail going out, lets see what happens when we partition the data by rates above and below (0.003). We'll start by creating some partitions
+
+By defining rate based breaks in our data, we can see the PI of "fast" versus "slow" sites
 <pre>
-lower<-c(0,0.005) 
-upper<-c(0.00501,10) 
+lower<-c(0,0.003) 
+upper<-c(0.003000001,10) 
 cbind(lower,upper)->breaks
 </pre>
 <br>
-PhyR has a function allowing profiles to be broken along any point in the rate vector to assess changes in phylogenetic informativeness
-<code>multi.profile(rr,sample.tree, breaks)</code>
+phyinformR has a function allowing profiles to be broken along any point in the rate vector, to assess changes in phylogenetic informativeness associated with thresholding the dataset at that rate
+<code>multi.profile(rr,tree, breaks)</code>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_4.png" alt="">
 
 Part1 represents the slower site rates, and as expected the decay in phylogenetic informativeness is much lower across the tree. Conversely, we can see the faster sites in part two are informative for recent divergences, yet exhibit a rapid decline in informative site patterns as we move to deeper portions of the tree.
