@@ -17,6 +17,7 @@ header:
 comments: true
 show_meta: false    
 ---
+<br>
 This is a two part tutorial. Part 1 focuses on the generation of PI profiles
 <br>
 <a href='https://carolinafishes.github.io/software/phyinformR_manual2/'>Part two focuses on advanced features, visualizations, and calculations of quartet resolution probabilities</a>

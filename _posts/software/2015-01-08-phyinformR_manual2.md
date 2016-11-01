@@ -2,7 +2,7 @@
 layout: page
 title:  "Walking Through phyinformR"
 
-teaser: "Learn how to conduct phylogenetic informativeness analyses in R!"
+teaser: "Learn how to conduct phylogenetic informativeness analyses in R, part 2"
 categories:
     - software
 tags:
@@ -17,9 +17,9 @@ header:
 comments: true
 show_meta: false    
 ---
-This is a two part tutorial. <a href='https://carolinafishes.github.io/software/phyinformR_manual/'>Part Part 1 focuses on the generation of PI profiles</a>
+This is a two part tutorial. <a href='https://carolinafishes.github.io/software/phyinformR_manual/'>Part 1 focuses on the generation of PI profiles</a>
 <br>
-This part two focuses on advanced features, visualizations, and calculations of quartet resolution probabilities 
+This part focuses on advanced features, visualizations, and calculations of quartet resolution probabilities 
 
 <h3>4. Resolution probability quantification</h3>
 Townsend et al. (2012) introduced theory that takes into the account the interplay of site rates, time, and internode length between species divergences to assess the predicted probabilty of data contributing to accurate topological resolution 
@@ -257,6 +257,7 @@ seq(by.this,0.30-0.0001,by=by.this)->lilts
 colnames(demo2)<-lilts
 heatmap.2(demo2, Colv=F,Rowv=F, scale='none') 
 </pre>
+<br>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_13.png" alt=""> 
 <br> 
 This heatmap shows us the probability of correct resolution for increasingly small internodes. This map can be generated for other loci and the internode distances can be zoomed in on using the space.maker.narrow function.

@@ -24,4 +24,11 @@ We introduce phyinformR, an open source software package that facilitates rapid 
 <a href='https://github.com/carolinafishes/phyinformR'> PhyR can be downloaded here or directly from CRAN and requires R </a> 
 <br>
 <br> 
-<br> A walthrough of PhyR is available <a href='http://carolinafishes.github.io/software/phyinformR_manual'>here</a>
+<br> A walthrough of phyinformR is available in two parts:
+<br>
+<br>
+<a href='http://carolinafishes.github.io/software/phyinformR_manual/'>Part1: Installation, dependencies, and Phylogenetic informativeness profiles</a>
+<br>
+<br>
+<a href='http://carolinafishes.github.io/software/phyinformR_manual2/'>Part2: Quartet resolution probabilities, advanced features, and visualizations</a>
+
