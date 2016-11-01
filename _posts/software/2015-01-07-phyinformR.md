@@ -27,7 +27,7 @@ We introduce phyinformR, an open source software package that facilitates rapid 
 <br> A walthrough of phyinformR is available in two parts:
 <br>
 <br>
-<a href='http://carolinafishes.github.io/software/phyinformR_manual/'>Part1: Installation, dependencies, and Phylogenetic informativeness profiles</a>
+<a href='http://carolinafishes.github.io/software/phyinformR_manual/'>Part1: Installation, dependencies, and phylogenetic informativeness profiles</a>
 <br>
 <br>
 <a href='http://carolinafishes.github.io/software/phyinformR_manual2/'>Part2: Quartet resolution probabilities, advanced features, and visualizations</a>

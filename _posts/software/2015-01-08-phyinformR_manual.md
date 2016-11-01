@@ -2,7 +2,7 @@
 layout: page
 title:  "Walking Through phyinformR"
 
-teaser: "Learn how to conduct phylogenetic informativeness analyses in R!"
+teaser: "Learn how to conduct phylogenetic informativeness analyses in R, part 1"
 categories:
     - software
 tags:

@@ -11,9 +11,9 @@ tags:
 image:
    thumb: "informer_thumb.jpg"
 header:
-    image_fullwidth: "software_stream.jpg"
+    image_fullwidth: "texas_banner.jpg"
     title: ""
-    caption: Hells Canyon, ID
+    caption: Guadalupe National Park, TX
 comments: true
 show_meta: false    
 ---
