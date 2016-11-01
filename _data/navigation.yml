@@ -24,8 +24,8 @@
   url: "/software/"
   side: left
   dropdown:
-  - title: PhyR
-    url: "/software/PhyR/"
+  - title: phyinformR
+    url: "/software/phyinformR/"
   - title: "R Functions"
     url: "/MiscR/"
  

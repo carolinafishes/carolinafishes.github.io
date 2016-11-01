@@ -19,7 +19,7 @@ permalink: "/software/"
 ---
 As scientists we constantly need to modify or develop software in order to better analyze our data. As our team develops new tools or tweaks existing programs to do useful things, we will be updating this section to contribute to the growing body of bioinformatic software. 
 
-<br><a href="/software/PhyR/">PhyR</a>
+<br><a href="/software/phyinformR/">phyinformR</a>
 
 <ul>
     {% for post in site.categories.software %}
