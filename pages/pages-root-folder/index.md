@@ -15,10 +15,10 @@ widget1:
   image: Hiding_fish2.jpg
   text: 'With over 30,000 species, it is an understatement to say that there is much to discover about the diversity of fishes. Come learn about our ongoing research projects and discoveries here!'
 widget2:
-  title: "PhyR"
-  url: 'https://carolinafishes.github.io/software/PhyR/'
+  title: "phyinformR"
+  url: 'https://carolinafishes.github.io/software/phyinformR/'
   image: lizard_fish.jpg
-  text: 'We have a beta version of our new R package PhyR available for testing. Check out the manual and code here!'
+  text: 'We have a beta version of our new R package phyinformR available for testing. Check out the manual and code here!'
 widget3:
   title: "Reprints"
   url: 'https://carolinafishes.github.io/Pubs/reprints/'
