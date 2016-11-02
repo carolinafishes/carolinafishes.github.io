@@ -30,7 +30,9 @@ site rates, state space, and internode lengths
 <br>
 Site rates are covered above. Now we'll introduce the internode lengths and state spaces and will continue using the avian tree and site rates from Prum et al. (2015) that are distributed with phyinformR.In case these are not in memory already use
 <pre>
-Need from Nick
+library(ape) 
+read.tree(system.file("extdata","Prumetal_timetree. phy",package="PhyInformR"))->tree 
+as.matrix(prumetalrates)->rr
 </pre>
 <h3> Getting Started </h3>
 There are three quantities that phyloInformeR calculates with regard to a specified internode given a set of site rates: Quartet Internode Resolution Probability (QIRP, "Quirp"), Quartet Internode Homoplasy Probability (QIHP, "Quip"), and Quartet Internode Polytomy Probability (QIPP, "Quippy"). Townsend et al.1 introduced two ways to calculate these quantities: An analytical approximation and a Monte Carlo based solution. Both approaches depend on site rates and two user defined internode lengths, T (time from present) and t (internode)
