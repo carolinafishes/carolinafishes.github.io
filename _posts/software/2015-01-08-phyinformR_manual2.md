@@ -231,9 +231,10 @@ length(L21)->leL21
 length(L2)->leL2
 length(L325)->leL325
 length(L80)->leL80
-length(L28)->leL28 c(leL216,leL182,leL149,leL213,leL184,leL223,leL305,leL8,leL203,leL95,leL41,leL295,leL107,
-leL163,leL21,leL2,leL325,leL80,leL28)->ll names(ll)<-
-c("leL216","leL182","leL149","leL213","leL184","leL223","leL305","leL8","leL203","leL95",
+length(L28)->leL28 
+c(leL216,leL182,leL149,leL213,leL184,leL223,leL305,leL8,leL203,leL95,leL41,leL295,leL107,
+leL163,leL21,leL2,leL325,leL80,leL28)->ll 
+names(ll)<-c("leL216","leL182","leL149","leL213","leL184","leL223","leL305","leL8","leL203","leL95",
 "leL41","leL295","leL107","leL163","leL21","leL2","leL325","leL80","leL28") 
 sort(ll)
 </pre>
@@ -269,8 +270,8 @@ eL216","leL28", "leL184","leL8","leL95","leL80","leL163","leL21","leL305","leL22
 .30/20->by.this 
 seq(by.this,0.30-0.0001,by=by.this)->lilts
 colnames(demo2)<-lilts
-heatmap.2(demo2, Colv=F,Rowv=F, scale='none') 
-</pre>
+heatmap.2(demo2, Colv=F,Rowv=F, scale='none') </pre>
+<br>
 <br>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_13.png" alt=""> 
 <br> 
