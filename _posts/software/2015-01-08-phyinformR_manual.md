@@ -23,15 +23,26 @@ This is a two part tutorial. Part 1 focuses on the generation of PI profiles
 <a href='https://carolinafishes.github.io/software/phyinformR_manual2/'>Part two focuses on advanced features, visualizations, and calculations of quartet resolution probabilities</a>
 
 <h3>1. Installation</h3>
-phyinformR is easy to install. Simply install via CRAN or <a href='https://github.com/carolinafishes/phyinformR'>download the compressed R script from github</a> and install it manually 
+PhyInformR is easy to install. Simply install via CRAN or <a href='https://github.com/carolinafishes/PhyInformR'>download the compressed R script from github</a> and install it manually 
 
-If you would like to load the sample data, you can... 
-<pre>(need final from nick...)
+<pre>
+##cran install
+install.packages("PhyInformR")
+library(PhyInformR)
+</pre>
+<br>
+To install from github
+<pre>
+library(devtools) 
+install_github("carolinafishes/PhyInformR")
+library(PhyInformR)
 </pre> 
+Once you load PhyInformR, set the number of cores at the start of your session to enable later parallel processing if desired
+<br>
 We will also be hosting more sample data through Zenodo archives and github to explore new features as we develop them, so check back often!
 <br>
 <h3>2. Dependencies</h3>
-phyinformR is built upon the efforts of several other R packages including:
+PhyInformR is built upon the efforts of several other R packages including:
 <pre>
 phytools
 splines
@@ -47,8 +58,9 @@ ggplot2
 PBSmodelling
 </pre>
 
-Several functions in phyinformR use parallel processing. Enable this via
+Several functions in PhyInformR use parallel processing. Enable this via
 <pre>
+library(doParallel) 
 #set the number of cores if you are working in parallel 
 registerDoParallel(cores=8)
 </pre>
@@ -78,10 +90,11 @@ Once you have site rates, use the the "c" function in R to format them. You are 
 <pre> mysiterates<-c(0.00034, 0.005678, 0.0,..., 0.008967)
 </pre>
 <h3> Getting Started </h3>
-For this walkthrough, we will be using the avian tree and site rates from Prum et al.3 that are distributed with phyinformR
+For this walkthrough, we will be using the avian tree and site rates from Prum et al.3 that are distributed with PhyInformR
 <br>
 <pre>
-Need from Nick 
+read.tree(system.file("extdata","Prumetal_timetree.phy",package="PhyInformR"))->tree
+as.matrix(prumetalrates)->rr
 informativeness.profile(rr,tree, codon="FALSE", values="off")
 </pre>
 <br> Easy! Now you can make phylogenetic informativeness profiles (Townsend 2007) that look like this
