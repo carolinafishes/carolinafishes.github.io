@@ -60,8 +60,11 @@ You can also toggle the screen output on and off by setting image to either "TRU
 <br>
 Remember to set your cores appropriately using the registerDoParallel(cores=8) 
 <br>
-Here is the function using the same T and t and 5000 simulations
-<pre>parallel.cluster.signal.noise(100,0.5,rr,5000,3,filename="test",imagename="testimage",image="TRUE")</pre>
+Here is the function using the same T and t and 5000 simulations on a subset of sites to save time
+<pre>
+as.matrix(prumetalrates[1:20000])->rr2 
+parallel.cluster.signal.noise(100,0.5,rr2,5000,3,filename="test",imagename="testimage",image="FALSE
+</pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_7.png" alt="">
 <br>
 <h3> 5. Advanced resolution probability quantification </h3>
