@@ -127,11 +127,16 @@ From left to right, the three values represent QIHP, QIPP, and QIRP
 <h3> Posterior Distributions </h3>
 Since branch length are rarely known with certainty, phyinformR can also be used to calculate QIRP, QIPP, and QIHP values across a distribution of trees such as those obtained from Bayesian analyses. 
 <br>
-For this example, we will read in use the sample distribution of bichir trees from a study by Near et al.8 that is provided with the release 
+For this example, we will read in use the sample distribution of bichir trees from a study by <a href='https://www.researchgate.net/publication/259528342_Boom_and_bust_ancient_and_recent_diversification_in_bichirs_Polypteridae_Actinopterygii_a_relictual_lineage_of_ray-finned_fishes?ev=prf_pub'> Near et al. 2015</a> that is provided with the release 
 <pre>
-Need from Nick>
+library(ape) 
+read.tree(system.file("extdata","polypterus_trees. phy",package="PhyInformR"))->tree 
+as.matrix(rag1)->rate_vector
 </pre>	
-First you will need to specify the quartet of interest. In the bichir dataset, we will look at the clade containing Polypterus congicus as this species was not placed with high support in the tree. We define the quartet as follows
+First you will need to specify the quartet of interest. In the bichir dataset, we will look at the clade containing Polypterus congicus as this species was not placed with high support in the tree: 
+<img class="b30" src="https://carolinafishes.github.io/images/phyinformR_bichir.jpg" alt="">
+<br>
+We define the quartet as follows
 <pre>
 quart<- c("Polypterus_congicus","Polypterus_bichir","Polypterus_ansorgii" ,"Polypterus_endlicheri" ) 
 </pre>
@@ -165,12 +170,16 @@ The quantitative framework of quartet internode calculations lends itself wonder
 <br>
 Hwang et al. 2015 depicted QIRP across an entire tree by plotting the QIRP of a marker for each node simultaneously. This plot can be drawn by providing a tree, rate vector, and state space as in section 3. For this example, we will use a single tree from Near et al. 2014 along with site rates from the same study
 <pre>
-	Need from Nick
-
-trees[[1]]->bichir_tree
-PlotTreeSI(sample.tree,rr,3) </pre>
+library(ape) 
+read.tree(system.file("extdata","polypterus_trees. phy",package="PhyInformR"))->tree 
+as.matrix(rag1)->rate_vector
+tree[[1]]->bichir_tree 
+PlotTreeSI(bichir_tree,rate_vector,3)
+</pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_11.png" alt="">
-Here the branch lengths (x axis) and the blue lines (QIRP, y axis) match up and we can see that signal is pretty high for many nodes. However, some of the smaller internodes are predicted to be impacted by homoplasy or contain little information. We can explore this further by looking at the rate distribution. First we will get the rates from a partition we defined in the the PI profile section:
+Here the branch lengths (x axis, time) and the blue lines (y axis, QIRP) match up and we can see that a similar trend to the one at the end of the previous section: small recent internode have low QIRP and are predicted to be impacted by homoplasy or contain little information
+<br>
+This approach to visualization can be quite handy when comparing markers
 <br>
 <br>
 Visualizing Phylogenetic Experimental Design
@@ -192,7 +201,7 @@ This form of visualization also displays overall trends of markers over time, an
 Note that here we are using the files from Prum et al. (2015), which are <a href='https://zenodo.org/record/30269?ln=en#.VfJJ-GRViko'> available on Zenodo (DOI 10.5281)</a>
 though you could also substitute site rates from your own markers here. 
 <br>
-Download the above files and open prumetal_heatmap_rosetta.r that is hosted on the github repository with phyinformR
+Download the above files and <a href='https://github.com/carolinafishes/PhyInformR'> open prumetal_heatmap_rosetta.r that is hosted on the github repository with phyinformR </a>
 <br>
 Navigate to the "Phylogenetic_Informativeness" part of the downloaded directory 
 <br>
