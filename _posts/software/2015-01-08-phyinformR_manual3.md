@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  "Walking Through phyinformR, part3: Visualization"
+title:  "Walking Through phyinformR, Part3: Visualization"
 
-teaser: "Learn how to conduct phylogenetic informativeness analyses in R, part 3"
+teaser: "Learn how to conduct phylogenetic informativeness analyses in R, Part 3"
 categories:
     - software
 tags:
@@ -20,7 +20,7 @@ show_meta: false
 This is a three part tutorial. <a href='https://carolinafishes.github.io/software/phyinformR_manual/'>Part 1 focuses on the generation of PI profiles</a>
 <br>
 <br>
-<a href='https://carolinafishes.github.io/software/phyinformR_manual2/'>Part two focuses on advanced features, visualizations, and calculations of quartet resolution probabilities</a><br>
+<a href='https://carolinafishes.github.io/software/phyinformR_manual2/'>Part 2 focuses on advanced features, visualizations, and calculations of quartet resolution probabilities</a><br>
 <br>
 This part focuses on visualization. We anticipate this to be an area of rapid growth so please check back often for new ways to visualize these metrics. Also, if you develop a new way to view these data please let us know and we will gladly post the code and link(s) to your manuscript(s) </a>
 

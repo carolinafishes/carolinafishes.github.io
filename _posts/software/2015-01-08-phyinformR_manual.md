@@ -1,8 +1,8 @@
 ---
 layout: page
-title:  "Walking Through phyinformR, part1: Installation & PI Profiles"
+title:  "Walking Through phyinformR, Part1: Installation & PI Profiles"
 
-teaser: "Learn how to conduct phylogenetic informativeness analyses in R, part 1"
+teaser: "Learn how to conduct phylogenetic informativeness analyses in R, Part 1"
 categories:
     - software
 tags:
