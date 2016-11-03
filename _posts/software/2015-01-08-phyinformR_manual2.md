@@ -158,8 +158,11 @@ su.bayes returns a matrix of internodes and T values from the trees and their as
 plot.posterior(final, plot="QIPs")   #or
 plot.posterior(final,plot="violin")
 </pre>
+<br>
 Setting plot="qips" returns a density plot of the quartet internode resolution/polytomy/homoplasy probabilities and the internode lengths
+<br>
 <img class="b30" src="http://carolinafishes.github.io/images/informR_14.png" alt="">
+<br>
 Visualizing the density of calculations reveals a trend that is common in phylogenetic datasets. Both lack of information and increased probabilities of convergence misleading inference plague smaller internodes. In this plot we can see that the bulk of the posterior density is in the realm of low QIRP and high QIPP, so we can conclude that the lack of resolution of this clade by this locus is in part predicted to be driven by limited information content
 <br>
 <br>
