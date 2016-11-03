@@ -164,6 +164,7 @@ Visualizing the density of calculations reveals a trend that is common in phylog
 <br>
 <br>
 Plot = "violin" returns violin plots of the quartet internode resolution/polytomy/homoplasy probabilities and the internode lengths 
+<br>
 <img class="b30" src="http://carolinafishes.github.io/images/informR_15.png" alt="">
 <br>
 Visualizing the quantiles and kernel density of calculations allows for a additional perspective of how topological and branch length uncertainty influence quantifications. In this case we can see from the box plot of quantiles that QIHP is generally low, but that QIPP is centered near 0.45 with the majority of trees leading to a calculation between about 0.5 and 0.35. The kernel density gives us additional perspective, showcasing somewhat inverted distributions between QIRP and QIPP, with the majority of QIRP values being lower. 
