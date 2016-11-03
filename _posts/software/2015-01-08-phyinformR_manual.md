@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Walking Through phyinformR"
+title:  "Walking Through phyinformR, part1: Installation & PI Profiles"
 
 teaser: "Learn how to conduct phylogenetic informativeness analyses in R, part 1"
 categories:
@@ -18,9 +18,13 @@ comments: true
 show_meta: false    
 ---
 <br>
-This is a two part tutorial. Part 1 focuses on the generation of PI profiles
+This is a three part tutorial. Part 1 focuses on the generation of PI profiles
+<br>
 <br>
 <a href='https://carolinafishes.github.io/software/phyinformR_manual2/'>Part two focuses on advanced features, visualizations, and calculations of quartet resolution probabilities</a>
+<br>
+<br>
+<a href='https://carolinafishes.github.io/software/phyinformR_manual3/'>Part 3 focuses on visualization</a>
 
 <h3>1. Installation</h3>
 PhyInformR is easy to install. Simply install via CRAN or <a href='https://github.com/carolinafishes/PhyInformR'>download the compressed R script from github</a> and install it manually 
