@@ -41,6 +41,23 @@ library(devtools)
 install_github("carolinafishes/PhyInformR")
 library(PhyInformR)
 </pre> 
+<br> FOR WINDOWS USERS - devtools will not install depencies for certain versions of windows. This is being addressed and should be fixed in the next major release. If your install fails, please first install the dependencies through CRAN and then use devtools as above for the final install. 
+<br>
+<pre>
+install.packages("doParallel") 
+install.packages("phytools") 
+install.packages("splines") 
+install.packages("gplots") 
+install.packages("RColorBrewer") 
+install.packages("foreach") 
+install.packages("iterators") 
+install.packages("geiger") 
+install.packages("doParallel") 
+install.packages("gridExtra") 
+install.packages("hexbin") 
+install.packages("PBSmodelling") 
+install.packages("ggplot2")
+</pre>	
 Once you load PhyInformR, set the number of cores at the start of your session to enable later parallel processing if desired
 <br>
 We will also be hosting more sample data through Zenodo archives and github to explore new features as we develop them, so check back often!
