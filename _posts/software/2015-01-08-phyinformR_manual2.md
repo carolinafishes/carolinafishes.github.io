@@ -133,7 +133,7 @@ Since branch length are rarely known with certainty, phyinformR can also be used
 For this example, we will read in use the sample distribution of bichir trees from a study by <a href='https://www.researchgate.net/publication/259528342_Boom_and_bust_ancient_and_recent_diversification_in_bichirs_Polypteridae_Actinopterygii_a_relictual_lineage_of_ray-finned_fishes?ev=prf_pub'> Near et al. 2015</a> that is provided with the release 
 <pre>
 library(ape) 
-read.tree(system.file("extdata","polypterus_trees. phy",package="PhyInformR"))->tree 
+read.tree(system.file("extdata","polypterus_trees.phy",package="PhyInformR"))->tree 
 as.matrix(rag1)->rate_vector
 </pre>	
 First you will need to specify the quartet of interest. In the bichir dataset, we will look at the clade containing Polypterus congicus as this species was not placed with high support in the tree: 
@@ -143,9 +143,10 @@ We define the quartet as follows
 <pre>
 quart<- c("Polypterus_congicus","Polypterus_bichir","Polypterus_ansorgii" ,"Polypterus_endlicheri" ) 
 </pre>
-The remaining objects should be familiar, please review the above and preceeding page if the variable names seem enigmatic. To compute over a distribution of trees, run the function
+The remaining objects should be familiar, please review the above and preceeding page if the variable names seem enigmatic. To compute over a distribution of trees, run the function. Note that here we are truncating the tree distribution for the purpose of example
 <pre>
-su.bayes(a,b,c,d,e,f,Pi_T,Pi_C,Pi_A,Pi_G,rate_vector,quart,trees)->final
+tree
+su.bayes(a,b,c,d,e,f,Pi_T,Pi_C,Pi_A,Pi_G,rate_vector,quart,tree)->final
 </pre>
 This function returns a matrix of internodes and T values from the trees and their associated QIHP,QIPP, and QIRP values 
 <pre>
@@ -155,8 +156,8 @@ Remember to set your cores appropriately using registerDoParallel(cores=8)
 <br>
 su.bayes returns a matrix of internodes and T values from the trees and their associated QIHP, QIPP, and QIRP values. This matrix can be summarized using
 <pre>
-plot.posterior(final, plot="QIPs")   #or
-plot.posterior(final,plot="violin")
+plotPosterior(final, plot="QIPs")   #or
+plotPosterior(final,plot="violin")
 </pre>
 <br>
 Setting plot="qips" returns a density plot of the quartet internode resolution/polytomy/homoplasy probabilities and the internode lengths

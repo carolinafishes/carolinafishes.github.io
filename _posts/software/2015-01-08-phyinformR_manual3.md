@@ -31,7 +31,7 @@ The quantitative framework of quartet internode calculations lends itself wonder
 Hwang et al. 2015 depicted QIRP across an entire tree by plotting the QIRP of a marker for each node simultaneously. This plot can be drawn by providing a tree, rate vector, and state space as in section 3. For this example, we will use a single tree from Near et al. 2014 along with site rates from the same study
 <pre>
 library(ape) 
-read.tree(system.file("extdata","polypterus_trees. phy",package="PhyInformR"))->tree 
+read.tree(system.file("extdata","polypterus_trees.phy",package="PhyInformR"))->tree 
 as.matrix(rag1)->rate_vector
 tree[[1]]->bichir_tree 
 PlotTreeSI(bichir_tree,rate_vector,3)
@@ -39,7 +39,7 @@ PlotTreeSI(bichir_tree,rate_vector,3)
 <img class="b30" src="https://carolinafishes.github.io/images/informR_11.png" alt="">
 Here the branch lengths (x axis, time) and the blue lines (y axis, QIRP) match up and we can see that a similar trend to the one at the end of the previous section: small recent internode have low QIRP and are predicted to be impacted by homoplasy or contain little information
 <br>
-This approach to visualization can be quite handy when comparing markers
+This approach to visualization can be quite handy when comparing markers, so leave this graphics window open for now
 <br>
 <br>
 Visualizing Phylogenetic Experimental Design
@@ -54,7 +54,7 @@ We'll start by isolating the locus
 Now we can compare to the above plot as follows
 <pre> Plot.Another.TreeSI(bichir_tree, candidate.locus,3,col="red",type=3)</pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_12.png" alt="">
-In the above plot QIRP is on the Y axis and time is on the X axis. Blue lines correspond to the QIRP values of the tree internodes for rag1 while red lines correspond to our candidate locus. This visualization reveals that the candidate marker is predicted to be of higher utility for resolving every node in the bichir tree. This sort of visualization can be a great heuristic for choosing probe sets or primers for cost and time effective sequencing of markers
+In the above plot, we have added QIRP to the previous plot on the Y axis with time still on the X axis. Blue lines correspond to the QIRP values of the tree internodes for rag1 while red lines correspond to our candidate locus. This visualization reveals that the candidate marker is predicted to be of higher utility for resolving every node in the bichir tree. This sort of visualization can be a great heuristic for choosing probe sets or primers for cost and time effective sequencing of markers
 
 This form of visualization also displays overall trends of markers over time, and can help disentangle sources of error in tree inference. However, the above method requires a fixed internode length. Prum et al. 2015 provided an alternative visualization that accommodates for uncertainty in internode length  
 
