@@ -30,7 +30,7 @@ My research takes an integrative approach to explore the factors that underlie t
 <br>
 <br>
 
-<h2>Interns</h2>
+<h2>Current Interns</h2>
 <br> 
 <h3>Willa Brooks</h3>
 <img class="b30" src="http://carolinafishes.github.io/images/intern_willa_brooks.jpg" alt="">
@@ -45,20 +45,33 @@ I graduated from Emory University in 2014 with a bachelors in Environmental Scie
 I am currently getting my feet wet in phylogenetic studies by constructing a <a href='https://en.wikipedia.org/wiki/Lycopodiophyta'> Lycopod</a> Tree of Life and also studying the possible effects of Madagascar's hypervariable climate on the community-level organization its endemic trees. I'm interested in pursuing projects in plant phylogenetics that unite integrative taxonomy, herbarium research, and applications towards conservation. What can the history of flora found in our natural history collections tell us about impending (or active) changes in the floral landscape due to factors like climate change? What other novel uses arise for collections such as herbaria when a researcher combines modern data analysis with such historical datasets? What new strategies and biological understandings can combined molecular and morphological phylogenetic analyses give us by illuminating more branches (or new pathways) on the evolutionary trees of various plant groups?
 <br>
 <a href='https://www.researchgate.net/profile/Abagail_Burrus'> Researchgate </a> 
+<br>
 
+<h3>April Lamb</h3>
+<br>
+<img class="b30" src="http://carolinafishes.github.io/images/vol_april_lamb.jpg" alt="">
+<br>
+I am starting my junior year at North Carolina State University and am majoring in Zoology with intended minors in Applied Ecology and Biotechnology. I currently work in the lab of Dr. John Godwin at NC State, where I look at the expression of GnRH1 and Kisspeptin receptors in the hypothalamus of Bluehead wrasses, a sex changing coral reef fish, to gain insight on the systems’ roles in the sex change process. Here at the NCMNS fish unit, I am gaining a foundation in phylogenetic and biogeographic analyses as I explore the biogeography of Antarctic icefishes. I am broadly interested in marine and behavioral ecology and the interactions between fishes and invertebrate species relative to a changing environment. I intend to pursue a graduate degree in one of these related fields and further my research experience after I graduate from NC State.
+<br>
+<a href='https://www.researchgate.net/profile/April_Lamb'> Researchgate </a> 
+<br>
+
+<h3>Katerina Zapfe</h3>
+<br>
+<img class="b30" src="http://carolinafishes.github.io/images/intern_katerina_zapfe.jpg" alt="">
+<br>
+I am a born naturalist with a B.S. in Marine Science and minor in Plant Biology from NC State University. My love for the natural world began early. A childhood snorkeling off Grand Cayman introduced me to the world below the waves and I went on to become involved with study abroad research in the Bahamas, animal husbandry through The Maritime Aquarium and marine biology education with the Sea Turtle Camp. These experiences fueled my passion for marine science. Since working at the Fish Lab, I have become interested in both the adaptive radiation of Antarctic icefish and patterns of morphological evolution in trigger and filefishes. When I am not working at the research station, I enjoys orchid keeping, SCUBA diving and merging my passions for science and fine art in the form of detailed biological illustrations. I aspire to attend graduate school and inspire others to develop their own passion for marine life. 
+<br>
+<h2>Former Interns and Volunteers</h2>
+<br>
+<br>
+<h3>2015-2016</h3>
 <h3>Joseph Flores</h3>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/vol_josef_flores.jpg" alt="">
 <br>
 I am a 2014 graduate of the University of North Carolina Wilmington with my B.S. in marine biology. My primary interests are in marine life and conservation and I enjoy both field work and hands on data gathering. I am currently collecting morphometric data to better understand biodiversity patterns in several species of fish, both in fresh and salt water. Quantifying morphological change within or between species can gleam valuable insights into a range of topics including the discovery of cryptic diversity and correlations between form,  function, and life history. I am looking forward to expanding my knowledge of fishes and ultimately finding a career in this field of study.
 <br>
-<h3>April Lamb</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/vol_april_lamb.jpg" alt="">
-<br>
- I am starting my junior year at North Carolina State University and am majoring in Zoology with intended minors in Applied Ecology and Biotechnology. I currently work in the lab of Dr. John Godwin at NC State, where I look at the expression of GnRH1 and Kisspeptin receptors in the hypothalamus of Bluehead wrasses, a sex changing coral reef fish, to gain insight on the systems’ roles in the sex change process. Here at the NCMNS fish unit, I am gaining a foundation in phylogenetic and biogeographic analyses as I explore the biogeography of Antarctic icefishes. I am broadly interested in marine and behavioral ecology and the interactions between fishes and invertebrate species relative to a changing environment. I intend to pursue a graduate degree in one of these related fields and further my research experience after I graduate from NC State.
- <br>
- <h2>Volunteers</h2>
  <h3>Leela Rao</h3>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/vol_leela_rao.jpg" alt="">
