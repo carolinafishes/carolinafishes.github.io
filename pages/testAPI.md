@@ -1,3 +1,5 @@
+---
+---
 {
   "name": "World Register of Marine Species",
   "identifierSpace": "urn:lsid:marinespecies.org:taxname:",
