@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-<body>
-{
+{ 
   "name": "World Register of Marine Species",
   "identifierSpace": "urn:lsid:marinespecies.org:taxname:",
   "schemaSpace": "http:\/\/rdf.freebase.com\/ns\/type.object.id",
@@ -15,6 +12,4 @@
     }
   ]
 }
-</body>
-</html>
 
