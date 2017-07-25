@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Islands are cradles for Antarctic Marine Life"
+title: "Islands are cradles for Antarctic marine life"
 meta_teaser: "Surviving in a frozen sea"
 
 header:
