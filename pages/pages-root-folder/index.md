@@ -18,7 +18,7 @@ widget2:
   title: "phyinformR"
   url: 'https://carolinafishes.github.io/software/phyinformR/'
   image: lizard_fish.jpg
-  text: 'We have a beta version of our new R package phyinformR available for testing. Check out the manual and code here!'
+  text: 'Our new R package phyinformR is now available. Check out the manual and code here!'
 widget3:
   title: "Reprints"
   url: 'https://carolinafishes.github.io/Pubs/reprints/'
