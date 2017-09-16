@@ -28,7 +28,8 @@ It turns out that these fishes diverged from 99% of all other fishes nearly 350 
 <br>
 We currently are funded through the triangle center for evolutionary medicine <a href='http://tricem.dreamhosters.com/'> (TriCEM) </a> for this work and have been conducting several DNA based studies. However, knowing what immune genes are in gar does not reveal their function.
 <br>  
-<img class="b30" src="http://carolinafishes.github.io/images/Capefear9.jpg" alt=""><table border="0" <em>Gar and bowfin housed at the NCSU College of Veterinary Sciences. These fishes were referred to as "living fossils" by Charles Darwin. Our research aims to link immune genes in these fishes to similar genes in mammales</em>
+<img class="b30" src="http://carolinafishes.github.io/images/Capefear9.jpg" alt=""><table border="0" <em>Gar and bowfin housed at the NCSU College of Veterinary Sciences. These fishes were referred to as "living fossils" by Charles Darwin. Our research aims to link immune genes in these fishes to similar genes in mammals</em>
+<br>
 <br>
 This week, we went out with our collaborator Michael Fisk at the NC Wildlife Resource Commission to collect blood samples from a few gar and bowfin (another ancient fish) on the Cape Fear River to further study cell function this fall.
 <br> 
