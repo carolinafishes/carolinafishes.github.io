@@ -13,10 +13,10 @@ tags:
 image:
    thumb: Capefear6.jpg
    homepage: Capefear6.jpg
-   caption: Juvenile longnose gar
 header: 
     image_fullwidth: "Capefear6.jpg"
     title: ""
+    caption: Juvenile longnose gar
 comments: true
 show_meta: false
 ---
