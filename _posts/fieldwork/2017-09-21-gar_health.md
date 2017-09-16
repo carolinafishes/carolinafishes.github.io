@@ -29,12 +29,15 @@ Over the past year we have been working with <a href='http://www4.ncsu.edu/~jayo
 <br> 
 We share 70 percent of our genes with fish, and advances in genetic engineering allow us to test how these genes contribute to everything from behavior to disease. While several fish species are already used as model systems, all contain a duplicated genome. This genome duplication is a major problem that makes relating genetic mechanisms between humans and fish especially difficult. Consequently, this raises the challenge of identifying species that bridge the genetic gap between model fish and humans. Fortunately, a group of fishes that reside in the waters of North America may well be the missing link – gar.
 <br>
+<br>
 <img class="b30" src="http://carolinafishes.github.io/images/Lumber1.jpg" alt=""><em>Longnose gar being measured prior to release by Wildlife Resource Commission during a sportfish survey we assisted on last year. These ancient fishes are very common in all the major rivers of North Carolina</em>
 <br>
 <br>
 Referred to by Darwin as living fossils, gar are members of an ancient fish lineage that do not possess a duplicated genome. Instead gar contain a mix of genes that sometimes more closely resemble those in humans rather than fish. This amazing similarity can be utilized when we develop a better understanding of how gar genomes evolved, which will be critical in linking the genes of fish to humans.
 <br>
+<br>
 We currently are funded through the triangle center for evolutionary medicine <a href='http://tricem.dreamhosters.com/'> (TriCEM) </a> to investigate genes relevant to human immune function also shared by gar species, with the goal of effectively translating genetic research in model fish to human health and disease.
+<br> 
 <br>  
 <img class="b30" src="http://carolinafishes.github.io/images/Capefear9.jpg" alt=""><em>Gar and bowfin housed at the NCSU College of Veterinary Sciences. These fishes were referred to as "living fossils" by Charles Darwin. Our research aims to link immune genes in these fishes to similar genes in mammals</em>
 <br>
