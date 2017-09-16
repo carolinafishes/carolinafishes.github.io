@@ -28,19 +28,19 @@ It turns out that these fishes diverged from 99% of all other fishes nearly 350 
 <br>
 We currently are funded through the triangle center for evolutionary medicine <a href='http://tricem.dreamhosters.com/'> (TriCEM) </a> for this work and have been conducting several DNA based studies. However, knowing what immune genes are in gar does not reveal their function.
 <br>  
-<img class="b30" src="http://carolinafishes.github.io/images/Capefear9.jpg" alt=""><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><p><em>Gar and bowfin housed at the NCSU College of Veterinary Sciences. These fishes were referred to as "living fossils" by Charles Darwin. Our research aims to link immune genes in these fishes to similar genes in mammales</em></p></td></tr></tbody></table>
+<img class="b30" src="http://carolinafishes.github.io/images/Capefear9.jpg" alt=""><table border="0" <em>Gar and bowfin housed at the NCSU College of Veterinary Sciences. These fishes were referred to as "living fossils" by Charles Darwin. Our research aims to link immune genes in these fishes to similar genes in mammales</em>
 <br>
 This week, we went out with our collaborator Michael Fisk at the NC Wildlife Resource Commission to collect blood samples from a few gar and bowfin (another ancient fish) on the Cape Fear River to further study cell function this fall.
 <br> 
-<img class="b30" src="http://carolinafishes.github.io/images/Capefear4.jpg" alt=""><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><p><em>View from the front of the boat as we travelled up the Cape Fear River</em></p></td></tr></tbody></table>
+<img class="b30" src="http://carolinafishes.github.io/images/Capefear4.jpg" alt=""><em>View from the front of the boat as we travelled up the Cape Fear River</em>
 <br>
 We were also joined by <a href='https://cvm.ncsu.edu/directory/passingham-ronald/Kent Passingham'> Kent Passingham </a> who was simultaneously collecting critical baseline data with which to conduct a health assessment of these fishes. Despite the promise of these fishes for medical research, no data exists on what healthy blood values look like for these ancient fishes.
 <br> 
-<img class="b30" src="http://carolinafishes.github.io/images/Capefear2.jpg" alt=""><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><p><em>Jeff and Kent preparing to go search for fish at the start of the day</em></p></td></tr></tbody></table>
+<img class="b30" src="http://carolinafishes.github.io/images/Capefear2.jpg" alt=""><em>Jeff and Kent preparing to go search for fish at the start of the day</em>
 <br>
 It was suprisingly difficult to find gar on this stretch of the Cape Fear. After nearly 4 hours we had only found a single fish despite virtually nonstop effort. Furtunately, our luck was about to change. By midafternoon we were able to catch a decent sample size of fishes from which we could assess vital blood based health statistics. These values represent the first bloodwork values in this species and will form the foundation for a more intensive health assessment in different habitats. 
 <br>  
-<img class="b30" src="http://carolinafishes.github.io/images/Capefear7.jpg" alt=""><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td><p><em>A snapshot of a bowfin about to be released after health data was collected</em></p></td></tr></tbody></table>
+<img class="b30" src="http://carolinafishes.github.io/images/Capefear7.jpg" alt=""><em>A snapshot of a bowfin about to be released after health data was collected</em>
 <br>
 Stay tuned for more updates as we continue our journey to link fish models to human health and monitor the health of these species in our waterways. 
 <ul class="clearing-thumbs small-block-grid-2" data-clearing>
