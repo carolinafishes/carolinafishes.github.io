@@ -51,20 +51,22 @@ We were also joined by <a href='https://cvm.ncsu.edu/directory/passingham-ronald
 <img class="b30" src="http://carolinafishes.github.io/images/Capefear5.jpg" alt=""><em>Electrodes on the boat. We use a sampling technique that sends a small amount of electricity into the water and temporarily stuns fish, bringing them to the surface. The fish are stunned for a few seconds, just long enough to net and place into the livewell. This is a very effective and non-destructive sampling technique routinely used by agencies to monitor fish populations</em>
 <br>
 <br>
-It was suprisingly difficult to find either gar or bowfin on this stretch of the Cape Fear. After nearly 4 hours we had only found a single gar despite virtually nonstop effort. Furtunately, our luck was about to change. By midafternoon we were able to catch a decent sample size of both fishes from which we could assess vital blood based health statistics. These values represent the first bloodwork values in either species and will form the foundation for a more intensive health assessment in different habitats. 
+It was suprisingly difficult to find either gar or bowfin on this stretch of the Cape Fear. After nearly 4 hours we had only found a single gar despite virtually nonstop effort. Furtunately, our luck was about to change. By midafternoon we were able to catch a decent sample size of both gar and bowfin from which we could assess vital blood based health statistics. These values represent the first bloodwork values in either species and will form the foundation for a more intensive health assessment in different habitats. 
 <br>  
 <img class="b30" src="http://carolinafishes.github.io/images/Capefear7.jpg" alt=""><em>A snapshot of a bowfin about to be released after health data was collected</em>
 <br>
 <br>
-In addition to catching gar and bowfin, an NC Wildlife Resource Commission photographer was on the scene photographing other sportfish for an updated pamphlet on game fishes. We brought in several bass, catfish, and sunfish for her to photograph and release.
+In addition to catching gar and bowfin, an NC Wildlife Resource Commission photographer was on the scene photographing other sportfish we encountered for an updated pamphlet on game fishes. We brought in several bass, catfish, and sunfish for her to photograph and release. 
 <br>
 <br>
 Stay tuned for more updates as we continue our journey to link fish models to human health and monitor the health of these species in our waterways. 
-<ul class="clearing-thumbs small-block-grid-2" data-clearing>
+<ul class="clearing-thumbs small-block-grid-3" data-clearing>
   <li><a href="{{ site.url }}/images/Capefear1.jpg"><img  data-caption="Potential habitat along the Cape Fear" class="th" src="{{ site.url }}/images/Capefear1_thumb.jpg"></a></li>
   <li><a href="{{ site.url }}/images/Capefear3.jpg"><img  data-caption="View from the boat" class="th" src="{{ site.url }}/images/Capefear3_thumb.jpg"></a></li>
   <li><a href="{{ site.url }}/images/Capefear2.jpg"><img  data-caption="Jeff and Kent preparing to go search for fish at the start of the day" class="th" src="{{ site.url }}/images/Capefear2_thumb.jpg"></a></li>
   <li><a href="{{ site.url }}/images/Capefear8.jpg"><img  data-caption="Gar and bowfin housed at NCSU" class="th" src="{{ site.url }}/images/Capefear8_thumb.jpg"></a></li>
+  <li><a href="{{ site.url }}/images/Capefear13.jpg"><img  data-caption="Photographing fish we brought back for an updated gamefish pamphlet" class="th" src="{{ site.url }}/images/Capefear13_thumb.jpg"></a></li>
+  <li><a href="{{ site.url }}/images/Capefear14.jpg"><img  data-caption="Michael and Jeff heading up the Cape Fear in search of elusive ancient fishes" class="th" src="{{ site.url }}/images/Capefear14_thumb.jpg"></a></li>
 </ul>
 
 
