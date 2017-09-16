@@ -30,7 +30,7 @@ Over the past year we have been working with <a href='http://www4.ncsu.edu/~jayo
 We share 70 percent of our genes with fish, and advances in genetic engineering allow us to test how these genes contribute to everything from behavior to disease. While several fish species are already used as model systems, all contain a duplicated genome. This genome duplication is a major problem that makes relating genetic mechanisms between humans and fish especially difficult. Consequently, this raises the challenge of identifying species that bridge the genetic gap between model fish and humans. Fortunately, a group of fishes that reside in the waters of North America may well be the missing link – gar.
 <br>
 <br>
-<img class="b30" src="http://carolinafishes.github.io/images/Lumber1.jpg" alt=""><em>Longnose gar being measured prior to release by Wildlife Resource Commission during a sportfish survey we assisted on last year. These ancient fishes are very common in all the major rivers of North Carolina</em>
+<img class="b30" src="http://carolinafishes.github.io/images/Lumber1.jpg" alt=""><em>Longnose gar being measured prior to release by the NC Wildlife Resource Commission during a sportfish survey we assisted on last year. These ancient fishes are very common in all the major rivers of North Carolina</em>
 <br>
 <br>
 Referred to by Darwin as living fossils, gar are members of an ancient fish lineage that do not possess a duplicated genome. Instead gar contain a mix of genes that sometimes more closely resemble those in humans rather than fish. This amazing similarity can be utilized when we develop a better understanding of how gar genomes evolved, which will be critical in linking the genes of fish to humans.
@@ -61,7 +61,7 @@ Stay tuned for more updates as we continue our journey to link fish models to hu
 <ul class="clearing-thumbs small-block-grid-2" data-clearing>
   <li><a href="{{ site.url }}/images/Capefear1.jpg"><img  data-caption="Potential habitat along the Cape Fear" class="th" src="{{ site.url }}/images/Capefear1_thumb.jpg"></a></li>
   <li><a href="{{ site.url }}/images/Capefear3.jpg"><img  data-caption="View from the boat" class="th" src="{{ site.url }}/images/Capefear3_thumb.jpg"></a></li>
-  <li><a href="{{ site.url }}/images/Capefear2.jpg"><img  data-caption="Jeff and Kent preparing to go search for fish at the start of the day" class="th" src="{{ site.url }}/images/Capefear2.jpg"></a></li>
+  <li><a href="{{ site.url }}/images/Capefear2.jpg"><img  data-caption="Jeff and Kent preparing to go search for fish at the start of the day" class="th" src="{{ site.url }}/images/Capefear2_thumb.jpg"></a></li>
   <li><a href="{{ site.url }}/images/Capefear8.jpg"><img  data-caption="Gar and bowfin housed at NCSU" class="th" src="{{ site.url }}/images/Capefear8_thumb.jpg"></a></li>
 </ul>
 
