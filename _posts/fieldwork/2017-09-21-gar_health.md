@@ -10,6 +10,9 @@ tags:
     - gar
     - hematology
     - fieldwork
+    - tricem
+    - evolutionary medicine
+    - bowfin
 image:
    thumb: Capefear6.jpg
    homepage: Capefear6.jpg
