@@ -1,7 +1,7 @@
 ---
 layout: page
 subheadline:  "Fishing for fossils"
-title:  "Developing longnose gar as a model organism"
+title:  "The medical importance of North Carolina's ancient fishes"
 meta_teaser: "Conducting bloodwork and monitoring the health of a living fossil"
 teaser: "Ancient fishes with ties to human health"
 categories:
@@ -32,10 +32,7 @@ We share 70 percent of our genes with fish, and advances in genetic engineering 
 <img class="b30" src="http://carolinafishes.github.io/images/Lumber1.jpg" alt=""><em>Longnose gar being measured prior to release by the NC Wildlife Resource Commission during a sportfish survey we assisted on last year. These ancient fishes are very common in all the major rivers of North Carolina</em>
 <br>
 <br>
-Referred to by Darwin as living fossils, both gar and bowfin are ancient fish lineages that do not possess a duplicated genome. Instead they contain a mix of genes that sometimes more closely resemble those in humans rather than fish. Over the past year we have been working with <a href='http://www4.ncsu.edu/~jayoder/'> Jeff Yoder </a> at the NC State Veterinary School and Michael Fisk of the North Carolina Wildlife Resources Commission on several projects that aim to develop a better understanding of how gar and bowfin genomes evolved, in an effort to link the genes of fishes and humans.
-<br>
-<br>
-We currently are funded through the triangle center for evolutionary medicine <a href='http://tricem.dreamhosters.com/'> (TriCEM) </a> to investigate genes relevant to human immune function also shared by gar species, with the goal of effectively translating genetic research in model fish to human health and disease.
+Referred to by Darwin as living fossils, both gar and bowfin are ancient fish lineages that do not possess a duplicated genome. Instead they contain a mix of genes that sometimes more closely resemble those in humans rather than fish. Over the past year we have teamed up with <a href='http://www4.ncsu.edu/~jayoder/'> Jeff Yoder </a> at the NC State Veterinary School and Michael Fisk of the North Carolina Wildlife Resources Commission on several projects funded by the Triangle Center for Evolutionary Medicine <a href='http://tricem.dreamhosters.com/'> (TriCEM) </a> that investigate genes relevant to human immune function also shared by these species, with the goal of effectively translating genetic research in model fish to human health and disease.
 <br> 
 <br>  
 <img class="b30" src="http://carolinafishes.github.io/images/Capefear9.jpg" alt=""><em>Gar and bowfin housed at the NCSU College of Veterinary Sciences. These fishes were referred to as "living fossils" by Charles Darwin. Our research aims to link immune genes in these fishes to similar genes in mammals</em>
