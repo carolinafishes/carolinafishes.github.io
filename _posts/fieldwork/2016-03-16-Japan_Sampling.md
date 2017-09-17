@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "Scanning fish brains in Japan"
-meta_teaser: "Unlocking the secrets of the teleost brain"
+title:  "Sampling the coast of Okinawa"
+meta_teaser: "Getting creative and scouting new places"
 teaser: ""
 categories:
     - fieldwork
