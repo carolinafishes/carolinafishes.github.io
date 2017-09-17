@@ -23,6 +23,7 @@ I teamed up with Evan Economo, <a href='https://danlwarren.wordpress.com/'>Dan W
 <br>
 <h3> Scanning fish brains in Japan </h3>
 <br> Working at the Okinawa Institute of Science and Technology is nothing short of amazing. Several buildings linked by sky bridges filled with some of the brightest minds armed with some of the most advanced technology in the world. Having the opportunity to work here was incredible. 
+<br>
 <img class="b30" src="http://carolinafishes.github.io/images/Oist4.jpg" alt=""><em>View from a skybridge at two of the OIST buildings. Our temporary offices were on the right and we would use the bridge in the background to access the CT scanner in the building on the left.</em>
 <br>
 <br>
@@ -32,6 +33,7 @@ I teamed up with Evan Economo, <a href='https://danlwarren.wordpress.com/'>Dan W
 <br>
 <br>
 CT-scanning fish brains is not trivial. Luckily Dan and Teresa were able to come up with the correct range of settings and innovative solutions to keeping the brains in the scanner without them moving. As you may imagine, no one has produced fish head holders for these machines yet. However, with some glue and a few hacks to common lab supplies we were able to make holders that kept heads from sliding. 
+<br>
 <img class="b30" src="http://carolinafishes.github.io/images/Oist5.jpg" alt=""><em>Inside of a CT-scanner set up to scan an ant. The Economo lab has been using CT-scans of ants to unlock new insights into their biodiversity</em>
 <br>
 <br>
