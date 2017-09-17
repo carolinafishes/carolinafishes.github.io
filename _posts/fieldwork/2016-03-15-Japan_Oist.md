@@ -10,10 +10,10 @@ tags:
     - OIST
     - fieldwork
 image:
-   thumb: japan1.jpg
-   homepage: japan1.jpg
+   thumb: Japan_1.jpg
+   homepage: Japan_1.jpg
 header: 
-    image_fullwidth: "japan1.jpg"
+    image_fullwidth: "Japan_1.jpg"
     title: ""
     caption: Onna, Japan
 comments: true
