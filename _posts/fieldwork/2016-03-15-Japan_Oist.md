@@ -21,7 +21,7 @@ show_meta: false
 ---
 I teamed up with Evan Economo, <a href='https://danlwarren.wordpress.com/'>Dan Warren </a> and <a href='https://www.researchgate.net/profile/Teresa_Iglesias'>Teresa Iglesias </a> at the <a href='https://www.oist.jp/'> Okinawa Institute of Science and Technology </a> to aid them on a quest to map the brain of teleost fishes. Our goal is to use special dyes and preservation techniques to CT-scan different regions of the brain in order to investigate the evolutionary dynamics that have given rise to the spectacular diversity of brain forms found in fish.
 <br>
-<h3> Scanning fish brains in Japan </h3>
+<h3> Imaging the teleost brain </h3>
 <br> Working at the Okinawa Institute of Science and Technology is nothing short of amazing. Several buildings linked by sky bridges filled with some of the brightest minds armed with some of the most advanced technology in the world. Having the opportunity to work here was incredible. 
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/Oist4.jpg" alt=""><em>View from a skybridge at two of the OIST buildings. Our temporary offices were on the right and we would use the bridge in the background to access the CT scanner in the building on the left.</em>
