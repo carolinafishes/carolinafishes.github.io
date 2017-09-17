@@ -35,7 +35,7 @@ CT-scanning fish brains is not trivial. Luckily Dan and Teresa were able to come
 <img class="b30" src="http://carolinafishes.github.io/images/Oist5.jpg" alt=""><em>Inside of a CT-scanner set up to scan an ant. The Economo lab has been using CT-scans of ants to unlock new insights into their biodiversity</em>
 <br>
 <br>
-<img class="b30" src="http://carolinafishes.github.io/images/Oist6.jpg" alt=""><em>Assessing scans of fish for quality.</em>
+<img class="b30" src="http://carolinafishes.github.io/images/Oist6.jpg" alt=""><em>The finished raw scan results. Three screens give views of the three perspectives (X, Y, Z, axes) of the scan with the fourth screen showing the composite scan.</em>
 <br>
 <br>
 <br>
