@@ -20,8 +20,8 @@ mediaplayer: true
 It is well known that day/light cycles regulate the circadian rhythms of marine fishes. Evidence for diversication corresponding to a “temporal niche” is readily apparent in the eyes of marine fishes, where adaptations to dim-light conditions have constrained optical and trophic diversity. True nocturnality has evolved independently within dozens of marine fish families, making fishes an excellent system for assessing how human-driven disturbances, such as light pollution or contaminants, affect circadian rhythms in wild species. While the vast species-richness of marine ray finned fishes presents a potential boon to research, it also presents the inordinate challenge of first quantifying activity patterns across a quarter of all living vertebrates.
 <br>
 <br>
-I recently had the opportunity to attend a special <a href='http://www.rsmas.miami.edu/bms/FishAtNight/'> conference </a> hosted by the <a href='http://www.rsmas.miami.edu/bms/'> Bulletin of Marine Science </a> in Miami this November that focused on "fish at night". Our work for this conference focused on overviewing just what we know about which fishes actually are nocturnal fishes. It turns out there are some pretty striking gaps in our knowledge.
-<img class="b30" src="http://carolinafishes.github.io/images/FAN3" alt="">
+I recently had the opportunity to attend a special <a href='http://www.rsmas.miami.edu/bms/FishAtNight/'> conference </a> hosted by the <a href='http://www.rsmas.miami.edu/bms/'> Bulletin of Marine Science </a> in Miami this November that focused on "fish at night". Our work for this conference focused on overviewing just what we know about which fishes actually are nocturnal. It turns out there are some pretty striking gaps in our knowledge.
+<img class="b30" src="http://carolinafishes.github.io/images/FAN3.jpg" alt="">
 <em> Light Pollution in Curaçao. Changes in light effect not only the behavior of humans and other animals, but have also been linked to long-term health problems. For most species of fish, we have no idea how artificial light pollution impacts there lives </em>.
 <br>
 <br>
