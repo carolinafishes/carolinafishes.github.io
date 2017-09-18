@@ -18,7 +18,9 @@ show_meta: false
 <br> 
 Over the past 100 years, we have altered the landscape of vast portions of our planet. As someone who grew up mostly in cities, how animals respond to urbanization is something I find really fascinating. Urban habitats are overlooked as containing "nature" in some idealistic sense by many people. However lots of animals do very well in cities and suburbs.
 <br>
+<br>
 We spend a lot of time diving at night when we conduct fieldwork in Curaçao. Whether we are in the city or small towns, there is one group of animals that is ubiquitous when we get out of the water: geckos.
+<br>
 <br>
 Think about it. Numerous Geckos are adapted to climbing shear walls to hunt insects. We build sheer walls and attach lights to the outside that attract large numbers of insects. This should be gecko paradise. However there is a problem.
 <img class="b30" src="http://carolinafishes.github.io/images/Phylodactylus_5.jpg" alt=""><em>The walls of tropical city streets provide a great habitat for many gecko species. Why then are the urban centers of Curaçao devoid of native gecko species? </em>
