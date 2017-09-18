@@ -26,13 +26,13 @@ Recently our intern, <a href='https://adlamb0.wixsite.com/research'>April Lamb</
 <h3>The need for calcium</h3>
 <br>
 Female geckos are faced with challenge when it comes time to lay eggs. They need calcium, and lots of it. Calcium is necessary not just for the development the egg shell, but also to provide the developing baby gecko with enough nutrients to grow. To meet this challenge a variety of gecko species have evolved highly modified endolymphatic sacs that enable them to store calcium for egg development. These are the large sacs on the side of the heads of many geckos you see in pet stores. However, not all species do this.
-<img class="b30" src="http://carolinafishes.github.io/images/Gonatodes_1.jpg" alt=""><em>Radiographs of Gonatodes antillensis specimens. (A) Gravid female with a visible egg (circle) and large endolymphatic sacs indicated by arrow. (B) Female with small endolymphatic sacs. (C) Male with no visible endolymphatic sacs.</em>
+<img class="b30" src="http://carolinafishes.github.io/images/Gonatodes_1.jpg" alt=""><em>Radiographs of Gonatodes antillensis specimens. (A) Gravid female with a visible egg (circle) and large endolymphatic sacs indicated by arrow. (B) Female with small endolymphatic sacs. (C) Male with no visible endolymphatic sacs. Females that use endolymphatic sacs for reproduction ramp up calcium storage prior to forming an egg. </em>
 <br>
 <br>
 <br>
-Documenting which species make use of modified endolymphatic sacs is pretty important. It turns out that stress can inhibit calcium storage in these organs. If animals are stressed, they could potentially lay less thick eggs or not provide enough calcium for development. While the animal may appear otherwise healthy, these sorts of subtle changes can greatly impact the persistence of populations over multiple populations.
+Documenting which species make use of modified endolymphatic sacs is pretty important. It turns out that stress can inhibit calcium storage in these organs. If animals are stressed, they could potentially lay less thick eggs or not provide enough calcium for development. While the animal may appear otherwise healthy, these sorts of subtle changes can greatly impact the persistence of populations over multiple generations.
 <br>
-<img class="b30" src="http://carolinafishes.github.io/images/gonatodes2.jpg" alt=""><em>Image of a male Gonatodes antillensis. G. antillensis is the only nocturnal species of Gonatodes, making it a great species from which to study how vertebrates evolve dim light vision.</em>.
+<img class="b30" src="http://carolinafishes.github.io/images/gonatodes2.jpg" alt=""><em>Image of a male Gonatodes antillensis. G. antillensis is the only nocturnal species of Gonatodes, making it a great species from which to study how vertebrates evolve dim light vision.</em>
 <br>
 <br>
 <br>
