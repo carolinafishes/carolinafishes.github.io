@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "On the natural history of a peculiar gecko"
-teaser: "Unusual adaptations for calcium storage"
+title: "Detecting bias in phylogenomic data"
+teaser: "Identifying the sister lineage to Percomorpha"
 header:
     image_fullwidth: "Percomorphbanner.jpg"
     caption: Director's Bay, Curaçao
