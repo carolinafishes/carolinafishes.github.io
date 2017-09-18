@@ -14,38 +14,39 @@ categories:
 comments: true
 show_meta: false
 ---
- 
 <br> 
 Geckos are an incredible group of lizards that have managed to colonize habitats that include deserts, rainforests, and even alpine mountains. While the diversity of this group is amazing, the variations between species in ecology and life histories creates a major challenge for predicting their conservation needs.
 <br>
 <br>
-Since we work on nocturnal reef fishes, late nights of diving mean that we get to spend a lot of time surrounded by geckos when we do fieldwork in curaçao. In this island native gecko populations are slowly declining, and we are doing our best to opportunistically study these animals to fill knowledge gaps necessary for effective conservation.
+Since we work on nocturnal reef fishes, late nights of diving mean that we get to spend a lot of time surrounded by geckos when we do fieldwork in Curaçao. On this island native gecko populations are slowly declining, and we are doing our best to opportunistically study these animals to fill knowledge gaps necessary for effective conservation.
 <br>
 <br>
-Recently I worked with our intern, April Lamb, on a study assessing the role of endolymphatic sacs in the reproductive biology of <em>Gonatodes antillensis</em>.
+Recently our intern, <a href='https://adlamb0.wixsite.com/research'>April Lamb</a>, took the lead on a study assessing the role of endolymphatic sacs in the reproductive biology of <em>Gonatodes antillensis</em>.
 <br>
 <h3>The need for calcium</h3>
 <br>
-Female geckos are faced with challenge when it comes time to lay eggs. They need calcium, and lots of it. Calcium is necessary not just for the development I the egg shell, but also to provide the developing baby gecko with enough nutrients to grow. The solution that a variety of gecko species have come up with is to utilize a modified endolymphatic sacs to store calcium for egg development. These are the large sacs on the side of the heads of many geckos you see in pet stores. However, not all species do this.
+Female geckos are faced with challenge when it comes time to lay eggs. They need calcium, and lots of it. Calcium is necessary not just for the development the egg shell, but also to provide the developing baby gecko with enough nutrients to grow. To meet this challenge a variety of gecko species have evolved highly modified endolymphatic sacs that enable them to store calcium for egg development. These are the large sacs on the side of the heads of many geckos you see in pet stores. However, not all species do this.
 <img class="b30" src="http://carolinafishes.github.io/images/Gonatodes_1.jpg" alt=""><em>Radiographs of Gonatodes antillensis specimens. (A) Gravid female with a visible egg (circle) and large endolymphatic sacs indicated by arrow. (B) Female with small endolymphatic sacs. (C) Male with no visible endolymphatic sacs.</em>
 <br>
 <br>
 <br>
-Documenting which species make use of modified endolymphatic sacs is not esoteric. It turns out that stress can inhibit calcium storage in these organs. If animals are stressed, they could potentially lay less thick eggs or not provide enough calcium for development.
+Documenting which species make use of modified endolymphatic sacs is pretty important. It turns out that stress can inhibit calcium storage in these organs. If animals are stressed, they could potentially lay less thick eggs or not provide enough calcium for development. While the animal may appear otherwise healthy, these sorts of subtle changes can greatly impact the persistence of populations over multiple populations.
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/gonatodes2.jpg" alt=""><em>Image of a male Gonatodes antillensis. G. antillensis is the only nocturnal species of Gonatodes, making it a great species from which to study how vertebrates evolve dim light vision.</em>.
+<br>
+<br>
 <br>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/Gonatodes_4.jpg" alt=""><em>Image of a female Gonatodes antillensis. There are over 1,600 species of geckos in the world. With the gloabl pace of change, documenting basic aspects of their biology essential for conservation management is a race against time. </em>
 <br>
 <br>
 <br>
-We used X-rays from museum specimens to compare endolymphatic sac sizes between egg bearing and non visible egg bearing females, as well as females to males.
+We investigated whether <em>Gonatodes antillensis</em> makes use of these structures for egg development through the use of X-rays images taken from museum specimens. We compared endolymphatic sac sizes between egg bearing and non visible egg bearing females, as well as females to males.
 <br>
 <br>
-We found that while both males and females have minerals in their endolymphatic sacs, females have far, far more, supporting the expectations of endolymphatic sac use for reproduction.
+We found that while both males and females have minerals in their endolymphatic sacs, females have far, far more. Our results support the expectations of endolymphatic sac use for reproduction.
 <br>
-<img class="b30" src="http://carolinafishes.github.io/images/Gonatodes_2.jpg" alt=""><em>Violin plots with embedded box plots depicting the first, second (median) and third quartiles. A, Endolymphatic sac size area (mm2) for gravid females (GF), females with no eggs (NVE) and males (M).</em>
+<img class="b30" src="http://carolinafishes.github.io/images/Gonatodes_2.jpg" alt=""><em>Violin plots with embedded box plots depicting the first, second (median) and third quartiles of Endolymphatic sac size area (mm2) for gravid females (GF), females with no eggs (NVE) and males (M).</em>
 <br>
 <br>
 <br>
