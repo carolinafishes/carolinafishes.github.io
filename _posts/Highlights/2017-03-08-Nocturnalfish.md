@@ -27,7 +27,6 @@ I recently had the opportunity to attend a special <a href='http://www.rsmas.mia
 <br>
 We just <a href='https://www.researchgate.net/publication/311066164_An_assessment_of_sampling_biases_across_studies_of_diel_activity_patterns_in_marine_ray-fnned_fshes_Actinopterygii?_iepl%5BviewId%5D=2RJ6musqH3HS91JZ4KFixtmY&_iepl%5BprofilePublicationItemVariant%5D=default&_iepl%5Bcontexts%5D%5B0%5D=prfpi&_iepl%5BtargetEntityId%5D=PB%3A311066164&_iepl%5BinteractionType%5D=publicationTitle'>published a study</a> that investigated where our knowledge gaps in circadian rhythms are. It turns out that there are some readily apparent biases in where we collect data on marine fish activity patterns.
 <br>
-<br>
 <h3> Sampling Biases </h3>
 <br>
 By surveying the literature and coding every study on fish activity we could find we compiled a database of over 800 marine species that have been studied. This is pretty amazing in itself. The ability to track species and study marine species is incredibly difficult. Given the difficulties of working underwater, it is probably not surprising that most behavioral studies come from coral reefs. In contrast, we know far less about the fishes off the coast in New England.
