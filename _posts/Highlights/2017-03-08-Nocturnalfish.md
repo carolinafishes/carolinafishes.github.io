@@ -45,21 +45,19 @@ In contrast, a good day of tropical diving can often have visibility beyond 100 
 However, even in tropical areas, we are overlooking large groups of taxa. If we map what species have been studied unto a phylogeny of all fishes, it is clear that some groups are well represented, other groups (like blennies and gobies) are barely represented at all. 
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/FAN1.png" alt="">
-<em>. (A) Significant clustering of sampled (dark) and unsampled (light) in taxon sampling in the Rabosky et al. (2013) topology pruned to only reef associated species relative to a diversity tree containing all known reef associated  fish species. (B) Significant clustering of sampled (dark) and unsampled (light) in activity data relative to a diversity tree containing all known reef associated  fish species. Black lines in the phylogeny represent no deviation in under or over dispersion of taxon sampling. Names represent signicantly under-sampled named clades. Cartoon illustration of a butterfly fish (Chaetodontidae) represents one of the reef fish clades highlighted as highly sampled in our analyses.</em>.
+<em> (A) Significant clustering of sampled (dark) and unsampled (light) in taxon sampling in the Rabosky et al. (2013) topology pruned to only reef associated species relative to a diversity tree containing all known reef associated  fish species. (B) Significant clustering of sampled (dark) and unsampled (light) in activity data relative to a diversity tree containing all known reef associated  fish species. Black lines in the phylogeny represent no deviation in under or over dispersion of taxon sampling. Names represent signicantly under-sampled named clades. Cartoon illustration of a butterfly fish (Chaetodontidae) represents one of the reef fish clades highlighted as highly sampled in our analyses.</em>
 <br>
 <br>
 <br>
 More globally, this group specific pattern persists.
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/FAN2.png" alt="">
-<em>. (A) Patterns of over (dark) and under-dispersion (light) in taxon sampling in the Rabosky et al. (2013) topology pruned to only marine species relative to a diversity tree containing all known marine  fish species. (B) Patterns of over (dark) and under-dispersion (light) in activity data relative to a diversity tree containing all known marine fish species. Black lines in the phylogeny represent no deviation in under or over dispersion of taxon sampling. Names represent significantly over-dispersed named clades. Illustration of a sturgeon (Acipenseridae) represents the earliest diverging lineage in our analyses.</em>.
+<em> (A) Patterns of over (dark) and under-dispersion (light) in taxon sampling in the Rabosky et al. (2013) topology pruned to only marine species relative to a diversity tree containing all known marine  fish species. (B) Patterns of over (dark) and under-dispersion (light) in activity data relative to a diversity tree containing all known marine fish species. Black lines in the phylogeny represent no deviation in under or over dispersion of taxon sampling. Names represent significantly over-dispersed named clades. Illustration of a sturgeon (Acipenseridae) represents the earliest diverging lineage in our analyses.</em>
 <br>
 <br>
 <br>
 This mapping exercise is illustrative a major problem in science that matters quite a bit. We live in the age of big data and compiling lots of historic information is easier than ever. However, independent studies are not conducted with the intent of future meta-study. As such, it is up to the investigator if their synthesis of the literature is well-designed or not. As it stands right now, making sweeping statements about the ecology and evolution of circadian rhythms in marine fishes would be largely driven by data from a few groups of tropical reef species. 
 <br>
- <img class="b30" src="http://carolinafishes.github.io/images/" alt="">
-<em>. </em>.
 <br>
 <br>
 <br>
