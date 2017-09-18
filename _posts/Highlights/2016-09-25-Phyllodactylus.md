@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Disentangling the impact of invasive species and urbanization on population declines"
-teaser: "Why are native geckos vanishing in Curaçao"
+teaser: "Why are native geckos vanishing in Curaçao?"
 header:
     image_fullwidth: "Phylodactylus_banner.jpg"
     caption: Shete Boca National Park, Curaçao
