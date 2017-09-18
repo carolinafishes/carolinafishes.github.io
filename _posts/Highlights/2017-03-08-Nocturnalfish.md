@@ -43,6 +43,7 @@ I actually have spent quite a bit of time in the waters of Connecticut and Rhode
 <br>
 In contrast, a good day of tropical diving can often have visibility beyond 100 feet, and most days will have excellent visibility.
 <br> 
+<br>
 However, even in tropical areas, we are overlooking large groups of taxa. If we map what species have been studied unto a phylogeny of all fishes, it is clear that some groups are well represented, other groups (like blennies and gobies) are barely represented at all. 
 <br>
 <br>
@@ -61,9 +62,8 @@ More globally, this group specific pattern persists.
 This mapping exercise is illustrative a major problem in science that matters quite a bit. We live in the age of big data and compiling lots of historic information is easier than ever. However, independent studies are not conducted with the intent of future meta-study. As such, it is up to the investigator if their synthesis of the literature is well-designed or not. As it stands right now, making sweeping statements about the ecology and evolution of circadian rhythms in marine fishes would be largely driven by data from a few groups of tropical reef species. 
 <br>
 <br>
-<br>
-<br>
 In the theme of the Fish at Night symposium, shining a light on fish at night is in some ways analogous to exploring biases lurking beneath the surface of an existing data structure. Focusing research efforts on one underrepresented component of marine vertebrates holds great potential for scientific discovery. Likewise, addressing emerging challenges associated with the accumulation of large data sets, such as sampling bias, also holds great promise. 
+<br>
 <br>
 Assessing sampling bias patterns can increase the efficiency of experimental design, saving both research time and costs. Scrutinizing data for bias patterns can also spur the development of new methodologies while empowering new discoveries. As global biodiversity patterns continue to change in response to new pressures associated with the Anthropocene, such scrutiny of ecological or behavioral data will be essen- tial if we are to accurately forecast and manage the future of the planet’s biodiversity.
 
