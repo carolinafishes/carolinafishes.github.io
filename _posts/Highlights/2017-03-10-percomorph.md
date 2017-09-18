@@ -21,7 +21,7 @@ The past decade has given rise to incredible advances in sequencing technology t
 We just <a href='https://www.researchgate.net/publication/314104725_New_Insights_on_the_Sister_Lineage_of_Percomorph_Fishes_with_an_Anchored_Hybrid_Enrichment_Dataset'>published a study</a> investigating one area of the fish Tree of Life that has been particularly recalcitrant: identifying the sister lineage to percomorpha.
 <br>
 <br>
-Percomorph fishes represent over 17,000 species, including several model organisms and species of eco- nomic importance. However, resolution of the sister lineage to Percomorpha remains inconsistent. This is a problem. Identifying what the sister lineage is serves to not only place studies of morphological and genomic evolution of teleost fishes into a broader context, but also provides the comparative perspective needed to investigate the processes that have generated a quarter of living vertebrate biodiversity. 
+Percomorph fishes represent over 17,000 species, including several model organisms and species of economic importance. However, resolution of the sister lineage to Percomorpha remains inconsistent. This is a problem. Identifying what the sister lineage is serves to not only place studies of morphological and genomic evolution of teleost fishes into a broader context, but also provides the comparative perspective needed to investigate the processes that have generated a quarter of living vertebrate biodiversity. 
 <br>
 <h3>Searching for lost relatives</h3>
 <br>
