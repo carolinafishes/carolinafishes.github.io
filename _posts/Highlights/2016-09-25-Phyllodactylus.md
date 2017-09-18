@@ -28,7 +28,7 @@ Think about it. Numerous Geckos are adapted to climbing shear walls to hunt inse
 <br>
 <br>
 In Curaçao native geckos are disappearing from the urban landscape and being replaced by a species of gecko that has invaded much of the Western Hemisphere: <em>Hemidactylus mabouia</em>. The prevailing hypothesis is that native geckos cannot compete with this newcomer. 
-<img class="b30" src="http://carolinafishes.github.io/images/Phylodactylus_3.png" alt=""><em>By day the streets of Willemstad mobbed with tourists searching for a meal, by night these alleys transform into the feeding dens of Hemidactylus mabouia. In the main urban centers of Curaçao, native geckos have been displaced entirely.</em>
+<img class="b30" src="http://carolinafishes.github.io/images/Phylodactylus_4.jpg" alt=""><em>By day the streets of Willemstad mobbed with tourists searching for a meal, by night these alleys transform into the feeding dens of Hemidactylus mabouia. In the main urban centers of Curaçao, native geckos have been displaced entirely.</em>
 <br>
 <br>
 <br>
