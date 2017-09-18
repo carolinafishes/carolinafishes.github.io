@@ -32,6 +32,7 @@ We just <a href='https://www.researchgate.net/publication/311066164_An_assessmen
 <br>
 By surveying the literature and coding every study on fish activity we could find we compiled a database of over 800 marine species that have been studied. This is pretty amazing in itself. The ability to track species and study marine species is incredibly difficult. Given the difficulties of working underwater, it is probably not surprising that most behavioral studies come from coral reefs. In contrast, we know far less about the fishes off the coast in New England.
 <br>
+<br>
 I actually have spent quite a bit of time in the waters of Connecticut and Rhode Island and can tell you first hand that designing a transect study to visually monitor or film activity would be very difficult. I have had numerous dives where visibility was measured in inches, not feet. That said, good days can produce some really excellent dives such as the one we filmed below.
 <br> 
 <br>
@@ -43,6 +44,7 @@ I actually have spent quite a bit of time in the waters of Connecticut and Rhode
 In contrast, a good day of tropical diving can often have visibility beyond 100 feet, and most days will have excellent visibility.
 <br> 
 However, even in tropical areas, we are overlooking large groups of taxa. If we map what species have been studied unto a phylogeny of all fishes, it is clear that some groups are well represented, other groups (like blennies and gobies) are barely represented at all. 
+<br>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/FAN1.png" alt="">
 <em> (A) Significant clustering of sampled (dark) and unsampled (light) in taxon sampling in the Rabosky et al. (2013) topology pruned to only reef associated species relative to a diversity tree containing all known reef associated  fish species. (B) Significant clustering of sampled (dark) and unsampled (light) in activity data relative to a diversity tree containing all known reef associated  fish species. Black lines in the phylogeny represent no deviation in under or over dispersion of taxon sampling. Names represent signicantly under-sampled named clades. Cartoon illustration of a butterfly fish (Chaetodontidae) represents one of the reef fish clades highlighted as highly sampled in our analyses.</em>
