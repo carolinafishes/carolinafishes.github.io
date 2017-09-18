@@ -4,17 +4,17 @@
   title: Code and data...
 
 - name: YouTube
-  url: 'http://www.youtube.com/NCSM_Fishes'
+  url: 'https://www.youtube.com/channel/UCQ0dCEMuLwM-lM2syyf_VrA'
   class: icon-youtube
-  title: "Coming Soon"
+  title: "Collection of our videos"
 
 - name: Instagram
-  url: 'http://instagram.com/NCSM_Fishes'
+  url: 'http://instagram.com/fish_focus/'
   class: icon-instagram
-  title: "Coming Soon"
+  title: "Follow us on instagram"
 
 - name: Facebook
-  url: 'http://www.facebook.com/NCSM_Fishes'
+  url: 'https://www.facebook.com/alex.dornburg'
   class: icon-facebook
   title: "Coming Soon"
 
@@ -31,11 +31,6 @@
 # - name: Soundcloud
 #   url: http://soundcloud.com/
 #   class: icon-soundcloud
-#   title: ""
-
-# - name: Instagram
-#   url: http://instagram.com/
-#   class: icon-instagram
 #   title: ""
 
 # - name: Pinterest
