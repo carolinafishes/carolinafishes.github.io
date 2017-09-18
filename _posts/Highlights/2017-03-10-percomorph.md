@@ -46,7 +46,7 @@ Although the mechanisms generating codon biases are heterogeneous, codon biases 
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/Percomorph2.png" alt="">
 <br>
-<em>Nucleotide frequencies of the codon partitions in one of the retained (blue) versus filtered (grey) data sets. Frequencies within each panel correspond to the frequency within each partition of either adenine, thymine, guanine, cytosine, or guanine + cytosine. <a href='https://www.researchgate.net/publication/314104725_New_Insights_on_the_Sister_Lineage_of_Percomorph_Fishes_with_an_Anchored_Hybrid_Enrichment_Dataset'>Figure taken from our study<a/></em>.
+<em>Nucleotide frequencies of the codon partitions in one of the retained (blue) versus filtered (grey) data sets. Frequencies within each panel correspond to the frequency within each partition of either adenine, thymine, guanine, cytosine, or guanine + cytosine. <a href='https://www.researchgate.net/publication/314104725_New_Insights_on_the_Sister_Lineage_of_Percomorph_Fishes_with_an_Anchored_Hybrid_Enrichment_Dataset'>Figure taken from our study</a></em>.
 <br>
 <br>
 <br>
@@ -54,7 +54,7 @@ Investigating previous data used to infer the sister lineage of percomorphs reve
 <br>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/Percomorph3.png" alt="">
-<em>Maximum clade credibility tree of the posterior distribution of phylogenies based on amino acid analysis of next-generation sequence data using PhyloBayes. No circles at nodes represent Bayesian Posterior Probability (BPP) estimates of 1.00 and the black circle represents a BPP of 0.98. All branch lengths are in substitution units and the highlighted branches correspond with the inferred sister lineage to Percomorpha. *** symbols indicate a branch length scaling of 25% of all subtending branches to accommodate graphical constraints. <a href='https://www.researchgate.net/publication/314104725_New_Insights_on_the_Sister_Lineage_of_Percomorph_Fishes_with_an_Anchored_Hybrid_Enrichment_Dataset'>Figure taken from our study<a/></em>.
+<em>Maximum clade credibility tree of the posterior distribution of phylogenies based on amino acid analysis of next-generation sequence data using PhyloBayes. No circles at nodes represent Bayesian Posterior Probability (BPP) estimates of 1.00 and the black circle represents a BPP of 0.98. All branch lengths are in substitution units and the highlighted branches correspond with the inferred sister lineage to Percomorpha. *** symbols indicate a branch length scaling of 25% of all subtending branches to accommodate graphical constraints. <a href='https://www.researchgate.net/publication/314104725_New_Insights_on_the_Sister_Lineage_of_Percomorph_Fishes_with_an_Anchored_Hybrid_Enrichment_Dataset'> Figure taken from our study</a></em>.
 <br>
 <br>
 Bias have become a major problem for phylogenomic data that is leading to the development of several new techniques to overcome this obstacle. We are also part of this effort and are currently collaborating with Jeff Townsend on new theory of phylogenetic experimental design that incorporates bias and will enable prediction of when analyses are misled. Stay tuned!
