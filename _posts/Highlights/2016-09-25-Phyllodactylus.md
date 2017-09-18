@@ -32,7 +32,9 @@ In Curaçao native geckos are disappearing from the urban landscape and being re
 <br>
 This is a pretty solid hypothesis. <em>Hemidactylus mabouia</em> is a highly aggressive and territorial species of gecko. In fact, this species is so aggressive that a <a href='http://www.jstor.org/stable/1565258?seq=1#page_scan_tab_contents'>study in Florida</a> found that the arrival of <em>H. mabouia </em> led to the rapid displacement of other species of highly invasive geckos.
 <br>
+<br>
 However, despite the intuitive appeal of this hypothesis, any hypothesis requires testing to rule out alternative potential drivers of displacement.
+<br>
 <br>
 We recently <a href='https://www.researchgate.net/publication/308891841_Disentangling_the_Influence_of_Urbanization_and_Invasion_on_Endemic_Geckos_in_Tropical_Biodiversity_Hot_Spots_A_Case_Study_of_Phyllodactylus_martini_Squamata_Phyllodactylidae_along_an_Urban_Gradient_i'> published a manuscript </a> doing just that. We tested the possibility that urbanization may disrupt the prey base of the native leaf toed gecko <em>Phyllodactylus martini</em>, and therefore leave <em>P. Martini</em> with insufficient prey resources to persist by assessing differences in fedding ecology between developed and undeveloped areas.
 <br>
@@ -48,7 +50,9 @@ We found that in undeveloped habitats <em>Phyllodactylus martini</em> subsisted 
 <br>
 While our study supports the expectations of the competition hypothesis, we also provide direct evidence for an additional driver of extirpation: predation.
 <br>
+<br>
 We witnessed first hand how a <em>Hemidactylus mabouia</em> darted out from behind a poster on a wall of our fieldstation to consume a juvenile <em>Phyllodactylus martini</em>. We previously <a href='https://www.researchgate.net/publication/232688233_Natural_History_Observations_of_the_Ichthyological_and_Herpetological_Fauna_on_the_Island_of_Curacao_Netherlands'> documented the remains of another native gecko, <em>Gonatodes antillensis</em> in the stomach contesnts of <em>H. mabouia</em></a>. This additional finding lends further support that <em>H. mabouia</em> may be opportunistically preying upon native species.
+<br>
 <br>
 Luckily for the geckos of Curaçao, <em>Hemidactylus mabouia</em> is restricted to suburban and urban areas.Why remains unknown, though this is something we hope to find out. Other parts of the world are not as lucky, and <em>Hemidactylus</em> invasions are so pervasive that the group had been referred to as a complex of weedy species.
 <img class="b30" src="http://carolinafishes.github.io/images/Phylodactylus_1.jpg" alt=""><em>Many areas in the North of Curaçao remain undeveloped, leaving native geckos with a refuge. However, the surrounding suburbs are already heavily colonized by H. mabouia.</em>
