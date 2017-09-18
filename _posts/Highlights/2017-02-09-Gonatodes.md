@@ -50,7 +50,6 @@ We found that while both males and females have minerals in their endolymphatic 
 <br>
 <br>
 <br>
-<br>
 We also used egg presence absence data to see when this species is reproductively active. To date, only summer reproductive activity was known. However, we expand the reproductive season into winter, suggesting year-round reproducition.
 <br>
 <br>
