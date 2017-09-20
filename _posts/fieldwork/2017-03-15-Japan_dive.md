@@ -1,7 +1,7 @@
 ---
 layout: page
-title:  "Okinawa 2016"
-meta_teaser: "Diving beneath the East China Sea"
+title:  "Filming below the East China Sea"
+meta_teaser: "Scenes from the field"
 teaser: "Sampling reef fish in order to map the teleost brain"
 categories:
     - fieldwork
