@@ -20,10 +20,9 @@ comments: true
 show_meta: false
 mediaplayer: true
 ---
-Last year, I teamed up with <a href='https://danlwarren.wordpress.com/'>Dan Warren </a> and <a href='https://www.researchgate.net/profile/Teresa_Iglesias'>Teresa Iglesias </a> at the <a href='https://www.oist.jp/'> Okinawa Institute of Science and Technology </a> to continue or collaborative research on the evolution of the teleost brain. Most of our trip was spent CT scanning fish brains, however we also attempted to get into the water to obtain more samples whenever possible.   
+Last year, I teamed up with <a href='https://danlwarren.wordpress.com/'>Dan Warren </a> and <a href='https://www.researchgate.net/profile/Teresa_Iglesias'>Teresa Iglesias </a> at the <a href='https://www.oist.jp/'> Okinawa Institute of Science and Technology </a> to continue or collaborative research on the evolution of the teleost brain. Most of our trip was spent CT scanning fish brains, however we also attempted to get into the water to obtain more samples when possible.   
 <br>
 <h3> Diving in Okinawa </h3>
-
 <br> We were diving on the Western Shore of the Island around Onna, and this is an interesting area to dive to say the least. Lots of curious sea snakes, octopus, and of course triggerfish kept us company as we worked our way around the reefs and canyons. I had a chance to compile some footage I captured and am sharing it here to give you a sense of what working in this area was like.  
 <br>
 <br>
