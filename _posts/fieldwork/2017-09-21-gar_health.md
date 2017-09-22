@@ -57,13 +57,15 @@ In addition to catching gar and bowfin, an NC Wildlife Resource Commission photo
 <br>
 <br>
 Stay tuned for more updates as we continue our journey to link fish models to human health and monitor the health of these species in our waterways. 
-<ul class="clearing-thumbs small-block-grid-3" data-clearing>
+<ul class="clearing-thumbs small-block-grid-4" data-clearing>
   <li><a href="{{ site.url }}/images/Capefear1.jpg"><img  data-caption="Potential habitat along the Cape Fear" class="th" src="{{ site.url }}/images/Capefear1_thumb.jpg"></a></li>
   <li><a href="{{ site.url }}/images/Capefear3.jpg"><img  data-caption="View from the boat" class="th" src="{{ site.url }}/images/Capefear3_thumb.jpg"></a></li>
   <li><a href="{{ site.url }}/images/Capefear2.jpg"><img  data-caption="Jeff and Kent preparing to go search for fish at the start of the day" class="th" src="{{ site.url }}/images/Capefear2_thumb.jpg"></a></li>
   <li><a href="{{ site.url }}/images/Capefear8.jpg"><img  data-caption="Gar and bowfin housed at NCSU" class="th" src="{{ site.url }}/images/Capefear8_thumb.jpg"></a></li>
   <li><a href="{{ site.url }}/images/Capefear13.jpg"><img  data-caption="Michael helping with the photographing of fish we brought back for an updated gamefish pamphlet" class="th" src="{{ site.url }}/images/Capefear13_thumb.jpg"></a></li>
   <li><a href="{{ site.url }}/images/Capefear14.jpg"><img  data-caption="Michael and Jeff heading up the Cape Fear in search of elusive ancient fishes" class="th" src="{{ site.url }}/images/Capefear14_thumb.jpg"></a></li>
+  <li><a href="{{ site.url }}/images/Capefear15.jpg"><img  data-caption="Heading upriver in search of North Carolina's elusive living fossil fishes" class="th" src="{{ site.url }}/images/Capefear15_thumb.jpg"></a></li>
+  <li><a href="{{ site.url }}/images/Capefear16.jpg"><img  data-caption="Getting ready to try netting fish another site along the Cape Fear River" class="th" src="{{ site.url }}/images/Capefear16_thumb.jpg"></a></li>
 </ul>
 
 
