@@ -21,7 +21,7 @@ permalink: "/team/"
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/Alex_guam_diving.jpg" alt="">
 <br>
-My research takes an integrative approach to explore the factors that underlie the origin and maintenance of biodiversity in ray-finned fishes (Actinopterygii). Actinopterygiians comprise over half of all living vertebrate species and a better understanding of their history will shed light onto some long standing questions in evolutionary biology. Why are some clades more diverse than others? Are there general trends that govern the diversification dynamics of lineages in different communities? To answer these questions, my work crosses traditional boundaries between molecular phylogenetics, morphology, paleontology, and ecology. This integrative approach to research facilitates a broader understanding of not only how ecomorphological diversity has accumulated in ecosystems ranging from coral reefs to the Southern Ocean of Antarctica, but also illuminates the factors that influence patterns of vertebrate diversification.
+My research takes an integrative approach to explore the factors that underlie the origin and maintenance of biodiversity in ray-finned fishes (Actinopterygii). Actinopterygiians comprise over half of all living vertebrate species and a better understanding of their history will shed light onto some long standing questions in evolutionary biology. Why are some clades more diverse than others? Are there general trends that govern the diversification dynamics of lineages in different communities? To answer these questions, my work crosses traditional boundaries between molecular phylogenetics, morphology, paleontology, and ecology. This approach to research facilitates a broader understanding of not only how ecomorphological diversity has accumulated in ecosystems ranging from coral reefs to the Southern Ocean of Antarctica, but also illuminates the factors that influence patterns of vertebrate diversification.
 <br>
 <br><a href="http://carolinafishes.github.io/images/Dornburg_CV.pdf"><en>C.V.</en></a>
 <br><a href='https://www.researchgate.net/profile/Alex_Dornburg'>Research Gate</a>
@@ -30,32 +30,31 @@ My research takes an integrative approach to explore the factors that underlie t
 <br>
 <br>
 
-<h2>Current Interns</h2>
-<br> 
-<h3>Willa Brooks</h3>
-<img class="b30" src="http://carolinafishes.github.io/images/intern_willa_brooks.jpg" alt="">
-<br>
-I graduated from Emory University in 2014 with a bachelors in Environmental Science and a minor in math. My primary interest lies in marine conservation and I have worked in several areas of marine science education and outreach, fisheries management policy analysis, and field and lab based marine research. Working with the fishes unit I am developing a foundation in phylogenetic and biogeographic analyses as we investigate a complex pattern of cryptic species diversity in Caribbean blennies. Understanding patterns of species diversity forms the critical foundation for much of organismal biology, and I look forward to utilizing the skills and knowledge I gain in the ichthyology unit to develop new perspectives on contemporary issues in marine conservation. 
-<br>
-<a href='https://www.linkedin.com/in/willarbrooks'> linkedin </a> 
+<h2>Current Interns and Volunteers</h2>
 
-<h3>Abagail Burrus</h3>
-<img class="b30" src="http://carolinafishes.github.io/images/intern_a_burrus.jpg" alt="">
+<h3>Rita Chen</h3>
 <br>
-I am currently getting my feet wet in phylogenetic studies by constructing a <a href='https://en.wikipedia.org/wiki/Lycopodiophyta'> Lycopod</a> Tree of Life and also studying the possible effects of Madagascar's hypervariable climate on the community-level organization its endemic trees. I'm interested in pursuing projects in plant phylogenetics that unite integrative taxonomy, herbarium research, and applications towards conservation. What can the history of flora found in our natural history collections tell us about impending (or active) changes in the floral landscape due to factors like climate change? What other novel uses arise for collections such as herbaria when a researcher combines modern data analysis with such historical datasets? What new strategies and biological understandings can combined molecular and morphological phylogenetic analyses give us by illuminating more branches (or new pathways) on the evolutionary trees of various plant groups?
-<br>
-<a href='https://www.researchgate.net/profile/Abagail_Burrus'> Researchgate </a> 
+<img class="b30" src="http://carolinafishes.github.io/images/vol_rita_chen.jpg" alt="">
 <br>
 
+<h3>Tim Curtis</h3>
+<br>
+<img class="b30" src="http://carolinafishes.github.io/images/vol_tim_curtis.jpg" alt="">
+<br>
+
+<br>
 <h3>April Lamb</h3>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/vol_april_lamb.jpg" alt="">
 <br>
-I am starting my junior year at North Carolina State University and am majoring in Zoology with intended minors in Applied Ecology and Biotechnology. I currently work in the lab of Dr. John Godwin at NC State, where I look at the expression of GnRH1 and Kisspeptin receptors in the hypothalamus of Bluehead wrasses, a sex changing coral reef fish, to gain insight on the systems’ roles in the sex change process. Here at the NCMNS fish unit, I am gaining a foundation in phylogenetic and biogeographic analyses as I explore the biogeography of Antarctic icefishes. I am broadly interested in marine and behavioral ecology and the interactions between fishes and invertebrate species relative to a changing environment. I intend to pursue a graduate degree in one of these related fields and further my research experience after I graduate from NC State.
+I am a M.Sc. student in the Department of Applied Ecology at North Carolina State University, where I work on invasive carp (Cyprinus carpio) in a shallow lake ecosystem. In general, I am interested in the ecology, physiology, and diversity of marine and freshwater fishes. Here at the museum I have been involved in a number of projects including: (1) <a href="https://www.researchgate.net/publication/318660129_Cradles_and_museums_of_Antarctic_teleost_biodiversity?_iepl%5BviewId%5D=7VrdiZEkOGNKwKZwBr2HhzOe&_iepl%5BprofilePublicationItemVariant%5D=default&_iepl%5Bcontexts%5D%5B0%5D=prfpi&_iepl%5BtargetEntityId%5D=PB%3A318660129&_iepl%5BinteractionType%5D=publicationTitle"> examining the diversification dynamics of Antarctic fishes</a>, (2) <a href="https://www.researchgate.net/publication/308891841_Disentangling_the_Influence_of_Urbanization_and_Invasion_on_Endemic_Geckos_in_Tropical_Biodiversity_Hot_Spots_A_Case_Study_of_Phyllodactylus_martini_Squamata_Phyllodactylidae_along_an_Urban_Gradient_i">investigating how urbanization impacts</a> the <a href="https://www.researchgate.net/publication/316107244_Endolymphatic_Sac_Use_and_Reproductive_Activity_in_the_Lesser_Antilles_Endemic_Gecko_Gonatodes_antillensis_Gekkota_Sphaerodactylidae">natural history </a> of geckos native to Curaçao, and currently (3) examining morphological and ecological diversity in reef fishes. In addition to this, I assist with maintaining and databasing collection specimens. 
 <br>
 <a href='https://www.researchgate.net/profile/April_Lamb'> Researchgate </a> 
 <br>
-
+<h3>Richard Morris</h3>
+<br>
+<img class="b30" src="http://carolinafishes.github.io/images/vol_richard_morris.jpg" alt="">
+<br>
 <h3>Katerina Zapfe</h3>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/intern_katerina_zapfe.jpg" alt="">
@@ -65,14 +64,36 @@ I am a born naturalist with a B.S. in Marine Science and minor in Plant Biology 
 <h2>Former Interns and Volunteers</h2>
 <br>
 <br>
+<h3>2016-2017</h3>
+<br>
+<br>
+<h3>Willa Brooks</h3>
+<img class="b30" src="http://carolinafishes.github.io/images/intern_willa_brooks.jpg" alt="">
+<br>
+I graduated from Emory University in 2014 with a bachelors in Environmental Science and a minor in math. My primary interest lies in marine conservation and I have worked in several areas of marine science education and outreach, fisheries management policy analysis, and field and lab based marine research. Working with the fishes unit I am developing a foundation in phylogenetic and biogeographic analyses as we investigate a complex pattern of cryptic species diversity in Caribbean blennies. Understanding patterns of species diversity forms the critical foundation for much of organismal biology, and I look forward to utilizing the skills and knowledge I gain in the ichthyology unit to develop new perspectives on contemporary issues in marine conservation. 
+<br>
+<a href='https://www.linkedin.com/in/willarbrooks'> linkedin </a> 
+<br>
+<br>
+<h3>Abagail Burrus</h3>
+<img class="b30" src="http://carolinafishes.github.io/images/intern_a_burrus.jpg" alt="">
+<br>
+I am currently getting my feet wet in phylogenetic studies by constructing a <a href='https://en.wikipedia.org/wiki/Lycopodiophyta'> Lycopod</a> Tree of Life and also studying the possible effects of Madagascar's hypervariable climate on the community-level organization its endemic trees. I'm interested in pursuing projects in plant phylogenetics that unite integrative taxonomy, herbarium research, and applications towards conservation. What can the history of flora found in our natural history collections tell us about impending (or active) changes in the floral landscape due to factors like climate change? What other novel uses arise for collections such as herbaria when a researcher combines modern data analysis with such historical datasets? What new strategies and biological understandings can combined molecular and morphological phylogenetic analyses give us by illuminating more branches (or new pathways) on the evolutionary trees of various plant groups?
+<br>
+<a href='https://www.researchgate.net/profile/Abagail_Burrus'> Researchgate </a> 
+<br> 
+<br>
+<br>
 <h3>2015-2016</h3>
+<br> 
+<br>
 <h3>Joseph Flores</h3>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/vol_josef_flores.jpg" alt="">
 <br>
 I am a 2014 graduate of the University of North Carolina Wilmington with my B.S. in marine biology. My primary interests are in marine life and conservation and I enjoy both field work and hands on data gathering. I am currently collecting morphometric data to better understand biodiversity patterns in several species of fish, both in fresh and salt water. Quantifying morphological change within or between species can gleam valuable insights into a range of topics including the discovery of cryptic diversity and correlations between form,  function, and life history. I am looking forward to expanding my knowledge of fishes and ultimately finding a career in this field of study.
 <br>
- <h3>Leela Rao</h3>
+<h3>Leela Rao</h3>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/vol_leela_rao.jpg" alt="">
 <br>
