@@ -57,6 +57,9 @@ I am a M.Sc. student in the Department of Applied Ecology at North Carolina Stat
 <br>
 I am a born naturalist with a B.S. in Marine Science and minor in Plant Biology from NC State University. My love for the natural world began early. A childhood snorkeling off Grand Cayman introduced me to the world below the waves and I went on to become involved with study abroad research in the Bahamas, animal husbandry through The Maritime Aquarium and marine biology education with the Sea Turtle Camp. These experiences fueled my passion for marine science. Since working at the Fish Lab, I have become interested in both the adaptive radiation of Antarctic icefish and patterns of morphological evolution in trigger and filefishes. When I am not working at the research station, I enjoys orchid keeping, SCUBA diving and merging my passions for science and fine art in the form of detailed biological illustrations. I aspire to attend graduate school and inspire others to develop their own passion for marine life. 
 <br>
+<a href='https://www.researchgate.net/profile/Katerina_Zapfe'> Researchgate </a> 
+<br>
+<br>
 <h2>Former Interns and Volunteers</h2>
 <br>
 <br>
