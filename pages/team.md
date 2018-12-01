@@ -21,7 +21,7 @@ permalink: "/team/"
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/Alex_guam_diving.jpg" alt="">
 <br>
-My research takes an integrative approach to explore the factors that underlie the origin and maintenance of biodiversity in ray-finned fishes (Actinopterygii). Actinopterygiians comprise over half of all living vertebrate species and a better understanding of their history will shed light onto some long standing questions in evolutionary biology. Why are some clades more diverse than others? Are there general trends that govern the diversification dynamics of lineages in different communities? To answer these questions, my work crosses traditional boundaries between molecular phylogenetics, morphology, paleontology, and ecology. This approach to research facilitates a broader understanding of not only how ecomorphological diversity has accumulated in ecosystems ranging from coral reefs to the Southern Ocean of Antarctica, but also illuminates the factors that influence patterns of vertebrate diversification.
+My research program takes an integrative approach to explore the factors that underlie the origin and maintenance of vertebrate biodiversity, with an emphasis on the study of ray-finned fishes (Actinopterygiians). Actinopterygiians comprise over half of all living vertebrate species—a better understanding of their history will shed light onto long standing questions in evolutionary biology that have relevance to both conservation and human health such as: how do lineages persist and recover from rapid environmental change? How do we extract relevant information from genome-scale datasets to efficiently link genotypes to phenotypes? What are the mechanisms and functional consequences of vertebrate immune gene evolution?  To address these types of questions, I often cross traditional research boundaries, enabling the integration of perspectives from the fields of biodiversity science,  molecular phylogenomics, functional and computational genomics, and human health. This integrative approach to research not provides a historical foundation for forecasting the response of species facing global changes while illuminating general features of vertebrate evolution, but also is critical for developing a comparative perspective of the molecular pathways vertebrates have taken to distinguish normal cells from pathogens. 
 <br>
 <br><a href="http://carolinafishes.github.io/images/Dornburg_CV.pdf"><en>C.V.</en></a>
 <br><a href='https://www.researchgate.net/profile/Alex_Dornburg'>Research Gate</a>
@@ -32,10 +32,6 @@ My research takes an integrative approach to explore the factors that underlie t
 
 <h2>Current Interns and Volunteers</h2>
 
-<h3>Rita Chen</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/vol_rita_chen.jpg" alt="">
-<br>
 
 <h3>Tim Curtis</h3>
 <br>
@@ -81,6 +77,11 @@ I graduated from Emory University in 2014 with a bachelors in Environmental Scie
 I am currently getting my feet wet in phylogenetic studies by constructing a <a href='https://en.wikipedia.org/wiki/Lycopodiophyta'> Lycopod</a> Tree of Life and also studying the possible effects of Madagascar's hypervariable climate on the community-level organization its endemic trees. I'm interested in pursuing projects in plant phylogenetics that unite integrative taxonomy, herbarium research, and applications towards conservation. What can the history of flora found in our natural history collections tell us about impending (or active) changes in the floral landscape due to factors like climate change? What other novel uses arise for collections such as herbaria when a researcher combines modern data analysis with such historical datasets? What new strategies and biological understandings can combined molecular and morphological phylogenetic analyses give us by illuminating more branches (or new pathways) on the evolutionary trees of various plant groups?
 <br>
 <a href='https://www.researchgate.net/profile/Abagail_Burrus'> Researchgate </a> 
+<br>
+<br>
+<h3>Rita Chen</h3>
+<br>
+<img class="b30" src="http://carolinafishes.github.io/images/vol_rita_chen.jpg" alt="">
 <br> 
 <br>
 <br>
