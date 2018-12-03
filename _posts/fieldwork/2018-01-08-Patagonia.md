@@ -73,7 +73,7 @@ I also assembled some photos and a quick video of photos & video I took. We didn
 <br>
 <br>
 <video id="player1" style="width:100%;height:100%;" width="640" height="360" controls="controls" > 
-  <source type="video/youtube" src="https://www.youtube.com/watch?v=_SUP_ac0Dvs&feature=youtu.be" />
+  <source type="video/youtube" src="https://www.youtube.com/watch?v=_SUP_ac0Dvs&t=91s" />
 </video>
 
 
