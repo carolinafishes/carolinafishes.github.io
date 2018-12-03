@@ -22,6 +22,8 @@ header:
     caption: Alberto de Augustini National Park, Chile
 comments: true
 show_meta: false
+mediaplayer: true
+
 ---
 
 <h3>Journey to Antarctica</h3>
