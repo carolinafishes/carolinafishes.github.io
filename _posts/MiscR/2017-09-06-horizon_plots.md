@@ -139,12 +139,15 @@ Note that in order for this to makes sense, you should keep either T or t consta
 <br>
 That's it! From here you can keep modifying the above, breaking out different subsets of data such as sites, or begin to use your favorite graphic editing software to customize as you like. We are working on a new release of PhyInformR that will have a more elegant version of the above as well as a lot of new theory for data exploration, so check back for updates.
 
+<h3>Citations</h3>
 <br> If you use this tutorial and code in a project, please cite:
 <br>
 <br>
 Near, T.J., MacGuigan, D., Parker, C.E., Jones, C., Struthers, C., Dornburg, A. 2018. Phylogenetic analysis of Antarctic notothenioids illuminates the utility of RADseq for resolving Cenozoic adaptive radiations. Molecular Phylogenetics and Evolution 129: 268—279
 <br>
+<br>
 and
+<br>
 <br>
 Dornburg, A., Tamagnon, J., Townsend, J.P. 2016. PhyInformR: Phylogenetic experimental design and phylogenomic data exploration. BMC Evolutionary Biology 16 (1): 262
 
