@@ -6,7 +6,7 @@ teaser: "Visualizing the predicted benefits of adding more data"
 categories:
     - MiscR
 tags:
-    - MiscR Diet Data 
+    - MiscR PhyInformR 
     
 image:
    thumb: ""
@@ -61,11 +61,17 @@ return(final)
 Let's demystify this a bit. 
 <br>
 rates: You need to feed this your site rates just like any other PhyInformR function.
+<br>
 pre_name: This will keep your times straight in the csv. go with pre_name="T_yourtime" where your time is the depth of the tree (e.g., 5, 10, 40, 500, etc)
+<br>
 filename: filename="yourfilename"
+<br>
 increment: how many more sites you want to sample per iteration (e.g., every 50, 100, 500 bp)
-time: depth of the tree
-internode: internode length
+<br>
+time: depth of the tree (T)
+<br>
+internode: internode length (t)
+<br>
 state_space: how many different types of characters you have, (e.g., 4 for nucleotides).
 <br>
 <br>
@@ -125,8 +131,8 @@ horizonplot(ts(signal), horizonscale=.3, origin=0,colorkey = TRUE, layout=c(1,10
 
 </pre>
 You should have something that looks like this:
+<img class="b30" src="https://carolinafishes.github.io/images/horizon_example.png" alt="">
 
- <img class="b30" src="https://carolinafishes.github.io/images/horizon_example" alt="">
 <br>
 Note that in order for this to makes sense, you should keep either T or t constant. For example, you could flip this logic and ask for a tree of depth X (e.g., 30 million years) what is the predicted benefit of adding more data for resolving an internode of length Y, Z, etc. 
 <br>
