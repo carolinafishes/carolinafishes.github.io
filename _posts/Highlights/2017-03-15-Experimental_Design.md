@@ -43,9 +43,11 @@ Resolving the fungal Tree of Life is pivotal for more accurately forecasting how
 <br>
 <br>
 Our review discusses these challenges in more detail, so check it out! For this post we will focus on experimental design, starting with the observation that the experimental design decisions required to resolve the fungal Tree of Life are not unique to fungi.
+
 <h3><i>Phylogenomics and Experimental Design</i></h3>
 <br>
 As we go from genes to genomes, selecting the best genes and taxa to better resolve nodes phylogenetic tree topologies remains an area of intense interest. Studies of why their is incongruence between markers have become ubiquitous, and for over a decade authors have repeatedly highlighted the fact that sequencing more genes is not enough. In the worst case, a few sequences can positively mislead an entire study. So what should we sequence from whom?   
+
 <h3><i>More Genes or More Taxa?</i></h3> 
 “Should more taxa or more genes be sequenced to help resolve this node?” is a classic question in phylogenetics. Although we have begun to change the narrative of this question from genes to genomes, the problem remains the same.
 <br>
@@ -55,8 +57,6 @@ Dense taxon sampling has repeatedly been shown to increase phylogenetic accuracy
 <br>
 Theory of phylogenetic experimental design has recently advanced to provide significant guidance as to when increased taxon or gene sampling would be cost-effective. For reasonable rates of sequence evolution, selection of taxa proximate to a focal internode is a good rule of thumb—if the goal is to resolve a specific node. However, rates of character change are integral to effectively choosing whether more genes or more taxa should be added to a study. Townsend and Lopez-Giraldez provide a predictive framework to answer the question of taxon-sampling that we summarize here.
 <br>
-<br>
-Theory of phylogenetic experimental design has recently advanced to provide significant guidance as to when increased taxon or gene sampling would be cost-effective. For reasonable rates of sequence evolution, selection of taxa proximate to a focal internode is a good rule of thumb—if the goal is to resolve a specific node. However, rates of character change are integral to effectively choosing whether more genes or more taxa should be added to a study. Townsend and Lopez-Giraldez provide a predictive framework to answer the question of taxon-sampling that we summarize here.
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/genes_or_taxa.png" alt=""><em>Graphic to aid in choosing more genes or more taxa</em>
 <br>

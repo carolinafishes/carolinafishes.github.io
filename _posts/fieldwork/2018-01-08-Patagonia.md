@@ -72,7 +72,7 @@ The captain picked a gorgeous site for this, and we got stuninng views of mounta
   <li><a href="{{ site.url }}/images/augusti08.jpg"><img  data-caption="Sunset as we leave South America" class="th" src="{{ site.url }}/images/augusti08_thumb.jpg"></a></li>
 </ul>
 
-I also assembled some photos and a quick video of photos & video I took. We didn't have a fitting soundtrack so I mixed together soundbites from everyones mp3s to create something for the background. 
+I also assembled some photos and made a quick video of photos & video I took. We didn't have a fitting soundtrack so I mixed together soundbites from everyones mp3s to create something for the background. 
 <br>
 <br>
 <video id="player1" style="width:100%;height:100%;" width="640" height="360" controls="controls" > 
