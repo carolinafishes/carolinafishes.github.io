@@ -69,12 +69,10 @@ A time-calibrated Tree of Life holds tremendous potential for understanding the 
 Consider dating a tree using a rapidly evolving marker and placing a calibration near the tips. If sites high in noise have converged in a pattern that appears fast relative to the real rates and a tipward calibration is used, then the deep branches of the tree will extend. 
 <br>
 <br>
-Dating a tree based on only a single calibration and a single rapidly evolving marker is an unlikely design for a 21st century phylogenomic study. However, utilizing a combination of loci character- ized by high or low noise and a differential representation of deep or shallow calibrations for divergence time studies is subject to the same principles. For example, Brandley et al. (2011) demonstrated a loss of accuracy in age estimates of liz- ards when they used a combination of noisy and conserved markers. These marker types yielded nearly mutually exclusive distributions of ages when analyzed independently. However, when marker types were combined for analysis, they yielded age estimates that were largely absent from both distributions, demonstrating an averaging effect that was driving a wholesale misestimation of ages. 
-<br>
-<br>
-So how do we detect hidden substitutions?
-<br>
-<br>
+Dating a tree based on only a single calibration and a single rapidly evolving marker is an unlikely design for a 21st century phylogenomic study. However, utilizing a combination of loci characterized by high or low noise and a differential representation of deep or shallow calibrations for divergence time studies is subject to the same principles. For example, Brandley et al. (2011) demonstrated a loss of accuracy in age estimates of lizards when they used a combination of noisy and conserved markers. These marker types yielded nearly mutually exclusive distributions of ages when analyzed independently. However, when marker types were combined for analysis, they yielded age estimates that were largely absent from both distributions, demonstrating an averaging effect that was driving a wholesale misestimation of ages. 
+
+<h3><i>So how do we detect hidden substitutions?</i></h3> 
+
 Phylogenetic informativeness (PI) profiles provide a useful roadmap of information content through time. Moving from the tips to the apex of a profile represents a rise of phylogenetic information. Declines in informativeness following the apex of the primary peak reflect a steady decline or loss in phylogenetic information toward the root of a given focal tree.
 <br>
 <br>
