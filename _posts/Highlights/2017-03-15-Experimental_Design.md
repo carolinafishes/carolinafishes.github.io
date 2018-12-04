@@ -7,7 +7,7 @@ header:
     caption: Cary, NC
     title: ""
 image:
-    thumb:  ""
+    thumb:  fungalbanner.jpg
     homepage: fungalbanner.jpg
 categories:
     - highlights
@@ -43,11 +43,9 @@ Resolving the fungal Tree of Life is pivotal for more accurately forecasting how
 <br>
 Our review discusses these challenges in more detail, so check it out! For this post we will focus on experimental design, starting with the observation that the experimental design decisions required to resolve the fungal Tree of Life are not unique to fungi.
 <br>
-<br>
 <h3><i>Phylogenomics and Experimental Design</i></h3>
 <br>
 As we go from genes to genomes, selecting the best genes and taxa to better resolve nodes phylogenetic tree topologies remains an area of intense interest. Studies of why their is incongruence between markers have become ubiquitous, and for over a decade authors have repeatedly highlighted the fact that sequencing more genes is not enough. In the worst case, a few sequences can positively mislead an entire study. So what should we sequence from whom?   
-<br>
 <br>
 <h3><i>More Genes or More Taxa?</i></h3> 
 “Should more taxa or more genes be sequenced to help resolve this node?” is a classic question in phylogenetics. Although we have begun to change the narrative of this question from genes to genomes, the problem remains the same.
@@ -64,7 +62,6 @@ Theory of phylogenetic experimental design has recently advanced to provide sign
 <img class="b30" src="http://carolinafishes.github.io/images/genes_or_taxa.png" alt=""><em>Graphic to aid in choosing more genes or more taxa</em>
 <br>
 This theory is a great foundation, however it is important to note that this approach is currently limited to a four taxon tree, ignoring heterogeneous predictions of homoplasy between taxa, and being agnostic to outgroup choice. We are in the process of solving all three of this issues, stay tuned.
-<br>
 <br>
 <h3><i>Saturation and Divergence Times</i></h3> 
 A time-calibrated Tree of Life holds tremendous potential for understanding the early origins of the planet’s biodiversity. However, age estimates concerning the origins of early fungi have varied dramatically, in some cases predating the Cambrian explosion by hundreds of millions of years. WHile this sounds extreme, incongruence between divergence time studies is certainly not restricted to fungi. From mammals to birds to fishes to plants, age estimates often vary by millions of years. Some of this conflict is the result of poor model choice, conflicting interpretations of the fossil record, or branch-length priors. However, marker choice can be just as important.
