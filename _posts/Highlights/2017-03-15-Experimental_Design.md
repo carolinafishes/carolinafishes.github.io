@@ -36,7 +36,7 @@ One question I got from a few of my colleagues when I started writing this paper
 Depending on who you ask, there are anywhere from 1.5 to 7.1 million species of fungus in the world. You may not realize it, but the interactions of other lineages with fungi is a major part of our world. Just consider the rapid spread of fungal pathogens like <i>Geomyces</i> or <i>Batrachochytrium</i> that have devasted populations of wildlife or the vital role numerous fungi play in the root system of plants. 
 <br>
 <br>
-<img class="b30" src="http://carolinafishes.github.io/images/fungal01.jpg" alt=""><em>Fungi, Umstead State Park, Raliegh NC</em>
+<img class="b30" src="http://carolinafishes.github.io/images/fungal01.jpg" alt=""><em>Fungi, Umstead State Park, Raleigh NC</em>
 <br>
 <br>
 Resolving the fungal Tree of Life is pivotal for more accurately forecasting how fungi will respond to change. Such a framework is of critical importance if we are to predict the movement of botanical communities that rely on fungal interactions, the spread of crop pests, or the spread and evolution of virulent fungal pathogens. In other words, we need to understand fungal evolutionary biology to better solve emerging conservation, management, and human health concerns over the next hundred years. 
