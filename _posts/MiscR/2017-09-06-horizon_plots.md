@@ -9,7 +9,7 @@ tags:
     - MiscR PhyInformR 
     
 image:
-   thumb: ""
+   thumb: patagonia_banner.jpg
    homepage: patagonia_banner.jpg
 
 header:
