@@ -60,7 +60,7 @@ I am a born naturalist with a B.S. in Marine Science and minor in Plant Biology 
 <a href='https://www.researchgate.net/profile/Katerina_Zapfe'> Researchgate </a> 
 <br>
 <br>
-<h2>Former Interns and Volunteers</h2>
+<h2>Lab Alumni</h2>
 <br>
 <br>
 <h3>2016-2017</h3>
