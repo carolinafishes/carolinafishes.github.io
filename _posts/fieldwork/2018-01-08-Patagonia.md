@@ -14,7 +14,7 @@ tags:
     - evolutionary medicine
     - icefish
 image:
-   thumb: ""
+   thumb: Punta_banner.jpg
    homepage: Punta_banner.jpg
 header: 
     image_fullwidth: "Punta_banner.jpg"
