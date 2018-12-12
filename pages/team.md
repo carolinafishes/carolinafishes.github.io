@@ -49,6 +49,8 @@ I am a M.Sc. student in the Department of Applied Ecology at North Carolina Stat
 <br>
 <h3>Richard Morris</h3>
 <br>
+After retiring as a statistician working on problems in public health and medical applications, I wondered what to do with my free time. Then I became fascinated by ideas about the underlying processes and consequences of evolution. And so, I return to earlier interests in life with new tools and perspectives. My goal is to contribute in any way I can to ongoing studies in the lab. 
+<br>
 <img class="b30" src="http://carolinafishes.github.io/images/vol_richard_morris.jpg" alt="">
 <br>
 <h3>Katerina Zapfe</h3>
@@ -83,6 +85,8 @@ I am currently getting my feet wet in phylogenetic studies by constructing a <a 
 <br>
 <br>
 <h3>Rita Chen</h3>
+<br>
+I am a junior applied math major student at NC State. I'm interested in bioinformatics and am currently working on developing new phylogenetic theory on the utility of outgroups. 
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/vol_rita_chen.jpg" alt="">
 <br> 
