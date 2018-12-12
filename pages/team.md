@@ -64,9 +64,7 @@ I am a born naturalist with a B.S. in Marine Science and minor in Plant Biology 
 <br>
 <h2>Lab Alumni</h2>
 <br>
-<br>
 <h3>2016-2017</h3>
-<br>
 <br>
 <h3>Willa Brooks</h3>
 <img class="b30" src="http://carolinafishes.github.io/images/intern_willa_brooks.jpg" alt="">
@@ -90,11 +88,8 @@ I am currently getting my feet wet in phylogenetic studies by constructing a <a 
 <br> 
 I am a junior applied math major student at NC State. I'm interested in bioinformatics and am currently working on developing new phylogenetic theory on the utility of outgroups. 
 <br>
-<br>
-<br>
 <h3>2015-2016</h3>
 <br> 
-<br>
 <h3>Joseph Flores</h3>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/vol_josef_flores.jpg" alt="">
