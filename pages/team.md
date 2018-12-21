@@ -46,7 +46,9 @@ My research program takes an integrative approach to explore the factors that un
 I am a M.S. student and NSF Graduate Research Fellow in the Department of Applied Ecology at North Carolina State University and have been volunteering at the NCMNS since 2015. My scientific interests range across a wide spectrum of the animal kingdom’s biodiversity, so my research often takes an integrative and cross-disciplinary approach to addressing applied questions that transcend traditional boundaries of ecology and evolutionary biology. Specifically, I am interested in understanding (1) how vertebrate species diversity is generated and maintained over time and (2) how non-native species introductions influence community composition and abundance, growth, and niche occupancy of native species to better inform management decisions regarding imperiled systems. Here at the museum, I work with scientists on relevant research projects that relate to fish and/or collections-based specimens. I also help maintain the fish unit’s research collection by databasing, georeferencing, and organizing data in the collection database and by processing specimens for long-term storage in the collection.
 <br>
 <a href='https://adlamb0.wixsite.com/april'> Website </a>
+<br>
 <a href='https://docs.wixstatic.com/ugd/480d4f_13c28937f98e43ea8a7f18d0adbb20bc.pdf'> C.V. </a>
+<br>
 <a href='https://www.researchgate.net/profile/April_Lamb'> Researchgate </a> 
 <br>
 <h3>Richard Morris</h3>
