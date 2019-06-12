@@ -18,7 +18,6 @@ show_meta: false
  
 <br> While cruising around the Antarctic I assisted Yale Ph.D. student <a href='https://eeb.yale.edu/people/graduate-students/chantal-parker'>Elyse Parker</a> on analyzing the results of her M.S. work. The resulting paper was <a href="http://carolinafishes.github.io/images/Parker_et_al_2019.pdf"> <en>recently published</en></a> and concerns the need to hold inferences based on legacy markers to the same level of scrutiny as next-gen datasets. I thought I would revist the topic here. 
 
-<br>
 <h3>Opening cold cases to end incongruence</h3>
 <br>
 As we move further into the genomics era, a repeating research theme has been to contrast inferences based on hundreds or thousands of markers to historical inferences based on a handful of legacy markers. This contrast is of course necessary to reveal both conflict and congruence in relationships. 
