@@ -39,7 +39,7 @@ Looking closey within each marker reveals codon positions that either lack of va
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/Parkeretal_2.png" alt=""><em> FIgure from our manuscript summarizing the extant of phylogenetic information in these markers.</em>
 <br>
-<br> These results are not terribly suprising. The percieved utility of legacy markers was not based on experimental design, but largely on their ability to be readily sequenced and thereby supply data for investigators. Nearly 20 years Goldman published a paper referring to this practice as selecting markers based on "folklore". 
+<br> These results are not terribly suprising. The percieved utility of legacy markers was not based on experimental design, but largely on their ability to be readily sequenced and thereby supply data for investigators. Nearly 20 years ago Nick Goldman published a paper referring to this practice as selecting markers based on "folklore". 
 <br>
 <br> At the time, this was the best we had as phylogeneticists. But now as we move forward towards resolving the Tree of Life, adding assessments of legacy data is a trivial (by computational comparison) way to assess whether a historical conflicting topology is based on strong evidence, noise, or bias. 
 <br>
