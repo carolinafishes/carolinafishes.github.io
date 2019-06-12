@@ -16,7 +16,7 @@ comments: true
 show_meta: false
 ---
  
-<br> While cruising around the Antarctic I assisted Yale Ph.D. student <a href='https://eeb.yale.edu/people/graduate-students/chantal-parker'>Elyse Parker</a> on analyzing the results of her M.S. work. The resulting paper was <a href="http://carolinafishes.github.io/images/Parker_et_al_2019.pdf"> <en>recently published</en></a> and concerns the need to hold inferences based on legacy markers to the same level of scrutiny as next-gen datasets. I thought I would revist the topic here. </br>
+<br> While cruising around the Antarctic I assisted Yale Ph.D. student <a href='https://eeb.yale.edu/people/graduate-students/chantal-parker'>Elyse Parker</a> on analyzing the results of her M.S. work. The resulting paper was <a href="http://carolinafishes.github.io/images/Parker_et_al_2019.pdf"> <en>recently published</en></a> and concerns the need to hold inferences based on legacy markers to the same level of scrutiny as next-gen datasets. I thought I would revist the topic here. 
 
 <br>
 <h3>Opening cold cases to end incongruence</h3>
@@ -38,7 +38,7 @@ As we move further into the genomics era, a repeating research theme has been to
 Looking closey within each marker reveals codon positions that either lack of variable sites and thereby contribute little to inference, or high levels of GC3 bias. Scrutinizing the same markers for lack of resolution and uncertainty in triggerfish and squirrelfish relationships revealed the same pathologies. 
 <br>
 <br>
-<img class="b30" src="http://carolinafishes.github.io/images/Parkeretal_2.png" alt=""><em> What do we know about goodeine relationships? About this much. We know the major clades but legacy data has little justifiable evidence strongly supporting their inter-relationships.</em>
+<img class="b30" src="http://carolinafishes.github.io/images/Parkeretal_2.png" alt=""><em> FIgure from our manuscript summarizing the extant of phylogenetic information in these markers.</em>
 <br>
 <br> These results are not terribly suprising. The percieved utility of legacy markers was not based on experimental design, but largely on their ability to be readily sequenced and thereby supply data for investigators. Nearly 20 years Goldman published a paper referring to this practice as selecting markers based on "folklore". 
 <br>
