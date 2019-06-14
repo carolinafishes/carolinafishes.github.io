@@ -23,8 +23,8 @@ Part of this project requires taking pdf scans of datasheets and splitting out s
 <br>
 With thousands of records that contain multiple pages each, this can be an overwhelming task. I wanted to offer a quick guide for how we've been automating this procedure using available tools. 
 <br>
-<br>
 <h3>Extracting a pdf page from the command line</h3>
+<br>
 The first challenge is splitting the pdf pages. Fortunately, there is a free executable you can deploy for this task. Meet <a href="https://community.coherentpdf.com/"> <en>cpdf. </en></a> 
 <br>
 <br>
@@ -35,7 +35,7 @@ Assume we have a pdf called "DanMoore-0004.pdf", which corresponds to multiple p
 <br>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/zscript2page.png" alt=""><em>
-Example of a two page pdf that needs to have page 1 extracted.</em>
+       Example of a two page pdf that needs to have page 1 extracted.</em>
 <br>
 <br>
 Place this file into the folder where you have cpdf (or add cpdf to your bash). Open terminal and navigate to this folder. Now enter the following command:
@@ -43,7 +43,6 @@ Place this file into the folder where you have cpdf (or add cpdf to your bash). 
 <pre>
 ./cpdf DanMoore-0004.pdf 1  -o DanMoore-0004_page1.pdf
 </pre>	
-<br>
 That's it! 1 indicates the page you want and the -o is the name of the outfile. You can easily turn this into a script to go through thousands of pdfs in seconds. 
 <br>
 <br>
@@ -53,7 +52,6 @@ That's it! 1 indicates the page you want and the -o is the name of the outfile. 
 <h3>Converting from pdf to png in terminal</h3>
 <br>
 To convert to png is also super easy on a mac and requires a single line of code. Move all your single page pdfs into a new folder and navigate there in terminal. Now enter:  
-<br>
 <pre>
 for i in *; do sips -s format png $i --out $i.png; done	
 </pre>
