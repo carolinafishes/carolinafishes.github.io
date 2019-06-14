@@ -34,7 +34,7 @@ If you are one of the folks who helped with the transcription efforts so far, th
 I wanted to update everyone that the success of this project was recently disseminated at the Society for the Preservation of Natural History Collections meeting and is opening a new conversation about how natural history museums can serve the research community.
 <br>
 <br>
-Often specimens come with additional field information that include climate data and other observations.  This data is all too often often  in filing cabinets and boxes and lost to history as extremely limited resources force museums to focus their efforts on making data that central to the specimen (such as location) as well as access to the specimens themselves a priority. 
+Often specimens come with additional field information that include climate data and other observations.   As extremely limited resources force museums to focus their efforts on making data that central to the specimen (such as location) as well as access to the specimens themselves a priority, this data is all too often stored in filing cabinets or boxes and lost to history. 
 <br>
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/zooniverse3.png" alt=""><em>Snapshot from zooniverse showing the amount of records and type of data already completed. </em>
