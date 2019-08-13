@@ -2,14 +2,14 @@
 layout: page
 title:  "Walking Through TOAST, Part1: Installation & Dependencies"
 
-teaser: "Set up TOAST and harness more data, Part 1"
+teaser: "Set up TOAST and prepare to harness more data"
 categories:
     - software
 tags:
     - software TOAST
     
 image:
-   thumb: "informer_thumb.jpg"
+   thumb: "TOASTpage2_alt.jpg"
 header:
     image_fullwidth: "TOASTpage2_alt.jpg"
     title: ""
