@@ -18,7 +18,12 @@ comments: true
 show_meta: false    
 ---
 <br>
-This is a three part tutorial. Part 1 focuses on installation of TOAST. Note that TOAST requires R version 3.6.1 or higher for installation of dependencies and functionality. Update R prior to going any further
+This is a three part tutorial. Part 1 focuses on installation of TOAST. 
+<br>
+<br>
+Note that TOAST requires R version 3.6.1 or higher for installation of dependencies and functionality. 
+<br>
+Update R prior to going any further
 <br>
 <br>
 <a href='https://carolinafishes.github.io/software/TOAST_manual2/'>Part 2 focuses on gathering public data using BUSCO.</a> Note that ONLY LINUX users can use BUSCO!
@@ -104,11 +109,14 @@ However, you need to be using LINUX to use any functions that involve <a href='h
 <br>
 Please see the BUSCO manual for instructions on installation. 
 <br>
-Note that BUSCO recommends specific releases of HMMER
-and BLAST. We recommend following the BUSCO instructions to ensure compatibility. 
+Note that BUSCO recommends specific releases of HMMER and BLAST. 
+<br>
+We recommend following the BUSCO instructions to ensure compatibility. 
 <br>
 <br>
-After you have successfully installed BUSCO you will need to modify the config.ini file to direct BUSCO to both BLAST and HMMER. Please see the BUSCO manual and follow these directions carefully!
+After you have successfully installed BUSCO you will need to modify the config.ini file to direct BUSCO to both BLAST and HMMER. 
+<br>
+Please see the BUSCO manual and follow these directions carefully.
 <br>
 CHECK that you have successfully installed BUSCO prior to proceeding any further!
 <br>
