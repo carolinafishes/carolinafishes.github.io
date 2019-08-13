@@ -64,7 +64,6 @@ library(doParallel)
 registerDoParallel(cores=8)
 </pre>
 
-<br>
 <h3>2. R Dependencies</h3>
 TOAST is built upon the efforts of several other R packages including:
 <pre>
@@ -92,13 +91,13 @@ sudo apt install libssl-dev
 sudo apt install libcurl4-opensll-dev
 sudo apt install libxml2-dev
 </pre>
+If you did the above and only wish to visualize missing data patterns/assemble concatenated alignments you are ready to <a href='https://carolinafishes.github.io/software/TOAST_manual2/'>move on to part 2.</a><br> 
 <br>
-<br>
-If you did the above and only wish to visualize missing data patterns/assemble concatenated alignments you are ready to <a href='https://carolinafishes.github.io/software/TOAST_manual2/'>move on to part 2.</a> If you are a LINUX user and wish to harness BUSCO orthologs, keep reading! 
-<br>
+If you are a LINUX user and wish to harness BUSCO orthologs, keep reading! 
 <br>
 <h3>2. Additional Dependencies for Linux Users: BUSCO </h3>
 <a href='https://busco.ezlab.org/'>BUSCO</a> is limited to only running on Linux machines. If you plan to use TOAST to look at missing data patterns and assemble custom alignments using local data and not use BUSCO, these functions will work on any platform (Windows and OSX). 
+<br>
 <br>
 However, you need to be using LINUX to use any functions that involve <a href='https://busco.ezlab.org/'>BUSCO</a> harvesting of data. 
 <br>
@@ -113,13 +112,8 @@ After you have successfully installed BUSCO you will need to modify the config.i
 <br>
 CHECK that you have successfully installed BUSCO prior to proceeding any further!
 <br>
-<br>
 <h3>2. Additional Dependencies for Linux Users: MAFFT </h3>
 TOAST requires you install <a href='https://mafft.cbrc.jp/alignment/software/'>MAFFT</a> and place this into your global path 
-<br>
-<br>
-
-
 <br>
 <br>
 <h3><a href='https://carolinafishes.github.io/software/TOAST_manual2/'>Continue to Part 2</a>
