@@ -27,6 +27,8 @@
   dropdown:
   - title: phyinformR
     url: "/software/phyinformR/"
+  - title: TOAST
+    url: "/software/TOAST/"
   - title: "R Functions"
     url: "/MiscR/"
  

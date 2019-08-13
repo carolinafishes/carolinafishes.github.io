@@ -19,8 +19,11 @@ permalink: "/software/"
 ---
 As scientists we constantly need to modify or develop software in order to better analyze our data. As our team develops new tools or tweaks existing programs to do useful things, we will be updating this section to contribute to the growing body of bioinformatic software. 
 
+<br><a href="/software/TOAST/">TOAST</a>
+A beta version of TOAST is now available! <a href="http://carolinafishes.github.io/images/TOAST_manual.pdf"><en>A manual is available here</en></a>
+
 <br><a href="/software/phyinformR/">phyinformR</a>
-PhyInformR is now on CRAN! <a href="http://carolinafishes.github.io/images/PhyInformR.pdf"><en>A manual is available here</en></a>
+PhyInformR is now on CRAN <a href="http://carolinafishes.github.io/images/PhyInformR.pdf"><en>A manual is available here</en></a>
 <ul>
     {% for post in site.categories.software %}
     <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
