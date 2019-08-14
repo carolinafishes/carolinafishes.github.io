@@ -73,9 +73,9 @@ Using a taxonomy id and a specified fasta directory, this is will download all d
 <br>
 <h4>Step 2 Run Busco</h4>
 Once you have downloaded all the sequence data, you are ready to run BUSCO.
- <pre>
+<pre>
 RunBusco(fasta_dir = fd, toast_dir = td, path_to_run_busco.py = bs, path_to_orthoDB = od, threads = cpu)
- </pre>
+</pre>
 This function uses the paths you set up earlier to run BUSCO with a specified number of cores. Note that this step may take some time depending on the number of sequences and taxa you are searching. 
 <br>
 <h4> Step 3 & 4 Parse and Extract Results </h4>
