@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  "Walking Through TOAST, Part3: Visualizating Missing Data and Assembly of Alignments"
+title:  "Walking Through TOAST, Part3: Missing Data Patterns and Assembly of Alignments"
 
 teaser: "Consider what isn't in your data"
 categories:
@@ -149,9 +149,9 @@ Prior to looking at this graph please do note that this assumes your pilot data 
 <pre>
 MissingStreambar(tsv, taxonomy, "level1", 0, type="stream")
 </pre>
-The above code will open up an interactive plot in your web browser (plotted small here since it's just an example, so scroll around).
+The above code will open up an interactive plot in your web browser (plotted static here since it's just an example and has a large footprint).
 <br>
-<iframe src="https://carolinafishes.github.io/images/TOAST_SB.html" style='height: 75%; width: 75%;' frameborder="0"></iframe>
+<img class="b30" src="https://carolinafishes.github.io/images/TOASTStream.png" alt="">
 <br>
 Now that you have looked at missing data patterns, you may want to assemble your concatenated alignments with or without thresholds of missing data applied. TOAST has a series of tools for doing just that.
 <br>
