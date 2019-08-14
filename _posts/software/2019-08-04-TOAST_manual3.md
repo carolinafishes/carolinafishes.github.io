@@ -28,7 +28,6 @@ This part focuses on focuses on visualization missing data patterns and concaten
 <h3>Missing Data</h3>
 Missing data is a common feature of large sequence datasets. Everything from changes in coverage depth, DNA/RNA quality, probe design, assembly method, etc can result in uneven coverage of loci between species.TOAST provides a suite of functions to both explore missing data and reassemble alignments based on user determined thresholds of acceptable representation.     
 <br>
-<br>
 We will use the missing_data.tsv file distributed with TOAST in the examples in this section. 
 <br>
 <br>
@@ -39,7 +38,7 @@ missing<-MissingDataTable(aligned_dir = ad)
 In fact, ANY delimitated file of data presence/absence can be used with these visualization functions (just needs data and NA for no data). This includes phenotypic trait data, behavioural observations, etc!
 <br>
 <br>
-Now you have no excuse to not look at missing data patterns anymore!
+<i>Now you have no excuse to not look at missing data patterns anymore!</i>
 <br>
 <h3>Visualizing Missing Data Patterns</h3>
 Part of the orthology assembly steps in both sections 2 and 3 generates a .tsv file entited "missing_data.tsv" that is distrbuted with this software. We will use this file to throughout this section. Let's begin by reading it into memory.
@@ -149,7 +148,7 @@ Prior to looking at this graph please do note that this assumes your pilot data 
 <pre>
 MissingStreambar(tsv, taxonomy, "level1", 0, type="stream")
 </pre>
-The above code will open up an interactive plot in your web browser (plotted small here since it's just an example).
+The above code will open up an interactive plot in your web browser (plotted small here since it's just an example, so scroll around).
 <br>
 <iframe src="https://carolinafishes.github.io/images/TOAST_SB.html" style='height: 75%; width: 75%;' frameborder="0"></iframe>
 <br>
@@ -160,7 +159,7 @@ Now that you have looked at missing data patterns, you may want to assemble your
 TOAST has several concatenation functions.
 <br>
 <br>
-The most basic will assemble a concatenated alignment of aligned fasta  les into the relaxed phylip format used by IQtree
+The most basic will assemble a concatenated alignment of aligned fasta files into the relaxed phylip format used by IQtree, along with a nexus file of partitions that can also be read directly into IQtree for model/partition selection. You can use this function with ANY set of aligned fasta files in a directory.
 <pre>
 coming soon...
 </pre>
