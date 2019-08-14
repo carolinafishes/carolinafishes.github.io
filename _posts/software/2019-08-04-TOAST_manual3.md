@@ -9,9 +9,9 @@ tags:
     - software TOAST
     
 image:
-   thumb: "TOASTpage3.jpg"
+   thumb: "TOASTpage3a.jpg"
 header:
-    image_fullwidth: "TOASTpage3.jpg"
+    image_fullwidth: "TOASTpage3a.jpg"
     title: ""
     caption: River Irwell, UK
 comments: true

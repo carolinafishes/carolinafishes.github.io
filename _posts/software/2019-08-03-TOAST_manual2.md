@@ -9,9 +9,9 @@ tags:
     - software TOAST
     
 image:
-   thumb: "TOASTpage2.jpg"
+   thumb: "TOASTpage2a.jpg"
 header:
-    image_fullwidth: "TOASTpage2.jpg"
+    image_fullwidth: "TOASTpage2a.jpg"
     title: ""
     caption: London, UK
 comments: true
