@@ -83,7 +83,7 @@ VisualizeTaxonomyInteractive(tsv, taxonomy, 0)
 </pre>
 As above, the missing data file along with your threshold of mininum number of loci is used to generate these plots. We are going to begin by setting our threshold to zero, to see how missing data is distributed overall. The above code should have opened an interactive plot in your browser like this one
 <br>
-<iframe src="https://carolinafishes.github.io/images/TOAST_circlepack1.html"></iframe>
+<iframe src="https://carolinafishes.github.io/images/TOAST_circlepack1.html" style='height: 100%; width: 100%;' frameborder="0"></iframe>
 <br>
 The size of the circles here indicate higher levels of missing data per leaf taxon. At a glace we can see that a big chunk of missing coverage is within a specifc sphere of toothed whales (Odontoceti).
 <br>
