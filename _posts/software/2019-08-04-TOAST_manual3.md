@@ -85,7 +85,7 @@ As above, the missing data file along with your threshold of mininum number of l
 <br>
 <iframe src="https://carolinafishes.github.io/images/TOAST_circlepack1.html" style='height: 100%; width: 100%;' frameborder="0"></iframe>
 <br>
-The size of the circles here indicate higher levels of missing data per leaf taxon. At a glace we can see that a big chunk of missing coverage is within a specifc sphere of toothed whales (Odontoceti).
+The size of the circles here indicate higher levels of missing data per leaf taxon. At a glace we can see that a big chunk of missing coverage is within a specific sphere of toothed whales (Odontoceti).
 <br>
 Clicking around this plot you can zoom in an out of these spheres to get more detail.
 <br>
@@ -121,7 +121,7 @@ In addition to thinking about missing data between taxa, it may also be of inter
 This could reveal clade biases in missing data representation and also be of interest for the design of probe sets or sequence capture efforts given a small pilot dataset.
 <br>
 <br>
-TOAST currently offers two visualizations that facilitate taxon speci c visualization of missing values using the taxonomy  le from earlier examples in this section. We will begin by looking at a barplot of missing data.
+TOAST currently offers two visualizations that facilitate taxon speci c visualization of missing values using the taxonomy table from earlier examples in this section. We will begin by looking at a barplot of missing data.
 <br>
 Note that this uses parallel processing so if you have not done so, de ne the number of processors to use as follows, changing the number of cores to what you have available on your machine.
 <pre>
@@ -151,11 +151,19 @@ MissingStreambar(tsv, taxonomy, "level1", 0, type="stream")
 </pre>
 The above code will open up an interactive plot in your web browser.
 <br>
-<iframe src="https://carolinafishes.github.io/images/TOAST_SB.html"></iframe>
+<iframe src="https://carolinafishes.github.io/images/TOAST_SB.html" style='height: 100%; width: 100%;' frameborder="0"></iframe>
 <br>
 Now that you have looked at missing data patterns, you may want to reassemble your concatenated alignments. TOAST has a series of tools for doing just that!
 <br>
 <h3>Assembly of Sequence Datasets</h3>
+<br>
+TOAST has several concatenation functions.
+<br>
+<br>
+The most basic will assemble a concatenated alignment of aligned fasta  les into the relaxed phylip format used by IQtree
+<pre>
+coming soon...
+</pre>
 <h3> 7. References </h3>
 Auguie, B. 2016. gridExtra: Miscellaneous Functions for "Grid" Graphics. R package version 2.2.1.
 <br>
