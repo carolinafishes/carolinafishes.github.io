@@ -95,7 +95,7 @@ To give an example with a threshold, let's again look at taxa with more than 100
 VisualizeTaxonomyInteractive(tsv, taxonomy, 1000)
 </pre>
 <br>
-<iframe src="https://carolinafishes.github.io/images/TOAST_circlepack1.html"></iframe>
+<iframe src="https://carolinafishes.github.io/images/TOAST_circlepack1.html" style='height: 100%; width: 100%;' frameborder="0"></iframe>
 <br>
 Again, there is more missing data in Odontoceti and clicking within the plot reveals that the species with the most missing data are within dolphins.
 <br>
@@ -151,7 +151,7 @@ MissingStreambar(tsv, taxonomy, "level1", 0, type="stream")
 </pre>
 The above code will open up an interactive plot in your web browser.
 <br>
-<iframe src="https://carolinafishes.github.io/images/TOAST_SB.html" style='height: 100%; width: 100%;' frameborder="0"></iframe>
+<iframe src="https://carolinafishes.github.io/images/TOAST_SB.html" style='height: 200%; width: 100%;' frameborder="0"></iframe>
 <br>
 Now that you have looked at missing data patterns, you may want to reassemble your concatenated alignments. TOAST has a series of tools for doing just that!
 <br>
