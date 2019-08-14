@@ -23,7 +23,7 @@ This is a three part tutorial. <a href='https://carolinafishes.github.io/softwar
 <a href='https://carolinafishes.github.io/software/TOAST_manual2/'>Part 2 focuses on using BUSCO to harvest orthologs from online or locally stored fasta files, as well as the combination of the two.</a> NOTE you need to be using LINUX to use BUSCO for this section.
 <br>
 <br>
-This part focuses on focuses on visualization missing data patterns and concatenated alignment assembly</a>. You can use any platform for these functions.
+This part focuses on focuses on visualization missing data patterns and concatenated alignment assembly. You can use any platform for these functions.
 
 <h3>Missing Data</h3>
 Missing data is a common feature of large sequence datasets. Everything from changes in coverage depth, DNA/RNA quality, probe design, assembly method, etc can result in uneven coverage of loci between species.TOAST provides a suite of functions to both explore missing data and reassemble alignments based on user determined thresholds of acceptable representation.     
@@ -65,7 +65,7 @@ This provides a list of species with complete coverage.
 <img class="b30" src="https://carolinafishes.github.io/images/TOAST_CompCoverage.png" alt="">
 <br>
 <br>
-As we assemble genome-scale coverage of the Tree of Life, it is clear that sequence data is unevenly distributed between groups of organisms. TOAST offers the ability to explore missing data interac- tively based on a user speci ed taxonomic framework. For each species, you may supply as many taxonomic/phylocode levels as you like to explore the hierachical structure of missing data.
+As we assemble genome-scale coverage of the Tree of Life, it is clear that sequence data is unevenly distributed between groups of organisms. TOAST offers the ability to explore missing data interactively based on a user speci ed taxonomic framework. For each species, you may supply as many taxonomic/phylocode levels as you like to explore the hierachical structure of missing data.
 <br>
 <br>
 The guide file is formatted as follows
@@ -121,9 +121,9 @@ In addition to thinking about missing data between taxa, it may also be of inter
 This could reveal clade biases in missing data representation and also be of interest for the design of probe sets or sequence capture efforts given a small pilot dataset.
 <br>
 <br>
-TOAST currently offers two visualizations that facilitate taxon speci c visualization of missing values using the taxonomy table from earlier examples in this section. We will begin by looking at a barplot of missing data.
+TOAST currently offers two visualizations that facilitate taxon specific visualization of missing values using the taxonomy table from earlier examples in this section. We will begin by looking at a barplot of missing data.
 <br>
-Note that this uses parallel processing so if you have not done so, de ne the number of processors to use as follows, changing the number of cores to what you have available on your machine.
+Note that this uses parallel processing so if you have not done so, define the number of processors to use as follows, changing the number of cores to what you have available on your machine.
 <pre>
 library(doParallel) 
 registerDoParallel(cores=8)
@@ -139,7 +139,7 @@ The Y axis is the frequency of missing data for each locus, color coded by hiera
 <br>
 We set the threshold to zero here just to visualize raw missing data patterns. In this case, missing data is fairly evely distributed across loci.
 <br>
-An additional spin on this plot is that for experimental design, you may wonder what sorts of miss- ing data patterns could I expect given a probe set or other sequence capture method. One way to visualize this is to make use of streamgraphs which interpolate data values across a matrix.
+An additional spin on this plot is that for experimental design, you may wonder what sorts of missing data patterns could I expect given a probe set or other sequence capture method. One way to visualize this is to make use of streamgraphs which interpolate data values across a matrix.
 <br>
 <br>
 If you have pilot data and are considering the potential for sequence capture (or really any data caputre), you can generate an interactive streamgraph to see what sorts of missing data patterns you may expect should you continue to aggregate data using the same techniques as the pilot.
