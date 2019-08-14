@@ -9,11 +9,11 @@ tags:
     - software TOAST
     
 image:
-   thumb: "TOASTpage2a.jpg"
+   thumb: "TOASTpage2b.jpg"
 header:
-    image_fullwidth: "TOASTpage2a.jpg"
+    image_fullwidth: "TOASTpage2b.jpg"
     title: ""
-    caption: London, UK
+    caption: Antarctica
 comments: true
 show_meta: false    
 ---
