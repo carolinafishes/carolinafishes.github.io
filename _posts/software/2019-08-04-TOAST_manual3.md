@@ -151,7 +151,7 @@ MissingStreambar(tsv, taxonomy, "level1", 0, type="stream")
 </pre>
 The above code will open up an interactive plot in your web browser (plotted small here since it's just an example).
 <br>
-<iframe src="https://carolinafishes.github.io/images/TOAST_SB.html" style='height: 400%; width: 75%;' frameborder="0"></iframe>
+<iframe src="https://carolinafishes.github.io/images/TOAST_SB.html" style='height: 75%; width: 75%;' frameborder="0"></iframe>
 <br>
 Now that you have looked at missing data patterns, you may want to assemble your concatenated alignments with or without thresholds of missing data applied. TOAST has a series of tools for doing just that.
 <br>
