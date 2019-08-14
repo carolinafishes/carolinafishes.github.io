@@ -133,6 +133,7 @@ MissingStreambar(tsv, taxonomy, "level1", 0, type="bar")
 </pre>
 This code will generate a traditional stacked barplot of missing data across all loci by hierarchical level (in this case odontocetes versus mysticetes).
 <br>
+<img class="b30" src="https://carolinafishes.github.io/images/TOAST_Streambar_bar.png" alt="">
 <br>
 The Y axis is the frequency of missing data for each locus, color coded by hierarchy. The X axis is each locus.
 <br>
@@ -185,6 +186,8 @@ Warnes, M.G.R., Bolker, B., Bonebakker, L. and Gentleman, R., 2016. Package ‘g
 Wickham, H. and W. Chang. 2017. devtools: Tools to Make Developing R Packages Easier. R package version 1.13.3.
 <br>
 <br>
-Winter, D.J., 2017. rentrez: An R package for the NCBI eUtils API (No. e3179v1). PeerJ Preprints.
 Wickham, H. 2016. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag New York.
+<br>
+<br>
+Winter, D.J., 2017. rentrez: An R package for the NCBI eUtils API (No. e3179v1). PeerJ Preprints.
 
