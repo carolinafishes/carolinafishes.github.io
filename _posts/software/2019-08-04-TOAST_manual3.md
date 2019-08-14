@@ -9,11 +9,11 @@ tags:
     - software TOAST
     
 image:
-   thumb: "TOASTpage.jpg"
+   thumb: "TOASTpage3.jpg"
 header:
-    image_fullwidth: "TOASTpage.jpg"
+    image_fullwidth: "TOASTpage3.jpg"
     title: ""
-    caption: Snake River Canyon
+    caption: River Irwell, UK
 comments: true
 show_meta: false    
 ---
@@ -149,11 +149,11 @@ Prior to looking at this graph please do note that this assumes your pilot data 
 <pre>
 MissingStreambar(tsv, taxonomy, "level1", 0, type="stream")
 </pre>
-The above code will open up an interactive plot in your web browser.
+The above code will open up an interactive plot in your web browser (plotted small here since it's just an example).
 <br>
-<iframe src="https://carolinafishes.github.io/images/TOAST_SB.html" style='height: 200%; width: 100%;' frameborder="0"></iframe>
+<iframe src="https://carolinafishes.github.io/images/TOAST_SB.html" style='height: 400%; width: 150%;' frameborder="0"></iframe>
 <br>
-Now that you have looked at missing data patterns, you may want to reassemble your concatenated alignments. TOAST has a series of tools for doing just that!
+Now that you have looked at missing data patterns, you may want to assemble your concatenated alignments with or without thresholds of missing data applied. TOAST has a series of tools for doing just that.
 <br>
 <h3>Assembly of Sequence Datasets</h3>
 <br>
