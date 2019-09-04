@@ -25,6 +25,41 @@ This part focuses on using BUSCO to harvest orthologs from online or locally sto
 <br>
 <a href='https://carolinafishes.github.io/software/TOAST_manual3/'>Part 3 focuses on visualization missing data and concatenated alignment assembly</a>. You can use any platform for these functions.
 
+<h3>Quick Overview - Suggested Project Structure</h3>
+<br>
+TOAST will move between directories on your harddrive generating files. We recommend the following folder architecture to keep your project organized
+<img class="b30" src="https://carolinafishes.github.io/images/TOAST_file_arc.png" alt="">
+<br> 
+Within a main project folder, 
+<br>
+1) Create a separate folder in which you store FASTA files. TOAST will also place downloaded FASTA files here. 
+<br>
+2) Have a busco_results folder for storing and retrieving busco IDs
+<br>
+3) An extracted folder for your raw ortholog sequences
+<br>
+4) a mafft_aligned folder for your alignments of each ortholog
+<br>
+5) a threshold folder for you alignments of each ortholog with species removed due to not meeting requirements of representation
+<br>
+TOAST will write concatenated alignments, custom concatenated alignments of user selected loci, and partition files into the main directory for easy retrieval. 
+<h3>Function Overview</h3>
+<br>
+Here is an overview of core functions and their purpose
+<br>
+<img class="b30" src="https://carolinafishes.github.io/images/TOAST_functions.png" alt="">
+<br>
+TOAST functions can be divided into 4 groups 
+<br>
+1) Sequence gathering functions 
+and
+2) BUSCO related functions
+(covered on this page)
+<br>
+3) Missing data pattern visualization
+and
+4) Alignment assembly
+(covered in the <a href='https://carolinafishes.github.io/software/TOAST_manual3/'>next section)</a>
 <h3>Getting a Taxonomic ID</h3>
 <br>
 For a given focal clade (mammals, cetaceans, squirrels, etc), TOAST will utilize BUSCO and BLAST to download, find, and extract all orthologs from available public data on NCBI.
@@ -61,7 +96,7 @@ ad <- "/home/dustin/temp/trial1/mafft_aligned" #mafft_dir, which is a directory 
 cpu <- 12 #number of threads to use at various steps
 </pre>
 <br>
-To explain, you need to provide the location of toast (td), the location of where to store and or find your FASTA files (fd), the location of BUSCO (bs), where to store your BUSCO results (bd), where to store extracted orthologs (ed), where to store alignments (md), where the ortholog database is (od), where to store/find aligned FASTA files. We recommend working on a directory per project as above, but leave that choice to up to you.
+To explain, you need to provide the location of toast (td), the location of where to store and or find your FASTA files (fd), the location of BUSCO (bs), where to store your BUSCO results (bd), where to store extracted orthologs (ed), where to store alignments (md), where the ortholog database is (od), where to store/find aligned FASTA files. We recommend working on a directory per project as above, but leave that choice up to you.
 <br>
 <br>
 <h4>Step 1 Download Data</h4>
@@ -69,7 +104,7 @@ Once you have set up your paths, we can download sequences as follows
 <pre>
 EntrezDownload(txid = 9721, fasta_dir = fd, minimumSeq = 350, maximumSeq = NULL)	
 </pre>
-Using a taxonomy id and a specified fasta directory, this is will download all databases per species with at least X number of sequences specified by minimumSeq. By default minimumSeq is set to 350. In addition if you wish to simply test that things are working you can specify they maximum number of sequences to download. This is only to be used for testing and set to NULL by default.
+Using a taxonomy id and a specified fasta directory, this is will download all databases per species with at least X number of sequences specified by minimumSeq. By default minimumSeq is set to 350. In addition, if you wish to simply test that things are working you can specify the maximum number of sequences to download. This is only to be used for testing and set to NULL by default.
 <br>
 <h4>Step 2 Run Busco</h4>
 Once you have downloaded all the sequence data, you are ready to run BUSCO.

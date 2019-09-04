@@ -35,13 +35,13 @@ Note that you can use the following code to generate a .tsv file of missing data
 <pre>
 missing<-MissingDataTable(aligned_dir = ad)
 </pre>
-In fact, ANY delimitated file of data presence/absence can be used with these visualization functions (just needs data and NA for no data). This includes phenotypic trait data, behavioural observations, etc!
+In fact, ANY delimited file of data presence/absence can be used with these visualization functions (just needs data and NA for no data). This includes phenotypic trait data, behavioural observations, etc!
 <br>
 <br>
 <i>Now you have no excuse to not look at missing data patterns anymore!</i>
 <br>
 <h3>Visualizing Missing Data Patterns</h3>
-Part of the orthology assembly steps in both sections 2 and 3 generates a .tsv file entited "missing_data.tsv" that is distrbuted with this software. We will use this file to throughout this section. Let's begin by reading it into memory.
+Part of the orthology assembly steps in both sections 2 and 3 generates a .tsv file entitled "missing_data.tsv" that is distributed with this software. We will use this file throughout this section. Let's begin by reading it into memory.
 <pre>
 tsv<-read.delim("~/missing_data.tsv", header=TRUE)
 </pre>
@@ -49,7 +49,7 @@ With this file we can begin to explore coarse missing data patterns. Let's start
 <pre>
 VisualizeCoverage(tsv, 1000)
 </pre>
-This will produce a two panel graphic. The top panel is a circlepack plot showing the number of missing loci per species that meet the threshold of having at least 1000 loci. The bottom panel depicts the number of loci captured versus missing for each species that did not meet the treshold criterion.<br>
+This will produce a two panel graphic. The top panel is a circlepack plot showing the number of missing loci per species that meet the threshold of having at least 1000 loci. The bottom panel depicts the number of loci captured versus missing for each species that did not meet the threshold criterion.<br>
 <img class="b30" src="https://carolinafishes.github.io/images/TOAST_VisCoverage.png" alt="">
 <br>
 In this case, the taxa not meeting the threshold were very similar in having little sequence coverage. In contrast, <i>Tursiops</i> stands out as having the most missing loci among the taxa that did meet this criterion.
@@ -84,9 +84,9 @@ As above, the missing data file along with your threshold of mininum number of l
 <br>
 <iframe src="https://carolinafishes.github.io/images/TOAST_circlepack1.html" style='height: 100%; width: 100%;' frameborder="0"></iframe>
 <br>
-The size of the circles here indicate higher levels of missing data per leaf taxon. At a glace we can see that a big chunk of missing coverage is within a specific sphere of toothed whales (Odontoceti).
+The size of the circles here indicate higher levels of missing data per leaf taxon. At a glance we can see that a big chunk of missing coverage is within a specific sphere of toothed whales (Odontoceti).
 <br>
-Clicking around this plot you can zoom in an out of these spheres to get more detail.
+Clicking around this plot you can zoom in and out of these spheres to get more detail.
 <br>
 <br>
 To give an example with a threshold, let's again look at taxa with more than 1000 loci sampled.
@@ -111,7 +111,7 @@ VisualizeThreshold(tsv, 1000)
 </pre>
 <img class="b30" src="https://carolinafishes.github.io/images/TOAST_VisThreshold.png" alt="">
 <br>
-The above plots shows your total remaing missing data (left), how much missing data was removed (right), and how much missing data was in the originally present in your data (right). In each case the bars are color coded by taxa.
+The above plots shows your total remaining missing data (left), how much missing data was removed (right), and how much missing data was in the originally present in your data (right). In each case the bars are color coded by taxa.
 <br>
 <br>
 In addition to thinking about missing data between taxa, it may also be of interest to look between loci and taxa at different hierarchical levels.
@@ -137,12 +137,12 @@ This code will generate a traditional stacked barplot of missing data across all
 <br>
 The Y axis is the frequency of missing data for each locus, color coded by hierarchy. The X axis is each locus.
 <br>
-We set the threshold to zero here just to visualize raw missing data patterns. In this case, missing data is fairly evely distributed across loci.
+We set the threshold to zero here just to visualize raw missing data patterns. In this case, missing data is fairly evenly distributed across loci.
 <br>
 An additional spin on this plot is that for experimental design, you may wonder what sorts of missing data patterns could I expect given a probe set or other sequence capture method. One way to visualize this is to make use of streamgraphs which interpolate data values across a matrix.
 <br>
 <br>
-If you have pilot data and are considering the potential for sequence capture (or really any data caputre), you can generate an interactive streamgraph to see what sorts of missing data patterns you may expect should you continue to aggregate data using the same techniques as the pilot.
+If you have pilot data and are considering the potential for sequence capture (or really any data capture), you can generate an interactive streamgraph to see what sorts of missing data patterns you may expect should you continue to aggregate data using the same techniques as the pilot.
 <br>
 <br>
 Prior to looking at this graph please do note that this assumes your pilot data is characteristic of dataset as a whole, so do use common sense and your own judgement in your experimental design choices as this is merely a prediction.
@@ -162,8 +162,19 @@ TOAST has several concatenation functions.
 <br>
 The most basic will assemble a concatenated alignment of aligned fasta files into the relaxed phylip format used by IQtree, along with a nexus file of partitions that can also be read directly into IQtree for model/partition selection. You can use this function with ANY set of aligned fasta files in a directory.
 <pre>
-coming soon...
+SuperAlign(aligned_dir=ad)
+
+PartitionTable(aligned_dir=ad)
 </pre>
+<br>
+Additionally TOAST will take your missing data threshold to remove taxa that do not meet the criterion for retention, realign all loci, concatenate the filtered dataset into the relaxed phylip format used by IQtree, and generate a nexus file of partitions that can also be read directly into IQtree for model/partition selection. 
+<pre>
+ThresholdExtract(aligned_dir=ad, threshold_df=missing_df, threshold_fasta_folder="path/to/store/fastas/threshold100")
+
+ThresholdDataTable(aligned_dir=ad)
+</pre>
+For the above the directories should be whatever you specified earlier on. Again we recommend the folder architecture at the start of this guide. At this point you should be ready to harvest and explore data. Remember to check back for updates as we add functionality and please drop a line if you have features you would like to see added. 
+
 <h3> 7. References </h3>
 Auguie, B. 2016. gridExtra: Miscellaneous Functions for "Grid" Graphics. R package version 2.2.1.
 <br>
