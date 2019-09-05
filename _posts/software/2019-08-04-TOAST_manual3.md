@@ -162,16 +162,15 @@ TOAST has several concatenation functions.
 <br>
 The most basic will assemble a concatenated alignment of aligned fasta files into the relaxed phylip format used by IQtree, along with a nexus file of partitions that can also be read directly into IQtree for model/partition selection. You can use this function with ANY set of aligned fasta files in a directory.
 <pre>
-SuperAlign(aligned_dir=ad)
+SuperAlign(aligned_dir=ad, missing_data_table)
 
 PartitionTable(aligned_dir=ad)
 </pre>
 <br>
 Additionally TOAST will take your missing data threshold to remove taxa that do not meet the criterion for retention, realign all loci, concatenate the filtered dataset into the relaxed phylip format used by IQtree, and generate a nexus file of partitions that can also be read directly into IQtree for model/partition selection. 
 <pre>
-ThresholdExtract(aligned_dir=ad, threshold_df=missing_df, threshold_fasta_folder="path/to/store/fastas/threshold100")
-
-ThresholdDataTable(aligned_dir=ad)
+ThresholdDataTable(missing_data, threshold)->threshold_df
+ThresholdExtract(aligned_dir=ad, threshold_df=threshold_df, threshold_fasta_folder="path/to/store/fastas/threshold100")
 </pre>
 For the above the directories should be whatever you specified earlier on. Again we recommend the folder architecture at the start of this guide. At this point you should be ready to harvest and explore data. Remember to check back for updates as we add functionality and please drop a line if you have features you would like to see added. 
 

@@ -29,7 +29,6 @@ This part focuses on using BUSCO to harvest orthologs from online or locally sto
 <br>
 TOAST will move between directories on your harddrive generating files. We recommend the following folder architecture to keep your project organized
 <img class="b30" src="https://carolinafishes.github.io/images/TOAST_file_arc.png" alt="">
-<br> 
 Within a main project folder, 
 <br>
 1) Create a separate folder in which you store FASTA files. TOAST will also place downloaded FASTA files here. 
@@ -48,7 +47,6 @@ TOAST will write concatenated alignments, custom concatenated alignments of user
 Here is an overview of core functions and their purpose
 <br>
 <img class="b30" src="https://carolinafishes.github.io/images/TOAST_functions.png" alt="">
-<br>
 TOAST functions can be divided into 4 groups 
 <br>
 1) Sequence gathering functions 
