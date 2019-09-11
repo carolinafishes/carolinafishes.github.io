@@ -31,7 +31,7 @@ Missing data is a common feature of large sequence datasets. Everything from cha
 We will use the missing_data.tsv file distributed with TOAST in the examples in this section. 
 <br>
 <br>
-Note that you can use the following code to generate a .csv file of missing data patterns from ANY set of FASTA files in a directory with the following function
+Note that you can use the following code to generate a .csv or .tsv file (depending on your preference) of missing data patterns from ANY set of FASTA files in a directory with the following function
 <pre>
 setwd(td)
 missing<-MissingDataTable(aligned_dir = ad)
@@ -44,9 +44,9 @@ In fact, ANY delimited file of data presence/absence can be used with these visu
 <i>Now you have no excuse to not look at missing data patterns anymore!</i>
 <br>
 <h3>Visualizing Missing Data Patterns</h3>
-Part of the orthology assembly steps in both sections 2 and 3 generates a .csv file entitled "missing_data.tsv" that is distributed with this software. We will use this file throughout this section. Let's begin by reading it into memory.
+Part of the orthology assembly steps in both sections 2 and 3 was used to generate .tsv file entitled "missing_data.tsv" that is <a href='https://github.com/carolinafishes/toast/tree/master/sample_data'> distributed with this software.</a> We will use this file throughout this section. Let's begin by reading it into memory. Note you may need to change the path depending on where you downloaded this. 
 <pre>
-tsv<-read.csv("~/missing_data.csv", header=TRUE)
+tsv<-read.delim("/toast/sample_data/missing_data.tsv", header=TRUE)
 </pre>
 With this file we can begin to explore coarse missing data patterns. Let's start with a snapshot of who has more than 1000 out of 6000 loci in the cetacean dataset as follows
 <pre>
@@ -75,12 +75,13 @@ The guide file is formatted as follows
 <img class="b30" src="https://carolinafishes.github.io/images/TOAST_TaxoGuide.png" alt="">
 <br>
 <br>
-Leaves are your sampled species and there is no limit to the number of levels you can add. Simply add more columns if you wish for increased resolution. Please note that you need a column entitled "leaves". You can save this in any format you wish to read into R (.csv, .tsv, etc). In our case, we will use a .csv file.
+Leaves are your sampled species and there is no limit to the number of levels you can add. Simply add more columns if you wish for increased resolution. Please note that you need a column entitled "leaves". You can save this in any format you wish to read into R (.csv, .tsv, etc). In our case, we will use a .csv file <a href='https://github.com/carolinafishes/toast/tree/master/sample_data'> that is distributed with this software.</a>
 <br>
 <br>
 Additionally, you must also fill in all levels. For the purpose of this tutorial we will look at the difference between baleen and toothed whales and higher level subclades such dolphins using your web browser to interactively explore missing data circlepack plots.
 <pre>
-taxonomy<-read.csv("cetacean_taxonomy", header=TRUE) 
+taxonomy<-read.csv("/toast/sample_data/cetacean_taxonomy.csv", header=TRUE) 
+#note, please change the path to reflect the location on your HD
 VisualizeTaxonomyInteractive(tsv, taxonomy, 0)
 </pre>
 As above, the missing data file along with your threshold of mininum number of loci is used to generate these plots. We are going to begin by setting our threshold to zero, to see how missing data is distributed overall. The above code should have opened an interactive plot in your browser like this one
@@ -114,7 +115,7 @@ VisualizeThreshold(tsv, 1000)
 </pre>
 <img class="b30" src="https://carolinafishes.github.io/images/TOAST_VisThreshold.png" alt="">
 <br>
-The above plots shows your total remaining missing data (left), how much missing data was removed (right), and how much missing data was in the originally present in your data (right). In each case the bars are color coded by taxa.
+The above plots shows your total remaining missing data (left), how much missing data was removed (right), and how much missing data was in the originally present in your data (right). In each case the bars are color coded by taxa. Please note that mac users may need to adjust (drag the corner slightly) of the R graphics window for the display to readjust and draw appropriately. 
 <br>
 <br>
 In addition to thinking about missing data between taxa, it may also be of interest to look between loci and taxa at different hierarchical levels.
@@ -163,17 +164,16 @@ Now that you have looked at missing data patterns, you may want to assemble your
 TOAST has several concatenation functions.
 <br>
 <br>
-The most basic will assemble a concatenated alignment of aligned fasta files into the relaxed phylip format used by IQtree, along with a nexus file of partitions that can also be read directly into IQtree for model/partition selection. You can use this function with ANY set of aligned fasta files in a directory.
+The most basic will assemble a concatenated alignment of aligned fasta files into the relaxed phylip format used by IQtree, along with a nexus file of partitions that can also be read directly into IQtree for model/partition selection. You can use this function with ANY set of aligned fasta files in a directory. "missing" below refers to the output of the function: missing<-MissingDataTable(aligned_dir = ad). 
 <pre>
-SuperAlign(aligned_dir=ad, missing_data_table)
-
-PartitionTable(aligned_dir=ad)
+SuperAlign(aligned_dir=ad, missing)
+PartitionTable(aligned_dir=ad, missing)
 </pre>
 <br>
-Additionally TOAST will take your missing data threshold to remove taxa that do not meet the criterion for retention, realign all loci, concatenate the filtered dataset into the relaxed phylip format used by IQtree, and generate a nexus file of partitions that can also be read directly into IQtree for model/partition selection. 
+Additionally TOAST will take your missing data threshold to remove taxa that do not meet the criterion for retention, realign all loci, concatenate the filtered dataset into the relaxed phylip format used by IQtree, and generate a nexus file of partitions that can also be read directly into IQtree for model/partition selection. Note that TOAST does not come with a test data set for this out of the box, so you will either need to run TOAST on the example data or supply your own set of aligned fasta files. If you have this you can use the code below!
 <pre>
-ThresholdDataTable(missing_data, threshold)->threshold_df
-ThresholdExtract(aligned_dir=ad, threshold_df=threshold_df, threshold_fasta_folder="path/to/store/fastas/threshold100")
+ThresholdDataTable(missing, threshold=1000)->threshold_df
+ThresholdExtract(aligned_dir=ad, missing_df=threshold_df, threshold_fasta_folder="path/to/store/fastas/threshold100")
 </pre>
 For the above the directories should be whatever you specified earlier on. Again we recommend the folder architecture at the start of this guide. At this point you should be ready to harvest and explore data. Remember to check back for updates as we add functionality and please drop a line if you have features you would like to see added. 
 
