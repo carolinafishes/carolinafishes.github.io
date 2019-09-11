@@ -31,9 +31,12 @@ Missing data is a common feature of large sequence datasets. Everything from cha
 We will use the missing_data.tsv file distributed with TOAST in the examples in this section. 
 <br>
 <br>
-Note that you can use the following code to generate a .tsv file of missing data patterns from ANY set of FASTA files in a directory with the following function
+Note that you can use the following code to generate a .csv file of missing data patterns from ANY set of FASTA files in a directory with the following function
 <pre>
+setwd(td)
 missing<-MissingDataTable(aligned_dir = ad)
+write.csv(missing, file="missing_data.csv")
+
 </pre>
 In fact, ANY delimited file of data presence/absence can be used with these visualization functions (just needs data and NA for no data). This includes phenotypic trait data, behavioural observations, etc!
 <br>
@@ -41,9 +44,9 @@ In fact, ANY delimited file of data presence/absence can be used with these visu
 <i>Now you have no excuse to not look at missing data patterns anymore!</i>
 <br>
 <h3>Visualizing Missing Data Patterns</h3>
-Part of the orthology assembly steps in both sections 2 and 3 generates a .tsv file entitled "missing_data.tsv" that is distributed with this software. We will use this file throughout this section. Let's begin by reading it into memory.
+Part of the orthology assembly steps in both sections 2 and 3 generates a .csv file entitled "missing_data.tsv" that is distributed with this software. We will use this file throughout this section. Let's begin by reading it into memory.
 <pre>
-tsv<-read.delim("~/missing_data.tsv", header=TRUE)
+tsv<-read.csv("~/missing_data.csv", header=TRUE)
 </pre>
 With this file we can begin to explore coarse missing data patterns. Let's start with a snapshot of who has more than 1000 out of 6000 loci in the cetacean dataset as follows
 <pre>

@@ -20,7 +20,7 @@ show_meta: false
 This is a three part tutorial. <a href='https://carolinafishes.github.io/software/TOAST_manual/'>Part 1 focuses on installation</a>. Make sure to look at this page prior to proceeding.
 <br>
 <br>
-This part focuses on using BUSCO to harvest orthologs from online or locally stored fasta files, as well as the combination of the two. NOTE you need to be using LINUX to use BUSCO!
+This part focuses on using BUSCO to harvest orthologs from online or locally stored fasta files, as well as the combination of the two. NOTE you need to be using MAC or LINUX to use BUSCO!
 <br>
 <br>
 <a href='https://carolinafishes.github.io/software/TOAST_manual3/'>Part 3 focuses on visualization missing data and concatenated alignment assembly</a>. You can use any platform for these functions.
@@ -76,21 +76,21 @@ The taxonomic ID can be easily obtained from NCBI as follows
 4) This will send you to a page that includes the taxonomic ID. In the case of Cetacea this is 9721. 
 <br>
 <h3>Harvesting New Ortholog Datasets</h3>
-To use BUSCO and harvest orthologs you need to be using LINUX and also have installed the dependencies mentioned in section 1. If you said yes to both of these things, then we are ready to begin.
+To use BUSCO and harvest orthologs you need to be using Mac or LINUX and also have installed the dependencies mentioned in section 1. If you said yes to both of these things, then we are ready to begin.
 <br>
 <br>
 Looking at the example_script.R file from within the example folder, you will see that you need to define some locations as well as the number of cores to use.
 
 <pre>
 #universal variables
-td <- "/home/dustin/temp/trial1" #toast_directory
-fd <- "/home/dustin/temp/trial1/fasta" #fasta_dir
-bs <- "/home/dustin/software/busco/scripts/run_BUSCO.py" #path to busco_script
-bd <- "/home/dustin/temp/trial1/busco_results" #path to busco results directory
-ed <- "/home/dustin/temp/trial1/extracted" #extracted_dir
-md <- "/home/dustin/temp/trial1/mafft_aligned" #mafft_dir
-od <- "/home/dustin/temp/trial1/350_laurasiatheria_odb9" #path to orthoDB directory
-ad <- "/home/dustin/temp/trial1/mafft_aligned" #mafft_dir, which is a directory of aligned fastas
+td <- "/home/carolinafishes/temp/trial1" #toast_directory
+fd <- "/home/carolinafishes/temp/trial1/fasta" #fasta_dir
+bs <- "/home/carolinafishes/software/busco/scripts/run_BUSCO.py" #path to busco_script
+bd <- "/home/carolinafishes/temp/trial1/busco_results" #path to busco results directory
+ed <- "/home/carolinafishes/temp/trial1/extracted" #extracted_dir
+md <- "/home/carolinafishes/temp/trial1/mafft_aligned" #mafft_dir
+od <- "/home/carolinafishes/temp/trial1/350_laurasiatheria_odb9" #path to orthoDB directory
+ad <- "/home/carolinafishes/temp/trial1/mafft_aligned" #mafft_dir, which is a directory of aligned fastas
 cpu <- 12 #number of threads to use at various steps
 </pre>
 <br>

@@ -26,7 +26,7 @@ Note that TOAST requires R version 3.6.1 or higher for installation of dependenc
 Update R prior to going any further
 <br>
 <br>
-<a href='https://carolinafishes.github.io/software/TOAST_manual2/'>Part 2 focuses on gathering public data using BUSCO.</a> Note that ONLY LINUX users can use BUSCO!
+<a href='https://carolinafishes.github.io/software/TOAST_manual2/'>Part 2 focuses on gathering public data using BUSCO.</a> Note that ONLY MAC and LINUX users can use BUSCO!
 <br>
 <br>
 <a href='https://carolinafishes.github.io/software/TOAST_manual3/'>Part 3 focuses on visualization of missing data patterns and alignment assembly</a>. This functionality works on all platforms.
@@ -77,24 +77,27 @@ sudo apt install libxml2-dev
 </pre>
 If you did the above and only wish to visualize missing data patterns/assemble concatenated alignments you are ready to <a href='https://carolinafishes.github.io/software/TOAST_manual2/'>move on to part 2.</a><br> 
 <br>
-If you are a LINUX user and wish to harness BUSCO orthologs, keep reading! 
+If you are a MAC OR LINUX user and wish to harness BUSCO orthologs, keep reading! 
 <br>
-<h3>2. Additional Dependencies for Linux Users: BUSCO </h3>
-<a href='https://busco.ezlab.org/'>BUSCO</a> is limited to only running on Linux machines. If you plan to use TOAST to visualize missing data patterns, these functions will work on any platform (Windows and UNIX). 
+<h3>2. Additional Dependencies for Mac and Linux Users: BUSCO </h3>
+<a href='https://busco.ezlab.org/'>BUSCO</a> is limited to only running on Mac and Linux machines and requires Python3, please update if you are using earlier versions. If you plan to use TOAST to visualize missing data patterns, these functions will work also work on Windows and do not use python. 
 <br>
 <br>
-However, you need to be using LINUX to use any functions that involve <a href='https://busco.ezlab.org/'>BUSCO</a> harvesting of data. Further, MafftOrientAlign requires a Unix (Linux or OSX) environment.
+However, you need to be using Mac or LINUX to use any functions that involve <a href='https://busco.ezlab.org/'>BUSCO</a> harvesting of data. Further, MafftOrientAlign requires a Unix (Linux or OSX) environment.
  
 <br>
 <br>
 Please see the BUSCO manual for instructions on installation. 
 <br>
-Note that BUSCO recommends specific releases of HMMER and BLAST. 
+Note that BUSCO recommends specific releases of HMMER and BLAST. But, we have found more recent versions of HMMER to work while the lastest BLAST (2.9+) will occassionally crash.
 <br>
-We recommend following the BUSCO instructions to ensure compatibility. 
+We recommend following the BUSCO instructions to ensure compatibility. There are several options availabel when installing BUSCO and we suggest using the following command to ensure no mismatch of python versions in R (This is particularly important for mac users!)
+<pre>
+sudo python3 setup.py install
+</pre>
 <br>
 <br>
-After you have successfully installed BUSCO you will need to modify the config.ini file to direct BUSCO to both BLAST and HMMER. 
+After you have successfully installed BUSCO you will need to copy and modify the config.ini file to direct BUSCO to both BLAST and HMMER. 
 <br>
 Please see the BUSCO manual and follow these directions carefully.
 <br>
