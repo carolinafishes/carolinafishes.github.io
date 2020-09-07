@@ -8,7 +8,7 @@ layout: frontpage
 header:
   image_fullwidth: main_page2.jpg
   title: ""
-  caption: Cape Fear River, NC
+  caption: Topsail Island, NC
 widget1:
   title: "Research Highlights"
   url: 'https://carolinafishes.github.io/highlights/'
