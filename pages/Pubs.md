@@ -14,7 +14,7 @@ image:
 header:
     image_fullwidth: "publication_fish.jpg"
     title: ""
-    caption: Curacao
+    caption: Scorpionfish, Curacao
     caption_url: https://carolinafishes.github.io/fieldwork/diving
 permalink: "/Pubs/"
 ---
