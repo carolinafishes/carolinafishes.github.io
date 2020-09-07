@@ -37,8 +37,6 @@
   url: "/blog/"
   side: left
   dropdown:
-  - title: "Collection"
-    url: "/collection/"
   - title: "Discovering Fishes"
     url: "/fish_diversity/"
   - title: "Evolution and Ecology"
@@ -52,10 +50,10 @@
   url: "/Joinus/"
   side: left
   dropdown:
-  - title: "Internship Opportunities"
-    url: "/Joinus/Internships/"
-  - title: "Volunteer Opportunities"
-    url: "/Joinus/collections_volunteer/"
+  - title: "Graduate School Opportunities"
+    url: "/Joinus/Apply/"
+  - title: "Student Research Opportunities"
+    url: "/Joinus/Students/"
   
 
 - title: "Search"

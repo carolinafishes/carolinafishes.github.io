@@ -14,14 +14,14 @@ header:
     image_fullwidth: "volunteer_crab.jpg"
     title: ""
     caption: Okinawa, Japan
-permalink: "/Joinus/collections_volunteer/"
+permalink: "/Joinus/Apply/"
 show_meta: false
 ---
 
-<h3>Volunteer opportunities</h3>
+<h3>Graduate School Opportunities</h3>
 <br>
 
-<a href='http://carolinafishes.github.io/Team/Volunteers/'>Volunteers</a> form an integral part of our team and participate in tasks that span helping our staff care for our collection to conducting independent research projects and writing scientific manuscripts with us. 
+Interested in continuing your educational journey? Want to gain training in new skills while facilitating the growth of collaborative networks and experience working with our research team and collaborators from around the world? If you answered yes, then please reach out. I will be taking students this upcoming year and welcome conversations about your research interests. 
 
-<br><a href='http://naturalsciences.org/volunteer'>To join us, apply here today!!!</a>
+<br>If you are interested in the graduate program at UNCC, please<a href='https://gradadmissions.uncc.edu/apply/apply-now'> check out these pages </a> for more information.
 

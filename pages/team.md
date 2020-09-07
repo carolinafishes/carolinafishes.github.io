@@ -21,7 +21,11 @@ permalink: "/team/"
 <br>
 <img class="b30" src="http://carolinafishes.github.io/images/Alex_guam_diving.jpg" alt="">
 <br>
-My research program takes an integrative approach to explore the factors that underlie the origin and maintenance of vertebrate biodiversity, with an emphasis on the study of ray-finned fishes (Actinopterygiians). Actinopterygiians comprise over half of all living vertebrate species—and I am interested in developing a better understanding of their history to shed light onto long standing questions in evolutionary biology that have relevance to both conservation and human health. I often cross traditional research boundaries, enabling the integration of perspectives from the fields of molecular phylogenomics, biodiversity science, functional and computational genomics, and evolutionary medicine. In addition, I am very interested in furthering the theory of phylogenetic experimental design as a means to both guide guide cost-effective research and scrutinize existing datasets to reveal sources of conflict and thereby stabilize inferences of evolutionary relationships. I have conducted field research in marine and freshwater systems across the globe, from the rivers of North Carolina to the Caribbean, Indo-Pacific, and the Southern Ocean of Antarctica. As the curator of fishes at the North Carolina Museum of Natural Sciences I also actively ensure that over 1.4 million fish specimens and their associated data are available for research use. 
+
+I am an evolutionary biologist with a broad interest in vertebrates, especially fishes. With over 30,000 species, ray-finned fishes are argueably among the most successful vertebrates on our planet. And, although they may look quite different from us, we share remarkable genetic similarities with species as diverse as gar and pufferfishes. But just how did this diversity come to be, and how has it persisted over millions of years? Moreover, how can an understanding of this diversity aid us in undersdtanding our own genomes? My goal is to investigate the biodiversity of fishes to answer these types of questions. 
+
+My current research primarily focuses on three topics: 1) The evolutionary history of marine fishes in threatened ecosystems (reefs and the Antarctic); 2) the mechanisms and functional consequences of gene family diversification in the ray-finned fish innate immune system; and 3) the development of theory and software to aid comparative phylogenomic research. In addressing these topics, I hope to illuminate general pathways and features of vertebrate evolution. Such a perspective provides critical historical context that can lead to increased accuracy and effectiveness when facing emergent challenges to conservation or human health. 
+
 <br>
 <br><a href="http://carolinafishes.github.io/images/Dornburg_CV.pdf"><en>C.V.</en></a>
 <br><a href='https://www.researchgate.net/profile/Alex_Dornburg'>Research Gate</a>
@@ -30,14 +34,7 @@ My research program takes an integrative approach to explore the factors that un
 <br>
 <br>
 
-<h2>Current Interns and Volunteers</h2>
-
-
-<h3>Tim Curtis</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/vol_tim_curtis.jpg" alt="">
-<br>
-
+<h2>Lab Alumni</h2>
 <br>
 <h3>April Lamb</h3>
 <br>
@@ -66,10 +63,12 @@ I am a Clemson University master’s student and NSF Graduate Research Fellow in
 <a href='https://www.researchgate.net/profile/Katerina_Zapfe'> Researchgate </a> 
 <br>
 <br>
-<h2>Lab Alumni</h2>
+
+<h3>Tim Curtis</h3>
 <br>
-<h3>2016-2017</h3>
+<img class="b30" src="http://carolinafishes.github.io/images/vol_tim_curtis.jpg" alt="">
 <br>
+
 <h3>Willa Brooks</h3>
 <img class="b30" src="http://carolinafishes.github.io/images/intern_willa_brooks.jpg" alt="">
 <br>
@@ -91,8 +90,6 @@ I am currently getting my feet wet in phylogenetic studies by constructing a <a 
 <img class="b30" src="http://carolinafishes.github.io/images/vol_rita_chen.jpg" alt="">
 <br> 
 I am a junior applied math major student at NC State. I'm interested in bioinformatics and am currently working on developing new phylogenetic theory on the utility of outgroups. 
-<br>
-<h3>2015-2016</h3>
 <br> 
 <h3>Joseph Flores</h3>
 <br>
