@@ -6,9 +6,9 @@
 #
 layout: frontpage
 header:
-  image_fullwidth: "Main_page.jpg"
+  image_fullwidth: "Main_page2.jpg"
   title: ""
-  caption: "Topsail Island, NC"
+  caption: "View from Topsail Island, NC"
 widget1:
   title: "Research Highlights"
   url: 'https://carolinafishes.github.io/highlights/'
