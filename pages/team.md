@@ -23,17 +23,12 @@ permalink: "/team/"
 <br>
 
 I am an evolutionary biologist with a broad interest in vertebrates, especially fishes. With over 30,000 species, ray-finned fishes are argueably among the most successful vertebrates on our planet. And, although they may look quite different from us, we share remarkable genetic similarities with species as diverse as gar and pufferfishes. But just how did this diversity come to be, and how has it persisted over millions of years? Moreover, how can an understanding of this diversity aid us in undersdtanding our own genomes? My goal is to investigate the biodiversity of fishes to answer these types of questions. 
-
-My current research primarily focuses on three topics: 1) The evolutionary history of marine fishes in threatened ecosystems (reefs and the Antarctic); 2) the mechanisms and functional consequences of gene family diversification in the ray-finned fish innate immune system; and 3) the development of theory and software to aid comparative phylogenomic research. In addressing these topics, I hope to illuminate general pathways and features of vertebrate evolution. Such a perspective provides critical historical context that can lead to increased accuracy and effectiveness when facing emergent challenges to conservation or human health. 
-
 <br>
+My current research primarily focuses on three topics: 1) The evolutionary history of marine fishes in threatened ecosystems (reefs and the Antarctic); 2) the mechanisms and functional consequences of gene family diversification in the ray-finned fish innate immune system; and 3) the development of theory and software to aid comparative phylogenomic research. In addressing these topics, I hope to illuminate general pathways and features of vertebrate evolution. Such a perspective provides critical historical context that can help us more effectively face emergent challenges to conservation or human health. 
 <br><a href="http://carolinafishes.github.io/images/Dornburg_CV.pdf"><en>C.V.</en></a>
 <br><a href='https://www.researchgate.net/profile/Alex_Dornburg'>Research Gate</a>
 <br><a href='https://scholar.google.com/citations?user=VgPd6sMAAAAJ&hl=en'>Google Scholar</a>
-<br><a href='http://loop.frontiersin.org/people/263122/overview'> Loop </a>
 <br>
-<br>
-
 <h2>Lab Alumni</h2>
 <br>
 <h3>April Lamb</h3>
