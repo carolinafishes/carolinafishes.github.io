@@ -6,7 +6,7 @@
 #
 layout: frontpage
 header:
-  image_fullwidth: main_page.jpg
+  image_fullwidth: "main_page.jpg"
   title: ""
   caption: Topsail Island, NC
 widget1:
