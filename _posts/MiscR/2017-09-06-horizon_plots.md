@@ -29,34 +29,36 @@ Horizon plots are a convenient way to display information content as a function 
 <h3> Here is a walkthrough of how to do this in PhyInformR </h3>
 
 <br>
-This tutorial is for users already familiar with PhyInformR. If you haven't gone through the tutorial, give it a whirl! To start just read in this function, this is going to do the hard work. 
+This tutorial is for users already familiar with PhyInformR. If you haven't gone through the tutorial, give it a whirl! To start just read in this function, this is going to do the hard work. We will also load tidyverse for a downstream data cleanup.
 <pre>
+library(tidyverse)
+
 horizon.prep<-function(rates,pre_name,filename,increment, time, internode,state_space){
-rates[which(rates>0)]->nonzero
-length(nonzero)->max
-nonzero[1:increment]->start
-seq(0,max,increment)->range
+nonzero <-rates[which(rates>0)]
+max<-length(nonzero)
+start<-nonzero[1:increment]
+range<-seq(0,max,increment)
 outsa<-matrix(ncol=1, nrow=length(range))
 outsb<-matrix(ncol=1, nrow=length(range))
 outsc<-matrix(ncol=1, nrow=length(range))
 for(i in 2:length(range)){
-  range[i]->stop
-  nonzero[1:stop]->start
-  as.matrix(start)->start2
-  Approximator(time,internode,start2,4)->all
-  all[1]-all[3]->signal.to.noise
-  stop-increment->begin
-  #cbind("one",begin,stop, signal.to.noise)->output
+  stop<-range[i]
+  start<-nonzero[1:stop]
+  start2<-as.matrix(start)
+  all<-Approximator(time,internode,start2,4)
+ signal.to.noise<- all[1]-all[3]
+  begin<-stop-increment
   
-  signal.to.noise->outsc[i,]
-    begin->outsa[i,]
-      stop->outsb[i,]
+    outsc[i,]<-signal.to.noise
+  outsa[i,]<-begin
+      outsb[i,]<-stop
 }
-rep(pre_name,length(range))->nn
-cbind(nn,outsa,outsb,outsc)->final
+nn<-rep(pre_name,length(range))
+final<-cbind(nn,outsa,outsb,outsc)
 write.csv(final, file=filename)
 return(final)
 }
+
 </pre>
 Let's demystify this a bit. 
 <br>
@@ -86,6 +88,9 @@ Now we can use these rates and make some plots for resolving a small internode 2
 <pre>
 library(PhyInformR)
 setwd("~/Documents/your directory here")
+output<-NULL
+targetTimes<-c(20,30,40,50,60,70,80)
+for
 horizon.prep(ratesA,pre_name="T_20",filename="20_million",1000, .28, .03,4)->twenty
 horizon.prep(ratesA,pre_name="T_30",filename="30_million",1000, .38, .03,4)->thirty
 horizon.prep(ratesA,pre_name="T_40",filename="40_million",1000, .48, .03,4)->forty
@@ -106,28 +111,25 @@ require(quantmod)
 
 Almost there! Above you should have csv outputs of each step so you don't have to repeat the calculations each time and just read those in if you need to plot again. For plotting we first sort what we need. 
 <pre>
-na.omit(twenty[,4])->rh_twenty
-na.omit(thirty[,4])->rh_thirty
-na.omit(forty[,4])->rh_forty
-na.omit(fifty[,4])->rh_fifty
-na.omit(sixty[,4])->rh_sixty
-na.omit(seventy[,4])->rh_seventy
-na.omit(eighty[,4])->rh_eighty
-as.numeric(rh_twenty)->rh_twenty
-as.numeric(rh_thirty)->rh_thirty
-as.numeric(rh_forty)->rh_forty
-as.numeric(rh_fifty)->rh_fifty
-as.numeric(rh_sixty)->rh_sixty
-as.numeric(rh_seventy)->rh_seventy
-as.numeric(rh_eighty)->rh_eighty
-cbind(rh_twenty,rh_thirty,rh_forty, rh_fifty,rh_sixty,rh_seventy,rh_eighty)->signal
-colnames(signal)<-c("twenty","thirty","forty","fifty","sixty","seventy","eighty")
+output<-NULL
+targetTimes<-c(20,30,40,50,60,70,80)
+for (i in 1:length(targetTimes)){
+  filename<-paste(targetTimes[i],"million", sep="_")
+  prename<-paste0("T",targetTimes[i])
+  time<-targetTimes[i]/100
+temp<-horizon.prep(ratesA,pre_name= prename,filename=filename,500, time, .03,4)
+temp<-na.omit(temp)
+output<-cbind(output,as.numeric(temp[,4]))
+}
+colnames(output)<-c("twenty","thirty","forty","fifty","sixty","seventy","eighty")
+
 </pre>
 Now plot and add some separation between graphs with small white band
 <pre>
-horizonplot(ts(signal), horizonscale=.3, origin=0,colorkey = TRUE, layout=c(1,10))+
+horizonplot(ts(output), horizonscale=.3, origin=0,colorkey = TRUE, layout=c(1,10))+
 
     layer(panel.xblocks(height=0.005,col="white",...))
+
 
 </pre>
 You should have something that looks like this:
