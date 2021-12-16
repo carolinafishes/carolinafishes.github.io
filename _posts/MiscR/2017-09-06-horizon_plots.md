@@ -115,7 +115,7 @@ colnames(output)<-c("twenty","thirty","forty","fifty","sixty","seventy","eighty"
 </pre>
 Now plot and add some separation between graphs with small white band
 <pre>
-horizonplot(ts(output), horizonscale=.3, origin=0,colorkey = TRUE, layout=c(1,10))+
+horizonplot(ts(output), horizonscale=.3, origin=0,colorkey = TRUE, layout=c(1,7))+
 
     layer(panel.xblocks(height=0.005,col="white",...))
 
