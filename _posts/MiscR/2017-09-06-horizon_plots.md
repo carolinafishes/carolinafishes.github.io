@@ -90,14 +90,14 @@ library(PhyInformR)
 setwd("~/Documents/your directory here")
 output<-NULL
 targetTimes<-c(20,30,40,50,60,70,80)
-for
-horizon.prep(ratesA,pre_name="T_20",filename="20_million",1000, .28, .03,4)->twenty
-horizon.prep(ratesA,pre_name="T_30",filename="30_million",1000, .38, .03,4)->thirty
-horizon.prep(ratesA,pre_name="T_40",filename="40_million",1000, .48, .03,4)->forty
-horizon.prep(ratesA,pre_name="T_50",filename="50_million",1000, .58, .03,4)->fifty
-horizon.prep(ratesA,pre_name="T_50",filename="50_million",1000, .68, .03,4)->sixty
-horizon.prep(ratesA,pre_name="T_50",filename="50_million",1000, .78, .03,4)->seventy
-horizon.prep(ratesA,pre_name="T_50",filename="50_million",1000, .88, .03,4)->eighty
+for (i in 1:length(targetTimes)){
+  filename<-paste(targetTimes[i],"million", sep="_")
+  prename<-paste0("T",targetTimes[i])
+  time<-targetTimes[i]/100
+temp<-horizon.prep(ratesA,pre_name= prename,filename=filename,500, time, .03,4)
+temp<-na.omit(temp)
+output<-cbind(output,as.numeric(temp[,4]))
+}
 </pre>
 <br>
 
@@ -109,20 +109,9 @@ require(latticeExtra)
 require(quantmod)
 </pre>
 
-Almost there! Above you should have csv outputs of each step so you don't have to repeat the calculations each time and just read those in if you need to plot again. For plotting we first sort what we need. 
+Almost there! Above you should have csv outputs of each step so you don't have to repeat the calculations each time and just read those in if you need to plot again. For plotting we first add some column names. 
 <pre>
-output<-NULL
-targetTimes<-c(20,30,40,50,60,70,80)
-for (i in 1:length(targetTimes)){
-  filename<-paste(targetTimes[i],"million", sep="_")
-  prename<-paste0("T",targetTimes[i])
-  time<-targetTimes[i]/100
-temp<-horizon.prep(ratesA,pre_name= prename,filename=filename,500, time, .03,4)
-temp<-na.omit(temp)
-output<-cbind(output,as.numeric(temp[,4]))
-}
 colnames(output)<-c("twenty","thirty","forty","fifty","sixty","seventy","eighty")
-
 </pre>
 Now plot and add some separation between graphs with small white band
 <pre>
