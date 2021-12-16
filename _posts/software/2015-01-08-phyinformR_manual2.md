@@ -34,8 +34,8 @@ site rates, state space, and internode lengths
 Site rates are covered above. Now we'll introduce the internode lengths and state spaces and will continue using the avian tree and site rates from Prum et al. (2015) that are distributed with phyinformR.In case these are not in memory already use
 <pre>
 library(ape) 
-read.tree(system.file("extdata","Prumetal_timetree. phy",package="PhyInformR"))->tree 
-as.matrix(prumetalrates)->rr
+tree<-read.tree(system.file("extdata","Prumetal_timetree. phy",package="PhyInformR"))
+rr<-as.matrix(prumetalrates)
 </pre>
 <h3> Getting Started </h3>
 There are three quantities that phyloInformeR calculates with regard to a specified internode given a set of site rates: Quartet Internode Resolution Probability (QIRP, "Quirp"), Quartet Internode Homoplasy Probability (QIHP, "Quip"), and Quartet Internode Polytomy Probability (QIPP, "Quippy"). Townsend et al.1 introduced two ways to calculate these quantities: An analytical approximation and a Monte Carlo based solution. Both approaches depend on site rates and two user defined internode lengths, T (time from present) and t (internode)
@@ -65,7 +65,7 @@ Remember to set your cores appropriately using the registerDoParallel(cores=8)
 <br>
 Here is the function using the same T and t and 5000 simulations on a subset of sites to save time
 <pre>
-as.matrix(prumetalrates[1:20000])->rr2 
+rr2<-as.matrix(prumetalrates[1:20000])
 parallel.cluster.signal.noise(100,0.5,rr2,5000,3,filename="test",imagename="testimage",image="FALSE
 </pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_7.png" alt="">
@@ -133,8 +133,8 @@ Since branch length are rarely known with certainty, phyinformR can also be used
 For this example, we will read in use the sample distribution of bichir trees from a study by <a href='https://www.researchgate.net/publication/259528342_Boom_and_bust_ancient_and_recent_diversification_in_bichirs_Polypteridae_Actinopterygii_a_relictual_lineage_of_ray-finned_fishes?ev=prf_pub'> Near et al. 2015</a> that is provided with the release 
 <pre>
 library(ape) 
-read.tree(system.file("extdata","polypterus_trees.phy",package="PhyInformR"))->tree 
-as.matrix(rag1)->rate_vector
+trees<-read.tree(system.file("extdata","polypterus_trees.phy",package="PhyInformR"))
+rate_vector<-as.matrix(rag1)
 </pre>	
 First you will need to specify the quartet of interest. In the bichir dataset, we will look at the clade containing Polypterus congicus as this species was not placed with high support in the tree: 
 <img class="b30" src="https://carolinafishes.github.io/images/phyinformR_bichir.jpg" alt="">
@@ -146,7 +146,7 @@ quart<- c("Polypterus_congicus","Polypterus_bichir","Polypterus_ansorgii" ,"Poly
 The remaining objects should be familiar, please review the above and preceeding page if the variable names seem enigmatic. To compute over a distribution of trees, run the function. Note that here we are truncating the tree distribution for the purpose of example
 <pre>
 tree
-su.bayes(a,b,c,d,e,f,Pi_T,Pi_C,Pi_A,Pi_G,rate_vector,quart,tree)->final
+final<-su.bayes(a,b,c,d,e,f,Pi_T,Pi_C,Pi_A,Pi_G,rate_vector,quart,tree)
 </pre>
 This function returns a matrix of internodes and T values from the trees and their associated QIHP,QIPP, and QIRP values 
 <pre>

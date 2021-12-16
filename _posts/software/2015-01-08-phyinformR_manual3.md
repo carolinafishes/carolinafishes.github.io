@@ -31,9 +31,9 @@ The quantitative framework of quartet internode calculations lends itself wonder
 Hwang et al. 2015 depicted QIRP across an entire tree by plotting the QIRP of a marker for each node simultaneously. This plot can be drawn by providing a tree, rate vector, and state space as in section 3. For this example, we will use a single tree from Near et al. 2014 along with site rates from the same study
 <pre>
 library(ape) 
-read.tree(system.file("extdata","polypterus_trees.phy",package="PhyInformR"))->tree 
-as.matrix(rag1)->rate_vector
-tree[[1]]->bichir_tree 
+trees<-read.tree(system.file("extdata","polypterus_trees.phy",package="PhyInformR"))
+rate_vector<-as.matrix(rag1)
+bichir_tree <-trees[[1]]
 PlotTreeSI(bichir_tree,rate_vector,3)
 </pre>
 <img class="b30" src="https://carolinafishes.github.io/images/informR_11.png" alt="">
@@ -49,7 +49,7 @@ Say we are interested choosing a new marker to sequence for bichirs.
 We can compare the predicted utility of rag1 to candidate markers using this plotting method. In this example we will compare rag1 with the first locus from Prum et al. 2015
 We'll start by isolating the locus
 
-<pre>as.matrix(prumetalrates[1:1594])->candidate.locus
+<pre>candidate.locus<-as.matrix(prumetalrates[1:1594])
 </pre>
 Now we can compare to the above plot as follows
 <pre> Plot.Another.TreeSI(bichir_tree, candidate.locus,3,col="red",type=3)</pre>
@@ -68,67 +68,47 @@ Navigate to the "Phylogenetic_Informativeness" part of the downloaded directory
 Change the setwd() function at the top of the rosetta file to the directory path, save, then source
 <pre>
 setwd("~/yourpath/Zenodo/Phylogenetic_Informativeness")
-source("~/yourpathtofile/prumetal_heatmap_rosetta.r")
+source(url("https://raw.githubusercontent.com/carolinafishes/PhyInformR/master/inst/extdata/prumetalrates.txt"))
 </pre>
 This file translates the rates into locus specific rate matrices for you to explore. For this tutorial we will sort some loci by length to ask whether size of the locus is associated with increased information content. We are going to visualize a random subset of loci for the sake of keeping the tutorial manageable, though feel free to explore the full data further!
 
 <pre>
-length(L216)->leL216
-length(L182)->leL182
-length(L149)->leL149
-length(L213)->leL213
-length(L184)->leL184
-length(L223)->leL223
-length(L305)->leL305
-length(L8)->leL8
-length(L203)->leL203
-length(L95)->leL95
-length(L41)->leL41
-length(L295)->leL295
-length(L107)->leL107
-length(L163)->leL163
-length(L21)->leL21
-length(L2)->leL2
-length(L325)->leL325
-length(L80)->leL80
-length(L28)->leL28 
-c(leL216,leL182,leL149,leL213,leL184,leL223,leL305,leL8,leL203,leL95,leL41,leL295,leL107,
-leL163,leL21,leL2,leL325,leL80,leL28)->ll 
-names(ll)<-c("leL216","leL182","leL149","leL213","leL184","leL223","leL305","leL8","leL203","leL95",
-"leL41","leL295","leL107","leL163","leL21","leL2","leL325","leL80","leL28") 
-sort(ll)
+target_loci<-c("L216","L182","L149","L213","L184","L223","L305","L8","L203","L95","L41","L295","L107","L163","L21","L2","L325","L80","L28") 
+
+for (i in 1:length(target_loci)){
+	sizeInfo<-length(get(target_loci[i]))
+	assign(paste0("le",target_loci[i]), sizeInfo)	
+}
+
+ll<-c(leL216,leL182,leL149,leL213,leL184,leL223,leL305,leL8,leL203,leL95,leL41,leL295,leL107,leL163,leL21,leL2,leL325,leL80,leL28)
+
+names(ll)<-target_loci
+rev(sort(ll))
+
 </pre>
 The guide tree from Prum et al. 2015 used relative rates (root height=1), so we are going to look at resolving Neoaves with a crown at .30. We begin by calculating the signal for different internode lengths. Note that the loci were already formatted as matrices in the Prum et al. 2015 script.
 <pre>
+#get the concatenated alignment
 space.maker(allrates,.30,3)->a1 
-space.maker(L213,.30,3)->a2 
-space.maker(L182,.30,3)->a3
-space.maker(L203,.30,3)->a4 
-space.maker(L149,.30,3)->a5 
-space.maker(L2,.30,3)->a6 
-space.maker(L295,.30,3)->a7 
-space.maker(L325,.30,3)->a8 
-space.maker(L107,.30,3)->a9 
-space.maker(L41,.30,3)->a10 
-space.maker(L216,.30,3)->a11 
-space.maker(L28,.30,3)->a12 
-space.maker(L184,.30,3)->a13 
-space.maker(L8,.30,3)->a14 
-space.maker(L95,.30,3)->a15 
-space.maker(L80,.30,3)->a16 
-space.maker(L163,.30,3)->a17 
-space.maker(L21,.30,3)->a18 
-space.maker(L305,.30,3)->a19 
-space.maker(L223,.30,3)->a20    
+
+#add another 19 loci sorted by size
+for (i in 1:length(target_loci)){
+	tempspace<-space.maker(get(target_loci[i]),.3,3)
+	j<-i+1
+	assign(paste0("a",j), tempspace)	
+}
+
 </pre>
 We now take this output and assemble our heatmaps.
 <pre>
-rbind(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20)->demo as.matrix(demo)->demo2
+demo<-rbind(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20)
+demo2<-as.matrix(demo)
+
 row.names(demo2)<-
 c("allrates","L213","leL182","leL203","leL149","leL2","leL295","leL325","leL107","leL41","l
 eL216","leL28", "leL184","leL8","leL95","leL80","leL163","leL21","leL305","leL223")
-.30/20->by.this 
-seq(by.this,0.30-0.0001,by=by.this)->lilts
+byThis <-.30/20
+lilts<-seq(byThis,0.30-0.0001,by=byThis)
 colnames(demo2)<-lilts
 heatmap.2(demo2, Colv=F,Rowv=F, scale='none') </pre>
 <br>

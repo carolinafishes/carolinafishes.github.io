@@ -27,12 +27,12 @@ This is a three part tutorial. Part 1 focuses on the generation of PI profiles
 <a href='https://carolinafishes.github.io/software/phyinformR_manual3/'>Part 3 focuses on visualization</a>
 
 <h3>1. Installation</h3>
-PhyInformR is easy to install. Simply install via CRAN or <a href='https://github.com/carolinafishes/PhyInformR'>download the compressed R script from github</a> and install it manually 
+PhyInformR is easy to install. Note that it is currently not on CRAN but will be back following a major update. In the meantime install via devtools or <a href='https://github.com/carolinafishes/PhyInformR'>download the compressed R script from github</a> and install it manually 
 
 <pre>
-##cran install
-install.packages("PhyInformR")
-library(PhyInformR)
+##cran install is currently not available
+#install.packages("PhyInformR")
+#library(PhyInformR)
 </pre>
 <br>
 To install from github
@@ -114,18 +114,12 @@ Once you have site rates, use the the "c" function in R to format them. You are 
 For this walkthrough, we will be using the avian tree and site rates from Prum et al.3 that are distributed with PhyInformR
 <br>
 <pre>
-read.tree(system.file("extdata","Prumetal_timetree.phy",package="PhyInformR"))->tree
-as.matrix(prumetalrates)->rr
+tree<-read.tree(system.file("extdata","Prumetal_timetree.phy",package="PhyInformR"))
+rr<-as.matrix(prumetalrates)
 informativeness.profile(rr,tree, codon="FALSE", values="off")
 </pre>
 <br> Easy! Now you can make phylogenetic informativeness profiles (Townsend 2007) that look like this
 <img class="b30" src="https://carolinafishes.github.io/images/informR_1.png" alt="">
-To obtain PI profiles for each codon position, you can toggle codon="TRUE" if you are in reading frame
-<pre>
-informativeness.profile(rr,tree, codon=”TRUE”)
-</pre>
-<img class="b30" src="https://carolinafishes.github.io/images/informR_2.png" alt="">
-If you would like phyinformR to output of branching times and PI values, simply switch the values="on"
 
 <h3> Exploring Data with PI Profiles </h3>
 <br>Let's do something different and partition the data by site rates. First we will view the rates:
