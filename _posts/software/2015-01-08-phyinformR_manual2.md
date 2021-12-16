@@ -145,8 +145,7 @@ quart<- c("Polypterus_congicus","Polypterus_bichir","Polypterus_ansorgii" ,"Poly
 </pre>
 The remaining objects should be familiar, please review the above and preceeding page if the variable names seem enigmatic. To compute over a distribution of trees, run the function. Note that here we are truncating the tree distribution for the purpose of example
 <pre>
-tree
-final<-su.bayes(a,b,c,d,e,f,Pi_T,Pi_C,Pi_A,Pi_G,rate_vector,quart,tree)
+final<-su.bayes(a,b,c,d,e,f,Pi_T,Pi_C,Pi_A,Pi_G,rate_vector,quart,trees)
 </pre>
 This function returns a matrix of internodes and T values from the trees and their associated QIHP,QIPP, and QIRP values 
 <pre>
