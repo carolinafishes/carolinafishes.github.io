@@ -39,8 +39,8 @@ These topics work towards a goal of illuminating general rules of vertebrate evo
 this understanding can be applied to facilitate more effective stewardship of our planet, inform public
  health decision making, and establish a foundation for predicting the association of gene clusters with 
  human health phenotypes.
- 
-<br><a href="http://carolinafishes.github.io/images/Dornburg_CV.pdf"><en>C.V.</en></a>
+
+<a href="http://carolinafishes.github.io/images/Dornburg_CV.pdf"><en>C.V.</en></a>
 <br><a href='https://www.researchgate.net/profile/Alex_Dornburg'>Research Gate</a>
 <br><a href='https://scholar.google.com/citations?user=VgPd6sMAAAAJ&hl=en'>Google Scholar</a>
     
@@ -53,11 +53,10 @@ this understanding can be applied to facilitate more effective stewardship of ou
      alt="Image of Katerina Zapfe"/>
 <p>I'm Kat, a SCUBA diver, NSF Graduate Research Fellow, and PhD student in the Dornburg lab interested in the evolution and conservation of marine biodiversity. I ask how morphology, ecology, or presence of specific genes can influence the evolution of fishes across spaceand time. My thesis research uses an interdisciplinary approach to explore how marine fishes respond to  extreme habitat transitions at inter-individual and macroevolutionary scales. Through phylogenomics, models and comparative 
 methods, I ask how environmental changes happening today can impact the fish diversity of tomorrow.</p>
-
-<br><a href='https://www.researchgate.net/profile/Katerina_Zapfe'> Researchgate </a>
+<a href='https://www.researchgate.net/profile/Katerina_Zapfe'> Researchgate </a>
 
 <h4>Rittika Malik</h4>
-<i>Principal Investigator</i>
+<i>Graduate Researcher</i>
 <br>
 <img class="b30" src="/images/Rittika.jpg" width="200" height="auto"
      alt="Image of Rittika Malik" />          
@@ -116,8 +115,7 @@ State University. I am also a 2017 National Science Foundation Graduate Research
 from NC State. Broadly, I am interested in better understanding the bases of ecosystem resiliency (i.e. what factors contribute
 to an ecosystem's ability to recover from perturbations) and applying this knowledge to inform science-based policy and management
 decisions. I am especially interested in systems that are experiencing high levels of anthropogenically-driven change.</p>
-<br>
-<br><a href='https://aprildlamb.github.io'> Website </a>
+<a href='https://aprildlamb.github.io'> Website </a>
 <br><a href='https://www.linkedin.com/in/aprildlamb'> Linkedin </a>
 <br><a href='https://www.researchgate.net/profile/April_Lamb'> Researchgate </a>
 
