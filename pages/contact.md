@@ -12,9 +12,9 @@ header:
 
 permalink: "/contact/"
 ---
-Bioinformatics 357
-704-687-8437
-adornbur@uncc.edu
+<br>Bioinformatics 357
+<br>704-687-8437
+<br>adornbur@uncc.edu
 
 
 
