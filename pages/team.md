@@ -38,7 +38,6 @@ this understanding can be applied to facilitate more effective stewardship of ou
  health decision making, and establish a foundation for predicting the association of gene clusters with 
  human health phenotypes.
  
-<br>
 <br><a href="http://carolinafishes.github.io/images/Dornburg_CV.pdf"><en>C.V.</en></a>
 <br><a href='https://www.researchgate.net/profile/Alex_Dornburg'>Research Gate</a>
 <br><a href='https://scholar.google.com/citations?user=VgPd6sMAAAAJ&hl=en'>Google Scholar</a>
