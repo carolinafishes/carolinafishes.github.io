@@ -90,7 +90,7 @@ the impacts of endosymbiosis on the genome of marine organisms. </p>
 
 <h4>Haris Muharemovic </h4>
 <i> Graduate Student </i>
-Coming soon!
+<p>Coming soon!</p>
 
 <h4>Manav Rohilla</h4>
 <i>Undergraduate Researcher</i>
