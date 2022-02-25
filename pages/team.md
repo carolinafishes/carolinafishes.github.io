@@ -19,6 +19,7 @@ permalink: "/team/"
 ---
 <h4>Alex Dornburg, Ph.D.</h4>
 <i> Principal Investigator </i>
+<p></p>
 <img class="b30" src="/images/Alex.jpg" width="200" height="auto" 
      alt="Image of Dr. Alex Dornburg" />
 <p>In my lab group, we aim to develop a better understanding of the general principles 
@@ -48,6 +49,7 @@ human health phenotypes.
 
 <h4>Katerina Zapfe, M.Sc.</h4>
 <i>Graduate Researcher</i>
+<p></p>
 <img class="b30" img src="/images/Kat.jpg" width="200" height="auto" 
      alt="Image of Katerina Zapfe"/>
 <p>I'm Kat, a SCUBA diver, NSF Graduate Research Fellow, and PhD student in the Dornburg lab interested in the evolution and conservation of marine biodiversity. I ask how morphology, ecology, or presence of specific genes can influence the evolution of fishes across spaceand time. My thesis research uses an interdisciplinary approach to explore how marine fishes respond to  extreme habitat transitions at inter-individual and macroevolutionary scales. Through phylogenomics, models and comparative 
@@ -56,6 +58,7 @@ methods, I ask how environmental changes happening today can impact the fish div
 
 <h4>Rittika Malik</h4>
 <i>Graduate Researcher</i>
+<p></p>
 <img class="b30" src="/images/Rittika.jpg" width="200" height="auto"
      alt="Image of Rittika Malik" />          
 <p>I am a fourth-year Ph.D. student in the Bioinformatics department at UNC Charlotte.  I have completed my Masters from the same
@@ -71,6 +74,7 @@ free time, I love swimming, photography and travelling to new places.</p>
 
 <h4>Cameron Nguyen</h4>
 <i>Graduate Researcher</i>
+<p></p>
 <img class="b30" src="/images/Cameron.png" width="200" height="auto"
      alt="Image of Cameron Nguyen" />
 <p>I'm Cameron Nguyen, a masters student at UNC Charlotte pursuing a graduate degree in Bioinformatics. I obtained my bachelors degree
@@ -81,6 +85,7 @@ the two. My current research involves an investigation regarding the evolution o
 
 <h4>Alexandra Tew</h4>
 <i>Graduate Researcher</i>
+<p></p>
 <img class="b30" src="/images/Alexandra.jpg" width="200" height="auto"
      alt="Image of Alexandra Tew" />
 <p>I'm Alexandra, a graduate student in the Department of Bioinformatics and Genomics at UNCC with a particular interest in studying
@@ -92,6 +97,7 @@ the impacts of endosymbiosis on the genome of marine organisms. </p>
 
 <h4>Manav Rohilla</h4>
 <i>Undergraduate Researcher</i>
+<p></p>
 <img class="b30" src="/images/Manav.jpg" width="200" height="auto"
      alt="Image of Manav Rohilla" alt="">
 <p>Hello! My name is Manav (it might take a couple tries to get it right)! I am a junior at UNC Charlotte and am studying Computer Science
@@ -103,6 +109,7 @@ playing video games, and drinking what some may consider to be copious amounts o
 
 <h4>April Lamb, M.Sc.</h4>
 <i> Research Technician </i>
+<p></p>
 <img class="b30" src="/images/April.jpg" width="200" height="auto"
      alt="Image of April Lamb">
 <p>I'm April, a Research Technician in the Dornburg Lab. Prior to this position, I received my Masters degree in Biology, Ecology and 
