@@ -74,6 +74,8 @@ free time, I love swimming, photography and travelling to new places.</p>
 <h4>Cameron Nguyen</h4>
 <i>Graduate Researcher</i>
 <br>
+<img class="b30" src="/images/Cameron.jpg" width="200" height="auto"
+     alt="Image of Cameron Nguyen" />
 <p>I'm Cameron Nguyen, a masters student at UNC Charlotte pursuing a graduate degree in Bioinformatics. I obtained my bachelors degree
 from NCSU and am now soon to graduate from UNCC. My interests have always included computers, so naturally I gravitated towards
 the bioinformatics program at UNCC. Being of a biological science background, it felt like the perfect arrangement to combine
@@ -104,7 +106,7 @@ biosphere we inhabit. The work I do in the Evolutionary Informatics Lab (conveni
 acquisition, analysis, and reorganization of genetic data associated with viruses. Outside of EvIL, I enjoy aviation, playing guitar,
 playing video games, and drinking what some may consider to be copious amounts of coffee!</p>
 
-<h3>April Lamb, M.Sc.</h3>
+<h4>April Lamb, M.Sc.</h4>
 <i> Research Technician </i>
 <br>
 <img class="b30" src="/images/April.jpg" width="200" height="auto"
