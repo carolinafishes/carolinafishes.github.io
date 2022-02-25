@@ -1,14 +1,14 @@
 ---
 layout: page
 show_meta: false
-title:  "Fish Team"
+title:  "Lab Members"
 
 teaser: "Learn about us and our research!"
 categories:
     - team
 tags:
-    - team 
-    
+    - team
+
 image:
    thumb: "volunteer_water.jpg"
 header:
@@ -17,89 +17,92 @@ header:
     caption: Avon, NC
 permalink: "/team/"
 ---
-<h3>Alex Dornburg, Ph.D.</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/Alex_guam_diving.jpg" alt="">
-<br>
+<h3>Alex Dornburg, Ph.D., <i> Principal Investigator </i></h3>
+<img class="b30" src="/images/Alex.jpg" width="300" height="auto" 
+     alt="Image of Dr. Alex Dornburg" />
+In my lab group, we aim to develop a better understanding of the general principles 
+that have given rise to the diversity of living vertebrates and enabled their persistence. This 
+knowledge not only allows us to gain a better understanding of the evolution of our own genomes, 
+but also provides critical historical context for emergent challenges to both human health and conservation.
 
-I am an evolutionary biologist with a broad interest in vertebrates, especially fishes. With over 30,000 species, ray-finned fishes are argueably among the most successful vertebrates on our planet. Although they may look quite different from us, we also share remarkable genetic similarities with fish species as diverse as gar and pufferfishes. But just how did this diversity come to be, and how has it persisted over millions of years? Moreover, how can an understanding of this diversity aid us in understanding our own genomes? My goal is to investigate the biodiversity of fishes to answer these types of questions. 
+We are currently focusing on three core research topics
+1) The factors that shaped marine fish biodiversity; with an emphasis on the mechanisms and functional 
+consequences of gene family diversification in the innate immune system
+2) Leveraging the power of phylogenomic comparative methods to better understand critical aspects of 
+SARS-CoV-1 and SARS-CoV-2 biology such as the durability of immunity following infections and the genetic 
+mechanisms that enable zoonosis
+3) The development of theory and software to aid comparative phylogenomic research
+
+These topics work towards a goal of illuminating general rules of vertebrate evolution. In turn, 
+this understanding can be applied to facilitate more effective stewardship of our planet, inform public
+ health decision making, and establish a foundation for predicting the association of gene clusters with 
+ human health phenotypes.
+ 
 <br>
-<br>
-My current research primarily focuses on three topics: 
-1) The evolutionary history of marine fishes in threatened ecosystems (reefs and the Antarctic); 
-2) the mechanisms and functional consequences of gene family diversification in the ray-finned fish innate immune system; and 
-3) the development of theory and software to aid comparative phylogenomic research. 
-In addressing these topics, I hope to illuminate general features of vertebrate evolution while providing critical historical context that can help us more effectively face emergent challenges to both conservation and human health. 
 <br><a href="http://carolinafishes.github.io/images/Dornburg_CV.pdf"><en>C.V.</en></a>
 <br><a href='https://www.researchgate.net/profile/Alex_Dornburg'>Research Gate</a>
 <br><a href='https://scholar.google.com/citations?user=VgPd6sMAAAAJ&hl=en'>Google Scholar</a>
+    
+<h2>Lab Members</h2>
+    <h3>Katerina Zapfe, M.Sc.,<i>Graduate Researcher</i></h3>
+<img class="b30" img src="/images/Kat.jpg" width="300" height="auto" 
+     alt="Image of Katerina Zapfe" />
+I'm Kat, a SCUBA diver, NSF Graduate Research Fellow, and PhD student in the Dornburg lab interested in the evolution and conservation of marine biodiversity. I ask how morphology, ecology, or presence of specific genes can influence the evolution of fishes across spaceand time. My thesis research uses an interdisciplinary approach to explore how marine fishes respond to  extreme habitat transitions at inter-individual and macroevolutionary scales. Through phylogenomics, models and comparative 
+methods, I ask how environmental changes happening today can impact the fish diversity of tomorrow.
 <br>
-<h2>Lab Alumni</h2>
-<br>
-<h3>April Lamb</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/vol_april_lamb.jpg" alt="">
-<br>
-I am a M.S. student and NSF Graduate Research Fellow in the Department of Applied Ecology at North Carolina State University and have been volunteering at the NCMNS since 2015. My scientific interests range across a wide spectrum of the animal kingdom’s biodiversity, so my research often takes an integrative and cross-disciplinary approach to addressing applied questions that transcend traditional boundaries of ecology and evolutionary biology. Specifically, I am interested in understanding (1) how vertebrate species diversity is generated and maintained over time and (2) how non-native species introductions influence community composition and abundance, growth, and niche occupancy of native species to better inform management decisions regarding imperiled systems. Here at the museum, I work with scientists on relevant research projects that relate to fish and/or collections-based specimens. I also help maintain the fish unit’s research collection by databasing, georeferencing, and organizing data in the collection database and by processing specimens for long-term storage in the collection.
-<br>
-<a href='https://adlamb0.wixsite.com/april'> Website </a>
-<br>
-<a href='https://docs.wixstatic.com/ugd/480d4f_13c28937f98e43ea8a7f18d0adbb20bc.pdf'> C.V. </a>
-<br>
-<a href='https://www.researchgate.net/profile/April_Lamb'> Researchgate </a> 
-<br>
-<h3>Richard Morris</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/vol_richard_morris.jpg" alt="">
-<br>
-After retiring as a statistician working on problems in public health and medical applications, I wondered what to do with my free time. Then I became fascinated by ideas about the underlying processes and consequences of evolution. And so, I return to earlier interests in life with new tools and perspectives. My goal is to contribute in any way I can to ongoing studies in the lab. 
-<br>
-<h3>Katerina Zapfe</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/intern_katerina_zapfe.jpg" alt="">
-<br>
-I am a Clemson University master’s student and NSF Graduate Research Fellow interested in phylogenetics and evolutionary patterns of diversity in marine fishes. I graduated from NC State University in 2015 and have since become involved in marine science education, public outreach, and research with the NCMNS fishes unit. My research interests utilize phylogenomic and comparative methods to illuminate patterns of lineage persistence and phenotypic disparity. Why are some clades more ecologically diverse than others? How have lineages persisted in the face of environmental change? By answering questions such as these, I strive to produce meaningful scientific contributions to the field of evolutionary biology to inform conservation initiatives and our collective understanding of Earth’s biodiversity. I am also an avid SCUBA diver and founding member of Future Frogmen, a Cousteau diver founded non-profit organization, and regularly contribute biological illustrations to accompany publications. 
-<br>
-<a href='https://www.researchgate.net/profile/Katerina_Zapfe'> Researchgate </a> 
-<br>
+<br><a href='https://www.researchgate.net/profile/Katerina_Zapfe'> Researchgate </a>
+
+<h3>Rittika Malik, <i>Graduate Researcher</i></h3>
+<img class="b30" src="/images/Rittika.jpg" width="300" height="auto"
+     alt="Image of Rittika Malik" />          
+I am a fourth-year Ph.D. student in the Bioinformatics department at UNC Charlotte.  I have completed my Masters from the same
+department where I worked on population genetics. I am interested in evolutionary biology and studying the diversity of animals
+all across the globe. I am currently studying the evolution of immune genes in fishes. I am interested in understanding the repertoire
+of innate immune receptors in the early divergence of ray finned fishes. Recently I’ve been interested in signal regulatory proteins
+which are part of the immune system in our body. These are genes which bind to cancer cells and give off a “Don't eat me” signal to
+the immune system. Studying this is significant because it helps to understand how evolution affects cancer development. In the future,
+I’d like to look more into the evolution of cancer in other animals for learning human cancers. I am also working on genome announcement
+of Polypterus bichir and Long nosed gar. My skills involve developing pipelines for immunogenetics research by using a combination of
+python, R, and bash. I am familiar with libraries such as BWA, openmpi, Busco, RepdeNovo and other bioinformatics pipelines. During my
+free time, I love swimming, photography and travelling to new places.
+
+<h3>Cameron Nguyen, <i>Graduate Researcher</i></h3>
+I'm Cameron Nguyen, a masters student at UNC Charlotte pursuing a graduate degree in Bioinformatics. I obtained my bachelors degree
+from NCSU and am now soon to graduate from UNCC. My interests have always included computers, so naturally I gravitated towards
+the bioinformatics program at UNCC. Being of a biological science background, it felt like the perfect arrangement to combine
+the two. My current research involves an investigation regarding the evolution of innate immune system genes.
 <br>
 
-<h3>Tim Curtis</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/vol_tim_curtis.jpg" alt="">
-<br>
+<h3>Alexandra Tew, <i> Graduate Researcher </i></h3>
+<img class="b30" src="/images/Alexandra.jpg" width="300" height="auto"
+     alt="Image of Alexandra Tew" />
+I'm Alexandra, a graduate student in the Department of Bioinformatics and Genomics at UNCC with a particular interest in studying
+the impacts of endosymbiosis on the genome of marine organisms. 
 
-<h3>Willa Brooks</h3>
-<img class="b30" src="http://carolinafishes.github.io/images/intern_willa_brooks.jpg" alt="">
+<h3>Haris Muharemovic <i> Graduate Student </i></h3>
+Coming soon!
+
+<h3>Manav Rohilla, <i>Undergraduate Researcher</i></h3>
+<img class="b30" src="/images/Manav.jpg" width="300" height="auto"
+     alt="Image of Manav Rohilla" alt="">
+Hello! My name is Manav (it might take a couple tries to get it right)! I am a junior at UNC Charlotte and am studying Computer Science
+with concentration in bioinformatics. I’ve been interested in how life on this planet has evolved with time since high school, and
+bioinformatics is, in my opinion, one of the most interesting ways to analyze the evolutionary history that can be found within the
+biosphere we inhabit. The work I do in the Evolutionary Informatics Lab (conveniently shortened to EvIL) revolves mostly around the
+acquisition, analysis, and reorganization of genetic data associated with viruses. Outside of EvIL, I enjoy aviation, playing guitar,
+playing video games, and drinking what some may consider to be copious amounts of coffee!
+
+<h3>April Lamb, M.Sc., <i> Research Technician </i></h3>
+<img class="b30" src="/images/April.jpg" width="300" height="auto"
+     alt="Image of April Lamb">
+I'm April, a Research Technician in the Dornburg Lab. Prior to this position, I received my Masters degree in Biology, Ecology and 
+Evolution and a professional certificate in Geospatial Information Systems (GIS) from North Carolina
+State University. I am also a 2017 National Science Foundation Graduate Research Fellow and hold a Bachelor's degree in Zoology
+from NC State. Broadly, I am interested in better understanding the bases of ecosystem resiliency (i.e. what factors contribute
+to an ecosystem's ability to recover from perturbations) and applying this knowledge to inform science-based policy and management
+decisions. I am especially interested in systems that are experiencing high levels of anthropogenically-driven change.
 <br>
-I graduated from Emory University in 2014 with a bachelors in Environmental Science and a minor in math. My primary interest lies in marine conservation and I have worked in several areas of marine science education and outreach, fisheries management policy analysis, and field and lab based marine research. Working with the fishes unit I am developing a foundation in phylogenetic and biogeographic analyses as we investigate a complex pattern of cryptic species diversity in Caribbean blennies. Understanding patterns of species diversity forms the critical foundation for much of organismal biology, and I look forward to utilizing the skills and knowledge I gain in the ichthyology unit to develop new perspectives on contemporary issues in marine conservation. 
-<br>
-<a href='https://www.linkedin.com/in/willarbrooks'> linkedin </a> 
-<br>
-<br>
-<h3>Abagail Burrus</h3>
-<img class="b30" src="http://carolinafishes.github.io/images/intern_a_burrus.jpg" alt="">
-<br>
-I am currently getting my feet wet in phylogenetic studies by constructing a <a href='https://en.wikipedia.org/wiki/Lycopodiophyta'> Lycopod</a> Tree of Life and also studying the possible effects of Madagascar's hypervariable climate on the community-level organization its endemic trees. I'm interested in pursuing projects in plant phylogenetics that unite integrative taxonomy, herbarium research, and applications towards conservation. What can the history of flora found in our natural history collections tell us about impending (or active) changes in the floral landscape due to factors like climate change? What other novel uses arise for collections such as herbaria when a researcher combines modern data analysis with such historical datasets? What new strategies and biological understandings can combined molecular and morphological phylogenetic analyses give us by illuminating more branches (or new pathways) on the evolutionary trees of various plant groups?
-<br>
-<a href='https://www.researchgate.net/profile/Abagail_Burrus'> Researchgate </a> 
-<br>
-<br>
-<h3>Rita Chen</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/vol_rita_chen.jpg" alt="">
-<br> 
-I am a junior applied math major student at NC State. I'm interested in bioinformatics and am currently working on developing new phylogenetic theory on the utility of outgroups. 
-<br> 
-<h3>Joseph Flores</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/vol_josef_flores.jpg" alt="">
-<br>
-I am a 2014 graduate of the University of North Carolina Wilmington with my B.S. in marine biology. My primary interests are in marine life and conservation and I enjoy both field work and hands on data gathering. I am currently collecting morphometric data to better understand biodiversity patterns in several species of fish, both in fresh and salt water. Quantifying morphological change within or between species can gleam valuable insights into a range of topics including the discovery of cryptic diversity and correlations between form,  function, and life history. I am looking forward to expanding my knowledge of fishes and ultimately finding a career in this field of study.
-<br>
-<h3>Leela Rao</h3>
-<br>
-<img class="b30" src="http://carolinafishes.github.io/images/vol_leela_rao.jpg" alt="">
-<br>
-I hold degrees in Zoology from NC State University, a Masters in Coastal Environmental Management from Duke University, and a degree in Veterinary Medical Technology.  I love championing less celebrated species, especially those that have a profound influence on our natural ecosystems. Fishes are one such example, often seen only through a consumer lens. I seek to reveal the extraordinary and diverse characteristics of these taxa, and bring awareness to their plight for a more sustainable existence alongside humanity. Working in the fishes unit, I am involved in a study assessing the evolutionary dynamics associated with transitions between activity patterns, and am helping the unit develop a research program in fish hematology in collaboration with the museum's veterinary staff. I also have a guinea pig named Hubble, named after the telescope that has arguably provided data for the most groundbreaking scientific discoveries in the history of humankind, and a puppy named Simba.He is fluffy and goofy, and has been taught to be wary of estranged uncles bearing gifts. 
-<br> 
+<br><a href='https://aprildlamb.github.io'> Website </a>
+<br><a href='https://www.linkedin.com/in/aprildlamb'> Linkedin </a>
+<br><a href='https://www.researchgate.net/profile/April_Lamb'> Researchgate </a>
+
