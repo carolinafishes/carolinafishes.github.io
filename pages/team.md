@@ -78,7 +78,7 @@ free time, I love swimming, photography and travelling to new places.</p>
 <i>Graduate Researcher</i>
 <br>
 <br>
-<img class="b30" src="/images/Cameron.jpg" width="200" height="auto"
+<img class="b30" src="/images/Cameron.png" width="200" height="auto"
      alt="Image of Cameron Nguyen" />
 <p>I'm Cameron Nguyen, a masters student at UNC Charlotte pursuing a graduate degree in Bioinformatics. I obtained my bachelors degree
 from NCSU and am now soon to graduate from UNCC. My interests have always included computers, so naturally I gravitated towards
