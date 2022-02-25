@@ -12,10 +12,9 @@ header:
 
 permalink: "/contact/"
 ---
-<h3> Under construction </h3>
-This page will be updated shortly as I transition from the Museum of Natural Sciences to UNCC.
-
-
+Bioinformatics 357
+704-687-8437
+adornbur@uncc.edu
 
 
 
