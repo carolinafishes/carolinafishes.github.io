@@ -4112,14 +4112,11 @@ input, select, textarea {
 
 
 	/* For stacking text */
+	/* This is not part of the template but allows flexible image text stacking */
 	.parent {
 display: flex;
 flex-wrap:wrap;
 flex-direction: column;
-/*grid-template-columns: 1fr;
-grid-template-rows: repeat(10, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px; */
 }
 
 .div1 { min-width:200px; flex:1; margin:0.125em;}
