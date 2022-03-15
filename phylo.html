@@ -24,7 +24,7 @@
 						<li><a href="research.html">Research</a>
 							<ul>
 								<li><a href="macro.html">Macroevolution</a></li>
-								<li><a href="comp.html">Computational Epidemiology</a></li>
+								<li><a href="comp.html">Evolutionary Medicine</a></li>
 								<li><a href="phylo.html">Phylogenomics</a></li>
 								<li><a href="immuno.html">Immunogenetics</a></li>
 							</ul>
@@ -49,25 +49,31 @@
 					<div class="container">
 						<header class="major">
 							<h2>Phylogenomics</h2>
-							<p>Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan</p>
+							<p>Darwin's vision of a Tree of Life comes into view</p>
 						</header>
 						<div class="row gtr-150">
 							<div class="col-8 col-12-medium">
 
 								<!-- Content -->
 									<section id="content">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<h3>Dolore Amet Consequat</h3>
+										<a class="image fit"><img src="images/Phylo/Hiding2.jpg" alt="" /></a>
+										<h3>Resolving the Tree of Life</h3>
 										<p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam.</p>
 										<p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique.</p>
-										<h3>Sed Magna Ornare</h3>
-										<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus.</p>
+										<a class="image fit"><img src="images/Phylo/rattlesnake2.jpg" alt="" /></a>
+										<h3>Avoiding Pitfalls</h3>
+										<p>We employ quantitative measures from phylogenetic informativeness (PI) theory to provide a predictive framework with which to assess the influence of noise on phylogenetic datasets. The aims of this work are two-fold</p> <p>First, by creating a predictive framework for phylogenomic studies, markers or types of sequence data can be chosen objectively, saving investigator time and money by enabling cost-effective research design. Second, by scrutinizing existing datasets, sources of conflicting information can be revealed, leading to more stable inferences </p><p>These approaches are incorporated into computational pipelines used in most of our research efforts, and are available in the R package <a href="phyinformrMain.html">PhyInformR.</a> We continue making these methods approachable and site-rates for our anlyses can now be estimated in IQTree</p> 
+										<a class="image fit"><img src="images/Phylo/mainSkull2.jpg" alt="" /></a>
+										<h3> On the birth and death of genes </h3>
+										<p>The decay of phylogenetic information and ability to predict where to expect sequence convergence is directly linked to the ability to detect sequence homologs. We are currently expanding theory aimed at assessing loss of phylogenetic information to the problem of ortholog detection. This addresses a major challenge at deep evolutionary time scales or for rapidly evolving loci. Our goal is to provide an immensely powerful framework for disentangling functional orthologs from genetic orthologs and assessing the roles of adaptation and gene birth/death events in the maintenance of genetic diversity </p> 
+
+										<h3> Current Research Projects</h3>
 										<ul>
-											<li>Faucibus orci lobortis ac adipiscing integer.</li>
-											<li>Col accumsan arcu mi aliquet placerat.</li>
-											<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-											<li>Blandit massa non blandit tempor interdum.</li>
-											<li>Lacinia mattis arcu nascetur lobortis.</li>
+											<li>Continue to resolve the ray-finned fish Tree of Life</li>
+											<li>The role of compositional bias and taxon sampling</li>
+											<li>Brachiobdellidan phylogenetics</li>
+											<li>Ortholog detection and gene family phylogeny</li>
+											<li>Experimental design for massive viral sequence datasets</li>
 										</ul>
 									</section>
 
@@ -77,12 +83,15 @@
 								<!-- Sidebar -->
 									<section id="sidebar">
 										<section>
-											<h3>Magna Feugiat</h3>
-											<p>Sed tristique purus vitae volutpat commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit. Sed tristique purus vitae volutpat commodo suscipit ullamcorper commodo suscipit amet sed nibh. Proin a ullamcorper sed blandit..</p>
+											<h3>Dataset Assembly and Missing Data</h3>
+											<p>The amount of freely available sequence data has become staggering and has tremendous promise for science. However, how to effectively harness this resource is not trivial. Large sequence datasets can be messy, and we often need to aggregate data from multiple sources. Moreover, high levels of missing data can impact our analyses. Extracting the data we need from within this tangled sea of information requires bioinformatic tools </p> 
+											<a href="#" class="image fit"><img src="images/Phylo/Maine.jpg" alt="" /></a>
+											<p> To aid in this effort, we continue to develop <a href="">TOAST</a>, an R package that enables extraction of thousands of single copy orthologs for any taxonomic group using any combination of online or local data while also tracking missing data patterns. Building upon functions for assessing thresholds of acceptable missing data allows for custom data set creation, that work in concert with numerous utility functions that produce outputs directly for phylogenetic software such as BEAST or IQTREE. Our goal for TOAST is to provide readily accessible tools that can harvest any set of loci for any set of organisms with only a minimal knowledge of R required by end-users. This goal is in line with with our vision of empowering anyone to utilize public genomic scale datasets in their research</p>
 											<footer>
 												<ul class="actions">
-													<li><a href="#" class="button">Learn More</a></li>
+													<li><a href="#" class="button">See the tutorial</a></li>
 												</ul>
+												
 											</footer>
 										</section>
 										<hr />
