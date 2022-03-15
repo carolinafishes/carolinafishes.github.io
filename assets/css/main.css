@@ -4130,7 +4130,47 @@ flex-direction: column;
 .div9 { min-width:200px; flex:1; margin:0.125em;}
 .div10 { min-width:200px; flex:1; margin:0.125em;}
 
-
+/* For custom semibold font */
  .custom_bold {
     font-weight: 300;
 }
+
+/* For custom full size button color */
+input[type="submit"].custom,
+		input[type="reset"].custom,
+		input[type="button"].custom,
+		.button.custom {
+			background-color: #6b0d24;
+			box-shadow: none;
+			color: #ffffff !important;
+		}
+
+			input[type="submit"].custom:hover,
+			input[type="reset"].custom:hover,
+			input[type="button"].custom:hover,
+			.button.custom:hover {
+				background-color: #821932;
+			}
+
+			input[type="submit"].custom:active,
+			input[type="reset"].custom:active,
+			input[type="button"].custom:active,
+			.button.custom:active {
+				background-color: #bf415f;
+			}
+
+/* For custom header */
+	header.custom {
+		margin: 0 0 2em 0;
+		position: relative;
+		text-align: center;
+	}
+
+		header.custom:after {
+			background: #6b0d24;
+			content: '';
+			display: inline-block;
+			height: 0.2em;
+			max-width: 20em;
+			width: 75%;
+		}
