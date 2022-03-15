@@ -4131,3 +4131,6 @@ flex-direction: column;
 .div10 { min-width:200px; flex:1; margin:0.125em;}
 
 
+ .custom_bold {
+    font-weight: 300;
+}
