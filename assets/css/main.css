@@ -4333,7 +4333,7 @@ input[type="submit"].custom,
 			}
 
 			.tiles article.style2 > .image:before {
-				background-color: #7ecaf6;
+				background-color: #3446eb;
 			}
 
 			.tiles article.style3 > .image:before {
@@ -4341,7 +4341,7 @@ input[type="submit"].custom,
 			}
 
 			.tiles article.style4 > .image:before {
-				background-color: #c75b9b;
+				background-color: #75132d
 			}
 
 			.tiles article.style5 > .image:before {
@@ -4349,7 +4349,7 @@ input[type="submit"].custom,
 			}
 
 			.tiles article.style6 > .image:before {
-				background-color: #8499e7;
+				background-color: #4d0739;
 			}
 
 						body:not(.is-touch) .tiles article:hover > .image {
