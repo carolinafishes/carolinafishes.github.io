@@ -142,7 +142,7 @@
 					We can see a bit of a tail going out, lets see what happens when we partition the data by rates above and below (0.003). We'll start by creating some partitions by defining rate based breaks in our data, we can see the PI of "fast" versus "slow" sites
 					<pre style="text-align: left; white-space: pre-line;"><code>lower<-c(0,0.003) 
 						upper<-c(0.003000001,10) 
-						cbind(lower,upper)->breaks
+						breaks<-cbind(lower,upper)
 					</code></pre>
 					PhyinformR has a function allowing profiles to be broken along any point in the rate vector, to assess changes in phylogenetic informativeness associated with thresholding the dataset at that rate
 					<hr />
