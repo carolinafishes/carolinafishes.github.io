@@ -4211,7 +4211,7 @@ input[type="submit"].neon,
 			.button.neon:hover {
 				color: #ab1628;
 				text-shadow: none;
-				filter: blur(.02em);
+				filter: blur(.05em);
 			}
 
 			input[type="submit"].neon:active,
