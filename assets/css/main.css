@@ -4551,7 +4551,7 @@ input[type="submit"].neon,
 
 
 .imgButton{
-    text-align:left;
+    text-align:center;
 }
 
 .imgContainer img, 
@@ -4560,12 +4560,12 @@ input[type="submit"].neon,
 }
 
 
-informrcolumns {
-  -webkit-column-count: 2;
-     -moz-column-count: 2;
-          column-count: 2;
+hr.half-width{
+  width:60%;
+  border: 0;
+	border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+margin: 3em 0;
 }
-
 
 
 
