@@ -4237,7 +4237,7 @@ input[type="submit"].neon,
   			height: 100%;
 			transform: perspective(2em) rotateX(40deg) scale(1, 0.35);
   			filter: blur(1em);
-  			opacity: 0.6;
+  			opacity: 0.4;
 			}
 			
 			.neon:hover,
