@@ -4130,6 +4130,7 @@ flex-direction: column;
 .div9 { min-width:200px; flex:1; margin:0.125em;}
 .div10 { min-width:200px; flex:1; margin:0.125em;}
 
+
 /* For custom semibold font */
  .custom_bold {
     font-weight: 300;
@@ -4158,6 +4159,52 @@ input[type="submit"].custom,
 			.button.custom:active {
 				background-color: #bf415f;
 			}
+
+/* Making neon button */
+
+input[type="submit"].neon,
+		input[type="reset"].neon,
+		input[type="button"].neon,
+		.button.neon {
+			 display: inline-block;
+			 font-size: 1.35em;
+  			cursor: pointer;
+  			text-decoration: none;
+  			color: var(#e76278);
+  			border: var(#e76278) 0.125em solid;
+  			border-radius: 0.25em;
+  			text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+			box-shadow: inset 0 0 0.5em 0 var(#e76278), 0 0 0.5em 0 var(#e76278);
+			position: relative;
+			filter: blur(.025em);
+			opacity: 0.9;
+			font-weight: 300;
+			height: 3em;
+			line-height: 3em;
+			padding: 0 2.25em;
+			text-align: center;
+			white-space: nowrap;
+		}
+
+			input[type="submit"].neon:hover,
+			input[type="reset"].neon:hover,
+			input[type="button"].neon:hover,
+			.button.neon:hover {
+				color: #e76278;
+				text-shadow: none;
+			}
+
+			input[type="submit"].neon:active,
+			input[type="reset"].neon:active,
+			input[type="button"].neon:active,
+			.button.neon:active {
+				color: #e13652;
+				 box-shadow: 0 0 2em 0.5em var(#e13652);
+				 opacity: 0;
+				 background-color: var(#e13652);
+				 transition: opacity 100ms linear;
+			}
+	
 
 /* For custom header */
 	header.custom {
@@ -4448,6 +4495,28 @@ input[type="submit"].custom,
 				}
 
 		}
+
+
+
+
+.imgButton{
+    text-align:left;
+}
+
+.imgContainer img, 
+.imgContainer .imgButton button {
+    width: 100%;
+}
+
+
+informrcolumns {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+}
+
+
+
 
 
 

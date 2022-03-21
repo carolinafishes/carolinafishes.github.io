@@ -1,0 +1,204 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>EvIL- Software</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<h1 id="logo"><a href="index.html">Evolutionary Informatics Lab</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="research.html">Research</a>
+							<ul>
+								<li><a href="macro.html">Macroevolution</a></li>
+								<li><a href="comp.html">Evolutionary Medicine</a></li>
+								<li><a href="phylo.html">Phylogenomics</a></li>
+								<li><a href="immuno.html">Immunogenetics</a></li>
+							</ul>
+						</li>
+						<li><a href="current.html">Team</a>
+						<ul>
+							<li><a href="alex.html">Alex Dornburg</a></li>
+							<li><a href="current.html">Current Team Members</a></li>
+							<li><a href="alumni.html">Former Team Members</a></li>
+						</ul>
+					</li>
+						<li><a href="publications.html">Publications</a></li>
+						<li><a href="software.html">Software</a></li>
+						<li><a href="media.html">Media</a></li>
+						<li><a href="contact.html" class="button primary">Join Us</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>PhyInformR</h2>
+						</header>
+						<!-- Content -->
+							<section id="content">
+								<div class="div1"> 
+								<h3>1. Installation</h3>
+								<p>PhyInformR is easy to install. Note that it is currently not on CRAN but will be back following a major update. In the meantime install via devtools or <a href='https://github.com/carolinafishes/PhyInformR'>download the compressed R script from github</a> and install it manually <pre style="text-align: left; white-space: pre-line;"><code> ##cran install is currently not available 
+								#install.packages("PhyInformR") 
+								#library(PhyInformR)</code></pre>
+								<br>To install from github
+								<pre style="text-align: left; white-space: pre-line;"><code>library(devtools) 
+									install_github("carolinafishes/PhyInformR")
+									library(PhyInformR)
+							</code></pre> 
+							<br> FOR WINDOWS USERS - devtools will not install depencies for certain versions of windows. This is being addressed and should be fixed in the next major release. If your install fails, please first install the dependencies through CRAN and then use devtools as above for the final install. <br>
+							<pre style="text-align: left; white-space: pre-line;"><code>install.packages("doParallel") 
+								install.packages("phytools") 
+								install.packages("splines") 
+								install.packages("gplots") 
+								install.packages("RColorBrewer") 
+								install.packages("foreach") 
+								install.packages("iterators") 
+								install.packages("geiger") 
+								install.packages("doParallel") 
+								install.packages("gridExtra") 
+								install.packages("hexbin") 
+								install.packages("PBSmodelling") 
+								install.packages("ggplot2")
+							</code></pre>	
+							Once you load PhyInformR, set the number of cores at the start of your session to enable later parallel processing if desired
+							<br>
+							We will also be hosting more sample data through Zenodo archives and github to explore new features as we develop them, so check back often!
+							<br>
+							</div>
+							<hr />
+							<div class="div1"><h3>2. Dependencies</h3>
+							PhyInformR is built upon the efforts of several other R packages including:
+							<pre style="text-align: left; white-space: pre-line;"><code>phytools
+								splines
+								gplots
+								RColorBrewer
+								foreach
+								iterators
+								geiger
+								doParallel
+								gridExtra
+								hexbin
+								ggplot2
+							PBSmodelling
+						</code></pre>
+						Several functions in PhyInformR use parallel processing. Enable this via
+						<pre style="text-align: left; white-space: pre-line;"><code>library(doParallel) 
+							#set the number of cores if you are working in parallel 
+							registerDoParallel(cores=8)
+					</code></pre>
+					now set your working directory to save files
+					<pre style="text-align: left; white-space: pre-line;"><code>setwd("~/Documents/phyinformR")
+					</code></pre>
+					</div>
+					<hr />
+					<div class="div1"> 
+					<h3>3. Phylogenetic Informativeness Profiles</h3>
+					Townsend's phylogenetic informativeness profiles are a visual tool that enables assessment of the predicted utility of a given sequence for phylogenetic inference across a timescale of interest. Use of this method requires two inputs: site rates and a guide tree
+					<br>
+					<br>
+					Site rates can be obtained through a variety of software applications such as hyphy, rate4site, or DNArates. Currently the easiest way to obtain maximum likelihood estimated site-rates is through <a href="http://www.iqtree.org/">IQTREE2</a>
+					This is done using the following command in terminal 
+					<pre style="text-align: left; white-space: pre-line;"><code>./iqtree2 -s your_data_file -p your_partition_file -te your_tree_file -m chosen_substitution_model -blfix --mlrate 
+					</code></pre>
+					Here you are providing your aligment (-s), an <i>optional</i> file of partitions such as genes (-p), your ultrametric guidetree (-te), and a substitution model (-m). The next flags fix the tree (-blfix) and conduct maximum likelihood site rate estimates (--mlrate). The resulting file produces a table that can be read directly into R and contains each site in a column, optional partitions in the next (if present), and the rate of each site
+					<br>
+					<br>
+					For this walkthrough, we will be using the avian tree and site rates from Prum et al.3 that are distributed with PhyInformR
+					<pre style="text-align: left; white-space: pre-line;"><code>tree<-read.tree(system.file("extdata","Prumetal_timetree.phy",package="PhyInformR"))
+						rr<-as.matrix(prumetalrates)
+					</code></pre>
+					<br> Now you can make phylogenetic informativeness profiles (Townsend 2007) that look like this using only a single line of code
+					<hr />
+					<img src="images/PhyInformR/informR_1.png" alt=""> 
+					<pre style="text-align: left; white-space: pre-line;"><code>informativeness.profile(rr,tree, codon="FALSE", values="off")
+					</code></pre>
+					<hr />
+					<h3> Exploring Data with PI Profiles </h3>
+					Let's do something different and partition the data by site rates. First we will view the rates:
+					<hr />
+					<img src="images/PhyInformR/informR_3.png" alt="">
+					<pre style="text-align: left; white-space: pre-line;"><code>hist(rr)</code></pre>
+					<hr />
+					We can see a bit of a tail going out, lets see what happens when we partition the data by rates above and below (0.003). We'll start by creating some partitions by defining rate based breaks in our data, we can see the PI of "fast" versus "slow" sites
+					<pre style="text-align: left; white-space: pre-line;"><code>lower<-c(0,0.003) 
+						upper<-c(0.003000001,10) 
+						cbind(lower,upper)->breaks
+					</code></pre>
+					PhyinformR has a function allowing profiles to be broken along any point in the rate vector, to assess changes in phylogenetic informativeness associated with thresholding the dataset at that rate
+					<hr />
+					<img src="images/PhyInformR/informR_4.png" alt="">
+					<pre style="text-align: left; white-space: pre-line;"><code>multi.profile(rr,tree, breaks)</code></pre>
+					<hr />
+					Partition 1 represents the slower site rates. As expected, the decay in phylogenetic informativeness for partition 1 is much lower across the tree than for partition 2. Conversely, we can see the faster sites in part two are informative for recent divergences, yet exhibit a rapid decline in informative site patterns as we move to deeper portions of the tree.
+					<br>
+					<br>
+					The above examples serve to illustrate what phyinformR does, but this approach is not common practice. Instead, it is more common to work with character sets partitioned by loci you wish to evaluate. In this case, simply use the same approach as above to define your loci and use defined.multi.profile 
+					<br>
+					<br>
+					In this example we will compare locus 1, that spans sites 1-1594 in the alignment and locus2, that spans sites 1595-2787
+					<hr />
+					<img src="images/PhyInformR/informR_5.png" alt="">
+					<pre style="text-align: left; white-space: pre-line;"><code>Lower<-c(1,1594)
+						Upper<-c(1595,2787) 
+						Breaks<-cbind(Lower,Upper) 
+					defined.multi.profile(rr,tree,Breaks, values="off")
+				</code></pre>
+				<hr />
+				In this example the two loci are very similar.
+				<br>
+				Using this logic we can break datasets into any size partition we wish to evaluate. Feel free to give this a whirl with other included trees on the <a href='https://github.com/carolinafishes/phyinformR'> github repo</a> or some of our other studies (<a href='https://www.researchgate.net/publication/275103683_Phylogenetic_analysis_of_molecular_and_morphological_data_highlights_uncertainty_in_the_relationships_of_fossil_and_living_species_of_Elopomorpha_%28Actinopterygii_Teleostei%29'>Dornburg et al. 2015</a>; <a href='https://www.researchgate.net/publication/268452611_The_impact_of_shifts_in_marine_biodiversity_hotspots_on_patterns_of_range_evolution_Evidence_from_the_Holocentridae_%28squirrelfishes_and_soldierfishes%29'>Dornburg et al. 2014</a>) to get comfortable. 
+				<br>
+				Now, how about visualizing signal or noise probabilities across a tree?
+				<br>
+				<hr />
+				<a href="phyinformrPart2.html" class="button neon">On to Signal & Noise</a>
+				<hr />
+				<a href="phyinformrPart3.html" class="button neon">Skip to Visualization</a>
+
+					</section>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Evolutionary Informatics Lab. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
