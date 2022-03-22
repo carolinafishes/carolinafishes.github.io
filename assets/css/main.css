@@ -2579,6 +2579,7 @@ input, select, textarea {
 				width: 100%;
 			}
 
+
 /* List */
 
 	ol {
@@ -4554,9 +4555,15 @@ input[type="submit"].neon,
     text-align:center;
 }
 
-.imgContainer img, 
+.imgContainer img, {
+	position: relative;
+}
 .imgContainer .imgButton button {
-    width: 100%;
+position: absolute;
+transform: translate(-50%,-50%);
+margin-right: -50%;
+top: 50%;
+left: 50%;
 }
 
 
@@ -4568,7 +4575,244 @@ margin: 3em 0;
 }
 
 
+/* Container */
+
+	.EVcontainer {
+		margin: 0 auto;
+		max-width: 100%;
+		width: 68em;
+	}
+
+		@media screen and (max-width: 1680px) {
+
+			.EVcontainer {
+				width: 70em;
+			}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.EVcontainer {
+				width: calc(100% - 100px);
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.EVcontainer {
+				width: calc(100% - 100px);
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.EVcontainer {
+				width: calc(100% - 40px);
+			}
+
+		}
 
 
+/* EVWrapper */
+
+	.EVwrapper {
+		position: relative;
+		padding: 6em 0 9em 0;
+	}
+
+		.EVwrapper .title {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			text-align: center;
+			text-transform: uppercase;
+			display: block;
+			font-weight: 700;
+			letter-spacing: 0.25em;
+			font-size: 2em;
+			width: 25em;
+			height: 3.25em;
+			top: -3.25em;
+			line-height: 3.25em;
+			margin-bottom: -3.25em;
+			margin-left: -12.5em;
+			padding-top: 0.5em;
+		}
+
+			.EVwrapper .title:before {
+				content: '';
+				position: absolute;
+				bottom: -38px;
+				left: -35px;
+				width: 35px;
+				height: 38px;
+				background: url("images/shadow.png");
+			}
+
+			.EVwrapper .title:after {
+				-moz-transform: scaleX(-1);
+				-webkit-transform: scaleX(-1);
+				-ms-transform: scaleX(-1);
+				transform: scaleX(-1);
+				content: '';
+				position: absolute;
+				bottom: -38px;
+				right: -35px;
+				width: 35px;
+				height: 38px;
+				background: url("images/shadow.png");
+			}
+
+		.EVwrapper.style1 {
+			background: #1a1112 url("images/overlay.png");
+			color: #eee;
+			color: rgba(255, 255, 255, 0.75);
+		}
+
+			.EVwrapper.style1 .title {
+				background: #1a1112 url("images/overlay.png");
+				color: #fff;
+			}
+
+			.EVwrapper.style1 h1, .EVwrapper.style1 h2, .EVwrapper.style1 h3, .EVwrapper.style1 h4, .EVwrapper.style1 h5, .EVwrapper.style1 h6, .EVwrapper.style1 strong, .EVwrapper.style1 b, .EVwrapper.style1 a {
+				color: #fff;
+			}
+
+		.EVwrapper.style2 {
+			background: #414045;
+		}
+
+			.EVwrapper.style2 .title {
+				background: #414045;
+				color: #fff;
+			}
+
+		.EVwrapper.style3 {
+			background: #f3f3f3 url("images/overlay.png");
+		}
+
+			.EVwrapper.style3 .title {
+				background: #f3f3f3 url("images/overlay.png");
+				color: #484d55;
+			}
+
+			.EVwrapper.style3 .image {
+				border: solid 10px #fff;
+			}
+
+/* Logo */
+
+	#EVlogo {
+		width: 100%;
+		text-align: center;
+		position: relative;
+		top: 1.5em;
+	}
+
+		#EVlogo h1 {
+			font-weight: 900;
+			text-transform: uppercase;
+			color: #fff;
+			font-size: 2em;
+			letter-spacing: 0.25em;
+		}
+
+		#EVlogo p {
+			color: #eee;
+			color: rgba(255, 255, 255, 0.5);
+			text-transform: uppercase;
+			margin: 1.25em 0 0 0;
+			display: block;
+			letter-spacing: 0.2em;
+			font-size: 0.9em;
+		}
+
+/* Page Wrapper */
+
+	#EVpage-wrapper > section {
+		margin-bottom: 0;
+	}
 
 
+		/* Wrapper */
+
+			.EVwrapper {
+				padding: 3em 0 6em 0;
+			}
+
+				.EVwrapper .title {
+					font-size: 0.9em;
+					width: 18em;
+					height: 2.5em;
+					top: -2.5em;
+					line-height: 2.5em;
+					margin-bottom: -2.5em;
+					margin-left: -9em;
+					padding-top: 0.5em;
+				}
+
+					.EVwrapper .title:before, .EVwrapper .title:after {
+						height: 15px;
+						bottom: -15px;
+						background-size: 100% 100%;
+					}
+
+
+#EVheader {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		position: relative;
+		height: 24em;
+		background: url("../../images/banner.jpg") center center;
+		background-size: cover;
+		padding: 0;
+	}
+
+		#EVheader:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url("images/overlay.png");
+		}
+
+		.homepage #EVheader {
+			height: 35em;
+		}
+
+/* For custom columns on phyinformr landing */
+
+.rowPI {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.columnPI {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: .2em;
+}
+
+/* For rounded edges */
+ .rounded-edge {
+     border-radius: 25%;
+}
