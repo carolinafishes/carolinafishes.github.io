@@ -55,9 +55,10 @@
 								<div class="div1"> 
 								<span class="image"><img src="images/PhyInformR/informrlogo.png" height="200" alt="" /></span>
 								<h3>Overview</h3>
-								<p> This section covers the basics of installation and how to get site rates using IQTREE2. Also featured is a demonstration of how to import this external data and the dependencies PhyInformR utilizes</p><p> Once you have imported your site rate file and your guide tree this section covers how to generate PI profiles</p>
-									
-								<h3>1. Installation</h3>
+								<div class="custom_bold"><p> This section covers the basics of installation and how to get site rates using IQTREE2. Also featured is a demonstration of how to import this external data and the dependencies PhyInformR utilizes</p><p> Once you have imported your site rate file and your guide tree this section covers how to generate PI profiles</p><br></div>
+							<section id="main" class="EVwrapper style1">
+							<div class="title">Installation</div>
+							<div class="EVcontainer">
 								<p>PhyInformR is easy to install. Note that it is currently not on CRAN but will be back following a major update. In the meantime install via devtools or <a href='https://github.com/carolinafishes/PhyInformR'>download the compressed R script from github</a> and install it manually <pre style="text-align: left; white-space: pre-line;"><code> ##cran install is currently not available 
 								#install.packages("PhyInformR") 
 								#library(PhyInformR)</code></pre>
@@ -85,9 +86,11 @@
 							<br>
 							We will also be hosting more sample data through Zenodo archives and github to explore new features as we develop them, so check back often!
 							<br>
-							</div>
-							<hr />
-							<div class="div1"><h3>2. Dependencies</h3>
+							<br>
+
+							
+							
+							<h3>Dependencies</h3>
 							PhyInformR is built upon the efforts of several other R packages including:
 							<pre style="text-align: left; white-space: pre-line;"><code>phytools
 								splines
@@ -110,10 +113,14 @@
 					now set your working directory to save files
 					<pre style="text-align: left; white-space: pre-line;"><code>setwd("~/Documents/phyinformR")
 					</code></pre>
-					</div>
-					<hr />
-					<div class="div1"> 					
-					<h3>3. Phylogenetic Informativeness Profiles</h3>
+					
+				</div>
+				</div>
+			</section>
+					<section id="main" class="EVwrapper style2">
+							<div class="title">Informativeness Profiles</div>
+							<div class="EVcontainer">					
+					
 					Townsend's phylogenetic informativeness profiles are a visual tool that enables assessment of the predicted utility of a given sequence for phylogenetic inference across a timescale of interest. Use of this method requires two inputs: site rates and a guide tree
 					<br>
 					<br>
@@ -170,6 +177,11 @@
 				Using this logic we can break datasets into any size partition we wish to evaluate. Feel free to give this a whirl with other included trees on the <a href='https://github.com/carolinafishes/phyinformR'> github repo</a> or some of our other studies (<a href='https://www.researchgate.net/publication/275103683_Phylogenetic_analysis_of_molecular_and_morphological_data_highlights_uncertainty_in_the_relationships_of_fossil_and_living_species_of_Elopomorpha_%28Actinopterygii_Teleostei%29'>Dornburg et al. 2015</a>; <a href='https://www.researchgate.net/publication/268452611_The_impact_of_shifts_in_marine_biodiversity_hotspots_on_patterns_of_range_evolution_Evidence_from_the_Holocentridae_%28squirrelfishes_and_soldierfishes%29'>Dornburg et al. 2014</a>) to get comfortable. 
 				<br>
 				<br>
+			</div>
+		</section>
+				<section id="main" class="EVwrapper style1">
+							<div class="title">Next Steps</div>
+							<div class="EVcontainer">	
 				Now, how about visualizing signal or noise probabilities across a tree?
 				<hr />
 				<a href="phyinformrPart2.html" class="button neon">On to Signal & Noise</a>
@@ -177,12 +189,12 @@
 				<a href="phyinformrPart3.html" class="button neon">Skip to Visualization</a>
 
 
-					</section>
+					
 
 					</div>
 
 				</div>
-
+</section>
 			<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
