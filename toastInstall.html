@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>EvIL- Research</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="index.html">Evolutionary Informatics Lab</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="research.html">Research</a>
+              <ul>
+                <li><a href="macro.html">Macroevolution</a></li>
+                <li><a href="comp.html">Evolutionary Medicine</a></li>
+                <li><a href="phylo.html">Phylogenomics</a></li>
+                <li><a href="immuno.html">Immunogenetics</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="current.html">Team</a>
+              <ul>
+                <li><a href="alex.html">Alex Dornburg</a></li>
+                <li><a href="current.html">Current Team Members</a></li>
+                <li><a href="alumni.html">Former Team Members</a></li>
+              </ul>
+            </li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html" class="button primary">Join Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main" class="wrapper style1">
+        <div class="container">
+          <header class="minor">
+            <h3>TOAST INSTALLATION</h3>
+          </header>
+          <!-- Content -->
+
+
+     <div class="image fit">
+            <img class="toast-bg"
+            src="images/TOAST/TOASTpage_alt.jpg" alt=""/>
+        <div class="transbox">
+            <h3>Before getting started</h3>
+            <p>
+              Note that TOAST requires R version 3.6.1 or higher for
+              installation of dependencies and functionality.
+              <br />
+              <br />
+              <strong>Update R prior to going any further</strong>
+              <br />
+              <br />
+              TOAST also requires you install
+              <a href="https://mafft.cbrc.jp/alignment/software/">MAFFT</a> and
+              place this into your global path (e.g., modify your ~/.bashrc
+              file). <br />
+              <br />
+              <strong>Please ensure MAFFT is working before proceeding</strong>
+              <br />
+            </p>
+            </div>
+        </div>
+          </div>
+        <section id="Install">
+          <div class="container">
+            <div class="section-header">
+              <h3>1. Installation</h3>
+              TOAST can be installed from github, but relies on dependencies not
+              yet on CRAN. The easiest way to install TOAST and all dependencies
+              is to copy the following code
+
+              <pre style="text-align: left; white-space: pre-line"><code>#if you do not already have devtools
+                install.packages("devtools")
+
+                library(devtools)
+                devtools::install_github("carolinafishes/toast")
+                library("toast")
+              </code></pre>
+            </div>
+            <h3>2. R Dependencies</h3>
+TOAST is built upon the efforts of several other R packages including:
+<pre style="text-align: left; white-space: pre-line"><code>
+gplot
+rentrez
+ggplot2 
+devtools 
+viridis 
+packcircles 
+gridExtra 
+data.tree 
+circlepackeR 
+foreach 
+doParallel 
+seqinr 
+reshape 
+usethis 
+streamgraph 
+</code></pre>
+
+<strong>LINUX USERS ONLY</strong>: Please note that rentrez makes use of several dependencies that may not be on your computer. If you encounter errors during the installation of this package here is a list of dependencies you may need to install as follows in terminal
+<pre style="text-align: left; white-space: pre-line"><code>
+sudo apt install openssl
+sudo apt install libssl-dev
+sudo apt install libcurl4-opensll-dev
+sudo apt install libxml2-dev
+</code></pre>
+
+From here you are are ready to get started!
+<br/>
+<br/>
+				<a href="toastMain.html" class="button fit ">Next Section: Dataset Assembly</a>
+        <br/>
+        <br/>
+				<a href="toastMain.html" class="button fit ">Back to TOAST main page</a>
+        <hr />
+
+
+
+
+            
+          </div>
+        </section>
+      
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Evolutionary Informatics Lab. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
