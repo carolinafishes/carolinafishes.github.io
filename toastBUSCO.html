@@ -138,9 +138,9 @@
               <pre style="text-align: left; white-space: pre-line"><code># users can adjust below to name the fasta sequences per species,  default is "Genus_species"
 SampleIDs<-c("Ankyrodrilus_legaeus","Xironogiton_victoriensis","Bdellodrilus_illuminatus","Branchiobdella_kobayashi","Branchiobdella_parasita","Cambarincola_gracilis","Cambarincola_holti","Cirrodrilus_suzukii","Triannulata_magna")
               </code></pre>
-              Now we have the corresponding names of species in each fasta in one object, in this case called <code>SampleIDs</code>
+              We have the corresponding names of species in each fasta in one object, in this case called <code>SampleIDs</code>
               <br/>
-              Now we just need to say what directory we want to extract all these loci into as follows" 
+              Next we just need to say what directory we want to extract all these loci into as follows" 
 <pre style="text-align: left; white-space: pre-line"><code>#Location where to write the extracted sequences into
 ed<-"~/Documents/Branchiops/Transcriptomes/Extracted_Buscos"
               </code></pre>
@@ -166,13 +166,16 @@ ed<-"~/Documents/Branchiops/Transcriptomes/Extracted_Buscos"
             <pre style="text-align: left; white-space: pre-line"><code>extractBuscos(tsvLocations, fastaLocations, ed, SampleIDs,complete=TRUE, fragmented=TRUE, duplicated=TRUE,threshold=300, )
               </code></pre>
 </div>
-Note that the threshold parameter represents the minimum number of base pairs required for a fragmented sequence to be extracted and is not used when fragmented = false
+Note that the threshold parameter represents the minimum number of base pairs required for a fragmented sequence to be extracted. <br/>
+It is not used when fragmented = false
 <br />
 Running the above will generate a directory full of FASTA files for each BUSCO. 
 <br />
+<br />
 <strong>What if you want to add another sample?</strong>
 <br />
-Fear not, simply repeat the above with the same directory and the files will be appended to include any additional samples. In this example say we forgot a three outgroup taxa. 
+<br />
+Fear not, simply repeat the above with the same directory! <br /> The files will be appended to include any additional samples. In this example say we forgot three outgroup taxa. 
 <pre style="text-align: left; white-space: pre-line"><code>#Location of tsv files
 tsvLocations<-c("~/Documents/Branchiops/Busco_results/Antarctodrilus_proboscidea_TRI_1_15_NORM.fasta/run_arthropoda_odb10/full_table.tsv",
 "~/Documents/Branchiops/Busco_results/Haenopis_sanguisuga.fasta/run_arthropoda_odb10/full_table.tsv",
