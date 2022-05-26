@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>EvIL- Research</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="index.html">Evolutionary Informatics Lab</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="research.html">Research</a>
+              <ul>
+                <li><a href="macro.html">Macroevolution</a></li>
+                <li><a href="comp.html">Evolutionary Medicine</a></li>
+                <li><a href="phylo.html">Phylogenomics</a></li>
+                <li><a href="immuno.html">Immunogenetics</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="current.html">Team</a>
+              <ul>
+                <li><a href="alex.html">Alex Dornburg</a></li>
+                <li><a href="current.html">Current Team Members</a></li>
+                <li><a href="alumni.html">Former Team Members</a></li>
+              </ul>
+            </li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html" class="button primary">Join Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main" class="wrapper style1">
+        <div class="container">
+          <header class="minor">
+            <h3>TOAST | BUSCO & ALIGNMENTS </h3>
+          </header>
+          <!-- Content -->
+
+
+     <div class="image fit">
+            <img class="toast-bg"
+            src="images/TOAST/TOASTpage_alt.jpg" alt=""/>
+        <div class="transbox">
+            <h3>What is in this section</h3>
+            <p>
+              TOAST was originally designed to work with BUSCO, however many of the functions in earlier versions of TOAST are now also available in BUSCO. As such, TOAST has been updated to automate assembly of loci following a series of BUSCO runs
+              <br />
+              <br />
+              <strong>This section focuses on creating alignments of individual loci from a series of BUSCO runs</strong>
+              <br />
+              <br />
+              Note that the alignment step can be deployed on any set of fasta sequences you have assembled and requires installing
+              <a href="https://mafft.cbrc.jp/alignment/software/">MAFFT</a> and
+              placing this into your global path (e.g., modify your ~/.bashrc
+              file)  <br />
+              <br />
+              <strong>Please ensure MAFFT is working before proceeding</strong>
+              <br />
+            </p>
+            </div>
+        </div>
+          </div>
+        <section id="Install">
+          <div class="container">
+            <div class="section-header">
+              <h3>3. Parsing BUSCO</h3>
+              This part of the tutorial assumes you have already run BUSCO and need to parse the output. 
+              <br />
+              <br />
+              For users looking to align and assemble other gene/locus fasta files: start from the section on aligning below 
+              <br />
+              <br />
+              For those utilizing BUSCO, let's begin by reviewing what a series of BUSCO runs looks like using some crayfish worms as an example
+              <br />
+              <section id="content">
+								<div class="parent">
+								<div class="div1"> 
+                  <br />
+                  <br />
+								<a class="image left">
+		 								<img src="images/TOAST/TOASTFilepath.png"
+		 								alt="" /></a>
+		 							<b>BUSCO Runs</b><br>
+		 							<i> Get filepaths</i><br>
+										This tutorial begins assuming you have just run a batch of BUSCO runs across a series of genomes or transcriptome fasta files. Now how do you extract this information? The first thing you will need to do is provide the path for the full_table.tsv from EACH species or sample. In this example, the first file from Ankyrodrilus_legaeus is in the pictured subdirectory on the left. In R you will need to specify the file paths as in the eample code below, followed by the locations of the <strong>original fasta files you ran BUSCO with</strong>  <br>
+								</div>
+                </div>
+								<hr />
+                </section>
+			<pre style="text-align: left; white-space: pre-line"><code>tsvLocations<-c("~/Documents/Branchiops/Busco_results/Ankyrodrilus_legaeus.fa/run_arthropoda_odb10/full_table.tsv","~/Documents/Branchiops/Busco_results/Xironogiton_victoriensis.fa/run_arthropoda_odb10/full_table.tsv",
+"~/Documents/Branchiops/Busco_results/Bdellodrilus_illuminatus.fa/run_arthropoda_odb10/full_table.tsv",
+"~/Documents/Branchiops/Busco_results/Branchiobdella_kobayashi.fa/run_arthropoda_odb10/full_table.tsv",
+"~/Documents/Branchiops/Busco_results/Branchiobdella_parasita.fa/run_arthropoda_odb10/full_table.tsv",
+"~/Documents/Branchiops/Busco_results/Cambarincola_gracilis.fa/run_arthropoda_odb10/full_table.tsv",
+"~/Documents/Branchiops/Busco_results/Cambarincola_holti.fa/run_arthropoda_odb10/full_table.tsv",
+"~/Documents/Branchiops/Busco_results/Cirrodrilus_suzukii.fa/run_arthropoda_odb10/full_table.tsv",
+"~/Documents/Branchiops/Busco_results/Triannulata_magna.fa/run_arthropoda_odb10/full_table.tsv")
+              </code></pre>
+              In this example We are linking to all of the full_table.tsv locations in one object called <code>tsvLocations</code>
+              <br />
+              <br />
+              Next we need to provide the corresponding locations of the original fasta in one object, in this case called <code>fastaLocations</code>
+              <pre style="text-align: left; white-space: pre-line"><code>fastaLocations<-c("~/Documents/Branchiops/Transcriptomes/Ankyrodrilus_legaeus.fa","~/Documents/Branchiops/Transcriptomes/Xironogiton_victoriensis.fa","~/Documents/Branchiops/Transcriptomes/Bdellodrilus_illuminatus.fa",
+"~/Documents/Branchiops/Transcriptomes/Branchiobdella_kobayashi.fa",
+"~/Documents/Branchiops/Transcriptomes/Branchiobdella_parasita.fa",
+"~/Documents/Branchiops/Transcriptomes/Cambarincola_gracilis.fa",
+"~/Documents/Branchiops/Transcriptomes/Cambarincola_holti.fa",
+"~/Documents/Branchiops/Transcriptomes/Cirrodrilus_suzukii.fa",
+"~/Documents/Branchiops/Transcriptomes/Triannulata_magna.fa")
+              </code></pre>
+              In a moment we will use these locations to pull each BUSCO from the original fasta using the output from the full_table.tsv file 
+              <br />
+              First there are just two more steps, we need to say where we want these files to be stored and also what we want each species to be called in each file. <br/>This second topic is important as your fasta may simply have some DNA code like "sample_1234" or other code like Mmus for a genus and species.
+              <br/>
+              We can add in an object that can give the names we want now to make phylogenetic analyses easier.<br/> Note that the names should be in the same order as the table and fasta locations.  
+              <pre style="text-align: left; white-space: pre-line"><code># users can adjust below to name the fasta sequences per species,  default is "Genus_species"
+SampleIDs<-c("Ankyrodrilus_legaeus","Xironogiton_victoriensis","Bdellodrilus_illuminatus","Branchiobdella_kobayashi","Branchiobdella_parasita","Cambarincola_gracilis","Cambarincola_holti","Cirrodrilus_suzukii","Triannulata_magna")
+              </code></pre>
+              Now we have the corresponding names of species in each fasta in one object, in this case called <code>SampleIDs</code>
+              <br/>
+              Now we just need to say what directory we want to extract all these loci into as follows" 
+<pre style="text-align: left; white-space: pre-line"><code>#Location where to write the extracted sequences into
+ed<-"~/Documents/Branchiops/Transcriptomes/Extracted_Buscos"
+              </code></pre>
+              <br/>
+              Now we are ready to get our sequences! Before we do, let's quickly consider what is in the full_table.tsv 
+
+              <section id="content">
+								<div class="parent">
+								<div class="div1"> 
+                  <br />
+                  <br />
+								<a class="image left">
+		 								<img src="images/TOAST/toastBUSCO.png"
+		 								alt="" /></a>
+		 							<b>BUSCO Output</b><br>
+		 							<i> Complete, duplicated, or fragmented?</i><br>
+										Looking at the full_table.tsv in a text editor reveals how BUSCO is cataloging the completeness of loci. This leaves you with the choice of which loci are appropriate for your analysis. <br/>
+                    <strong>There is no immediate right or wrong answer since this depends entirely on what you are doing!</strong> <br/> The function to extract buscos has parameters that allow you to select any of the BUSCO types, so you can mix and match complete, fragmented, or duplicated loci as necessary. You simply need to toggle the arguments between TRUE and FALSE. The general case is below
+								</div>
+                </div>
+								<hr />
+                </section>
+            <pre style="text-align: left; white-space: pre-line"><code>extractBuscos(tsvLocations, fastaLocations, ed, SampleIDs,complete=TRUE, fragmented=TRUE, duplicated=TRUE,threshold=300, )
+              </code></pre>
+</div>
+Note that the threshold parameter represents the minimum number of base pairs required for a fragmented sequence to be extracted and is not used when fragmented = false
+<br />
+Running the above will generate a directory full of FASTA files for each BUSCO. 
+<br />
+<strong>What if you want to add another sample?</strong>
+<br />
+Fear not, simply repeat the above with the same directory and the files will be appended to include any additional samples. In this example say we forgot a three outgroup taxa. 
+<pre style="text-align: left; white-space: pre-line"><code>#Location of tsv files
+tsvLocations<-c("~/Documents/Branchiops/Busco_results/Antarctodrilus_proboscidea_TRI_1_15_NORM.fasta/run_arthropoda_odb10/full_table.tsv",
+"~/Documents/Branchiops/Busco_results/Haenopis_sanguisuga.fasta/run_arthropoda_odb10/full_table.tsv",
+"~/Documents/Branchiops/Busco_results/Theromyzon_tessulatum.fasta/run_arthropoda_odb10/full_table.tsv")
+#location of fasta files
+fastaLocations<-c("~/Documents/Branchiops/Transcriptomes/Real_Data/Branch_fastas-1/Antarctodrilus_proboscidea_TRI_1_15_NORM.fasta",
+"~/Documents/Branchiops/Transcriptomes/Real_Data/Branch_fastas-1/Haenopis_sanguisuga.fasta",
+"~/Documents/Branchiops/Transcriptomes/Real_Data/Branch_fastas-1/Theromyzon_tessulatum.fasta")
+# get the additional "Genus_species" names
+SampleIDs<-c("Antarctodrilus_proboscidea","Haenopis_sanguisuga","Theromyzon_tessulatum")
+</code></pre>
+As you can see this part is the same, now just run the <code>extractBuscos</code> function again using the same directory
+<pre style="text-align: left; white-space: pre-line"><code>extractBuscos(tsvLocations, fastaLocations, ed, SampleIDs,complete=TRUE, threshold=300)</code></pre>
+
+
+<h3>4. Alignment</h3>
+TOAST can call mafft to quickly align all of these BUSCO sequences (or any folder full of fasta files!)
+<br/>
+<br/>
+All you need to do is point toast to the directory with the unaligned fastafiles and a new directory you would like to write alignments into 
+<pre style="text-align: left; white-space: pre-line"><code>#note that mafft is multithreaded so you can speed things up by changing the thread count depending on your machine
+MafftOrientAlign(extract_dir = "~/Documents/Branchiops/Transcriptomes/Extracted_Buscos", mafft_dir = "~/Documents/Branchiops/Transcriptomes/Mafft_aligned", threads = 12)
+</code></pre>
+That's it! Now you are ready to concatenate some data or start filtering based on missing data patterns or gene trees!
+
+From here you are are ready to get started!
+<br/>
+<br/>
+				<a href="toastMain.html" class="button fit ">Next Section: Concatenation and Missing Data</a>
+        <br/>
+        <br/>
+				<a href="toastMain.html" class="button fit ">Back to TOAST main page</a>
+        <hr />
+
+
+
+
+            
+          </div>
+        </section>
+      
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Evolutionary Informatics Lab. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
