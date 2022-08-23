@@ -1041,7 +1041,17 @@
       function plusSlides(n) {
         showSlides((slideIndex += n));
       }
+$('body').on('keyup', function (e) {
+    switch (e.which) {
+        case 37:
+            $('.prev')[0].click();
+            break;
 
+        case 39:
+            $('.next')[0].click();
+            break;
+    }
+});
       // Thumbnail image controls
       function currentSlide(n) {
         showSlides((slideIndex = n));
