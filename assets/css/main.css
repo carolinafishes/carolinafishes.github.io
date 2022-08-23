@@ -5129,39 +5129,36 @@ hr.half-width {
 }
 
 .portfolio-item:hover .folio-info {
-	top: 0px;
+  top: 0px;
 }
 .portfolio-item .portfolio-desc .folio-info {
-	padding: 0px;
+  padding: 0px;
 }
 .portfolio-item .portfolio-desc .folio-info h5 {
-	font-size: 1em;
-} 
+  font-size: 1em;
 }
 
 .portfolio-item .portfolio-desc .folio-info h5 {
-	font-size: 11px;
+  font-size: 11px;
 }
 
 #portfolio .items li {
-position: relative;
-float: left;
-width: 50%;
-overflow: hidden;
-}
+  position: relative;
+  float: left;
+  width: 50%;
+  overflow: hidden;
 }
 
 .portfolio-item:hover .folio-info {
-	top: 0px;
+  top: 0px;
 }
 .portfolio-item .portfolio-desc .folio-info h5 {
-	text-transform: uppercase;
-	text-align: center;
-	font-weight: normal;
-	font-size: 10px;
-	margin: 10px 0 0 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal;
+  font-size: 10px;
+  margin: 10px 0 0 0;
 }
-
 
 .toast-bg {
   opacity: 0.6;
@@ -5177,4 +5174,195 @@ div.transbox {
   object-fit: cover;
   background-color: black;
   opacity: 0.8;
+}
+
+/* Lightbox for journeys page settings */
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: black;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  max-height: 800px;
+}
+
+/* The Close Button */
+.close {
+  color: rgb(235, 30, 30);
+  position: absolute;
+  z-index: 1;
+  right: 3%;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: rgb(244, 238, 238);
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row1x {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column1x {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column1x img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.item-last {
+  margin-top: auto;
+}
+
+/* Create four equal columns that sits next to each other */
+.row2x {
+  display: flex;
+  flex-flow: row;
+  max-width: 100%;
+}
+
+.row2x img {
+  margin-right: 4px;
+  margin-left: 6px;
+  width: 100%;
+  height: 7em;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.row2x img:nth-child(4n + 4) {
+  margin-right: 0;
+}
+.break {
+  flex-basis: 100%;
+  height: 1em;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column1x {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column1x {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
