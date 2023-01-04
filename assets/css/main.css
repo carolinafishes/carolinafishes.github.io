@@ -5261,7 +5261,7 @@ div.transbox {
 
 /* Position the "next button" to the right */
 .next {
-  right: -340px;
+  right: -200px;
   border-radius: 3px 0 0 3px;
 }
 
