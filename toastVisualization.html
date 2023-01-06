@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>EvIL- Research</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="index.html">Evolutionary Informatics Lab</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="research.html">Research</a>
+              <ul>
+                <li><a href="macro.html">Macroevolution</a></li>
+                <li><a href="comp.html">Evolutionary Medicine</a></li>
+                <li><a href="phylo.html">Phylogenomics</a></li>
+                <li><a href="immuno.html">Immunogenetics</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="current.html">Team</a>
+              <ul>
+                <li><a href="alex.html">Alex Dornburg</a></li>
+                <li><a href="current.html">Current Team Members</a></li>
+                <li><a href="alumni.html">Former Team Members</a></li>
+              </ul>
+            </li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html" class="button primary">Join Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main" class="wrapper style1">
+        <div class="container">
+          <header class="minor">
+            <h3>TOAST | Visualizations </h3>
+          </header>
+          <!-- Content -->
+
+
+     <div class="image fit">
+            <img class="toast-bg"
+            src="images/TOAST/TOASTpage_alt.jpg" alt=""/>
+        <div class="transbox">
+            <h3>What is in this section</h3>
+            <p>
+              In this section we will work on alternate forms of missing data visualization. 
+              <br />
+              <br />
+              <strong>This builds on the <a href=toastDatasetAssembly.html>previous section</a>, so please go back to make sure you have your presence/absence matrix handy. </strong>
+              <br />
+              <br />
+              Note that you can do these visualizations with any presence absence matrix, and that these tutorials are a starting point. 
+              <br>
+              <br>As we develop visuals for manuscripts we will add them here. Likewise, If you made one you would like to see featured please let us know! 
+              <br />
+              <br />
+              <br />
+            </p>
+            </div>
+        </div>
+          </div>
+        <section id="Visualization">
+          <div class="container">
+            <div class="section-header">
+              <h3>Plotting missing data by taxa</h3>
+We already mentioned that missing data is a common feature of large sequence datasets. 
+<br>
+A plotted matrix can give you some sense of coverage but it doesn't provide the complete picture. As a first step we are going to create a circlepackplot and a barplot of data presence of absence. 
+<br>
+<br>
+For this you simply need you missing data matrix (see previous section) and a sense of what threshold you find acceptable for missing data per taxon. This varies by dataset and is up to you. 
+<br>
+<br>For our example we will say at most 300 loci out of nearly 1000. This is arbitrary and picked for purpose of example. 
+<pre style="text-align: left; white-space: pre-line">
+<code>VisualizeCoverage(missing, threshold=300)</code></pre>
+<img class="image fit" src="images/TOAST/TOASTCirclePack.png" style="width: 50%; height: 50%" alt="">
+In the above, the top plot shows you the number of loci each taxon that meets your missing data requirements has as a circle pack plot. 
+<br>
+<br>In the next panel, those taxa that do not meet your criteria (in this having more than 300 missing loci) are displayed along with their proportion of absent/present loci. 
+<br>
+<br>
+You can also explore the impact of your threshold choice visually. 
+<pre style="text-align: left; white-space: pre-line">
+<code>VisualizeCoverage(missing, threshold=300)</code></pre>
+<img class="image fit" src="images/TOAST/TOASTVtresholdTaxa.png" style="width: 50%; height: 50%" alt="">
+This shows you your original prefiltered data (pre), the taxa you are removing (filt), and the resulting post filtered dataset (post). 
+<br>
+<br>
+This is not the most exciting by taxa, and should be intuitive. We can also assess threshold choices when filtering by loci with poor coverage which will be more interesting. 
+<br>
+<br>
+For this we are going to assess how much of an impact only keeping loci present in 60% of the taxa would have on overall dataset size and the distribution of missing data patterns. 
+<br>
+<br>
+This is the other side of the same coin, as it is common to have loci with low coverage in many datasets. This can be readily visualized as follows.  
+<br>
+<br>
+<pre style="text-align: left; white-space: pre-line">
+<code>VisualizeCoverageThreshold(missing2, 0.6)</code></pre>
+<img class="image fit" src="images/TOAST/TOASTVisualizeLocusThreshold.png" style="width: 50%; height: 50%" alt="">
+In the above, on the left we have the total proportion of missing data by taxa. In the middle we can see that removing loci that do not cover at least 60% of the taxa leads to a dataset reduction of close to 30%. 
+<br>
+<br>
+The resulting distribution of missing data is shown on the right, and we can see how this impacts coverage across taxa. 
+<br>
+<br>
+You can readily combine this with the steps on prior pages to first remove low coverage taxa, then assess locus coverage to desired levels. 
+<br>
+<br>
+<h3>Interactively Visualizing Taxonomic Missing Data Patterns</h3>
+If you have a sense of the underlying taxonomic, phylogenetic, or other heirarchical structure of your data, you can interactively explore how missing data is distrubuted at different levels.  
+<br>
+<br>
+For this example we will use the example cetacean files that are distributed with TOAST. These include a tsv file of missing data and an accompanying taxonomy file. Note that any hierachical structure would work, we are using taxonomy for convenience.  
+<br>
+<br>
+This file looks like this
+<img class="image fit" src="images/TOAST/TOASTTaxonomy.png" style="width: 30%; height: 30%" alt="">
+You can set up a similar file for any dataset, just be sure your leaves match the taxa you have! 
+<br>
+<br>
+Let's read these files in, remove the locus column, plot, and click around to explore our data! 
+<pre style="text-align: left; white-space: pre-line">
+<code>cetacean<-read.delim("~/Documents/GitHub/toast/sample_data/missing_data.tsv")
+  taxonomy<-read.csv("~/Documents/GitHub/toast/sample_data/cetacean_taxonomy.csv")
+  cet2<-cetacean[,-1]
+VisualizeTaxonomyInteractive(cet2,taxonomy,threshold=1000)</code></pre>
+<div id="htmlwidget-cc3f8f6968b4ddbbaa74" style="width:960px;height:500px;" class="circlepackeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-cc3f8f6968b4ddbbaa74">{"x":{"data":{"name":"world","children":[{"name":"Mysticeti","children":[{"name":"Baleanopteridae","children":[{"name":"Balaenoptera_acutorostrata","children":[{"name":"14","children":[{"name":"world","children":[{"name":"Mysticeti","children":[{"name":"Baleanopteridae","children":[{"name":"Balaenoptera_acutorostrata","level1":"Mysticeti","level2":"Baleanopteridae","missing":"14"}]}]}]}]}]}]}]},{"name":"Odontoceti","children":[{"name":"Monodontidae","children":[{"name":"Delphinapterus_leucas","children":[{"name":"21","children":[{"name":"world","children":[{"name":"Odontoceti","children":[{"name":"Monodontidae","children":[{"name":"Delphinapterus_leucas","level1":"Odontoceti","level2":"Monodontidae","missing":"21"}]}]}]}]}]},{"name":"Monodon_monoceros","children":[{"name":"16","children":[{"name":"world","children":[{"name":"Odontoceti","children":[{"name":"Monodontidae","children":[{"name":"Monodon_monoceros","level1":"Odontoceti","level2":"Monodontidae","missing":"16"}]}]}]}]}]}]},{"name":"Delphinidae","children":[{"name":"Lagenorhynchus_obliquidens","children":[{"name":"20","children":[{"name":"world","children":[{"name":"Odontoceti","children":[{"name":"Delphinidae","children":[{"name":"Lagenorhynchus_obliquidens","level1":"Odontoceti","level2":"Delphinidae","missing":"20"}]}]}]}]}]},{"name":"Orcinus_orca","children":[{"name":"23","children":[{"name":"world","children":[{"name":"Odontoceti","children":[{"name":"Delphinidae","children":[{"name":"Orcinus_orca","level1":"Odontoceti","level2":"Delphinidae","missing":"23"}]}]}]}]}]},{"name":"Tursiops_truncatus","children":[{"name":"467","children":[{"name":"world","children":[{"name":"Odontoceti","children":[{"name":"Delphinidae","children":[{"name":"Tursiops_truncatus","level1":"Odontoceti","level2":"Delphinidae","missing":"467"}]}]}]}]}]}]},{"name":"Lipotidae","children":[{"name":"Lipotes_vexillifer","children":[{"name":"19","children":[{"name":"world","children":[{"name":"Odontoceti","children":[{"name":"Lipotidae","children":[{"name":"Lipotes_vexillifer","level1":"Odontoceti","level2":"Lipotidae","missing":"19"}]}]}]}]}]}]},{"name":"Phocoenidae","children":[{"name":"Neophocaena_asiaeorientalis","children":[{"name":"15","children":[{"name":"world","children":[{"name":"Odontoceti","children":[{"name":"Phocoenidae","children":[{"name":"Neophocaena_asiaeorientalis","level1":"Odontoceti","level2":"Phocoenidae","missing":"15"}]}]}]}]}]}]},{"name":"Physeteroidea","children":[{"name":"Physeter_catodon","children":[{"name":"24","children":[{"name":"world","children":[{"name":"Odontoceti","children":[{"name":"Physeteroidea","children":[{"name":"Physeter_catodon","level1":"Odontoceti","level2":"Physeteroidea","missing":"24"}]}]}]}]}]}]}]}]},"options":{"size":"missing","color_min":"hsl(206,56%,34%)","color_max":"hsl(367,62%,79%)"}},"evals":[],"jsHooks":[]}</script>
+You can click around the above to zoom in and out and see how your missing data is distributed. The bigger the circle, the more data you are missing. 
+<br>
+This makes sense, from the taxa that meet our criteria of having more than 1000 loci, most missing data is in <i>Tursiops</i>.
+  <img class="image fit" src="images/TOAST/CetaceanMissingData.png" style="width: 30%; height: 30%" alt="">
+If you need to look at summary statistics of missing data like in the above, you can also use the missingDataSummary function then subset by some threshold (in this example less than 1000 missing loci). 
+<pre style="text-align: left; white-space: pre-line"><code>dataSummary<-missingDataSummary(cet2)
+dataSummary[dataSummary[,2]<1000,]</code></pre>
+  On a related note, if you have a large matrix and just want to see what taxa are completely covered you can use the following code:
+  <pre style="text-align: left; white-space: pre-line">
+<code>CompleteCoverage(cet2)</code></pre>
+In our case we don't have any, so we get a returned message stating "No taxa have complete coverage"
+<br>
+<br>
+<h3>Visualizing Missing Data on a Phylogeny</h3>
+We can also view this on a phylogeny using a cetacean phylogeny from timetree.org and help from geiger, ape, and phytools in the following
+<br>
+<br>
+Note that you have the option of viewing "both" missing and present data simultaneously, or just "present" or "missing data" next to a tree. 
+<pre style="text-align: left; white-space: pre-line">
+<code>library(ape)
+  library(geiger)
+  library(phytools)
+  cetTree<-read.tree("~/Downloads/cetacea_species.nwk")
+  VisTreeData(cet2, cetTree, option="both")
+</code></pre>
+<img class="image fit" src="images/TOAST/TOASTMissingonPhylo.png" style="width: 80%; height: 80%" alt="">
+In above example, purple is present and yellow is absent. This cetacean dataset is essentially comprised with few taxa that have near complete coverage of over 6000 loci (purple) and the majority of taxa that have only a handful of loci sequenced (yellow)
+<br>
+<br>
+That's it! In the next section we will do some more advanced filtering, or feel free to skip ahead to other utilities or go back below. 
+
+
+
+<br/>
+<br/>
+				<a href="toastMain.html" class="button fit ">Next Section: Gene tree based filtration</a>
+        <br/>
+        <br/>
+        <a href="toastBUSCO.html" class="button fit ">Back to: Previous Page</a>
+        <br/>
+        <br/>
+        <a href="toastBUSCO.html" class="button fit ">Skip to: Utilities | Interactive Plots</a>
+        <br/>
+        <br/>
+        <a href="toastInstall.html" class="button fit ">Back to: Installation</a>
+        <br/>
+        <br/>
+				<a href="toastMain.html" class="button fit ">Back to: TOAST main page</a>
+        <hr />
+
+
+
+
+            
+          </div>
+        </section>
+      
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Evolutionary Informatics Lab. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/PlotR/htmlwidgets.js"></script>
+<script src="assets/PlotR/d3.min.js"></script>
+<link href="assets/PlotR/style.css" rel="stylesheet" />
+<script src="assets/PlotR/circlepackeR.js"></script>
+  </body>
+</html>

@@ -54,7 +54,7 @@
       <div id="main" class="wrapper style1">
         <div class="container">
           <header class="minor">
-            <h3>TOAST | BUSCO & ALIGNMENTS </h3>
+            <h3>TOAST | Concatenated Alignments </h3>
           </header>
           <!-- Content -->
 
@@ -95,7 +95,7 @@ missing<-MissingDataTable(aligned_dir = "~/Documents/TOAST/AlignedLoci/")
 write.csv(missing, file="missing_data.csv")</code></pre>
 <br />
 <br />
-<h3>Visualizing Missing Data Patterns</h3>
+<h3>Visualizing General Missing Data Patterns</h3>
 Part of the orthology assembly steps in both sections 2 and 3 was used to generate .csv file entitled "missing_data.csv" that is <a href='https://github.com/carolinafishes/toast/tree/master/sample_data'> distributed with this software.</a> We will use this file throughout this section. Let's begin by reading it into memory. Note you may need to change the path depending on where you downloaded this. 
 <pre style="text-align: left; white-space: pre-line">
 <code>missing<-read.csv("/toast/sample_data/missing_data.csv", header=TRUE)</code></pre>
@@ -107,11 +107,12 @@ If you look at the distributed file, you have probably realized that ANY delimit
 <strong style= color:red> Now you have no excuse to not look at missing data patterns anymore! </strong>
 <br />
 <br />
-We are going to start by visualizing a missing data matrix for this dataset using the mismap function from the R package Amelia  
+
 <br> note that this data has the loci as a column. Let's quickly remove these. Your data may not need this, but this pops up often so why not cover it here. 
- <img class="b30" src="https://carolinafishes.github.io/images/TOAST/TOAST_headmissing.png" alt="">
+ <img class="image fit" src="images/TOAST/TOAST_headmissing.png" style="width: 75%; height: 75%" alt="">
 <pre style="text-align: left; white-space: pre-line">
 <code>missing2<-missing[,-1]</code></pre>
+<img class="image fit" src="images/TOAST/TOAST_headmissing2.png" style="width: 75%; height: 75%" alt="">
 Now we can start by visualizing a missing data matrix for this dataset using the mismap function from the R package Amelia  
 <pre style="text-align: left; white-space: pre-line">
 <code>library(Amelia)
@@ -119,133 +120,47 @@ Now we can start by visualizing a missing data matrix for this dataset using the
   missmap(missing2, rank.order=FALSE, las=2, cex.axis=0.8)</code></pre>
 Note that later we can use TOAST functions to order this in the order we would like based on a tree, but for now we will use the default<br />
 <p> 
-  <img class="b30" src="https://carolinafishes.github.io/images/TOAST/TOASTmissmap.png" alt="">
-  Let's start with a snapshot of who has more than 1000 out of 6000 loci in the cetacean dataset as follow
-<pre style="text-align: left; white-space: pre-line"><code>VisualizeCoverage(tsv, 1000)</code></pre>
-This will produce a two panel graphic. The top panel is a circlepack plot showing the number of missing loci per species that meet the threshold of having at least 1000 loci. The bottom panel depicts the number of loci captured versus missing for each species that did not meet the threshold criterion.<br>
-<img class="b30" src="https://carolinafishes.github.io/images/TOAST_VisCoverage.png" alt="">
-<br>
-In this case, the taxa not meeting the threshold were very similar in having little sequence coverage. In contrast, <i>Tursiops</i> stands out as having the most missing loci among the taxa that did meet this criterion.
-<br>
-<br>
-You may also be interested in simply knowing which taxa have complete coverage of all orthologs.  
-<pre style="text-align: left; white-space: pre-line"><code>CompleteCoverage(tsv)</code></pre>
-This provides a list of species with complete coverage.
-<br>
-<img class="b30" src="https://carolinafishes.github.io/images/TOAST_CompCoverage.png" alt="">
-<br>
-<br>
-              <section id="content">
-								<div class="parent">
-								<div class="div1"> 
-                  <br />
-                  <br />
-								<a class="image left">
-		 								<img src="images/TOAST/TOASTFilepath.png"
-		 								alt="" /></a>
-		 							<b>BUSCO Runs</b><br>
-		 							<i> Get filepaths</i><br>
-										This tutorial begins assuming you have just run a batch of BUSCO runs across a series of genomes or transcriptome fasta files. Now how do you extract this information? The first thing you will need to do is provide the path for the full_table.tsv from EACH species or sample. In this example, the first file from Ankyrodrilus_legaeus is in the pictured subdirectory on the left. In R you will need to specify the file paths as in the eample code below, followed by the locations of the <strong>original fasta files you ran BUSCO with</strong>  <br>
-								</div>
-                </div>
-								<hr />
-                </section>
-			<pre style="text-align: left; white-space: pre-line"><code>tsvLocations<-c("~/Documents/Branchiops/Busco_results/Ankyrodrilus_legaeus.fa/run_arthropoda_odb10/full_table.tsv","~/Documents/Branchiops/Busco_results/Xironogiton_victoriensis.fa/run_arthropoda_odb10/full_table.tsv",
-"~/Documents/Branchiops/Busco_results/Bdellodrilus_illuminatus.fa/run_arthropoda_odb10/full_table.tsv",
-"~/Documents/Branchiops/Busco_results/Branchiobdella_kobayashi.fa/run_arthropoda_odb10/full_table.tsv",
-"~/Documents/Branchiops/Busco_results/Branchiobdella_parasita.fa/run_arthropoda_odb10/full_table.tsv",
-"~/Documents/Branchiops/Busco_results/Cambarincola_gracilis.fa/run_arthropoda_odb10/full_table.tsv",
-"~/Documents/Branchiops/Busco_results/Cambarincola_holti.fa/run_arthropoda_odb10/full_table.tsv",
-"~/Documents/Branchiops/Busco_results/Cirrodrilus_suzukii.fa/run_arthropoda_odb10/full_table.tsv",
-"~/Documents/Branchiops/Busco_results/Triannulata_magna.fa/run_arthropoda_odb10/full_table.tsv")
-              </code></pre>
-              In this example We are linking to all of the full_table.tsv locations in one object called <code>tsvLocations</code>
-              <br />
-              <br />
-              Next we need to provide the corresponding locations of the original fasta in one object, in this case called <code>fastaLocations</code>
-              <pre style="text-align: left; white-space: pre-line"><code>fastaLocations<-c("~/Documents/Branchiops/Transcriptomes/Ankyrodrilus_legaeus.fa","~/Documents/Branchiops/Transcriptomes/Xironogiton_victoriensis.fa","~/Documents/Branchiops/Transcriptomes/Bdellodrilus_illuminatus.fa",
-"~/Documents/Branchiops/Transcriptomes/Branchiobdella_kobayashi.fa",
-"~/Documents/Branchiops/Transcriptomes/Branchiobdella_parasita.fa",
-"~/Documents/Branchiops/Transcriptomes/Cambarincola_gracilis.fa",
-"~/Documents/Branchiops/Transcriptomes/Cambarincola_holti.fa",
-"~/Documents/Branchiops/Transcriptomes/Cirrodrilus_suzukii.fa",
-"~/Documents/Branchiops/Transcriptomes/Triannulata_magna.fa")
-              </code></pre>
-              In a moment we will use these locations to pull each BUSCO from the original fasta using the output from the full_table.tsv file 
-              <br />
-              First there are just two more steps, we need to say where we want these files to be stored and also what we want each species to be called in each file. <br/>This second topic is important as your fasta may simply have some DNA code like "sample_1234" or other code like Mmus for a genus and species.
-              <br/>
-              We can add in an object that can give the names we want now to make phylogenetic analyses easier.<br/> Note that the names should be in the same order as the table and fasta locations.  
-              <pre style="text-align: left; white-space: pre-line"><code># users can adjust below to name the fasta sequences per species,  default is "Genus_species"
-SampleIDs<-c("Ankyrodrilus_legaeus","Xironogiton_victoriensis","Bdellodrilus_illuminatus","Branchiobdella_kobayashi","Branchiobdella_parasita","Cambarincola_gracilis","Cambarincola_holti","Cirrodrilus_suzukii","Triannulata_magna")
-              </code></pre>
-              We have the corresponding names of species in each fasta in one object, in this case called <code>SampleIDs</code>
-              <br/>
-              Next we just need to say what directory we want to extract all these loci into as follows" 
-<pre style="text-align: left; white-space: pre-line"><code>#Location where to write the extracted sequences into
-ed<-"~/Documents/Branchiops/Transcriptomes/Extracted_Buscos"
-              </code></pre>
-              <br/>
-              Now we are ready to get our sequences! Before we do, let's quickly consider what is in the full_table.tsv 
+  <img class="image fit" src="images/TOAST/TOASTmissmap.png" style="width: 50%; height: 50%" alt="">
+  The above gives us a snapshot of how missing data are distributed
 
-              <section id="content">
-								<div class="parent">
-								<div class="div1"> 
-                  <br />
-                  <br />
-								<a class="image left">
-		 								<img src="images/TOAST/toastBUSCO.png"
-		 								alt="" /></a>
-		 							<b>BUSCO Output</b><br>
-		 							<i> Complete, duplicated, or fragmented?</i><br>
-										Looking at the full_table.tsv in a text editor reveals how BUSCO is cataloging the completeness of loci. This leaves you with the choice of which loci are appropriate for your analysis. <br/>
-                    <strong>There is no immediate right or wrong answer since this depends entirely on what you are doing!</strong> <br/> The function to extract buscos has parameters that allow you to select any of the BUSCO types, so you can mix and match complete, fragmented, or duplicated loci as necessary. You simply need to toggle the arguments between TRUE and FALSE. The general case is below
-								</div>
-                </div>
-								<hr />
-                </section>
-            <pre style="text-align: left; white-space: pre-line"><code>extractBuscos(tsvLocations, fastaLocations, ed, SampleIDs,complete=TRUE, fragmented=TRUE, duplicated=TRUE,threshold=300, )
-              </code></pre>
-</div>
-Note that the threshold parameter represents the minimum number of base pairs required for a fragmented sequence to be extracted. <br/>
-It is not used when fragmented = false
-<br />
-Running the above will generate a directory full of FASTA files for each BUSCO. 
-<br />
-<br />
-<strong>What if you want to add another sample?</strong>
-<br />
-<br />
-Fear not, simply repeat the above with the same directory! <br /> The files will be appended to include any additional samples. In this example say we forgot three outgroup taxa. 
-<pre style="text-align: left; white-space: pre-line"><code>#Location of tsv files
-tsvLocations<-c("~/Documents/Branchiops/Busco_results/Antarctodrilus_proboscidea_TRI_1_15_NORM.fasta/run_arthropoda_odb10/full_table.tsv",
-"~/Documents/Branchiops/Busco_results/Haenopis_sanguisuga.fasta/run_arthropoda_odb10/full_table.tsv",
-"~/Documents/Branchiops/Busco_results/Theromyzon_tessulatum.fasta/run_arthropoda_odb10/full_table.tsv")
-#location of fasta files
-fastaLocations<-c("~/Documents/Branchiops/Transcriptomes/Real_Data/Branch_fastas-1/Antarctodrilus_proboscidea_TRI_1_15_NORM.fasta",
-"~/Documents/Branchiops/Transcriptomes/Real_Data/Branch_fastas-1/Haenopis_sanguisuga.fasta",
-"~/Documents/Branchiops/Transcriptomes/Real_Data/Branch_fastas-1/Theromyzon_tessulatum.fasta")
-# get the additional "Genus_species" names
-SampleIDs<-c("Antarctodrilus_proboscidea","Haenopis_sanguisuga","Theromyzon_tessulatum")
+<h3>Concatenated Alignments</h3>
+It is very easy to generate a concatenated alignment along with a corresponding file that provides the locations of each locus in the alignment<br />
+These files are generated by toast for direct input into IQTREE2. The partitions file is in nexus format and the alignment in phylip. Note that TOAST has utilities for converting between filetypes that are covered later in this tutorial.  
+<br><br><p>To generate a concatenated alignment you need the directory where your single locus alignments are stored, and the missing object we created above. As you will see in a moment, TOAST can also assemble based on missing data thresholds. </p>
+To begin, simply run these two lines of code to generate the files.
+  <pre style="text-align: left; white-space: pre-line"><code>SuperAlign("path_to_aligned_directory", missing_df = missing)
+    PartitionTable("path_to_aligned_directory", missing_df = missing)
+  </code></pre>
+This will produce two files, a concatenated alignment called superAlign (This silly name is to encourage you to change the name to something sensible),and "partitionTable". <br>
+<br>
+<h3>Concatenated Alignments with a Missing Data Threshold</h3>
+In case you wish to generate alignments based on a criteria of no more than 100 or no more than 400 missing loci per taxa... you can! 
+Simply create a new directory on your laptop where you wan to store the individual fasta files that meet the criteria, and then follow the code below
+
+<br>
+<br>You may also be interested in simply knowing which taxa have complete coverage of all orthologs.  
+<pre style="text-align: left; white-space: pre-line"><code>#create a second set of fasta files with taxa that have less than 400 missing loci 
+#You need to make a new file on your HD called "Fasta_400_missing"
+#Set the path here
+tff<-"Yourpath/goes/here/Fasta_400_missing"
+#Change this number for different thresholds
+ThresholdDataTable(missing, threshold=400)->threshold_df
+ThresholdExtract(aligned_dir=ad, missing_df=threshold_df, threshold_fasta_folder=tff)</code></pre>
+This first step primes a new directory with the files you need. This step is done intentionally for those wishing to only use these files for gene-tree species-tree analyses downstream. From here assemble as you just did. before. 
+<pre style="text-align: left; white-space: pre-line"><code>
+setwd(tff)
+missing<-MissingDataTable(aligned_dir = tff)
+write.csv(missing, file="missing_data.csv")
+SuperAlign(aligned_dir=tff, missing)
+PartitionTable(aligned_dir=tff, missing)
 </code></pre>
-As you can see this part is the same, now just run the <code>extractBuscos</code> function again using the same directory
-<pre style="text-align: left; white-space: pre-line"><code>extractBuscos(tsvLocations, fastaLocations, ed, SampleIDs,complete=TRUE, threshold=300)</code></pre>
+That's it! In the next section we will do some more advanced visualizations of missing data, or feel free to skip ahead to other utilities such as gene tree based filtration or utility functions. 
 
-
-<h3>4. Alignment</h3>
-TOAST can call mafft to quickly align all of these BUSCO sequences (or any folder full of fasta files!)
-<br/>
-<br/>
-All you need to do is point toast to the directory with the unaligned fastafiles and a new directory you would like to write alignments into 
-<pre style="text-align: left; white-space: pre-line"><code>#note that mafft is multithreaded so you can speed things up by changing the thread count depending on your machine
-MafftOrientAlign(extract_dir = "~/Documents/Branchiops/Transcriptomes/Extracted_Buscos", mafft_dir = "~/Documents/Branchiops/Transcriptomes/Mafft_aligned", threads = 12)
-</code></pre>
-That's it! Now you are ready to concatenate some data or start filtering based on missing data patterns or gene trees!
 
 
 <br/>
 <br/>
-				<a href="toastMain.html" class="button fit ">Next Section: Concatenation | Missing Data</a>
+				<a href="toastMain.html" class="button fit ">Next Section: Missing Data Visualization</a>
         <br/>
         <br/>
         <a href="toastBUSCO.html" class="button fit ">Skip to: Gene tree based filtration</a>
