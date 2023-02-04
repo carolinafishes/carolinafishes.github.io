@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>EvIL- Research</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="index.html">Evolutionary Informatics Lab</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="research.html">Research</a>
+              <ul>
+                <li><a href="macro.html">Macroevolution</a></li>
+                <li><a href="comp.html">Evolutionary Medicine</a></li>
+                <li><a href="phylo.html">Phylogenomics</a></li>
+                <li><a href="immuno.html">Immunogenetics</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="current.html">Team</a>
+              <ul>
+                <li><a href="alex.html">Alex Dornburg</a></li>
+                <li><a href="current.html">Current Team Members</a></li>
+                <li><a href="alumni.html">Former Team Members</a></li>
+              </ul>
+            </li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="contact.html" class="button primary">Join Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <div id="main" class="wrapper style1">
+        <div class="container">
+          <header class="minor">
+            <h3>TOAST | Utility Functions </h3>
+          </header>
+          <!-- Content -->
+
+
+     <div class="image fit">
+            <img class="toast-bg"
+            src="images/TOAST/TOASTpage_alt.jpg" alt=""/>
+        <div class="transbox">
+            <h3>What is in this section</h3>
+            <p>
+              In this section we will cover some utility functions hidden in TOAST. 
+              <br />
+              <br />
+              <strong>This builds on the <a href=toastDatasetAssembly.html>previous sections</a>, so please go back to make sure you can use other functions. </strong>
+              <br />
+              <br />
+              Note that there are ways to use these utilities across huge numbers of files etc. Please modify them as needed for your purposes. 
+              <br>
+              <br>As we develop utilties for manuscripts we will add them here. Likewise, if you have a handy function without a home you would like to see featured please let us know! 
+              <br />
+              <br />
+              <br />
+            </p>
+            </div>
+        </div>
+          </div>
+        <section id="Visualization">
+          <div class="container">
+            <div class="section-header">
+              <h3>Convertig between alignment filetypes</h3>
+A chore in bioinformatics/phylogenomics is converting between alignment filetypes.  
+<br>
+TOAST has a series of functions to convert between NEXUS, phylip, and fasta formats. 
+<br>
+<br>
+For our example to <strong>convert from nexus to fasta</strong> simply use 
+<pre style="text-align: left; white-space: pre-line">
+<code>NexIntoFas(nexusfile= mynexusdata, filename="file_name",externalfile=TRUE, tolower=FALSE)</code></pre>
+This function uses an aligned nexus file that is either in your working directory externalfile=TRUE or that has been read into memory, externalfile=false.
+<br>
+The tolower=TRUE options provides a chance to convert all text to lower case in case that is needed (this is required if END; and MATRIX are uppercase in your nexus file. 
+<br>
+<br>Alternatively, you may wish to convert a <strong>phylip to fasta </strong>
+<br>
+<br>
+The following function uses an aligned phylip file that is either in your working directory externalfile=TRUE or that has been read into memory, externalfile=false. This then converts it to a fasta format writing to file with user specified filename
+<pre style="text-align: left; white-space: pre-line">
+<code>PhyIntoFasta(phylipfile="myphylipdata", filename="file_name",externalfile=TRUE)</code></pre>
+
+Finally, you may wish to convert to <strong>phylip format from a fasta</strong>. Using similar logic this can be done as follows
+<br>
+<br>
+<pre style="text-align: left; white-space: pre-line">
+<code>FastaIntoPhy(fastafile=myfastadata, filename="file_name",externalfile=TRUE)</code></pre>
+<br>
+<br>
+If you need one of the other possible conversions, you can use these functions to make intermediate steps. 
+You can also loop these files across all the files in a directory to readily convert bactches of alignments. 
+<br>
+<br>
+<h3>Subsetting taxa out of alignments </h3>
+One of the more troublesome chores in bioinformatics is the pruning of taxa that only share partial strings in their name. For example, you may wish to isolate all zebrafish sequences, but they are named G4657_Danr_245; G47897_DanR_249; Q789_Dan_754; etc in an alignment of thousands of taxa.   
+<br>
+<br>
+TOAST has a phylip alignment pruning function that can assess partial string matches by taxa or sequence motif to remove or keep target sequences. 
+<br>
+<br>
+<pre style="text-align: left; white-space: pre-line">
+<code>PruneSuperAlign(filepath="yourpath/superalign.phy", targets=c("Danio",  "Canis", "Balistes", "Equu"), fileName="NewFileName")</code></pre>
+<br>
+This writes a new file out that is just the sequences you are looking for and prints the new length and number of taxa found to screen. You can supply complete or partial matches. For example if you have sequences for horses, equus, equu, equ, would all return the same sequences provided there are no similar strings. 
+<br>
+<br>
+
+That's it for now! Check back as this area is one in active development and we are constantly developing little helper functions to make our lives easier. 
+
+<br/>
+<br/>
+				<a href="toastMain.html" class="button fit ">Next Section: Gene tree based filtration</a>
+        <br/>
+        <br/>
+        <a href="toastBUSCO.html" class="button fit ">Back to: Previous Page</a>
+        <br/>
+        <br/>
+        <a href="toastUtilities.html" class="button fit ">Skip to: Utilities | Interactive Plots</a>
+        <br/>
+        <br/>
+        <a href="toastInstall.html" class="button fit ">Back to: Installation</a>
+        <br/>
+        <br/>
+				<a href="toastMain.html" class="button fit ">Back to: TOAST main page</a>
+        <hr />
+
+
+
+
+            
+          </div>
+        </section>
+      
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon brands alt fa-github"
+              ><span class="label">GitHub</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon solid alt fa-envelope"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy; Evolutionary Informatics Lab. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/PlotR/htmlwidgets.js"></script>
+<script src="assets/PlotR/d3.min.js"></script>
+<link href="assets/PlotR/style.css" rel="stylesheet" />
+<script src="assets/PlotR/circlepackeR.js"></script>
+  </body>
+</html>
