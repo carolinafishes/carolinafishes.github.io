@@ -11,7 +11,7 @@
 		$dimension = $('#dimension'),
 		$dimfooter = $('#dimfooter'),
 		$main = $('#main'),
-		$main_articles = $main.children('article');
+		$main_dimarticles = $main.children('dimarticle');
 
 	// Breakpoints.
 		breakpoints({
@@ -71,10 +71,10 @@
 		// Methods.
 			$main._show = function(id, initial) {
 
-				var $article = $main_articles.filter('#' + id);
+				var $dimarticle = $main_dimarticles.filter('#' + id);
 
-				// No such article? Bail.
-					if ($article.length == 0)
+				// No such dimarticle? Bail.
+					if ($dimarticle.length == 0)
 						return;
 
 				// Handle lock.
@@ -86,21 +86,21 @@
 								$body.addClass('is-switching');
 
 							// Mark as visible.
-								$body.addClass('is-article-visible');
+								$body.addClass('is-dimarticle-visible');
 
-							// Deactivate all articles (just in case one's already active).
-								$main_articles.removeClass('active');
+							// Deactivate all dimarticles (just in case one's already active).
+								$main_dimarticles.removeClass('active');
 
 							// Hide dimension, dimfooter.
 								$dimension.hide();
 								$dimfooter.hide();
 
-							// Show main, article.
+							// Show main, dimarticle.
 								$main.show();
-								$article.show();
+								$dimarticle.show();
 
-							// Activate article.
-								$article.addClass('active');
+							// Activate dimarticle.
+								$dimarticle.addClass('active');
 
 							// Unlock.
 								locked = false;
@@ -117,27 +117,27 @@
 					// Lock.
 						locked = true;
 
-				// Article already visible? Just swap articles.
-					if ($body.hasClass('is-article-visible')) {
+				// dimarticle already visible? Just swap dimarticles.
+					if ($body.hasClass('is-dimarticle-visible')) {
 
-						// Deactivate current article.
-							var $currentArticle = $main_articles.filter('.active');
+						// Deactivate current dimarticle.
+							var $currentdimarticle = $main_dimarticles.filter('.active');
 
-							$currentArticle.removeClass('active');
+							$currentdimarticle.removeClass('active');
 
-						// Show article.
+						// Show dimarticle.
 							setTimeout(function() {
 
-								// Hide current article.
-									$currentArticle.hide();
+								// Hide current dimarticle.
+									$currentdimarticle.hide();
 
-								// Show article.
-									$article.show();
+								// Show dimarticle.
+									$dimarticle.show();
 
-								// Activate article.
+								// Activate dimarticle.
 									setTimeout(function() {
 
-										$article.addClass('active');
+										$dimarticle.addClass('active');
 
 										// Window stuff.
 											$window
@@ -160,23 +160,23 @@
 
 						// Mark as visible.
 							$body
-								.addClass('is-article-visible');
+								.addClass('is-dimarticle-visible');
 
-						// Show article.
+						// Show dimarticle.
 							setTimeout(function() {
 
 								// Hide dimension, dimfooter.
 									$dimension.hide();
 									$dimfooter.hide();
 
-								// Show main, article.
+								// Show main, dimarticle.
 									$main.show();
-									$article.show();
+									$dimarticle.show();
 
-								// Activate article.
+								// Activate dimarticle.
 									setTimeout(function() {
 
-										$article.addClass('active');
+										$dimarticle.addClass('active');
 
 										// Window stuff.
 											$window
@@ -198,10 +198,10 @@
 
 			$main._hide = function(addState) {
 
-				var $article = $main_articles.filter('.active');
+				var $dimarticle = $main_dimarticles.filter('.active');
 
-				// Article not visible? Bail.
-					if (!$body.hasClass('is-article-visible'))
+				// dimarticle not visible? Bail.
+					if (!$body.hasClass('is-dimarticle-visible'))
 						return;
 
 				// Add state?
@@ -217,11 +217,11 @@
 							// Mark as switching.
 								$body.addClass('is-switching');
 
-							// Deactivate article.
-								$article.removeClass('active');
+							// Deactivate dimarticle.
+								$dimarticle.removeClass('active');
 
-							// Hide article, main.
-								$article.hide();
+							// Hide dimarticle, main.
+								$dimarticle.hide();
 								$main.hide();
 
 							// Show dimfooter, dimension.
@@ -229,7 +229,7 @@
 								$dimension.show();
 
 							// Unmark as visible.
-								$body.removeClass('is-article-visible');
+								$body.removeClass('is-dimarticle-visible');
 
 							// Unlock.
 								locked = false;
@@ -249,14 +249,14 @@
 					// Lock.
 						locked = true;
 
-				// Deactivate article.
-					$article.removeClass('active');
+				// Deactivate dimarticle.
+					$dimarticle.removeClass('active');
 
-				// Hide article.
+				// Hide dimarticle.
 					setTimeout(function() {
 
-						// Hide article, main.
-							$article.hide();
+						// Hide dimarticle, main.
+							$dimarticle.hide();
 							$main.hide();
 
 						// Show dimfooter, dimension.
@@ -266,7 +266,7 @@
 						// Unmark as visible.
 							setTimeout(function() {
 
-								$body.removeClass('is-article-visible');
+								$body.removeClass('is-dimarticle-visible');
 
 								// Window stuff.
 									$window
@@ -285,8 +285,8 @@
 
 			};
 
-		// Articles.
-			$main_articles.each(function() {
+		// dimarticles.
+			$main_dimarticles.each(function() {
 
 				var $this = $(this);
 
@@ -297,7 +297,7 @@
 							location.hash = '';
 						});
 
-				// Prevent clicks from inside article from bubbling.
+				// Prevent clicks from inside dimarticle from bubbling.
 					$this.on('click', function(event) {
 						event.stopPropagation();
 					});
@@ -307,8 +307,8 @@
 		// Events.
 			$body.on('click', function(event) {
 
-				// Article visible? Hide.
-					if ($body.hasClass('is-article-visible'))
+				// dimarticle visible? Hide.
+					if ($body.hasClass('is-dimarticle-visible'))
 						$main._hide(true);
 
 			});
@@ -319,8 +319,8 @@
 
 					case 27:
 
-						// Article visible? Hide.
-							if ($body.hasClass('is-article-visible'))
+						// dimarticle visible? Hide.
+							if ($body.hasClass('is-dimarticle-visible'))
 								$main._hide(true);
 
 						break;
@@ -347,14 +347,14 @@
 
 					}
 
-				// Otherwise, check for a matching article.
-					else if ($main_articles.filter(location.hash).length > 0) {
+				// Otherwise, check for a matching dimarticle.
+					else if ($main_dimarticles.filter(location.hash).length > 0) {
 
 						// Prevent default.
 							event.preventDefault();
 							event.stopPropagation();
 
-						// Show article.
+						// Show dimarticle.
 							$main._show(location.hash.substr(1));
 
 					}
@@ -386,11 +386,11 @@
 
 		// Initialize.
 
-			// Hide main, articles.
+			// Hide main, dimarticles.
 				$main.hide();
-				$main_articles.hide();
+				$main_dimarticles.hide();
 
-			// Initial article.
+			// Initial dimarticle.
 				if (location.hash != ''
 				&&	location.hash != '#')
 					$window.on('load', function() {
