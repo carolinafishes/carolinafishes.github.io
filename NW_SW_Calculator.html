@@ -1,0 +1,1806 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Needleman-Wunsch & Smith-Waterman Visualizer</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+    :root {
+      --bg: #07131f;
+      --bg-soft: #102337;
+      --card: rgba(15, 34, 52, 0.82);
+      --card-border: rgba(154, 191, 225, 0.24);
+      --text: #e7f4ff;
+      --muted: #9eb9ce;
+      --accent: #2dd4bf;
+      --accent-2: #f59e0b;
+      --good: #22c55e;
+      --warn: #fb7185;
+      --shadow: 0 12px 30px rgba(0, 0, 0, 0.34);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 20%, rgba(45, 212, 191, 0.16), transparent 38%),
+        radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.18), transparent 36%),
+        linear-gradient(130deg, #07131f 0%, #0a1a2a 55%, #091726 100%);
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: linear-gradient(rgba(167, 192, 214, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(167, 192, 214, 0.03) 1px, transparent 1px);
+      background-size: 24px 24px;
+      z-index: -1;
+    }
+
+    .app {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .hero {
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      background: linear-gradient(120deg, rgba(14, 35, 54, 0.95), rgba(7, 23, 37, 0.86));
+      box-shadow: var(--shadow);
+      animation: rise 500ms ease-out;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.6rem, 3vw, 2.6rem);
+      letter-spacing: 0.02em;
+    }
+
+    .hero p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.5;
+      max-width: 95ch;
+    }
+
+    .controls-panel .panel-content {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 12px;
+      align-items: end;
+    }
+
+    .controls-panel .field,
+    .controls-panel .row {
+      grid-column: span 3;
+    }
+
+    .controls-panel .field.sequence {
+      grid-column: span 4;
+    }
+
+    .controls-panel .buttons {
+      grid-column: 1 / -1;
+    }
+
+    .controls-panel .status {
+      grid-column: span 8;
+      margin: 0;
+    }
+
+    .controls-panel .legend {
+      grid-column: span 4;
+      justify-content: flex-end;
+      margin-top: 0;
+    }
+
+    .workspace-grid {
+      display: grid;
+      grid-template-columns: minmax(420px, 1fr) minmax(330px, 470px);
+      grid-template-areas:
+        "matrix inspector"
+        "trace trace";
+      gap: 20px;
+      align-items: start;
+    }
+
+    .matrix-panel { grid-area: matrix; }
+    .inspector-panel { grid-area: inspector; }
+    .trace-panel { grid-area: trace; }
+
+    .trace-active .workspace-grid {
+      grid-template-areas:
+        "matrix trace"
+        "inspector inspector";
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      animation: rise 550ms ease-out;
+    }
+
+    .panel-header {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--card-border);
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: #d6ebff;
+      background: linear-gradient(90deg, rgba(16, 35, 55, 0.86), rgba(11, 28, 44, 0.86));
+    }
+
+    .panel-content {
+      padding: 16px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .row {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .field {
+      display: grid;
+      gap: 5px;
+    }
+
+    label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #cae6f9;
+      letter-spacing: 0.02em;
+    }
+
+    input, select {
+      width: 100%;
+      border: 1px solid #38546d;
+      background: #0c1f31;
+      color: var(--text);
+      border-radius: var(--radius-sm);
+      padding: 10px 11px;
+      font: inherit;
+      outline: none;
+      transition: border-color 140ms ease, transform 140ms ease;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      border-top: 1px solid rgba(154, 191, 225, 0.28);
+      padding-top: 12px;
+      margin-top: 4px;
+    }
+
+    button {
+      border: 1px solid rgba(245, 158, 11, 0.42);
+      background: linear-gradient(90deg, rgba(84, 49, 18, 0.9), rgba(103, 58, 16, 0.86));
+      color: var(--text);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 120ms ease, border-color 120ms ease, background-color 120ms ease;
+    }
+
+    button:hover:not(:disabled) {
+      transform: translateY(-1px);
+      border-color: rgba(251, 191, 36, 0.86);
+      background: linear-gradient(90deg, rgba(112, 63, 17, 0.92), rgba(131, 72, 17, 0.9));
+    }
+
+    button:disabled {
+      opacity: 0.44;
+      cursor: not-allowed;
+    }
+
+    .btn-accent {
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0.52), rgba(251, 146, 60, 0.44));
+      border-color: rgba(251, 191, 36, 0.78);
+      color: #fff7e6;
+    }
+
+    .btn-green {
+      background: linear-gradient(90deg, rgba(22, 163, 74, 0.62), rgba(45, 212, 191, 0.42));
+      border-color: rgba(74, 222, 128, 0.8);
+      color: #eafff4;
+    }
+
+    .btn-green:hover:not(:disabled) {
+      border-color: rgba(110, 231, 183, 0.92);
+      background: linear-gradient(90deg, rgba(20, 146, 69, 0.7), rgba(45, 212, 191, 0.52));
+    }
+
+    .trace-active .controls-panel button {
+      background: linear-gradient(90deg, rgba(22, 163, 74, 0.62), rgba(45, 212, 191, 0.42));
+      border-color: rgba(74, 222, 128, 0.8);
+      color: #eafff4;
+    }
+
+    .trace-active .controls-panel button:hover:not(:disabled) {
+      border-color: rgba(110, 231, 183, 0.92);
+      background: linear-gradient(90deg, rgba(20, 146, 69, 0.7), rgba(45, 212, 191, 0.52));
+    }
+
+    .button-wide {
+      grid-column: span 2;
+    }
+
+    .status {
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(154, 191, 225, 0.28);
+      padding: 10px 12px;
+      background: rgba(11, 24, 39, 0.86);
+      color: #d5ecff;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .status strong {
+      color: #eff9ff;
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 4px;
+    }
+
+    .pill {
+      border: 1px solid #3d617e;
+      background: #112b41;
+      color: #d9eefc;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.77rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .pill.arrow { font-family: 'IBM Plex Mono', monospace; }
+
+    .matrix-wrap {
+      width: 100%;
+      overflow: auto;
+      border: 1px solid rgba(154, 191, 225, 0.2);
+      border-radius: var(--radius-sm);
+      background: #081422;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: max-content;
+      min-width: 100%;
+      table-layout: fixed;
+    }
+
+    th, td {
+      border: 1px solid rgba(154, 191, 225, 0.21);
+      min-width: 64px;
+      height: 58px;
+      text-align: center;
+      vertical-align: middle;
+      padding: 3px;
+    }
+
+    th {
+      background: #10263a;
+      color: #dcf1ff;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    td {
+      background: #0c2032;
+      position: relative;
+      transition: background-color 180ms ease;
+    }
+
+    td.boundary { background: #0f2940; }
+    td.uncomputed { background: rgba(26, 47, 67, 0.58); color: #86a1b6; }
+    td.next {
+      outline: 2px solid rgba(245, 158, 11, 0.72);
+      outline-offset: -2px;
+      animation: nextPulse 1.8s ease-in-out infinite;
+    }
+    td.last {
+      box-shadow: inset 0 0 0 2px rgba(94, 234, 212, 0.68);
+      background: rgba(28, 64, 86, 0.85);
+    }
+    td.path { background: rgba(45, 212, 191, 0.21); }
+    td.maxcell { box-shadow: inset 0 0 0 2px rgba(245, 158, 11, 0.7); }
+
+    .cell-score {
+      display: block;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .cell-arrows {
+      display: block;
+      margin-top: 3px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.73rem;
+      color: #b6d2e6;
+      min-height: 1em;
+    }
+
+    .inspector-grid {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr;
+    }
+
+    .formula {
+      border: 1px solid rgba(154, 191, 225, 0.24);
+      background: rgba(8, 21, 33, 0.9);
+      border-radius: var(--radius-sm);
+      padding: 9px 10px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.84rem;
+      color: #dcf0ff;
+      line-height: 1.45;
+    }
+
+    .formula strong { color: #fef3c7; }
+
+    .alignment-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .alignment-tabs button {
+      padding: 7px 9px;
+      font-size: 0.8rem;
+      background: linear-gradient(90deg, rgba(92, 52, 16, 0.9), rgba(112, 60, 17, 0.9));
+      border-color: rgba(246, 160, 34, 0.52);
+    }
+
+    .alignment-tabs button.active {
+      background: linear-gradient(90deg, rgba(245, 158, 11, 0.6), rgba(251, 146, 60, 0.45));
+      border-color: rgba(251, 191, 36, 0.85);
+      color: #fff8eb;
+    }
+
+    .alignment-view {
+      border: 1px solid rgba(154, 191, 225, 0.24);
+      background: rgba(8, 21, 33, 0.9);
+      border-radius: var(--radius-sm);
+      padding: 10px;
+      overflow: auto;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      white-space: pre;
+    }
+
+    .teach {
+      display: grid;
+      gap: 10px;
+    }
+
+    .teach p {
+      margin: 0;
+      color: #c8e2f5;
+      line-height: 1.45;
+      font-size: 0.9rem;
+    }
+
+    .credit {
+      color: #89aac4;
+      font-size: 0.8rem;
+    }
+
+    .trace-panel {
+      border-color: rgba(245, 158, 11, 0.45);
+      background: linear-gradient(110deg, rgba(37, 23, 9, 0.95), rgba(20, 24, 37, 0.88));
+    }
+
+    .trace-panel .panel-header {
+      border-bottom-color: rgba(245, 158, 11, 0.45);
+      color: #ffefcf;
+      background: linear-gradient(90deg, rgba(86, 46, 14, 0.9), rgba(49, 31, 12, 0.9));
+    }
+
+    .trace-panel .status,
+    .trace-panel .alignment-view {
+      border-color: rgba(245, 158, 11, 0.48);
+      background: rgba(47, 28, 9, 0.55);
+      color: #ffecc9;
+    }
+
+    .tutorial-launch {
+      margin-top: 4px;
+      background: linear-gradient(90deg, rgba(251, 146, 60, 0.52), rgba(245, 158, 11, 0.4));
+      border-color: rgba(251, 191, 36, 0.9);
+      color: #fff4da;
+      animation: tutorialButtonPulse 2.6s ease-in-out infinite;
+    }
+
+    .tutorial-launch:hover:not(:disabled) {
+      background: linear-gradient(90deg, rgba(251, 146, 60, 0.65), rgba(245, 158, 11, 0.5));
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .tutorial-modal {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: rgba(2, 9, 16, 0.75);
+      backdrop-filter: blur(6px);
+      padding: 18px;
+      z-index: 50;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms ease;
+    }
+
+    .tutorial-modal.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .tutorial-card {
+      width: min(1160px, 96vw);
+      max-height: min(92vh, 900px);
+      overflow: auto;
+      border: 1px solid rgba(251, 191, 36, 0.55);
+      border-radius: var(--radius);
+      background: linear-gradient(125deg, rgba(16, 21, 34, 0.96), rgba(38, 25, 12, 0.96));
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.5);
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .tutorial-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .tutorial-title {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #fff2da;
+    }
+
+    .tutorial-sub {
+      margin: 4px 0 0;
+      color: #f3d9b0;
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+
+    .tutorial-close {
+      width: 38px;
+      height: 38px;
+      padding: 0;
+      border-radius: 999px;
+      font-size: 1.05rem;
+      line-height: 1;
+      display: grid;
+      place-items: center;
+      background: rgba(127, 29, 29, 0.35);
+      border-color: rgba(248, 113, 113, 0.58);
+    }
+
+    .tutorial-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tutorial-body {
+      display: grid;
+      grid-template-columns: minmax(320px, 1fr) minmax(320px, 1fr);
+      gap: 14px;
+      align-items: start;
+    }
+
+    .tutorial-matrix-wrap {
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      border-radius: var(--radius-sm);
+      background: rgba(10, 20, 32, 0.88);
+      overflow: auto;
+      max-height: 55vh;
+    }
+
+    .tutorial-matrix-wrap td,
+    .tutorial-matrix-wrap th {
+      min-width: 46px;
+      height: 42px;
+      font-size: 0.8rem;
+      border-color: rgba(250, 213, 145, 0.2);
+    }
+
+    .tutorial-matrix-wrap td.tracepath {
+      background: rgba(252, 211, 77, 0.16);
+    }
+
+    .tutorial-matrix-wrap td.visited {
+      background: rgba(56, 189, 248, 0.22);
+    }
+
+    .tutorial-matrix-wrap td.active {
+      background: rgba(251, 191, 36, 0.33);
+      box-shadow: inset 0 0 0 2px rgba(251, 191, 36, 0.88), 0 0 13px rgba(251, 191, 36, 0.3);
+      animation: nextPulse 1.7s ease-in-out infinite;
+    }
+
+    .tutorial-right {
+      display: grid;
+      gap: 10px;
+    }
+
+    .tutorial-step {
+      border-color: rgba(251, 191, 36, 0.45);
+      background: rgba(59, 33, 8, 0.45);
+      color: #ffeac7;
+    }
+
+    .tutorial-alignment-view {
+      border: 1px solid rgba(251, 191, 36, 0.45);
+      background: rgba(17, 23, 35, 0.86);
+      border-radius: var(--radius-sm);
+      padding: 10px;
+      overflow: auto;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: var(--tutorial-font-size, 1.4rem);
+      line-height: 1.2;
+    }
+
+    .tutorial-line {
+      margin: 4px 0;
+      white-space: nowrap;
+    }
+
+    .tutorial-prefix {
+      color: #f8d8a3;
+      display: inline-block;
+      width: 2ch;
+    }
+
+    .tcol {
+      display: inline-block;
+      width: var(--tutorial-char-width, 1.05ch);
+      text-align: center;
+      color: #dfecf8;
+      transition: color 200ms ease, transform 200ms ease, text-shadow 200ms ease;
+    }
+
+    .tcol.masked {
+      color: #5f7286;
+    }
+
+    .tcol.current {
+      color: #fde68a;
+      transform: translateY(-1px) scale(1.06);
+      text-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes nextPulse {
+      0%, 100% {
+        box-shadow: inset 0 0 0 1px rgba(251, 191, 36, 0.36), 0 0 0 rgba(251, 191, 36, 0);
+      }
+      50% {
+        box-shadow: inset 0 0 0 2px rgba(251, 191, 36, 0.8), 0 0 14px rgba(251, 191, 36, 0.32);
+      }
+    }
+
+    @keyframes tutorialButtonPulse {
+      0%, 100% {
+        box-shadow: 0 0 0 rgba(251, 146, 60, 0);
+      }
+      50% {
+        box-shadow: 0 0 16px rgba(251, 146, 60, 0.35);
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .controls-panel .panel-content {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+
+      .controls-panel .field.sequence {
+        grid-column: span 6;
+      }
+
+      .controls-panel .field,
+      .controls-panel .row {
+        grid-column: span 3;
+      }
+
+      .controls-panel .status,
+      .controls-panel .legend {
+        grid-column: 1 / -1;
+      }
+
+      .controls-panel .legend {
+        justify-content: flex-start;
+      }
+
+      .buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .button-wide {
+        grid-column: auto;
+      }
+
+      .workspace-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "matrix"
+          "inspector"
+          "trace";
+      }
+
+      .trace-active .workspace-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "matrix"
+          "trace"
+          "inspector";
+      }
+
+      .tutorial-body {
+        grid-template-columns: 1fr;
+      }
+
+      th, td {
+        min-width: 56px;
+        height: 56px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <h1>Needleman-Wunsch & Smith-Waterman Alignment Studio</h1>
+      <p>
+        Learn dynamic programming for sequence alignment by filling each cell manually or automatically.
+        This tool shows the diagonal, up, and left calculations for every step and can enumerate multiple
+        optimal alignments when ties occur in traceback.
+      </p>
+    </section>
+
+    <section class="panel controls-panel">
+      <div class="panel-header">Controls</div>
+      <div class="panel-content">
+        <div class="field">
+          <label for="algorithm">Algorithm</label>
+          <select id="algorithm">
+            <option value="nw">Needleman-Wunsch (Global)</option>
+            <option value="sw">Smith-Waterman (Local)</option>
+          </select>
+        </div>
+
+        <div class="field sequence">
+          <label for="seqA">Sequence A (top / columns)</label>
+          <input id="seqA" value="GATTACA" />
+        </div>
+
+        <div class="field sequence">
+          <label for="seqB">Sequence B (left / rows)</label>
+          <input id="seqB" value="GCATGCU" />
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="match">Match score</label>
+            <input id="match" type="number" value="1" />
+          </div>
+          <div class="field">
+            <label for="mismatch">Mismatch score</label>
+            <input id="mismatch" type="number" value="-1" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="gap">Gap penalty</label>
+          <input id="gap" type="number" value="-1" />
+        </div>
+
+        <div class="buttons">
+          <button id="initBtn" class="btn-accent">1) Initialize Matrix</button>
+          <button id="stepBtn">2) Fill One Cell</button>
+          <button id="fillBtn" class="btn-green">3) Fill All Cells</button>
+          <button id="traceBtn">4) Show Traceback</button>
+          <button id="fillTraceBtn" class="btn-green button-wide">Fill All + Traceback</button>
+        </div>
+
+        <div id="status" class="status">Set parameters and initialize the matrix.</div>
+
+        <div class="legend">
+          <span class="pill">Boundary initialized</span>
+          <span class="pill">Step fill available</span>
+          <span class="pill arrow">↖ diagonal</span>
+          <span class="pill arrow">↑ up</span>
+          <span class="pill arrow">← left</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace-grid">
+      <section class="panel matrix-panel">
+        <div class="panel-header">Scoring Matrix</div>
+        <div class="panel-content">
+          <div id="matrixWrap" class="matrix-wrap"></div>
+        </div>
+      </section>
+
+      <section class="panel inspector-panel">
+        <div class="panel-header">Cell Calculation Inspector</div>
+        <div class="panel-content">
+          <div id="cellInfo" class="status">After <strong>Fill One Cell</strong>, this area will show all score formulas for that cell.</div>
+          <div class="inspector-grid">
+            <div id="formulaDiag" class="formula">↖ Diagonal: not computed yet.</div>
+            <div id="formulaUp" class="formula">↑ Up: not computed yet.</div>
+            <div id="formulaLeft" class="formula">← Left: not computed yet.</div>
+            <div id="formulaPick" class="formula">Selected max score: not computed yet.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel trace-panel">
+        <div class="panel-header">Traceback & Alignments</div>
+        <div class="panel-content">
+          <div id="traceSummary" class="status">
+            Run traceback after the matrix is filled. If there are tied optimal paths, use the alignment toggles.
+          </div>
+          <div id="alignmentTabs" class="alignment-tabs"></div>
+          <div id="alignmentView" class="alignment-view">No alignment yet.</div>
+          <button id="tutorialBtn" class="tutorial-launch hidden">Guided Traceback Walkthrough</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">How To Interpret The Matrix</div>
+      <div class="panel-content teach">
+        <p>
+          <strong>Needleman-Wunsch (Global):</strong> aligns full sequences end-to-end. The first row and first column are initialized
+          using cumulative gap penalties (<code>i * gap</code>, <code>j * gap</code>), then every internal cell takes the max of:
+          diagonal (match/mismatch), up (gap in sequence B), and left (gap in sequence A).
+        </p>
+        <p>
+          <strong>Smith-Waterman (Local):</strong> finds the best local subsequences. Boundaries start at 0 and every cell uses
+          <code>max(0, diagonal, up, left)</code>. Traceback starts at the highest scoring cell(s) and stops when score returns to 0.
+        </p>
+        <p>
+          <strong>Arrows in each cell</strong> show which predecessor(s) can lead to that score. Multiple arrows mean tied choices and
+          potentially multiple optimal alignments.
+        </p>
+        <p class="credit">
+          Educational visualizer built for stepwise dynamic programming practice.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="traceTutorialModal" class="tutorial-modal hidden" aria-hidden="true">
+    <section class="tutorial-card" role="dialog" aria-modal="true" aria-labelledby="tutorialTitle">
+      <div class="tutorial-top">
+        <div>
+          <h2 id="tutorialTitle" class="tutorial-title">Traceback Walkthrough</h2>
+          <p class="tutorial-sub">
+            This tutorial moves backward through traceback one cell at a time and reveals alignment columns from right to left.
+          </p>
+        </div>
+        <button id="tutorialCloseBtn" class="tutorial-close" aria-label="Close tutorial">X</button>
+      </div>
+      <div class="tutorial-controls">
+        <button id="tutorialPlayPauseBtn" class="btn-green">Pause</button>
+        <button id="tutorialRestartBtn">Restart</button>
+      </div>
+      <div class="tutorial-body">
+        <div id="tutorialMatrixWrap" class="tutorial-matrix-wrap"></div>
+        <div class="tutorial-right">
+          <div id="tutorialStepInfo" class="status tutorial-step">Preparing traceback walkthrough...</div>
+          <div id="tutorialAlignmentView" class="tutorial-alignment-view">Alignment columns will appear here.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const MAX_ALIGNMENTS = 200;
+    const TRACE_TUTORIAL_STEP_MS = 1500;
+
+    const state = {
+      algorithm: 'nw',
+      seqA: '',
+      seqB: '',
+      match: 1,
+      mismatch: -1,
+      gap: -1,
+      matrix: [],
+      pointers: [],
+      computed: [],
+      order: [],
+      stepIndex: 0,
+      initialized: false,
+      filled: false,
+      lastComputation: null,
+      tracebackResults: [],
+      activeAlignment: 0,
+      traceTruncated: false,
+      localBestScore: 0,
+      tutorial: {
+        open: false,
+        playing: false,
+        timer: null,
+        frame: 0,
+        totalFrames: 0,
+        stepMs: TRACE_TUTORIAL_STEP_MS,
+        path: [],
+        steps: [],
+        alignmentA: '',
+        alignmentB: '',
+        markers: ''
+      }
+    };
+
+    const els = {
+      app: document.querySelector('.app'),
+      algorithm: document.getElementById('algorithm'),
+      seqA: document.getElementById('seqA'),
+      seqB: document.getElementById('seqB'),
+      match: document.getElementById('match'),
+      mismatch: document.getElementById('mismatch'),
+      gap: document.getElementById('gap'),
+      initBtn: document.getElementById('initBtn'),
+      stepBtn: document.getElementById('stepBtn'),
+      fillBtn: document.getElementById('fillBtn'),
+      traceBtn: document.getElementById('traceBtn'),
+      fillTraceBtn: document.getElementById('fillTraceBtn'),
+      status: document.getElementById('status'),
+      matrixWrap: document.getElementById('matrixWrap'),
+      cellInfo: document.getElementById('cellInfo'),
+      formulaDiag: document.getElementById('formulaDiag'),
+      formulaUp: document.getElementById('formulaUp'),
+      formulaLeft: document.getElementById('formulaLeft'),
+      formulaPick: document.getElementById('formulaPick'),
+      traceSummary: document.getElementById('traceSummary'),
+      alignmentTabs: document.getElementById('alignmentTabs'),
+      alignmentView: document.getElementById('alignmentView'),
+      tutorialBtn: document.getElementById('tutorialBtn'),
+      traceTutorialModal: document.getElementById('traceTutorialModal'),
+      tutorialCloseBtn: document.getElementById('tutorialCloseBtn'),
+      tutorialPlayPauseBtn: document.getElementById('tutorialPlayPauseBtn'),
+      tutorialRestartBtn: document.getElementById('tutorialRestartBtn'),
+      tutorialMatrixWrap: document.getElementById('tutorialMatrixWrap'),
+      tutorialStepInfo: document.getElementById('tutorialStepInfo'),
+      tutorialAlignmentView: document.getElementById('tutorialAlignmentView')
+    };
+
+    function setTraceLayoutActive(active) {
+      els.app.classList.toggle('trace-active', active);
+    }
+
+    function arrowFor(dir) {
+      if (dir === 'diag') return '↖';
+      if (dir === 'up') return '↑';
+      if (dir === 'left') return '←';
+      return '';
+    }
+
+    function remapDirForDisplay(dir) {
+      if (dir === 'up') return 'left';
+      if (dir === 'left') return 'up';
+      return dir;
+    }
+
+    function normalizeSeq(raw) {
+      return (raw || '').toUpperCase().replace(/\s+/g, '').replace(/[^A-Z*\-]/g, '');
+    }
+
+    function parseNumber(input, fallback) {
+      const n = Number(input);
+      return Number.isFinite(n) ? n : fallback;
+    }
+
+    function readConfig() {
+      state.algorithm = els.algorithm.value;
+      state.seqA = normalizeSeq(els.seqA.value);
+      state.seqB = normalizeSeq(els.seqB.value);
+      state.match = parseNumber(els.match.value, 1);
+      state.mismatch = parseNumber(els.mismatch.value, -1);
+      state.gap = parseNumber(els.gap.value, -1);
+
+      els.seqA.value = state.seqA;
+      els.seqB.value = state.seqB;
+
+      if (!state.seqA.length || !state.seqB.length) {
+        throw new Error('Both sequences must contain at least one character (A-Z, *, or -).');
+      }
+    }
+
+    function setStatus(message, isError = false) {
+      els.status.innerHTML = isError
+        ? `<strong style="color:${'var(--warn)'}">Error:</strong> ${message}`
+        : message;
+    }
+
+    function resetInspector() {
+      els.cellInfo.innerHTML = 'After <strong>Fill One Cell</strong>, this area will show all score formulas for that cell.';
+      els.formulaDiag.textContent = '↖ Diagonal: not computed yet.';
+      els.formulaUp.textContent = '↑ Up: not computed yet.';
+      els.formulaLeft.textContent = '← Left: not computed yet.';
+      els.formulaPick.textContent = 'Selected max score: not computed yet.';
+    }
+
+    function resetTracebackUI() {
+      state.tracebackResults = [];
+      state.activeAlignment = 0;
+      state.traceTruncated = false;
+      closeTraceTutorial();
+      setTraceLayoutActive(false);
+      els.traceSummary.textContent = 'Run traceback after the matrix is filled. If there are tied optimal paths, use the alignment toggles.';
+      els.alignmentTabs.innerHTML = '';
+      els.alignmentView.textContent = 'No alignment yet.';
+      els.tutorialBtn.classList.add('hidden');
+    }
+
+    function initMatrix() {
+      try {
+        readConfig();
+      } catch (err) {
+        setStatus(err.message, true);
+        return;
+      }
+
+      const m = state.seqA.length;
+      const n = state.seqB.length;
+
+      state.matrix = Array.from({ length: m + 1 }, () => Array(n + 1).fill(null));
+      state.pointers = Array.from({ length: m + 1 }, () => Array.from({ length: n + 1 }, () => []));
+      state.computed = Array.from({ length: m + 1 }, () => Array(n + 1).fill(false));
+      state.order = [];
+      state.stepIndex = 0;
+      state.filled = false;
+      state.initialized = true;
+      state.lastComputation = null;
+      state.localBestScore = 0;
+
+      state.matrix[0][0] = 0;
+      state.computed[0][0] = true;
+
+      if (state.algorithm === 'nw') {
+        for (let i = 1; i <= m; i++) {
+          state.matrix[i][0] = i * state.gap;
+          state.pointers[i][0] = ['up'];
+          state.computed[i][0] = true;
+        }
+        for (let j = 1; j <= n; j++) {
+          state.matrix[0][j] = j * state.gap;
+          state.pointers[0][j] = ['left'];
+          state.computed[0][j] = true;
+        }
+      } else {
+        for (let i = 1; i <= m; i++) {
+          state.matrix[i][0] = 0;
+          state.computed[i][0] = true;
+        }
+        for (let j = 1; j <= n; j++) {
+          state.matrix[0][j] = 0;
+          state.computed[0][j] = true;
+        }
+      }
+
+      for (let j = 1; j <= n; j++) {
+        for (let i = 1; i <= m; i++) {
+          state.order.push({ i, j });
+        }
+      }
+
+      resetInspector();
+      resetTracebackUI();
+      renderMatrix();
+      updateButtons();
+
+      const alg = state.algorithm === 'nw' ? 'Needleman-Wunsch (global)' : 'Smith-Waterman (local)';
+      setStatus(`<strong>${alg}</strong> initialized. Boundary cells are set. Use <strong>Fill One Cell</strong> or <strong>Fill All Cells</strong>.`);
+    }
+
+    function computeCell(i, j) {
+      const aChar = state.seqA[i - 1];
+      const bChar = state.seqB[j - 1];
+      const pairScore = aChar === bChar ? state.match : state.mismatch;
+
+      const diagFrom = state.matrix[i - 1][j - 1];
+      const upFrom = state.matrix[i - 1][j];
+      const leftFrom = state.matrix[i][j - 1];
+
+      const diag = diagFrom + pairScore;
+      const up = upFrom + state.gap;
+      const left = leftFrom + state.gap;
+
+      let value;
+      const dirs = [];
+
+      if (state.algorithm === 'sw') {
+        value = Math.max(0, diag, up, left);
+        if (value > 0) {
+          if (diag === value) dirs.push('diag');
+          if (up === value) dirs.push('up');
+          if (left === value) dirs.push('left');
+        }
+      } else {
+        value = Math.max(diag, up, left);
+        if (diag === value) dirs.push('diag');
+        if (up === value) dirs.push('up');
+        if (left === value) dirs.push('left');
+      }
+
+      state.matrix[i][j] = value;
+      state.pointers[i][j] = dirs;
+      state.computed[i][j] = true;
+      if (state.algorithm === 'sw') {
+        state.localBestScore = Math.max(state.localBestScore, value);
+      }
+
+      state.lastComputation = {
+        i,
+        j,
+        aChar,
+        bChar,
+        pairScore,
+        diagFrom,
+        upFrom,
+        leftFrom,
+        diag,
+        up,
+        left,
+        chosen: value,
+        dirs,
+        includesZero: state.algorithm === 'sw'
+      };
+    }
+
+    function stepFill() {
+      if (!state.initialized) {
+        setStatus('Initialize the matrix first.', true);
+        return;
+      }
+      if (state.stepIndex >= state.order.length) {
+        state.filled = true;
+        setStatus('All internal cells are already computed. You can run traceback now.');
+        updateButtons();
+        return;
+      }
+
+      const { i, j } = state.order[state.stepIndex];
+      computeCell(i, j);
+      state.stepIndex += 1;
+
+      if (state.stepIndex >= state.order.length) {
+        state.filled = true;
+        setStatus('Matrix fill complete. Use Show Traceback to generate optimal alignment(s).');
+      } else {
+        setStatus(`Computed cell (${i}, ${j}). Continue stepping or fill all remaining cells.`);
+      }
+
+      renderInspector();
+      renderMatrix();
+      updateButtons();
+    }
+
+    function fillAll() {
+      if (!state.initialized) {
+        setStatus('Initialize the matrix first.', true);
+        return;
+      }
+      while (state.stepIndex < state.order.length) {
+        const { i, j } = state.order[state.stepIndex];
+        computeCell(i, j);
+        state.stepIndex += 1;
+      }
+      state.filled = true;
+      renderInspector();
+      renderMatrix();
+      updateButtons();
+      setStatus('All cells computed. You can now run traceback to recover optimal alignment path(s).');
+    }
+
+    function alignmentMarkers(aAligned, bAligned) {
+      const markers = [];
+      for (let k = 0; k < aAligned.length; k++) {
+        const a = aAligned[k];
+        const b = bAligned[k];
+        if (a === b && a !== '-') {
+          markers.push('|');
+        } else if (a === '-' || b === '-') {
+          markers.push(' ');
+        } else {
+          markers.push('.');
+        }
+      }
+      return markers.join('');
+    }
+
+    function createAlignmentText(aAligned, bAligned) {
+      const markers = alignmentMarkers(aAligned, bAligned);
+      return `A: ${aAligned}\n   ${markers}\nB: ${bAligned}`;
+    }
+
+    function dedupeResults(raw) {
+      const seen = new Set();
+      const out = [];
+      for (const r of raw) {
+        const key = `${r.a}|${r.b}|${r.path.map(([i, j]) => `${i},${j}`).join(';')}`;
+        if (!seen.has(key)) {
+          seen.add(key);
+          out.push(r);
+        }
+      }
+      return out;
+    }
+
+    function escapeHtmlChar(ch) {
+      if (ch === '&') return '&amp;';
+      if (ch === '<') return '&lt;';
+      if (ch === '>') return '&gt;';
+      if (ch === ' ') return '&nbsp;';
+      return ch;
+    }
+
+    function clearTutorialTimer() {
+      if (state.tutorial.timer) {
+        clearInterval(state.tutorial.timer);
+        state.tutorial.timer = null;
+      }
+    }
+
+    function closeTraceTutorial() {
+      clearTutorialTimer();
+      state.tutorial.open = false;
+      state.tutorial.playing = false;
+      els.traceTutorialModal.classList.remove('open');
+      els.traceTutorialModal.classList.add('hidden');
+      els.traceTutorialModal.setAttribute('aria-hidden', 'true');
+      els.tutorialPlayPauseBtn.textContent = 'Pause';
+    }
+
+    function computeTracebackSteps(path) {
+      const steps = [];
+      for (let idx = 0; idx < path.length - 1; idx++) {
+        const [i, j] = path[idx];
+        const [ni, nj] = path[idx + 1];
+        const di = ni - i;
+        const dj = nj - j;
+        let dir = 'stop';
+        let aChar = '-';
+        let bChar = '-';
+        if (di === -1 && dj === -1) {
+          dir = 'diag';
+          aChar = state.seqA[i - 1] ?? '-';
+          bChar = state.seqB[j - 1] ?? '-';
+        } else if (di === -1 && dj === 0) {
+          dir = 'up';
+          aChar = state.seqA[i - 1] ?? '-';
+        } else if (di === 0 && dj === -1) {
+          dir = 'left';
+          bChar = state.seqB[j - 1] ?? '-';
+        }
+        if (dir !== 'stop') {
+          steps.push({ from: [i, j], to: [ni, nj], dir, aChar, bChar });
+        }
+      }
+      return steps;
+    }
+
+    function prepareTutorialData() {
+      const current = state.tracebackResults[state.activeAlignment];
+      if (!current) return false;
+      state.tutorial.path = current.path || [];
+      state.tutorial.steps = computeTracebackSteps(state.tutorial.path);
+      state.tutorial.alignmentA = current.a || '';
+      state.tutorial.alignmentB = current.b || '';
+      state.tutorial.markers = alignmentMarkers(state.tutorial.alignmentA, state.tutorial.alignmentB);
+      state.tutorial.frame = 0;
+      state.tutorial.totalFrames = state.tutorial.steps.length || state.tutorial.alignmentA.length || 0;
+      return true;
+    }
+
+    function renderTutorialMatrix() {
+      const path = state.tutorial.path;
+      if (!path.length) {
+        els.tutorialMatrixWrap.innerHTML = '<div class="status" style="margin:8px;">No traceback path available.</div>';
+        return;
+      }
+
+      const m = state.seqA.length; // display columns
+      const n = state.seqB.length; // display rows
+      const activeIdx = Math.min(state.tutorial.frame, path.length - 1);
+      const allPath = new Set(path.map(([i, j]) => `${i}:${j}`));
+      const visited = new Set(path.slice(0, activeIdx + 1).map(([i, j]) => `${i}:${j}`));
+      const [activeI, activeJ] = path[activeIdx];
+
+      let html = '<table><thead><tr><th></th><th>-</th>';
+      for (let c = 0; c < m; c++) {
+        html += `<th>${state.seqA[c]}</th>`;
+      }
+      html += '</tr></thead><tbody>';
+
+      for (let r = 0; r <= n; r++) {
+        const rowLabel = r === 0 ? '-' : state.seqB[r - 1];
+        html += `<tr><th>${rowLabel}</th>`;
+        for (let c = 0; c <= m; c++) {
+          const origI = c;
+          const origJ = r;
+          const val = state.matrix[origI][origJ];
+          const classes = [];
+          if (allPath.has(`${origI}:${origJ}`)) classes.push('tracepath');
+          if (visited.has(`${origI}:${origJ}`)) classes.push('visited');
+          if (origI === activeI && origJ === activeJ) classes.push('active');
+          html += `<td class="${classes.join(' ')}">${val ?? ''}</td>`;
+        }
+        html += '</tr>';
+      }
+      html += '</tbody></table>';
+      els.tutorialMatrixWrap.innerHTML = html;
+    }
+
+    function setTutorialAlignmentScale(length) {
+      let fontRem = 1.45;
+      if (length > 26) fontRem = 1.28;
+      if (length > 38) fontRem = 1.1;
+      if (length > 55) fontRem = 0.95;
+      if (length > 78) fontRem = 0.84;
+      if (length > 105) fontRem = 0.74;
+
+      const charWidth = Math.max(0.86, Math.min(1.12, fontRem / 1.2));
+      els.tutorialAlignmentView.style.setProperty('--tutorial-font-size', `${fontRem}rem`);
+      els.tutorialAlignmentView.style.setProperty('--tutorial-char-width', `${charWidth}ch`);
+    }
+
+    function renderTutorialAlignment() {
+      const a = state.tutorial.alignmentA;
+      const b = state.tutorial.alignmentB;
+      const marks = state.tutorial.markers;
+      const len = a.length;
+      if (!len) {
+        els.tutorialAlignmentView.textContent = 'No alignment data available.';
+        return;
+      }
+
+      setTutorialAlignmentScale(len);
+      const revealed = Math.min(state.tutorial.frame, len);
+      const revealStart = len - revealed;
+      const currentIndex = revealed > 0 ? revealStart : -1;
+
+      function renderLine(prefix, text, maskedChar) {
+        let line = `<div class="tutorial-line"><span class="tutorial-prefix">${prefix}</span>`;
+        for (let i = 0; i < len; i++) {
+          const visible = i >= revealStart;
+          const classes = ['tcol'];
+          if (!visible) classes.push('masked');
+          if (i === currentIndex) classes.push('current');
+          const char = visible ? text[i] : maskedChar;
+          line += `<span class="${classes.join(' ')}">${escapeHtmlChar(char)}</span>`;
+        }
+        line += '</div>';
+        return line;
+      }
+
+      const html = [
+        renderLine('A:', a, '·'),
+        renderLine('·', marks, '·'),
+        renderLine('B:', b, '·')
+      ].join('');
+      els.tutorialAlignmentView.innerHTML = html;
+    }
+
+    function renderTutorialStepInfo() {
+      const path = state.tutorial.path;
+      const steps = state.tutorial.steps;
+      const frame = state.tutorial.frame;
+      const len = state.tutorial.alignmentA.length;
+
+      if (!path.length) {
+        els.tutorialStepInfo.textContent = 'No traceback path available.';
+        return;
+      }
+
+      const start = path[0];
+      if (frame === 0) {
+        const startRow = start[1];
+        const startCol = start[0];
+        const startMsg = state.algorithm === 'nw'
+          ? `Starting at display cell (row ${startRow}, col ${startCol}) in the lower-right corner.`
+          : `Starting at local max display cell (row ${startRow}, col ${startCol}).`;
+        els.tutorialStepInfo.textContent = `${startMsg} Press play to walk backward one traceback move at a time.`;
+        return;
+      }
+
+      const step = steps[Math.min(frame, steps.length) - 1];
+      if (!step) {
+        els.tutorialStepInfo.textContent = 'Traceback replay complete.';
+        return;
+      }
+
+      const colIndex = Math.max(1, len - frame + 1);
+      const pairType = step.aChar === '-' || step.bChar === '-'
+        ? 'gap column'
+        : (step.aChar === step.bChar ? 'match column' : 'mismatch column');
+      const displayDir = remapDirForDisplay(step.dir);
+      const move = `${arrowFor(displayDir)} from (row ${step.from[1]}, col ${step.from[0]}) to (row ${step.to[1]}, col ${step.to[0]})`;
+      els.tutorialStepInfo.textContent =
+        `Step ${frame}/${state.tutorial.totalFrames}: move ${move}. Alignment column ${colIndex}/${len} is revealed (right-to-left): A=${step.aChar}, B=${step.bChar} (${pairType}).`;
+    }
+
+    function renderTutorialFrame() {
+      renderTutorialMatrix();
+      renderTutorialAlignment();
+      renderTutorialStepInfo();
+
+      if (!state.tutorial.playing) {
+        els.tutorialPlayPauseBtn.textContent = state.tutorial.frame >= state.tutorial.totalFrames ? 'Replay' : 'Play';
+      }
+    }
+
+    function setTutorialPlaying(playing) {
+      clearTutorialTimer();
+      state.tutorial.playing = playing;
+      if (!playing) {
+        els.tutorialPlayPauseBtn.textContent = state.tutorial.frame >= state.tutorial.totalFrames ? 'Replay' : 'Play';
+        return;
+      }
+      els.tutorialPlayPauseBtn.textContent = 'Pause';
+      state.tutorial.timer = setInterval(() => {
+        if (!state.tutorial.open) {
+          clearTutorialTimer();
+          return;
+        }
+        if (state.tutorial.frame >= state.tutorial.totalFrames) {
+          setTutorialPlaying(false);
+          return;
+        }
+        state.tutorial.frame += 1;
+        renderTutorialFrame();
+        if (state.tutorial.frame >= state.tutorial.totalFrames) {
+          setTutorialPlaying(false);
+        }
+      }, state.tutorial.stepMs);
+    }
+
+    function openTraceTutorial() {
+      if (!state.tracebackResults.length) {
+        setStatus('Run traceback first to open the guided walkthrough.', true);
+        return;
+      }
+      if (!prepareTutorialData()) {
+        setStatus('No traceback alignment is available for guided walkthrough.', true);
+        return;
+      }
+      state.tutorial.open = true;
+      els.traceTutorialModal.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        els.traceTutorialModal.classList.add('open');
+      });
+      els.traceTutorialModal.setAttribute('aria-hidden', 'false');
+      renderTutorialFrame();
+      setTutorialPlaying(true);
+    }
+
+    function restartTraceTutorial() {
+      if (!state.tutorial.open) return;
+      state.tutorial.frame = 0;
+      renderTutorialFrame();
+      setTutorialPlaying(true);
+    }
+
+    function tracebackGlobal() {
+      const m = state.seqA.length;
+      const n = state.seqB.length;
+      const results = [];
+      state.traceTruncated = false;
+
+      function dfs(i, j, aAcc, bAcc, path) {
+        if (results.length >= MAX_ALIGNMENTS) {
+          state.traceTruncated = true;
+          return;
+        }
+
+        path.push([i, j]);
+
+        if (i === 0 && j === 0) {
+          const a = aAcc.slice().reverse().join('');
+          const b = bAcc.slice().reverse().join('');
+          results.push({ a, b, path: path.slice() });
+          path.pop();
+          return;
+        }
+
+        const dirs = state.pointers[i][j] || [];
+        for (const dir of dirs) {
+          if (dir === 'diag' && i > 0 && j > 0) {
+            aAcc.push(state.seqA[i - 1]);
+            bAcc.push(state.seqB[j - 1]);
+            dfs(i - 1, j - 1, aAcc, bAcc, path);
+            aAcc.pop();
+            bAcc.pop();
+          } else if (dir === 'up' && i > 0) {
+            aAcc.push(state.seqA[i - 1]);
+            bAcc.push('-');
+            dfs(i - 1, j, aAcc, bAcc, path);
+            aAcc.pop();
+            bAcc.pop();
+          } else if (dir === 'left' && j > 0) {
+            aAcc.push('-');
+            bAcc.push(state.seqB[j - 1]);
+            dfs(i, j - 1, aAcc, bAcc, path);
+            aAcc.pop();
+            bAcc.pop();
+          }
+          if (results.length >= MAX_ALIGNMENTS) {
+            state.traceTruncated = true;
+            break;
+          }
+        }
+
+        path.pop();
+      }
+
+      dfs(m, n, [], [], []);
+      return dedupeResults(results);
+    }
+
+    function tracebackLocal() {
+      const m = state.seqA.length;
+      const n = state.seqB.length;
+      const results = [];
+      state.traceTruncated = false;
+
+      let best = -Infinity;
+      const starts = [];
+      for (let i = 0; i <= m; i++) {
+        for (let j = 0; j <= n; j++) {
+          const v = state.matrix[i][j];
+          if (v > best) {
+            best = v;
+            starts.length = 0;
+            starts.push([i, j]);
+          } else if (v === best) {
+            starts.push([i, j]);
+          }
+        }
+      }
+
+      if (best <= 0) {
+        return [];
+      }
+
+      function dfs(i, j, aAcc, bAcc, path) {
+        if (results.length >= MAX_ALIGNMENTS) {
+          state.traceTruncated = true;
+          return;
+        }
+
+        path.push([i, j]);
+
+        if (state.matrix[i][j] === 0 || (state.pointers[i][j] || []).length === 0) {
+          const a = aAcc.slice().reverse().join('');
+          const b = bAcc.slice().reverse().join('');
+          if (a.length && b.length) {
+            results.push({ a, b, path: path.slice() });
+          }
+          path.pop();
+          return;
+        }
+
+        const dirs = state.pointers[i][j] || [];
+        for (const dir of dirs) {
+          if (dir === 'diag' && i > 0 && j > 0) {
+            aAcc.push(state.seqA[i - 1]);
+            bAcc.push(state.seqB[j - 1]);
+            dfs(i - 1, j - 1, aAcc, bAcc, path);
+            aAcc.pop();
+            bAcc.pop();
+          } else if (dir === 'up' && i > 0) {
+            aAcc.push(state.seqA[i - 1]);
+            bAcc.push('-');
+            dfs(i - 1, j, aAcc, bAcc, path);
+            aAcc.pop();
+            bAcc.pop();
+          } else if (dir === 'left' && j > 0) {
+            aAcc.push('-');
+            bAcc.push(state.seqB[j - 1]);
+            dfs(i, j - 1, aAcc, bAcc, path);
+            aAcc.pop();
+            bAcc.pop();
+          }
+          if (results.length >= MAX_ALIGNMENTS) {
+            state.traceTruncated = true;
+            break;
+          }
+        }
+
+        path.pop();
+      }
+
+      for (const [i, j] of starts) {
+        dfs(i, j, [], [], []);
+        if (results.length >= MAX_ALIGNMENTS) {
+          state.traceTruncated = true;
+          break;
+        }
+      }
+
+      return dedupeResults(results);
+    }
+
+    function showTraceback() {
+      if (!state.initialized || !state.filled) {
+        setStatus('Complete matrix filling before traceback.', true);
+        return;
+      }
+
+      const isGlobal = state.algorithm === 'nw';
+      const results = isGlobal ? tracebackGlobal() : tracebackLocal();
+      state.tracebackResults = results;
+      state.activeAlignment = 0;
+
+      if (!results.length) {
+        els.traceSummary.textContent = isGlobal
+          ? 'No traceback result was found. Verify scoring setup.'
+          : 'No positive local alignment found (all best scores are 0).';
+        els.alignmentTabs.innerHTML = '';
+        els.alignmentView.textContent = 'No alignment yet.';
+        els.tutorialBtn.classList.add('hidden');
+        closeTraceTutorial();
+        renderMatrix();
+        return;
+      }
+
+      const bestScore = isGlobal
+        ? state.matrix[state.seqA.length][state.seqB.length]
+        : Math.max(...state.matrix.flat());
+
+      let summary = `${results.length} optimal alignment${results.length > 1 ? 's' : ''} found. `;
+      summary += `Optimal score = ${bestScore}. `;
+      summary += isGlobal
+        ? 'Traceback started at bottom-right cell.'
+        : 'Traceback started at highest scoring local cell(s) and stopped at 0.';
+
+      if (state.traceTruncated) {
+        summary += ` Showing first ${MAX_ALIGNMENTS} due to combinatorial tie expansion.`;
+      }
+
+      els.traceSummary.textContent = summary;
+      setTraceLayoutActive(true);
+      renderAlignmentTabs();
+      renderActiveAlignment();
+      renderMatrix();
+      els.tutorialBtn.classList.remove('hidden');
+      setStatus('Traceback complete. Toggle alignments to inspect alternate optimal paths.');
+    }
+
+    function renderAlignmentTabs() {
+      const tabs = state.tracebackResults
+        .map((_, idx) => `<button data-idx="${idx}" class="${idx === state.activeAlignment ? 'active' : ''}">Alignment ${idx + 1}</button>`)
+        .join('');
+      els.alignmentTabs.innerHTML = tabs;
+
+      for (const btn of els.alignmentTabs.querySelectorAll('button')) {
+        btn.addEventListener('click', () => {
+          state.activeAlignment = Number(btn.dataset.idx);
+          renderAlignmentTabs();
+          renderActiveAlignment();
+          renderMatrix();
+          if (state.tutorial.open && prepareTutorialData()) {
+            renderTutorialFrame();
+            setTutorialPlaying(true);
+          }
+        });
+      }
+    }
+
+    function renderActiveAlignment() {
+      const current = state.tracebackResults[state.activeAlignment];
+      if (!current) {
+        els.alignmentView.textContent = 'No alignment yet.';
+        return;
+      }
+      els.alignmentView.textContent = createAlignmentText(current.a, current.b);
+    }
+
+    function getActivePathSet() {
+      const current = state.tracebackResults[state.activeAlignment];
+      if (!current) return new Set();
+      return new Set(current.path.map(([i, j]) => `${i}:${j}`));
+    }
+
+    function updateButtonThemeState() {
+      const initIsGreen = state.initialized;
+      els.initBtn.classList.toggle('btn-green', initIsGreen);
+      els.initBtn.classList.toggle('btn-accent', !initIsGreen);
+    }
+
+    function renderInspector() {
+      const c = state.lastComputation;
+      if (!c) {
+        resetInspector();
+        return;
+      }
+
+      const pLabel = c.pairScore === state.match ? 'match' : 'mismatch';
+      const displayDiagFrom = c.diagFrom;
+      const displayUpFrom = c.leftFrom;
+      const displayLeftFrom = c.upFrom;
+      const displayDiag = c.diag;
+      const displayUp = c.left;
+      const displayLeft = c.up;
+      const dirs = c.dirs.length
+        ? c.dirs.map(remapDirForDisplay).map(arrowFor).join(' ')
+        : (state.algorithm === 'sw' && c.chosen === 0 ? '0-reset' : 'none');
+
+      els.cellInfo.innerHTML = `Computed cell <strong>(row ${c.j}, col ${c.i})</strong> comparing <strong>${c.aChar}</strong> from Sequence A (top) vs <strong>${c.bChar}</strong> from Sequence B (left).`;
+      els.formulaDiag.innerHTML = `↖ Diagonal: H[row ${c.j - 1}, col ${c.i - 1}] + (${pLabel}=${c.pairScore}) = ${displayDiagFrom} + ${c.pairScore} = <strong>${displayDiag}</strong>`;
+      els.formulaUp.innerHTML = `↑ Up: H[row ${c.j - 1}, col ${c.i}] + gap(${state.gap}) = ${displayUpFrom} + ${state.gap} = <strong>${displayUp}</strong>`;
+      els.formulaLeft.innerHTML = `← Left: H[row ${c.j}, col ${c.i - 1}] + gap(${state.gap}) = ${displayLeftFrom} + ${state.gap} = <strong>${displayLeft}</strong>`;
+
+      if (c.includesZero) {
+        els.formulaPick.innerHTML = `Selected max: max(0, ${displayDiag}, ${displayUp}, ${displayLeft}) = <strong>${c.chosen}</strong> via ${dirs}`;
+      } else {
+        els.formulaPick.innerHTML = `Selected max: max(${displayDiag}, ${displayUp}, ${displayLeft}) = <strong>${c.chosen}</strong> via ${dirs}`;
+      }
+    }
+
+    function renderMatrix() {
+      if (!state.initialized) {
+        els.matrixWrap.innerHTML = '<div class="status" style="margin:10px;">Initialize to generate matrix.</div>';
+        return;
+      }
+
+      const m = state.seqA.length; // display columns
+      const n = state.seqB.length; // display rows
+      const next = state.order[state.stepIndex];
+      const last = state.lastComputation;
+      const pathSet = getActivePathSet();
+      const maxVal = state.algorithm === 'sw' && state.filled ? Math.max(...state.matrix.flat()) : null;
+
+      let html = '<table><thead><tr><th></th><th>-</th>';
+      for (let c = 0; c < m; c++) {
+        html += `<th>${state.seqA[c]}</th>`;
+      }
+      html += '</tr></thead><tbody>';
+
+      for (let r = 0; r <= n; r++) {
+        const rowLabel = r === 0 ? '-' : state.seqB[r - 1];
+        html += `<tr><th>${rowLabel}</th>`;
+
+        for (let c = 0; c <= m; c++) {
+          const origI = c;
+          const origJ = r;
+          const val = state.matrix[origI][origJ];
+          const computed = state.computed[origI][origJ];
+          const classes = [];
+
+          if (origI === 0 || origJ === 0) classes.push('boundary');
+          if (!computed && origI > 0 && origJ > 0) classes.push('uncomputed');
+          if (next && next.i === origI && next.j === origJ) classes.push('next');
+          if (last && last.i === origI && last.j === origJ) classes.push('last');
+          if (pathSet.has(`${origI}:${origJ}`)) classes.push('path');
+          if (maxVal !== null && val === maxVal && val > 0) classes.push('maxcell');
+
+          const dirs = state.pointers[origI][origJ] || [];
+          const arrows = dirs.map(remapDirForDisplay).map(arrowFor).join('');
+          html += `<td class="${classes.join(' ')}"><span class="cell-score">${val ?? ''}</span><span class="cell-arrows">${arrows}</span></td>`;
+        }
+
+        html += '</tr>';
+      }
+
+      html += '</tbody></table>';
+      els.matrixWrap.innerHTML = html;
+    }
+
+    function updateButtons() {
+      const init = state.initialized;
+      els.stepBtn.disabled = !init || state.filled;
+      els.fillBtn.disabled = !init || state.filled;
+      els.traceBtn.disabled = !init || !state.filled;
+      updateButtonThemeState();
+    }
+
+    els.initBtn.addEventListener('click', initMatrix);
+    els.stepBtn.addEventListener('click', stepFill);
+    els.fillBtn.addEventListener('click', fillAll);
+    els.traceBtn.addEventListener('click', showTraceback);
+    els.fillTraceBtn.addEventListener('click', () => {
+      if (!state.initialized) {
+        initMatrix();
+      }
+      if (!state.initialized) return;
+      if (!state.filled) {
+        fillAll();
+      }
+      showTraceback();
+    });
+    els.tutorialBtn.addEventListener('click', openTraceTutorial);
+    els.tutorialCloseBtn.addEventListener('click', closeTraceTutorial);
+    els.tutorialPlayPauseBtn.addEventListener('click', () => {
+      if (!state.tutorial.open) return;
+      if (!state.tutorial.playing && state.tutorial.frame >= state.tutorial.totalFrames) {
+        state.tutorial.frame = 0;
+        renderTutorialFrame();
+        setTutorialPlaying(true);
+        return;
+      }
+      setTutorialPlaying(!state.tutorial.playing);
+    });
+    els.tutorialRestartBtn.addEventListener('click', restartTraceTutorial);
+    els.traceTutorialModal.addEventListener('click', (event) => {
+      if (event.target === els.traceTutorialModal) {
+        closeTraceTutorial();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && state.tutorial.open) {
+        closeTraceTutorial();
+      }
+    });
+
+    els.algorithm.addEventListener('change', () => {
+      resetTracebackUI();
+      resetInspector();
+      state.initialized = false;
+      state.filled = false;
+      renderMatrix();
+      updateButtons();
+      setStatus('Algorithm changed. Re-initialize matrix to apply boundary rules for this method.');
+    });
+
+    resetInspector();
+    resetTracebackUI();
+    renderMatrix();
+    updateButtons();
+  </script>
+</body>
+</html>
