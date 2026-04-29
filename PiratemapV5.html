@@ -1834,7 +1834,7 @@
 
       candidates.forEach((row, index) => {
         const title = getField(row, "title") || getField(row, "popup") || "Untitled stop";
-        const image = row._imageSrc || "images/PirateMap.png";
+        const image = row._imageSrc || "https://carolinafishes.github.io/PirateMap.png";
         const day = titleCaseDay(getField(row, "day")) || "Trip stop";
         const category = normalizeCategory(getField(row, "category"));
         const type = (getField(row, "type") || "").toString().trim();
